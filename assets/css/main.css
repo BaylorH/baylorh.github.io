@@ -4687,3 +4687,13 @@ input, select, textarea {
 		}
 
 	}
+
+
+	#video-background {
+		width: 100%;
+		height: auto; 
+		object-fit: cover;
+		object-position: center;
+		border: 2px solid #cccccc16;
+		border-radius: 5px;
+	}	
