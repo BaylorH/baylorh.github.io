@@ -4699,11 +4699,13 @@ input, select, textarea {
 	}	
 
 	#resume-picture {
-		width: 70%;
+		width: 65%;
 		border: 4px solid #cccccc16;
 	}
 
 	.resume-container {
 		display: flex !important;
+		flex-direction: column;
+		align-items: center;
 		justify-content: center;
 	}
