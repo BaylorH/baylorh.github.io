@@ -4733,3 +4733,7 @@ input, select, textarea {
 		}
 
 	}
+
+	.font-size-reduce {
+		font-size: 1rem;
+	}
