@@ -56,10 +56,122 @@
 									</video>
                                 </div> -->
                                 <div class="image main"><img src="images/clientPortalClientDashboard.png" class="shadow-container" alt="" /></div>
-								<div class="image main"><img src="images/ClientPortalNotifications.png" class="shadow-container" alt="" /></div>
-								<div class="image main"><img src="images/ClientPortalOnboarding.png" class="shadow-container" alt="" /></div>
-								<div class="image main"><img src="images/ClientPortalStaffDashboard.png" class="shadow-container" alt="" /></div>
-								<div class="image main"><img src="images/ClientPortalStaffProfile.png" class="shadow-container" alt="" /></div>
+<p>
+  <strong>Login Form Implementation</strong><br>
+  The login system allows clients to securely log in using their credentials. The login form, built with Preact, manages user inputs and interacts with Firebase to verify credentials and manage sessions.
+</p>
+<pre>
+<code>
+export function Login() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const handleSignIn = async(event) => {
+    event.preventDefault();
+    setLoading(true);
+    const result = await api.loginWithEmail(username, password);
+    if (result === "success") {
+      const user = api.getUser();
+      user.role === "client" ? route('/dashboard') : setMessage("User role not recognized.");
+    } else {
+      setMessage("Error signing in.");
+    }
+    setLoading(false);
+  };
+</code>
+</pre>
+
+<div class="image main"><img src="images/ClientPortalNotifications.png" class="shadow-container" alt="" /></div>
+<p>
+  <strong>API Integration for User Authentication</strong><br>
+  This snippet shows how the app authenticates the user by verifying the email and password against Firebase's authentication service. Once logged in, the system fetches the user's details and routes them to the appropriate dashboard.
+</p>
+<pre>
+<code>
+async loginWithEmail(email: string, password: string): Promise<string> {
+  const auth = getAuth();
+  let response = "error";
+  try {
+    await signInWithEmailAndPassword(auth, email, password);
+    const user = await this.fetchUser();
+    this.User = user;
+    response = "success";
+  } catch (error) {
+    response = error.code;
+  }
+  return response;
+}
+</code>
+</pre>
+
+<div class="image main"><img src="images/ClientPortalOnboarding.png" class="shadow-container" alt="" /></div>
+<p>
+  <strong>Creating a New Client Portal</strong><br>
+  The backend is responsible for creating and managing new client portals. The following snippet demonstrates how a new portal is created in Firebase, and a user is registered using a randomly generated password.
+</p>
+<pre>
+<code>
+app.post("/createNewPortal", async (req, res) => {
+  const { clientName, clientEmail, agency } = req.body;
+  const password = generateRandomPassword();
+  try {
+    const userRecord = await admin.auth().createUser({ email: clientEmail, password });
+    const newPortalRef = await db.collection("portals").add({ clientName, clientEmail, agency, clientPassword: password });
+    res.status(201).send({ uid: userRecord.uid });
+  } catch (error) {
+    res.status(500).send({ error: "Internal Server Error" });
+  }
+});
+</code>
+</pre>
+
+<div class="image main"><img src="images/ClientPortalStaffDashboard.png" class="shadow-container" alt="" /></div>
+<p>
+  <strong>Fetching Client Data</strong><br>
+  This function queries the Firestore database for specific client data, filtered by the agency. It ensures that users are able to view relevant portals and updates based on their association.
+</p>
+<pre>
+<code>
+app.get("/portals", async (req, res) => {
+  const agency = req.query.agency;
+  try {
+    const portalsSnapshot = await db.collection("portals").where("agency", "==", agency).get();
+    const portals = portalsSnapshot.docs.map(doc => doc.data());
+    res.status(200).send(portals);
+  } catch (error) {
+    res.status(500).send({ error: "Internal Server Error" });
+  }
+});
+</code>
+</pre>
+
+<div class="image main"><img src="images/ClientPortalStaffProfile.png" class="shadow-container" alt="" /></div>
+<p>
+  <strong>Update User Information</strong><br>
+  The portal also allows updating user details such as their profile information. This snippet shows how the system securely handles the updates, ensuring data integrity and security in the process.
+</p>
+<pre>
+<code>
+app.post("/updateUser", async (req, res) => {
+  const { email, fullName, title, meetingLink } = req.body;
+  if (!email) {
+    res.status(400).send({ error: "Email is required for updating user details" });
+    return;
+  }
+  try {
+    const userDoc = await db.collection("users").where("email", "==", email).get();
+    const userRef = userDoc.docs[0].ref;
+    await userRef.update({ fullName, title, meetingLink });
+    res.status(200).send({ message: "User updated successfully" });
+  } catch (error) {
+    res.status(500).send({ error: "Internal Server Error" });
+  }
+});
+</code>
+</pre>
+
 							</section>
 
 
