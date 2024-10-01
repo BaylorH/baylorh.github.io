@@ -44,7 +44,47 @@
 									<h1>Machine Learning Visualization</h1>
 									<p>Worked in a team of five to create a 3D visualization tool for machine learning algorithms as part of a capstone project for a professor at ASU. This tool will be incorporated into the professor’s course.</p>
 								</header>
-                                <div class="image main"><img src="images/MachineLearningVisualization.png" class="shadow-container" alt="" /></div>
+								<div class="image main"><img src="images/MachineLearningVisualizationMenu.png" class="shadow-container" alt="" /></div>
+
+<div class="code-snippet">
+    <p>In this snippet, data points from the Iris dataset are instantiated in Unity. Each data point is positioned in 3D space based on sepal and petal dimensions. The points are assigned sizes and colors to represent the different species of Iris flowers, enhancing the visualization of machine learning classifications.</p>
+    <pre><code>
+// Instantiating Data Points in Unity
+foreach (DataPoint point in dataPoints) {
+    float scaler = 20.0f;
+    Vector3 position = new Vector3(
+        point.sepal_length * scaler + 720 - xMin * scaler,
+        point.sepal_width * scaler + 547 - yMin * scaler,
+        -point.petal_length * scaler + 56 + zMin * scaler
+    );
+    
+    GameObject sphere = Instantiate(dataPointPrefab, position, Quaternion.Euler(-90, 0, 0));
+    float scale = 20.0f + (point.petal_width * 10.0f);
+    sphere.transform.localScale = new Vector3(scale, scale, scale);
+
+    Material chosenMaterial = point.prediction == "Iris-setosa" ? SetosaMaterial : NonSetosaMaterial;
+    sphere.GetComponent<Renderer>().material = chosenMaterial;
+}
+    </code></pre>
+</div>
+
+<div class="image main"><img src="images/MachineLearningVisualization.png" class="shadow-container" alt="" /></div>
+
+<div class="code-snippet">
+    <p>This function is responsible for generating real-time predictions based on user input. It uses a trained model to classify new Iris flower data, allowing for immediate feedback, which helps the user interact with the visualization in an engaging way.</p>
+    <pre><code>
+// Predicting Based on User Input
+private string Predict(float[] input) {
+    client.Predict(input, output => {
+        prediction = "Prediction: " + output;
+    }, error => {
+        // Handle error
+    });
+    return prediction;
+}
+    </code></pre>
+</div>
+
 								
 							</section>
 
