@@ -4716,7 +4716,7 @@ input, select, textarea {
 	}
 
 	.pdf-button-container {
-		margin-bottom: 25px;
+		margin-top: 25px;
 	}
 
 	.pdf-button {
@@ -4855,7 +4855,7 @@ input, select, textarea {
 .carousel-container::after {
     content: "Click to view documents";
     position: absolute;
-    bottom: -80px;
+    top: -80px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 1rem;
