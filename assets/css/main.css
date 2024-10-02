@@ -4703,6 +4703,11 @@ input, select, textarea {
 		border: 4px solid #cccccc16;
 	}
 
+	#lor-picture {
+		width: 65%;
+		border: 4px solid #cccccc16;
+	}
+
 	.resume-container {
 		display: flex !important;
 		flex-direction: column;
@@ -4775,3 +4780,113 @@ input, select, textarea {
 		gap: 50px;
 		margin-bottom: 50px;
 	}
+
+/* The container that wraps both images */
+.carousel-container {
+    position: relative;
+    width: 700px;
+    height: 600px;
+    margin: 2rem auto;
+    perspective: 2700px;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+}
+
+/* Create backs of documents */
+.carousel-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #444;
+    transform: rotateY(180deg) translateZ(1px);
+    backface-visibility: visible;
+}
+
+@keyframes rotate {
+    from { transform: rotateY(0); }
+    to { transform: rotateY(360deg); }
+}
+
+.carousel-rotation {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotate 10s infinite linear;
+	display: flex;
+	justify-content: center;
+}
+
+.carousel-container.stopped .carousel-rotation {
+    animation: none;
+}
+
+#resume-picture {
+    transform: rotateY(0) translateZ(250px);
+}
+
+#lor-picture {
+    transform: rotateY(180deg) translateZ(250px);
+}
+
+.carousel-container.animate #resume-picture {
+    transform: rotateY(-180deg) translateZ(250px);
+}
+
+.carousel-container.animate #lor-picture {
+    transform: rotateY(0) translateZ(250px);
+}
+
+/* Rest of your CSS remains the same */
+/* Indicator text */
+.carousel-container::after {
+    content: "Click to view documents";
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    color: #717981;
+    white-space: nowrap;
+}
+
+.carousel-container.stopped::after {
+    content: "Click to view Letter of Recommendation →";
+    right: 0;
+    left: auto;
+    transform: none;
+}
+
+.carousel-container.stopped.animate::after {
+    content: "← Click to view Resume";
+    right: auto;
+    left: 0;
+}
+
+/* Glow effect */
+@keyframes glow {
+    0% { box-shadow: 0 0 5px rgba(255,255,255,0.5); }
+    50% { box-shadow: 0 0 20px rgba(255,255,255,0.8); }
+    100% { box-shadow: 0 0 5px rgba(255,255,255,0.5); }
+}
+
+.carousel-container {
+    animation: glow 2s infinite;
+}
+
+.carousel-container.stopped {
+    animation: none;
+}

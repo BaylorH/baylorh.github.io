@@ -123,6 +123,18 @@
 	// Background.
 		$wrapper._parallax(0.925);
 
+// 3D Carousel for Resume and LOR
+let isFirstClick = true;
+
+$('.carousel-container').on('click', function() {
+    if (isFirstClick) {
+        $(this).addClass('stopped');
+        isFirstClick = false;
+    } else {
+        $(this).toggleClass('animate');
+    }
+});
+
 	// Nav Panel.
 
 		// Toggle.
