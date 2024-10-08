@@ -47,19 +47,62 @@
                                 <!-- <div class="image main"><img src="images/LunarBase.png" class="shadow-container" alt="" /></div> -->
 								<div class="box alt">
 									<div class="row gtr-50 gtr-uniform">
+										<div class="col-4"><span class="image fit"><img src="images/MoonBase5.png" class="shadow-container" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="images/MoonBase4.png" class="shadow-container" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="images/MoonBase2.png" class="shadow-container" alt="" /></span></div>
+										<!-- Break -->
+										<div class="col-4"><span class="image fit"><img src="images/MoonBase6.png" class="shadow-container" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="images/MoonBase.png" class="shadow-container" alt="" /></span></div>
 										<div class="col-4"><span class="image fit"><img src="images/LunarBase.png" class="shadow-container" alt="" /></span></div>
-										<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-										<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
 										<!-- Break -->
-										<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-										<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-										<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-										<!-- Break -->
-										<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-										<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-										<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="images/MoonBase7.png" class="shadow-container" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="images/MoonBase8.png" class="shadow-container" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="images/MoonBase9.png" class="shadow-container" alt="" /></span></div>
 									</div>
 								</div>
+
+								<p style="margin-bottom: -20px;">The following state diagram is used to control which animations are played for the 3rd person controller:</p>
+								<div class="image main"><img src="images/MoonBaseDiagram.png" class="shadow-container" alt="" /></div>
+
+<div class="code-snippet">
+    <p>The following function is how the state diagram above for animations is called in the code:</p>
+    <pre><code>public void OnMove(InputAction.CallbackContext context) {
+    moveVector = context.ReadValue<Vector2>();
+
+    animator.SetBool("isSprinting", false);
+    animator.SetBool("isSprintingHardLeft", false);
+    animator.SetBool("isSprintingLeft", false);
+    animator.SetBool("isSprintingHardRight", false);
+    animator.SetBool("isSprintingRight", false);
+
+    if (moveVector.magnitude > 0) {
+        if (moveVector.x < 0 && moveVector.y == 0) {
+            // Only left (A key pressed)
+            animator.SetBool("isSprintingHardLeft", true);
+        }
+        else if (moveVector.x < 0 && moveVector.y > 0) {
+            // Forward left (W and A pressed)
+            animator.SetBool("isSprintingLeft", true);
+        }
+        else if (moveVector.x > 0 && moveVector.y == 0) {
+            // Only right (D key pressed)
+            animator.SetBool("isSprintingHardRight", true);
+        }
+        else if (moveVector.x > 0 && moveVector.y > 0) {
+            // Forward right (W and D pressed)
+            animator.SetBool("isSprintingRight", true);
+        }
+        else if (moveVector.x == 0 && moveVector.y > 0) {
+            // Only forward (W key pressed)
+            animator.SetBool("isSprinting", true);
+        }
+    }
+    else {
+        animator.SetBool("isSprinting", false);
+    }
+}
+    </code></pre>
+</div>
 							</section>
 
 
