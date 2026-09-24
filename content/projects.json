@@ -10,7 +10,13 @@
     "visual": "flowers",
     "short": "Support, product imagery and company knowledge—connected in one internal platform.",
     "role": "AI Solutions Engineer",
-    "stack": ["React", "Firebase", "Google Cloud", "Shopify", "AI APIs"],
+    "stack": [
+      "React",
+      "Firebase",
+      "Google Cloud",
+      "Shopify",
+      "AI APIs"
+    ],
     "problem": "An online flower retailer has very different workflows across customer support, marketing and storefront operations. The challenge is connecting useful AI to each team’s actual information and tools.",
     "contribution": "Built and evolved the internal AI platform, support applications, a Chrome extension, marketing tools and commerce integrations. The work spans full-stack application development, cloud services, product-data workflows and visibility into the company’s AI roadmap.",
     "groups": [
@@ -43,9 +49,18 @@
         "A dedicated FiftyFlowers dashboard in The Record, linked from Internal AI, gives access to the AI roadmap, project milestones, completed work and evidence."
       ]
     ],
-    "flow": ["Team workflows", "Connected AI tools", "Human review"],
+    "flow": [
+      "Team workflows",
+      "Connected AI tools",
+      "Human review"
+    ],
     "next": "Continue the migration cleanup and handoff, and develop the company knowledge workspace beyond its MVP. Individual tools have different levels of maturity; the whole platform is not one finished autonomous system.",
-    "evidence": "Scope reflects the reviewed project records and the saved September 2026 professional profile. The diagram is a capability map, not a screenshot or proof of company-wide adoption."
+    "evidence": "Scope reflects the reviewed project records and the saved September 2026 professional profile. The diagram is a capability map, not a screenshot or proof of company-wide adoption.",
+    "image": "images/fiftyflowers-internal-ai.png",
+    "imageAlt": "FiftyFlowers Internal AI customer inquiry screen with empty fields and navigation to the four support apps",
+    "imageWidth": 1280,
+    "imageHeight": 720,
+    "imageCaption": "Internal AI, September 2026. The customer inquiry interface shown with empty fields; no customer records are displayed."
   },
   {
     "id": "till",
@@ -80,9 +95,14 @@
         "The service saves $2,000 per month, equivalent to $24,000 annualized. The annualized figure expresses the monthly savings over twelve months."
       ]
     ],
-    "flow": ["Loan application", "Scoring service", "Decision & reporting"],
+    "flow": [
+      "Loan application",
+      "Scoring service",
+      "Decision & reporting"
+    ],
     "next": "Keep scoring behavior, reporting and policy changes understandable as the lending workflow evolves.",
-    "evidence": "The workflow represents the documented service and dashboard. No customer applications or private financial records are included."
+    "evidence": "The workflow represents the documented service and dashboard. No customer applications or private financial records are included.",
+    "logo": "images/till-logo.png"
   },
   {
     "id": "engineering-platform",
@@ -121,7 +141,11 @@
         "Plan a bounded milestone, pursue that work, capture questions and evidence, then review the outcome before planning the next scope. Engineering judgment and release accountability stay with the developer."
       ]
     ],
-    "flow": ["The Record", "Brain", "Jarvis OS"],
+    "flow": [
+      "The Record",
+      "Brain",
+      "Jarvis OS"
+    ],
     "next": "Bring project context and engineering memory into a more unified assistant experience. The complete proposed integration is not presented as a finished autonomous platform.",
     "evidence": "This is a conceptual map of the actual product responsibilities. It deliberately omits private prompts, credentials and implementation details."
   },
@@ -136,7 +160,12 @@
     "visual": "reports",
     "short": "A first step toward reliable report exports and a conversational reporting workspace.",
     "role": "Software Engineer · Manifold",
-    "stack": ["Hedberg", "Report exports", "Cloud environments", "AI analysis"],
+    "stack": [
+      "Hedberg",
+      "Report exports",
+      "Cloud environments",
+      "AI analysis"
+    ],
     "problem": "Useful sales data lives inside business software. Before a conversational dashboard can be dependable, exports must land somewhere the analysis workflow can actually read.",
     "contribution": "Tested AI analysis of sales reports exported from Hedberg, with the baseline exercised locally and in the cloud. The work separates reliable data collection from the future conversational interface.",
     "groups": [
@@ -153,9 +182,14 @@
         "A separate AI workspace is intended to let the team ask questions of the shared data and shape useful visualizations."
       ]
     ],
-    "flow": ["Hedberg report", "Accessible dataset", "Questions & insights"],
+    "flow": [
+      "Hedberg report",
+      "Accessible dataset",
+      "Questions & insights"
+    ],
     "next": "Make the bookings export reliable, then add recurring exports and summaries. A conversational reporting workspace and further workflows remain planned.",
-    "evidence": "This page describes a proof of concept and its next steps. It does not publish client sales data or represent the planned dashboard as built."
+    "evidence": "This page describes a proof of concept and its next steps. It does not publish client sales data or represent the planned dashboard as built.",
+    "logo": "images/create-spaces-logo.png"
   },
   {
     "id": "axiom",
@@ -190,7 +224,11 @@
         "Built a separate executive-briefing prototype. It was not launched."
       ]
     ],
-    "flow": ["Proposal history", "Search & explore", "Estimating context"],
+    "flow": [
+      "Proposal history",
+      "Search & explore",
+      "Estimating context"
+    ],
     "next": "Build on the research and estimating workflows as business requirements become clearer. The executive-briefing prototype remains distinct from launched work.",
     "evidence": "Attribution follows the reviewed professional profile. No confidential proposals, fee records or client identities are exposed."
   },
@@ -227,7 +265,11 @@
         "A dashboard helps surface decisions and next actions while the underlying information is refined."
       ]
     ],
-    "flow": ["Property lists", "Correspondence", "Review & follow-up"],
+    "flow": [
+      "Property lists",
+      "Correspondence",
+      "Review & follow-up"
+    ],
     "next": "Improve extraction accuracy and make conversation handling and automation dependable. The product remains beta.",
     "evidence": "Capability overview only. No private correspondence or live prospect information is included."
   },
@@ -264,7 +306,11 @@
         "Make import and sync status part of the interface instead of hiding incomplete work."
       ]
     ],
-    "flow": ["Accounts", "Imported posts", "Research library"],
+    "flow": [
+      "Accounts",
+      "Imported posts",
+      "Research library"
+    ],
     "next": "Reliable syncing, broader import coverage and additional research tools remain in development.",
     "evidence": "This is a prototype capability map, not a claim of complete or reliable platform-wide synchronization."
   },
@@ -279,7 +325,12 @@
     "image": "images/clientPortalClientDashboard.png",
     "short": "The first client portal for an agency’s communication and project workflows.",
     "role": "Web Developer Intern",
-    "stack": ["Preact", "TypeScript", "Node.js", "Firebase"],
+    "stack": [
+      "Preact",
+      "TypeScript",
+      "Node.js",
+      "Firebase"
+    ],
     "problem": "An agency needed a central platform for client communication.",
     "contribution": "Independently developed the first version, working with the lead developer on setup and CSS and collaborating on the visual direction.",
     "legacy": true
@@ -295,7 +346,12 @@
     "visual": "seo",
     "short": "Frontend and backend contributions to a domain-focused SEO tool.",
     "role": "Web Developer Intern",
-    "stack": ["React", "TypeScript", "Node.js", "Firebase"],
+    "stack": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Firebase"
+    ],
     "problem": "An agency needed a domain-focused SEO optimization interface.",
     "contribution": "Co-developed application features with the engineering team. The original project demonstration is retained below.",
     "legacy": true
@@ -311,7 +367,12 @@
     "image": "images/MachineLearningVisualization.png",
     "short": "An interactive 3D learning environment for machine-learning concepts.",
     "role": "Member of a five-person team",
-    "stack": ["Unity", "C#", "Machine learning", "3D visualization"],
+    "stack": [
+      "Unity",
+      "C#",
+      "Machine learning",
+      "3D visualization"
+    ],
     "problem": "Machine-learning concepts benefit from an environment where learners can inspect and interact with the data.",
     "contribution": "Worked in a team of five on a 3D visualization tool for an ASU professor. The original walkthrough includes data positioning and interactive predictions.",
     "legacy": true
@@ -327,7 +388,11 @@
     "image": "images/Pacmanpic2.jpg",
     "short": "A state-based Java game with two-player and free-movement variations.",
     "role": "Independent developer",
-    "stack": ["Java", "State machines", "Game systems"],
+    "stack": [
+      "Java",
+      "State machines",
+      "Game systems"
+    ],
     "problem": "Recreating a familiar game offered a way to explore game states, movement and rule variations.",
     "contribution": "Developed a Java Pacman game with two-player mode, free movement and expanded traversal. The original code and feature walkthrough are preserved.",
     "legacy": true
@@ -343,7 +408,12 @@
     "image": "images/LunarBase.png",
     "short": "A Unity environment with custom terrain, animation and third-person exploration.",
     "role": "Environment & gameplay developer",
-    "stack": ["Unity", "C#", "Animation", "3D environments"],
+    "stack": [
+      "Unity",
+      "C#",
+      "Animation",
+      "3D environments"
+    ],
     "problem": "Create an explorable environment that combines world-building with responsive character control.",
     "contribution": "Designed a moon-base environment with custom terrain, skybox and animations, including a third-person controller. Original imagery and the animation-state diagram are retained.",
     "legacy": true
@@ -359,7 +429,12 @@
     "image": "images/TravelCompanionItinerary.png",
     "short": "A Swift app that combines conversation, itinerary editing and maps.",
     "role": "iOS developer",
-    "stack": ["Swift", "OpenAI API", "Maps", "Location services"],
+    "stack": [
+      "Swift",
+      "OpenAI API",
+      "Maps",
+      "Location services"
+    ],
     "problem": "Travel planning moves between conversation, a schedule and places on a map.",
     "contribution": "Built an iOS app that uses conversation to create and update an itinerary, with integrated map and location features. Original screens remain in the walkthrough.",
     "legacy": true
