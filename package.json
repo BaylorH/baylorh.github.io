@@ -1,0 +1,21 @@
+{
+  "name": "portfolio-refresh",
+  "version": "1.0.0",
+  "description": "A static portfolio with 13 case studies, responsive layouts and a small progressive-enhancement layer. Content is readable without JavaScript. All existing project URLs and images remain available.",
+  "scripts": {
+    "build:motion": "esbuild assets/js/source/motion.js --bundle --minify --format=esm --target=es2022 --legal-comments=external --outfile=assets/js/motion.js",
+    "build": "npm run build:motion && python3 tools/build.py && python3 tools/package.py",
+    "test": "python3 tools/check.py && python3 tools/check-refinement.py && node --check assets/js/portfolio.js && node tools/check-analytics.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "dependencies": {
+    "motion": "13.4.3"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  },
+  "private": true
+}

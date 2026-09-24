@@ -98,3 +98,13 @@ Record evidence reviewed for the next pass includes the current Internal AI supp
 Hosting decision: keep GitHub Pages. Visitor analytics does not require Firebase Hosting. [Google's tag supports static HTML sites](https://developers.google.com/analytics/devguides/collection/ga4/tag-options); [Plausible also installs through a site-specific script](https://plausible.io/docs/plausible-script). A migration would add domain/release work without improving the current static portfolio.
 
 Recommended initial analytics scope: GA4 page visits, referral sources, popular case studies, and contact-link/document clicks. The dashboard should distinguish aggregate visits from leads: a contact-link click is not proof of a message or inquiry. No session recordings, form contents, personal identifiers or arbitrary URL query values in custom events. Exclude local previews and avoid duplicate page views. Configure measurement/consent behavior as part of the release setup and validate actual collection on the approved production domain. No analytics property or measurement ID is configured in this candidate yet; tracking is not active. A paid alternative or hosting migration is not needed to complete the design.
+
+## Implemented and reviewed
+
+The full local refinement was executed in the same turn after Baylor's explicit instruction to finish the entire scope before review. The opening composition, three featured stories, scroll-driven media, compact full directory, repeated-filter transitions, active case-study navigation and expanded screenshot viewing are implemented. Contact and reviewed source imagery remain integrated.
+
+Verification covered 1440px desktop and 390px phone layouts, all 13 directory entries, keyboard filtering, image modal Escape/focus return, active section navigation, actual source-image dimensions, and all generated routes/media. A script-free rendering retained all content; a separate local harness simulated reduced-motion preference and verified static visible layers. These harnesses are not shipped.
+
+The Motion module is 25,360 bytes gzipped. No field performance or low-end-device benchmark is claimed. A focused independent code review found image-dimension, contrast, interruptibility and analytics-queue issues; they were corrected. Gallery artwork was also adjusted after browser inspection to keep labels and all three platform layers visible.
+
+Analytics code is prepared, consent-gated and production-only, but there is no configured measurement ID in this candidate. Enhanced Measurement must be disabled/reviewed before activation. Production remains unchanged pending review and explicit approval.

@@ -9,3 +9,8 @@ exclude:
   - README.md
   - README.txt
   - .DS_Store
+
+  - node_modules
+  - package.json
+  - package-lock.json
+  - assets/js/source

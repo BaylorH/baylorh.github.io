@@ -333,7 +333,9 @@
     ],
     "problem": "An agency needed a central platform for client communication.",
     "contribution": "Independently developed the first version, working with the lead developer on setup and CSS and collaborating on the visual direction.",
-    "legacy": true
+    "legacy": true,
+    "imageWidth": 2534,
+    "imageHeight": 1372
   },
   {
     "id": "alpha-seo",
@@ -375,7 +377,9 @@
     ],
     "problem": "Machine-learning concepts benefit from an environment where learners can inspect and interact with the data.",
     "contribution": "Worked in a team of five on a 3D visualization tool for an ASU professor. The original walkthrough includes data positioning and interactive predictions.",
-    "legacy": true
+    "legacy": true,
+    "imageWidth": 1786,
+    "imageHeight": 1002
   },
   {
     "id": "pacman",
@@ -395,7 +399,9 @@
     ],
     "problem": "Recreating a familiar game offered a way to explore game states, movement and rule variations.",
     "contribution": "Developed a Java Pacman game with two-player mode, free movement and expanded traversal. The original code and feature walkthrough are preserved.",
-    "legacy": true
+    "legacy": true,
+    "imageWidth": 1916,
+    "imageHeight": 1438
   },
   {
     "id": "lunar-base",
@@ -416,7 +422,9 @@
     ],
     "problem": "Create an explorable environment that combines world-building with responsive character control.",
     "contribution": "Designed a moon-base environment with custom terrain, skybox and animations, including a third-person controller. Original imagery and the animation-state diagram are retained.",
-    "legacy": true
+    "legacy": true,
+    "imageWidth": 1790,
+    "imageHeight": 1004
   },
   {
     "id": "ai-travel-companion",
@@ -437,6 +445,8 @@
     ],
     "problem": "Travel planning moves between conversation, a schedule and places on a map.",
     "contribution": "Built an iOS app that uses conversation to create and update an itinerary, with integrated map and location features. Original screens remain in the walkthrough.",
-    "legacy": true
+    "legacy": true,
+    "imageWidth": 1179,
+    "imageHeight": 2556
   }
 ]

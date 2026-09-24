@@ -21,3 +21,16 @@ The retained résumé PDF is dated May 2025 and is visibly labeled accordingly. 
 ## Content conventions
 
 Start with the business problem, describe the individual contribution, then state the result or maturity. Group related products; distinguish working systems, MVPs, betas and prototypes. Illustrations are labeled as capability overviews, not production screenshots. Keep client records, internal prompts and detailed implementation out of the showcase.
+
+
+## Refined portfolio build
+
+Install pinned build dependencies with `npm ci`, then run `npm run build` and `npm test`. The generated HTML remains directly readable without JavaScript. Motion is bundled locally; its license file is included in the release. Homepage composition lives in `tools/homepage.py`, styles in `assets/css/refinement.css`, and motion source in `assets/js/source/motion.js`. The original six project routes and historical media remain.
+
+### Optional visitor analytics
+
+Tracking is **off** in the review candidate. Hosting remains GitHub Pages. Before activation, configure a GA4 web stream for the public domain and disable Enhanced Measurement (automatic clicks, site search, downloads and other automatic events). Review the property's data-sharing and retention settings. Set `PORTFOLIO_ANALYTICS_ID` to the verified measurement ID and `PORTFOLIO_ANALYTICS_REVIEWED=true` when building the approved release. These flags do not establish consent by themselves.
+
+On the configured production hostname only, visitors can allow or decline analytics. No Google script is requested before opt-in; the settings button can disable subsequent collection. Local previews and an empty measurement ID stay inactive. Events are limited to page views and project, contact and document clicks, with query strings removed from configured page location and only the referring origin retained. A contact click is not a completed inquiry.
+
+Verify actual outgoing requests after the approved production release, including opt-out behavior and no automatic Enhanced Measurement payloads. Unit checks validate the loader contract, not Google's live property configuration. Add the private analytics dashboard link to the authenticated portfolio Record once the property exists; do not make analytics reports public.
