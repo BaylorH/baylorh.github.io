@@ -1,150 +1,18 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Baylor Harrison</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f3ed"><title>3D Machine Learning · Baylor Harrison</title><meta name="description" content="An interactive 3D learning environment for machine-learning concepts."><link rel="canonical" href="https://baylor-harrison.com/machine-learning-visualization.html"><meta property="og:title" content="3D Machine Learning · Baylor Harrison"><meta property="og:description" content="An interactive 3D learning environment for machine-learning concepts."><meta property="og:type" content="website"><meta property="og:url" content="https://baylor-harrison.com/machine-learning-visualization.html"><meta property="og:image" content="https://baylor-harrison.com/images/portfolio-social.png"><link rel="icon" type="image/svg+xml" href="images/portfolio-mark.svg"><link rel="stylesheet" href="assets/css/portfolio.css"><script defer src="assets/js/portfolio.js"></script></head><body><a class="skip" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="index.html" aria-label="Baylor Harrison home"><span class="brand-mark">bh<span>·</span></span><span>Baylor Harrison<small>Engineer & builder</small></span></a><nav aria-label="Main navigation"><a href="index.html#work" aria-current="page">Work</a><a href="index.html#approach">Approach</a><a href="resume.html" >Background</a><a class="contact-link" href="mailto:bp21harrison@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a></nav></header><main id="main"><section class="case-hero"><a class="back-link" href="index.html#work">← All work</a><p class="eyebrow">ASU · Team capstone</p><h1>Make the data something to explore.</h1><p class="case-deck">An interactive 3D learning environment for machine-learning concepts.</p><div class="case-meta"><div><span>PROJECT</span><b>3D Machine Learning</b></div><div><span>MY ROLE</span><b>Member of a five-person team</b></div><div><span>STAGE</span><b>Academic project</b></div></div></section><div class="case-visual"><div class="project-visual purple image-visual"><img src="images/MachineLearningVisualization.png" alt="3D Machine Learning — original project screen" loading="lazy" width="1200" height="800"></div></div><div class="case-body"><aside class="case-aside"><p class="eyebrow">Inside this project</p><a href="#context">The context</a><a href="#contribution">My contribution</a><a href="#product">The product</a><a href="#next">Where it stands</a><div class="tech-tags"><span>Unity</span><span>C#</span><span>Machine learning</span><span>3D visualization</span></div></aside><div class="case-story"><section id="context"><p class="eyebrow">The context</p><h2>A problem worth solving.</h2><p>Machine-learning concepts benefit from an environment where learners can inspect and interact with the data.</p></section><section id="contribution"><p class="eyebrow">My contribution</p><h2>What I brought to the work.</h2><p>Worked in a team of five on a 3D visualization tool for an ASU professor. The original walkthrough includes data positioning and interactive predictions.</p></section><section id="product"><p class="eyebrow">The product</p><h2>What it makes possible.</h2><section class="legacy-content" aria-label="Original project walkthrough"><p class="eyebrow">Original project / selected screens & walkthrough</p><p class="archive-note">The original project imagery and product explanation are retained here. These are historical project materials; current availability may differ.</p>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Baylor Harrison</a>
-					</header>
-
-				<!-- Nav -->
-                <nav id="nav">
-                    <ul class="links">
-                        <li><a href="index.html">Portfolio</a></li>
-                        <li><a href="resume.html">Resume</a></li>
-                        <li class="active"><a href="machine-learning-visualization.html">Machine Learning Visualization</a></li>
-                    </ul>
-                    <ul class="icons">
-                        <li><a href="https://github.com/BaylorH" class="icon brands alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-                        <li><a href="https://www.linkedin.com/in/baylor-harrison" class="icon brands alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-                    </ul>
-                </nav>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Post -->
-							<section class="post">
-								<header class="major">
-									<h1>Machine Learning Visualization</h1>
-									<p>Worked in a team of five to create a 3D visualization tool for machine learning algorithms as part of a capstone project for a professor at ASU. This tool will be incorporated into the professor’s course.</p>
-								</header>
-								<div class="image main"><img src="images/MachineLearningVisualizationMenu.png" class="shadow-container" alt="" /></div>
+								<div class="image main"><img loading="lazy" src="images/MachineLearningVisualizationMenu.png" class="shadow-container" alt="3D Machine Learning original project image" /></div>
 
 <div class="code-snippet">
-    <p>In this snippet, data points from the Iris dataset are instantiated in Unity. Each data point is positioned in 3D space based on sepal and petal dimensions. The points are assigned sizes and colors to represent the different species of Iris flowers, enhancing the visualization of machine learning classifications.</p>
-    <pre><code>
-// Instantiating Data Points in Unity
-foreach (DataPoint point in dataPoints) {
-    float scaler = 20.0f;
-    Vector3 position = new Vector3(
-        point.sepal_length * scaler + 720 - xMin * scaler,
-        point.sepal_width * scaler + 547 - yMin * scaler,
-        -point.petal_length * scaler + 56 + zMin * scaler
-    );
-    
-    GameObject sphere = Instantiate(dataPointPrefab, position, Quaternion.Euler(-90, 0, 0));
-    float scale = 20.0f + (point.petal_width * 10.0f);
-    sphere.transform.localScale = new Vector3(scale, scale, scale);
+    <p>In the original implementation, data points from the Iris dataset are instantiated in Unity. Each data point is positioned in 3D space based on sepal and petal dimensions. The points are assigned sizes and colors to represent the different species of Iris flowers, enhancing the visualization of machine learning classifications.</p>
 
-    Material chosenMaterial = point.prediction == "Iris-setosa" ? SetosaMaterial : NonSetosaMaterial;
-    sphere.GetComponent<Renderer>().material = chosenMaterial;
-}
-    </code></pre>
 </div>
 
-<div class="image main"><img src="images/MachineLearningVisualization.png" class="shadow-container" alt="" /></div>
+<div class="image main"><img loading="lazy" src="images/MachineLearningVisualization.png" class="shadow-container" alt="3D Machine Learning original project image" /></div>
 
 <div class="code-snippet">
-    <p>This function is responsible for generating real-time predictions based on user input. It uses a trained model to classify new Iris flower data, allowing for immediate feedback, which helps the user interact with the visualization in an engaging way.</p>
-    <pre><code>
-// Predicting Based on User Input
-private string Predict(float[] input) {
-    client.Predict(input, output => {
-        prediction = "Prediction: " + output;
-    }, error => {
-        // Handle error
-    });
-    return prediction;
-}
-    </code></pre>
+    <p>The interactive tool generates predictions from user input. It uses a trained model to classify new Iris flower data, allowing for immediate feedback, which helps the user interact with the visualization in an engaging way.</p>
+
 </div>
 
-								
-							</section>
 
-
-                            <!-- Footer -->
-							<footer>
-								<div class="pagination">
-									<a href="pacman.html" class="previous">Prev</a>
-									<a href="index.html" class="page">1</a>
-									<a href="client-portal.html" class="page">2</a>
-									<a href="alpha-seo.html" class="page">3</a>
-									<a href="pacman.html" class="page">4</a>
-                                    <a href="machine-learning-visualization.html" class="page active">5</a>
-									<a href="lunar-base.html" class="page">6</a>
-									<a href="ai-travel-companion.html" class="page">7</a>
-									<a href="resume.html" class="page">8</a>
-									<a href="lunar-base.html" class="next">Next</a>
-								</div>
-							</footer>
-
-					</div>
-
-				<!-- Footer -->
-                <footer id="footer">
-                    <section class="split contact">
-                        <section>
-                            <h3>Phone</h3>
-                            <p><a href="tel:+12089991801">(208) 999-1801</a></p>
-                        </section>
-                        <section>
-                            <h3>Email</h3>
-                            <p><a href="mailto:bp21harrison@gmail.com">bp21harrison@gmail.com</a></p>
-                        </section>
-                        <section>
-                            <h3>Social</h3>
-                            <ul class="icons alt">
-                                <li><a href="https://github.com/BaylorH" class="icon brands alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-                                <li><a href="https://www.linkedin.com/in/baylor-harrison" class="icon brands alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-                            </ul>
-                        </section>
-                    </section>
-                    <section class="section-place-holder-hidden">
-                    </section>
-                </footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+							</section></section><section id="next"><p class="eyebrow">Where it stands</p><h2>The work keeps moving.</h2><p>This project remains part of the earlier-work collection. The original materials show the implementation at that point in time; they are not a claim about current operation.</p></section></div></div><a class="next-project" href="pacman.html"><span class="eyebrow">Keep exploring / next project</span><strong>Java Pacman <span aria-hidden="true">↗</span></strong></a></main><footer class="site-footer"><div class="footer-top"><div><p class="eyebrow">A useful next conversation</p><h2>What could work<br><em>better?</em></h2></div><div class="footer-contact"><p>Have a workflow, a product idea, or a team<br>that could use a different perspective?</p><a class="button dark" href="mailto:bp21harrison@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a></div></div><div class="footer-bottom"><span>© 2026 Baylor Harrison</span><div><a href="https://www.linkedin.com/in/baylor-harrison">LinkedIn ↗</a><a href="https://github.com/BaylorH">GitHub ↗</a><a href="tel:+12089991801">Call ↗</a></div><span>Built with care. Designed to be useful.</span></div></footer><dialog id="image-viewer" aria-label="Expanded project image"><button type="button" class="viewer-close" aria-label="Close image">Close ×</button><img alt=""><p></p></dialog></body></html>

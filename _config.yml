@@ -1,0 +1,11 @@
+# GitHub Pages serves main at /. Keep build inputs and historical implementation out of the website.
+exclude:
+  - content
+  - tools
+  - docs
+  - dist
+  - generic.html
+  - elements.html
+  - README.md
+  - README.txt
+  - .DS_Store

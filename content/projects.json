@@ -1,0 +1,367 @@
+[
+  {
+    "id": "fiftyflowers",
+    "title": "AI across the flower business.",
+    "name": "FiftyFlowers",
+    "category": "business",
+    "sector": "E-commerce · Retail & wholesale",
+    "status": "Production tools + ongoing work",
+    "color": "green",
+    "visual": "flowers",
+    "short": "Support, product imagery and company knowledge—connected in one internal platform.",
+    "role": "AI Solutions Engineer",
+    "stack": ["React", "Firebase", "Google Cloud", "Shopify", "AI APIs"],
+    "problem": "An online flower retailer has very different workflows across customer support, marketing and storefront operations. The challenge is connecting useful AI to each team’s actual information and tools.",
+    "contribution": "Built and evolved the internal AI platform, support applications, a Chrome extension, marketing tools and commerce integrations. The work spans full-stack application development, cloud services, product-data workflows and visibility into the company’s AI roadmap.",
+    "groups": [
+      [
+        "Customer service",
+        "Four applications for customer questions, reviews, claims and payment disputes, with shared chat, case history and a Chrome extension. The serving layer moved from AWS Lambda to Firebase and Google Cloud."
+      ],
+      [
+        "Company Second Brain",
+        "An umbrella MVP connecting departmental knowledge and tools. Customer Service knowledge, voice and policies support production apps; Marketing demonstrates image-tool guidance and presets; Engineering is a beta used in my own AI-assisted coding."
+      ],
+      [
+        "Marketing workflows",
+        "Image Studio supports consistent product photos, reusable presets and transparent cutouts. Farm Exports supports catalog-image work. The FAQ & Content Engine helps identify unanswered questions and review content drafts."
+      ],
+      [
+        "Shopping & operations",
+        "The flower-selection assistant, Share Your Flair wedding submissions and urgent-order requests connect storefront interactions with operational workflows. Earlier implementations and later improvements are distinct parts of the work."
+      ],
+      [
+        "Proposal Manager",
+        "Implemented supplied wireframes as a tool for event planning, flower recipes, presentations and shopping lists. It was not launched; work paused when DIY Migration took priority."
+      ],
+      [
+        "DIY Kits Migration",
+        "Tools match farm spreadsheets with store products and transfer kit recipes and purchase links to a test store, with source tracking and checks. Data cleanup and the production handoff remain ongoing."
+      ],
+      [
+        "Project visibility",
+        "A dedicated FiftyFlowers dashboard in The Record, linked from Internal AI, gives access to the AI roadmap, project milestones, completed work and evidence."
+      ]
+    ],
+    "flow": ["Team workflows", "Connected AI tools", "Human review"],
+    "next": "Continue the migration cleanup and handoff, and develop the company knowledge workspace beyond its MVP. Individual tools have different levels of maturity; the whole platform is not one finished autonomous system.",
+    "evidence": "Scope reflects the reviewed project records and the saved September 2026 professional profile. The diagram is a capability map, not a screenshot or proof of company-wide adoption."
+  },
+  {
+    "id": "till",
+    "title": "A clearer view of lending decisions.",
+    "name": "Till",
+    "category": "business",
+    "sector": "Financial services · Lending",
+    "status": "Scoring service + dashboard",
+    "color": "blue",
+    "visual": "till",
+    "short": "Machine-learning loan scoring and an operating dashboard for the lending workflow.",
+    "role": "Software Engineer · Manifold",
+    "stack": [
+      "Machine learning",
+      "APIs",
+      "Cloud services",
+      "Data visualization"
+    ],
+    "problem": "Loan scoring needs to fit into an existing application process, while the team needs visibility into scoring activity and loan performance.",
+    "contribution": "Built a machine-learning scoring service integrated with the lender’s application system, plus a dashboard for reviewing scoring activity, approval thresholds, lead sources and loan performance.",
+    "groups": [
+      [
+        "Scoring integration",
+        "Receives application inputs and returns scoring results to the existing lending system."
+      ],
+      [
+        "Operational visibility",
+        "Brings scoring activity, policy thresholds, source information and historical performance into one dashboard."
+      ],
+      [
+        "Business outcome",
+        "The service saves $2,000 per month, equivalent to $24,000 annualized. The annualized figure expresses the monthly savings over twelve months."
+      ]
+    ],
+    "flow": ["Loan application", "Scoring service", "Decision & reporting"],
+    "next": "Keep scoring behavior, reporting and policy changes understandable as the lending workflow evolves.",
+    "evidence": "The workflow represents the documented service and dashboard. No customer applications or private financial records are included."
+  },
+  {
+    "id": "engineering-platform",
+    "title": "Better systems for building systems.",
+    "name": "AI Development Platform",
+    "category": "engineering",
+    "sector": "Internal products · Developer experience",
+    "status": "Working tools + orchestration prototype",
+    "color": "ink",
+    "visual": "platform",
+    "short": "Project management, durable engineering memory and supervised coding-agent workflows.",
+    "role": "Founder & Software Engineer",
+    "stack": [
+      "Agent connections",
+      "Project management",
+      "Knowledge systems",
+      "Cloud applications"
+    ],
+    "problem": "AI-assisted work can lose context across sessions and scatter decisions across repositories, conversations and tools. Planning and delivery need a shared structure that humans can inspect.",
+    "contribution": "Built an internal product suite around three distinct responsibilities: managing the work, retaining engineering knowledge and supervising agent assignments. These tools support my own development process; deeper integration remains in development.",
+    "groups": [
+      [
+        "The Record · manage the work",
+        "A project-management system for developers, clients and connected coding agents. It organizes scoped milestones, progress, decisions and evidence of completed work in a shared workspace."
+      ],
+      [
+        "Brain · preserve the context",
+        "Reusable engineering memory for project context, repository knowledge, decisions, workflows and handoffs across coding sessions."
+      ],
+      [
+        "Jarvis OS · coordinate execution",
+        "An orchestration prototype for assigning and supervising coding agents. It explores how agent work can connect with the project record and engineering memory."
+      ],
+      [
+        "The working cycle",
+        "Plan a bounded milestone, pursue that work, capture questions and evidence, then review the outcome before planning the next scope. Engineering judgment and release accountability stay with the developer."
+      ]
+    ],
+    "flow": ["The Record", "Brain", "Jarvis OS"],
+    "next": "Bring project context and engineering memory into a more unified assistant experience. The complete proposed integration is not presented as a finished autonomous platform.",
+    "evidence": "This is a conceptual map of the actual product responsibilities. It deliberately omits private prompts, credentials and implementation details."
+  },
+  {
+    "id": "create-spaces",
+    "title": "From business reports to useful answers.",
+    "name": "Create Spaces",
+    "category": "business",
+    "sector": "Office furniture · Workplace services",
+    "status": "Export proof of concept",
+    "color": "sand",
+    "visual": "reports",
+    "short": "A first step toward reliable report exports and a conversational reporting workspace.",
+    "role": "Software Engineer · Manifold",
+    "stack": ["Hedberg", "Report exports", "Cloud environments", "AI analysis"],
+    "problem": "Useful sales data lives inside business software. Before a conversational dashboard can be dependable, exports must land somewhere the analysis workflow can actually read.",
+    "contribution": "Tested AI analysis of sales reports exported from Hedberg, with the baseline exercised locally and in the cloud. The work separates reliable data collection from the future conversational interface.",
+    "groups": [
+      [
+        "Export the source report",
+        "A bookings-report workflow selects the report options, generates the preview and exports a file to an accessible destination."
+      ],
+      [
+        "Validate the result",
+        "Compare the exported report and analysis with the known baseline before introducing recurrence."
+      ],
+      [
+        "Build toward conversation",
+        "A separate AI workspace is intended to let the team ask questions of the shared data and shape useful visualizations."
+      ]
+    ],
+    "flow": ["Hedberg report", "Accessible dataset", "Questions & insights"],
+    "next": "Make the bookings export reliable, then add recurring exports and summaries. A conversational reporting workspace and further workflows remain planned.",
+    "evidence": "This page describes a proof of concept and its next steps. It does not publish client sales data or represent the planned dashboard as built."
+  },
+  {
+    "id": "axiom",
+    "title": "Make past engineering work useful again.",
+    "name": "Axiom",
+    "category": "business",
+    "sector": "Structural engineering",
+    "status": "Research & estimating tools",
+    "color": "clay",
+    "visual": "axiom",
+    "short": "Tools for exploring proposal history, project fees and hours to inform new estimates.",
+    "role": "Product development & coordination",
+    "stack": [
+      "Data exploration",
+      "Search",
+      "Dashboards",
+      "Delivery coordination"
+    ],
+    "problem": "Historical proposals contain useful information for estimating new work, but finding and comparing that information can be difficult.",
+    "contribution": "Led product development and coordinated subcontractors on tools for searching past proposals and exploring fees and hours. The role includes product direction and delivery coordination rather than a claim of sole implementation.",
+    "groups": [
+      [
+        "Proposal research",
+        "Search and investigate earlier proposal information to understand comparable work."
+      ],
+      [
+        "Estimating context",
+        "Explore project fees and hours to inform estimates for new projects."
+      ],
+      [
+        "Executive briefing",
+        "Built a separate executive-briefing prototype. It was not launched."
+      ]
+    ],
+    "flow": ["Proposal history", "Search & explore", "Estimating context"],
+    "next": "Build on the research and estimating workflows as business requirements become clearer. The executive-briefing prototype remains distinct from launched work.",
+    "evidence": "Attribution follows the reviewed professional profile. No confidential proposals, fee records or client identities are exposed."
+  },
+  {
+    "id": "sitesift",
+    "title": "Keep the property search in context.",
+    "name": "SiteSift AI",
+    "category": "business",
+    "sector": "Commercial real estate",
+    "status": "Beta",
+    "color": "purple",
+    "visual": "sitesift",
+    "short": "Connect property lists, broker correspondence and decisions in one research workflow.",
+    "role": "Founder & Software Engineer",
+    "stack": [
+      "Email integration",
+      "Structured data",
+      "AI workflows",
+      "Web dashboard"
+    ],
+    "problem": "Commercial property research moves between lists, correspondence and follow-up decisions. Those parts need to remain connected as information changes.",
+    "contribution": "Built a beta connecting property lists, broker emails and a dashboard for tracking decisions and follow-up.",
+    "groups": [
+      [
+        "Property context",
+        "Keep candidate properties and their associated information organized for research."
+      ],
+      [
+        "Correspondence",
+        "Connect broker communication with the relevant property workflow."
+      ],
+      [
+        "Review & follow-up",
+        "A dashboard helps surface decisions and next actions while the underlying information is refined."
+      ]
+    ],
+    "flow": ["Property lists", "Correspondence", "Review & follow-up"],
+    "next": "Improve extraction accuracy and make conversation handling and automation dependable. The product remains beta.",
+    "evidence": "Capability overview only. No private correspondence or live prospect information is included."
+  },
+  {
+    "id": "ai-media-manager",
+    "title": "A visual library for social research.",
+    "name": "AI Media Manager",
+    "category": "engineering",
+    "sector": "Social-media research",
+    "status": "Prototype",
+    "color": "rose",
+    "visual": "media",
+    "short": "Organize Instagram accounts and imported posts into an inspectable media library.",
+    "role": "Founder & Software Engineer",
+    "stack": [
+      "Web application",
+      "Media imports",
+      "Account organization",
+      "Visual library"
+    ],
+    "problem": "Research starts with a usable collection of accounts and content. A visual library makes imported material easier to inspect before more advanced analysis is added.",
+    "contribution": "Built a prototype for organizing Instagram accounts and imported posts in a visual library, with account management and sync visibility.",
+    "groups": [
+      [
+        "Account organization",
+        "Group the accounts relevant to a research workflow."
+      ],
+      [
+        "Imported content",
+        "Inspect imported posts and media in a shared visual library."
+      ],
+      [
+        "Sync visibility",
+        "Make import and sync status part of the interface instead of hiding incomplete work."
+      ]
+    ],
+    "flow": ["Accounts", "Imported posts", "Research library"],
+    "next": "Reliable syncing, broader import coverage and additional research tools remain in development.",
+    "evidence": "This is a prototype capability map, not a claim of complete or reliable platform-wide synchronization."
+  },
+  {
+    "id": "client-portal",
+    "name": "Client Portal",
+    "title": "A shared place for client work.",
+    "category": "earlier",
+    "sector": "Digital agency · 2024 internship",
+    "status": "Historical project",
+    "color": "blue",
+    "image": "images/clientPortalClientDashboard.png",
+    "short": "The first client portal for an agency’s communication and project workflows.",
+    "role": "Web Developer Intern",
+    "stack": ["Preact", "TypeScript", "Node.js", "Firebase"],
+    "problem": "An agency needed a central platform for client communication.",
+    "contribution": "Independently developed the first version, working with the lead developer on setup and CSS and collaborating on the visual direction.",
+    "legacy": true
+  },
+  {
+    "id": "alpha-seo",
+    "name": "ALPHA SEO",
+    "title": "Tools for focused search optimization.",
+    "category": "earlier",
+    "sector": "Digital agency · 2024 internship",
+    "status": "Collaborative project",
+    "color": "green",
+    "visual": "seo",
+    "short": "Frontend and backend contributions to a domain-focused SEO tool.",
+    "role": "Web Developer Intern",
+    "stack": ["React", "TypeScript", "Node.js", "Firebase"],
+    "problem": "An agency needed a domain-focused SEO optimization interface.",
+    "contribution": "Co-developed application features with the engineering team. The original project demonstration is retained below.",
+    "legacy": true
+  },
+  {
+    "id": "machine-learning-visualization",
+    "name": "3D Machine Learning",
+    "title": "Make the data something to explore.",
+    "category": "earlier",
+    "sector": "ASU · Team capstone",
+    "status": "Academic project",
+    "color": "purple",
+    "image": "images/MachineLearningVisualization.png",
+    "short": "An interactive 3D learning environment for machine-learning concepts.",
+    "role": "Member of a five-person team",
+    "stack": ["Unity", "C#", "Machine learning", "3D visualization"],
+    "problem": "Machine-learning concepts benefit from an environment where learners can inspect and interact with the data.",
+    "contribution": "Worked in a team of five on a 3D visualization tool for an ASU professor. The original walkthrough includes data positioning and interactive predictions.",
+    "legacy": true
+  },
+  {
+    "id": "pacman",
+    "name": "Java Pacman",
+    "title": "A familiar game, with room to experiment.",
+    "category": "earlier",
+    "sector": "Game development",
+    "status": "Independent project",
+    "color": "ink",
+    "image": "images/Pacmanpic2.jpg",
+    "short": "A state-based Java game with two-player and free-movement variations.",
+    "role": "Independent developer",
+    "stack": ["Java", "State machines", "Game systems"],
+    "problem": "Recreating a familiar game offered a way to explore game states, movement and rule variations.",
+    "contribution": "Developed a Java Pacman game with two-player mode, free movement and expanded traversal. The original code and feature walkthrough are preserved.",
+    "legacy": true
+  },
+  {
+    "id": "lunar-base",
+    "name": "Lunar Base",
+    "title": "A small world, built from the ground up.",
+    "category": "earlier",
+    "sector": "Interactive 3D",
+    "status": "Independent project",
+    "color": "sand",
+    "image": "images/LunarBase.png",
+    "short": "A Unity environment with custom terrain, animation and third-person exploration.",
+    "role": "Environment & gameplay developer",
+    "stack": ["Unity", "C#", "Animation", "3D environments"],
+    "problem": "Create an explorable environment that combines world-building with responsive character control.",
+    "contribution": "Designed a moon-base environment with custom terrain, skybox and animations, including a third-person controller. Original imagery and the animation-state diagram are retained.",
+    "legacy": true
+  },
+  {
+    "id": "ai-travel-companion",
+    "name": "AI Travel Companion",
+    "title": "Turn a conversation into an itinerary.",
+    "category": "earlier",
+    "sector": "iOS application",
+    "status": "Independent project",
+    "color": "rose",
+    "image": "images/TravelCompanionItinerary.png",
+    "short": "A Swift app that combines conversation, itinerary editing and maps.",
+    "role": "iOS developer",
+    "stack": ["Swift", "OpenAI API", "Maps", "Location services"],
+    "problem": "Travel planning moves between conversation, a schedule and places on a map.",
+    "contribution": "Built an iOS app that uses conversation to create and update an itinerary, with integrated map and location features. Original screens remain in the walkthrough.",
+    "legacy": true
+  }
+]
