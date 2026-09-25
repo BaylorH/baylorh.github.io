@@ -78,35 +78,80 @@ if (sections.length) {
   update();
 }
 
-// Play historical previews only in view; preserve explicit pause and reduced-motion choices.
+// Retain the embed across scrolling: destroying it can cancel YouTube startup.
+// Playback commands wait for the official API's readiness event.
+let youtubeAPI;
+function loadYouTubeAPI() {
+  if (window.YT?.Player) return Promise.resolve(window.YT);
+  if (!youtubeAPI) youtubeAPI = new Promise((resolve, reject) => {
+    const timeout = setTimeout(() => reject(new Error('Player unavailable')), 15000);
+    window.onYouTubeIframeAPIReady = () => { clearTimeout(timeout); resolve(window.YT); };
+    const script = document.createElement('script');
+    script.src = 'https://www.youtube.com/iframe_api';
+    script.onerror = () => { clearTimeout(timeout); reject(new Error('Player unavailable')); };
+    document.head.append(script);
+  });
+  return youtubeAPI;
+}
 for (const root of document.querySelectorAll('[data-video-preview]')) {
   const frame = root.querySelector('iframe');
   const button = root.querySelector('.video-toggle');
+  const fallback = root.querySelector('.video-fallback');
+  const embedURL = new URL(frame.src);
+  embedURL.searchParams.set('origin', location.origin);
+  frame.src = embedURL.href;
   const preference = matchMedia('(prefers-reduced-motion: reduce)');
-  const base = new URL(frame.src);
   let visible = false;
   let paused = preference.matches;
   let playing = false;
-  function update() {
-    const shouldPlay = visible && !paused && !document.hidden;
-    if (shouldPlay !== playing) {
-      playing = shouldPlay;
-      frame.hidden = !playing;
-      if (playing) {
-        const url = new URL(base); url.searchParams.set('autoplay', '1');
-        frame.src = url.href;
-      } else frame.removeAttribute('src');
-    }
-    button.textContent = paused ? 'Play preview' : 'Pause preview';
-    button.setAttribute('aria-label', `${paused ? 'Play' : 'Pause'} ALPHA SEO preview`);
+  let ready = false;
+  let playRequested = false;
+  let pausing = false;
+  let player;
+  const wantsPlayback = () => visible && !paused && !document.hidden;
+  function label() {
+    button.textContent = paused ? 'Play preview' : playing ? 'Pause preview' : 'Loading preview…';
+    button.setAttribute('aria-label', `${button.textContent} · ALPHA SEO`);
   }
-  frame.removeAttribute('src'); frame.hidden = true; button.hidden = false;
+  function update() {
+    if (ready) {
+      if (wantsPlayback()) { playRequested = true; player.mute(); player.playVideo(); }
+      else { pausing = playing || playRequested; player.pauseVideo(); }
+    }
+    label();
+  }
+  // If the API cannot load, retain YouTube's own play/error controls.
+  const nativeFallback = () => { button.hidden = true; frame.hidden = false; fallback.hidden = false; };
+  const startupTimeout = setTimeout(nativeFallback, 15000);
+  button.hidden = false;
+  label();
   button.addEventListener('click', () => { paused = !paused; update(); });
   preference.addEventListener('change', () => { paused = preference.matches; update(); });
   document.addEventListener('visibilitychange', update);
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(entries => { visible = entries[0].isIntersecting; update(); }, { threshold: .15 }).observe(root);
   } else { visible = true; update(); }
+  loadYouTubeAPI().then(YT => {
+    player = new YT.Player(frame, {
+      events: {
+        onReady() { clearTimeout(startupTimeout); ready = true; button.hidden = false; fallback.hidden = true; update(); },
+        onStateChange(event) {
+          playing = event.data === 1;
+          if (playing) {
+            // Honor native Play as user intent, but finish pending automatic pauses.
+            if (!visible || document.hidden || (pausing && paused)) player.pauseVideo();
+            else { paused = false; pausing = false; }
+          } else if (event.data === 2) {
+            if (!pausing && visible && !document.hidden) paused = true;
+            pausing = false; playRequested = false;
+          }
+          label();
+        },
+        onAutoplayBlocked() { paused = true; playing = false; label(); },
+        onError() { clearTimeout(startupTimeout); nativeFallback(); }
+      }
+    });
+  }).catch(() => { clearTimeout(startupTimeout); nativeFallback(); });
 }
 
 // Screen changes are deliberate, scoped to one gallery, and never auto-advance.

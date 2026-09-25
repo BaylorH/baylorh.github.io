@@ -5,7 +5,7 @@
   "scripts": {
     "build:motion": "esbuild assets/js/source/motion.js --bundle --minify --format=esm --target=es2022 --legal-comments=external --outfile=assets/js/motion.js",
     "build": "npm run build:motion && python3 tools/build.py && python3 tools/package.py",
-    "test": "python3 tools/check.py && python3 tools/check-refinement.py && node --check assets/js/portfolio.js && node tools/check-analytics.cjs"
+    "test": "python3 tools/check.py && python3 tools/check-refinement.py && node --check assets/js/portfolio.js && node tools/check-analytics.cjs && node tools/check-video.cjs"
   },
   "keywords": [],
   "author": "",

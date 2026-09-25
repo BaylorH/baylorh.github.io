@@ -1,9 +1,10 @@
 """Generate the portfolio as portable, crawlable static HTML."""
 from pathlib import Path
 from html import escape as e
-import json, re, subprocess, os
+import json, re, subprocess, os, hashlib
 from screen_gallery import preview_screens, screen_gallery
 ROOT = Path(__file__).resolve().parents[1]
+CONTROLLER_HASH = hashlib.sha256((ROOT/'assets/js/portfolio.js').read_bytes()).hexdigest()[:12]
 PROJECTS = json.loads((ROOT/'content/projects.json').read_text())
 # Original source is recoverable from the committed baseline; local copies never ship.
 legacy_dir=ROOT/'content/legacy'
@@ -28,7 +29,7 @@ def footer():
  return f'''<footer class="site-footer"><div class="footer-top"><div><p class="eyebrow">A useful next conversation</p><h2>What could work<br><em>better?</em></h2></div><div class="footer-contact"><p>Have a workflow, a product idea, or a team<br>that could use a different perspective?</p><a class="button dark" href="mailto:{EMAIL}">Let’s talk <span aria-hidden="true">↗</span></a></div></div><div class="footer-bottom"><span>© 2026 Baylor Harrison</span><div><a href="https://www.linkedin.com/in/baylor-harrison">LinkedIn ↗</a><a href="https://github.com/BaylorH">GitHub ↗</a><a href="tel:+12089991801">Call ↗</a></div><span>Built with care. Designed to be useful.</span></div></footer>'''
 
 def page(title,description,body,path,active=''):
- return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f3ed"><meta name="analytics-id" content="{ANALYTICS_ID}"><title>{e(title)} · Baylor Harrison</title><meta name="description" content="{e(description)}"><link rel="canonical" href="{SITE}/{path}"><meta property="og:title" content="{e(title)} · Baylor Harrison"><meta property="og:description" content="{e(description)}"><meta property="og:type" content="website"><meta property="og:url" content="{SITE}/{path}"><meta property="og:image" content="{SITE}/images/portfolio-social.png"><link rel="icon" type="image/svg+xml" href="images/portfolio-mark.svg"><link rel="stylesheet" href="assets/css/portfolio.css"><link rel="stylesheet" href="assets/css/refinement.css"><script defer src="assets/js/portfolio.js"></script><script defer src="assets/js/analytics.js"></script><script type="module" src="assets/js/motion.js"></script></head><body>{header(active)}<main id="main">{body}</main>{footer()}<dialog id="image-viewer" aria-label="Expanded project image"><button type="button" class="viewer-close" aria-label="Close image">Close ×</button><img alt=""><p></p></dialog></body></html>'''
+ return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f3ed"><meta name="analytics-id" content="{ANALYTICS_ID}"><title>{e(title)} · Baylor Harrison</title><meta name="description" content="{e(description)}"><link rel="canonical" href="{SITE}/{path}"><meta property="og:title" content="{e(title)} · Baylor Harrison"><meta property="og:description" content="{e(description)}"><meta property="og:type" content="website"><meta property="og:url" content="{SITE}/{path}"><meta property="og:image" content="{SITE}/images/portfolio-social.png"><link rel="icon" type="image/svg+xml" href="images/portfolio-mark.svg"><link rel="stylesheet" href="assets/css/portfolio.css"><link rel="stylesheet" href="assets/css/refinement.css"><script defer src="assets/js/portfolio.js?v={CONTROLLER_HASH}"></script><script defer src="assets/js/analytics.js"></script><script type="module" src="assets/js/motion.js"></script></head><body>{header(active)}<main id="main">{body}</main>{footer()}<dialog id="image-viewer" aria-label="Expanded project image"><button type="button" class="viewer-close" aria-label="Close image">Close ×</button><img alt=""><p></p></dialog></body></html>'''
 
 def visual(p,large=False,layered=False):
  if not large and not p.get("videoId") and len(preview_screens(p))>1:
@@ -36,7 +37,7 @@ def visual(p,large=False,layered=False):
  if p.get('videoId'):
   video=e(p['videoId']); fallback=visual({k:v for k,v in p.items() if k!='videoId'},large)
   caption=f'<p class="image-caption">{e(p["videoCaption"])}</p>' if large else ''
-  return f'<div class="video-preview" data-video-preview data-video-id="{video}"><div class="video-poster">{fallback}</div><iframe src="https://www.youtube-nocookie.com/embed/{video}?mute=1&amp;loop=1&amp;playlist={video}&amp;playsinline=1" title="{e(p["name"])} original product demonstration" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><button type="button" class="video-toggle" hidden>Pause preview</button></div>'+caption
+  return f'<div class="video-preview" data-video-preview data-video-id="{video}"><div class="video-poster">{fallback}</div><iframe src="https://www.youtube-nocookie.com/embed/{video}?enablejsapi=1&amp;mute=1&amp;loop=1&amp;playlist={video}&amp;playsinline=1" title="{e(p["name"])} original product demonstration" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><button type="button" class="video-toggle" hidden>Pause preview</button><a class="video-fallback" hidden href="https://www.youtube.com/watch?v={video}" target="_blank" rel="noopener">Watch original video ↗</a></div>'+caption
  if p.get('image'):
   caption = f'<p class="image-caption">{e(p["imageCaption"])}</p>' if large and p.get('imageCaption') else ''
   return f'<div class="project-visual {p["color"]} image-visual"><img src="{p["image"]}" alt="{e(p.get("imageAlt", p["name"] + " — original project screen"))}" loading="lazy" width="{p.get("imageWidth",1200)}" height="{p.get("imageHeight",800)}"></div>'+caption

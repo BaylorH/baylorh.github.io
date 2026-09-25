@@ -80,3 +80,11 @@ for item in items:
 assert next(x for x in items if x['id']=='axiom')['previewMode']=='single'
 assert 'object-fit:contain' in (r/'assets/css/refinement.css').read_text()
 print('PASS: directory order, unique screen sources, dimensions, keyboard-ready controls and singular Axiom cover')
+
+# Returning visitors must receive the matching controller, not stale cached playback code.
+import hashlib
+controller_hash=hashlib.sha256((r/'assets/js/portfolio.js').read_bytes()).hexdigest()[:12]
+for page in r.glob('*.html'):
+ if 'assets/js/portfolio.js' in page.read_text():
+  assert f'assets/js/portfolio.js?v={controller_hash}' in page.read_text(), f'{page.name}: stale controller URL'
+print('PASS: generated pages version the playback controller by content')
