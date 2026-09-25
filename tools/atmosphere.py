@@ -4,14 +4,18 @@ from html import escape as e
 def stream(projects):
  selected=['fiftyflowers','till','engineering-platform','create-spaces','axiom','sitesift','ai-media-manager']
  images=[next(p for p in projects if p['id']==pid) for pid in selected]
+ # The panoramic SiteSift cover is useful in its gallery; the taller settings
+ # view reads better in the hero without cropping or distorting either image.
+ settings=next(screen for screen in images[5]['screens'] if screen['src'].endswith('sitesift-settings.webp'))
+ images[5]={**images[5], 'image':settings['src'], 'imageWidth':settings['width'], 'imageHeight':settings['height']}
  duration=36
  keys=[];cards=[]
  for direction,name,rail_images in [(1,'stream-right',images[::2]),(-1,'stream-left',images[1::2])]:
   stops=[]
   for n in range(41):
-   u=n/40;scale=(2.6/16.25)*(46/2.6)**u;z=30*(1-1/scale)
-   rail=38-(38+11)*(1-u)**3.3;turn=6+22*u
-   stops.append(f'{u*100:.1f}%{{transform:translate3d({direction*rail:.3f}cqw,0,{z:.3f}cqw) rotateY({-direction*turn:.2f}deg)}}')
+   u=n/40;scale=.12*(1.25/.12)**u;z=30*(1-1/scale)
+   rail=28-39*(1-u)**3.3+82*(max(0,(u-.7)/.3))**2
+   stops.append(f'{u*100:.1f}%{{transform:translate3d({direction*rail:.3f}cqw,0,{z:.3f}cqw)}}')
   keys.append('@keyframes '+name+'{'+''.join(stops)+'}')
   for i,project in enumerate(rail_images):
    width,height=project['imageWidth'],project['imageHeight']

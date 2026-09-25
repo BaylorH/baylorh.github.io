@@ -25,3 +25,7 @@ Review the localhost preview. Publish the prepared release through the owner-run
 ## Follow-up: let the screenshots breathe
 
 The hero now animates image elements directly at their native proportions, without a painted card, border, letterboxing or shadow. Seven screenshots are divided between the two rails instead of duplicating all seven on both sides. The cycle increased from 22 to 36 seconds; narrower images and a slightly tighter rail spread provide a longer interval where a whole screenshot fits on screen. This change applies only to the hero animation. Existing page galleries retain their layout.
+
+## Follow-up: proportional, taller images
+
+The previous Y-axis tilt combined with forward perspective widened projected screenshots near the viewport edges, even though their underlying layout ratios were correct. Removed the tilt so depth scaling remains uniform. Images are now sized from the hero height (60% desktop, 48% mobile before perspective), with a capped scale and an outward exit trajectory. The hero uses the existing taller SiteSift settings screenshot instead of its panoramic cover; galleries are unchanged. Browser measurements at 1440×900 and 390×844 matched source aspect ratios within 0.00002 and showed no horizontal overflow. The 36-second cycle, motion controls and frameless presentation remain.
