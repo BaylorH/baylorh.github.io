@@ -71,3 +71,22 @@ html { scroll-padding-top:30px; }
 .product-screens img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line, #ddd); }
 .product-screens figcaption { margin-top: .75rem; color: #555e57; font-size: .88rem; line-height: 1.65; max-width: 68ch; }
 .product-screens .image-expand { display:block; width:100%; }
+
+/* Original product artwork uses its natural ratio on a consistent, quiet plate. */
+.brand-art { display: inline-flex; align-items: center; justify-content: center; gap: 12px; width: fit-content; max-width: 100%; background: #293137; color: #fff; border-radius: 8px; }
+.brand-art img { display: block; object-fit: contain; width: auto; max-width: 170px; height: 38px; }
+.featured-brand.brand-art { padding: 12px 18px; }
+.featured-brand.brand-art img { height: 40px; }
+.client-brand.brand-art { padding: 14px 20px; }
+.client-brand.brand-art img { height: 44px; max-width: 190px; }
+.directory-brand { padding: 9px 13px; margin: 4px 0 12px; min-height: 44px; }
+.directory-brand img { height: 26px; max-width: 125px; }
+.brand-art--icon { background: transparent; color: var(--ink); padding-left: 0; }
+.brand-art--icon img { width: 40px; height: 40px; }
+.brand-art--icon span { font-size: 17px; font-weight: 600; letter-spacing: -.02em; }
+.directory-brand.brand-art--icon { padding: 0; }
+.directory-brand.brand-art--icon img { width: 32px; height: 32px; }
+@media (max-width: 540px) {
+ .client-brand.brand-art img { max-width: 155px; height: 38px; }
+ .brand-art--icon span { font-size: 15px; }
+}

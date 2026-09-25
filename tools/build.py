@@ -52,12 +52,21 @@ def visual(p,large=False):
   inner='<span class="visual-kicker">ALPHA SEO / DIGITAL AGENCY</span><div class="seo-art" aria-hidden="true"><span>α</span><div><i></i><i></i><i></i><i></i></div></div><div class="visual-bottom">A clearer view of search.</div>'
  return f'<div class="project-visual {color} {"large" if large else ""}" role="img" aria-label="{e(p["name"])} illustrated capability overview">{inner}<span class="map-label">Illustrated overview</span></div>'
 
+def brand_art(p, context, decorative=False):
+ if not p.get('logo'):return ''
+ kind=p.get('logoKind','wordmark')
+ label='' if decorative or kind=='icon' else p['name']
+ image=f'<img src="{e(p["logo"])}" alt="{e(label)}" width="{p["logoWidth"]}" height="{p["logoHeight"]}" loading="lazy">'
+ # A product icon remains an icon; its readable product name is separate text.
+ name=f'<span>{e(p["name"])}</span>' if kind=='icon' and not decorative else ''
+ return f'<div class="brand-art brand-art--{kind} {context}"'+(' aria-hidden="true"' if decorative else '')+f'>{image}{name}</div>'
+
 def card(p,n):
- return f'''<article class="project-card" data-category="{p['category']}"><a class="visual-link" href="{p['id']}.html" aria-label="Explore {e(p['name'])}">{visual(p)}</a><div class="card-meta"><span>{e(p['sector'])}</span><span>{n:02d}</span></div><h3><a href="{p['id']}.html">{e(p['name'])}<span aria-hidden="true">↗</span></a></h3><p>{e(p['short'])}</p><span class="status"><i></i>{e(p['status'])}</span></article>'''
+ return f'''<article class="project-card" data-category="{p['category']}"><a class="visual-link" href="{p['id']}.html" aria-label="Explore {e(p['name'])}">{visual(p)}</a><div class="card-meta"><span>{e(p['sector'])}</span><span>{n:02d}</span></div>{brand_art(p,"directory-brand",True)}<h3><a href="{p['id']}.html">{e(p['name'])}<span aria-hidden="true">↗</span></a></h3><p>{e(p['short'])}</p><span class="status"><i></i>{e(p['status'])}</span></article>'''
 
 def home():
  from homepage import homepage
- return page('AI applications, built around real work','Baylor Harrison builds AI applications, business automation and cloud systems. Explore client work, developer tools and selected earlier projects.',homepage(PROJECTS,visual,card),'','work')
+ return page('AI applications, built around real work','Baylor Harrison builds AI applications, business automation and cloud systems. Explore client work, developer tools and selected earlier projects.',homepage(PROJECTS,visual,card,brand_art),'','work')
 
 
 def legacy_body(p):
@@ -90,7 +99,7 @@ def legacy_body(p):
 
 def case(p,n):
  chips=''.join(f'<span>{e(t)}</span>' for t in p['stack'])
- brand=f'<div class="client-brand"><img src="{p["logo"]}" alt="{e(p["name"])}"></div>' if p.get('logo') else ''
+ brand=brand_art(p,"client-brand")
  body=f'''<section class="case-hero"><a class="back-link" href="index.html#work">← All work</a><p class="eyebrow">{e(p['sector'])}</p>{brand}<h1>{e(p['title'])}</h1><p class="case-deck">{e(p['short'])}</p><div class="case-meta"><div><span>PROJECT</span><b>{e(p['name'])}</b></div><div><span>MY ROLE</span><b>{e(p['role'])}</b></div><div><span>STAGE</span><b>{e(p['status'])}</b></div></div></section><div class="case-visual">{visual(p,True)}</div><div class="case-body"><aside class="case-aside"><p class="eyebrow">Inside this project</p><a href="#context">The context</a><a href="#contribution">My contribution</a><a href="#product">The product</a><a href="#next">Where it stands</a><div class="tech-tags">{chips}</div></aside><div class="case-story"><section id="context"><p class="eyebrow">The context</p><h2>A problem worth solving.</h2><p>{e(p['problem'])}</p></section><section id="contribution"><p class="eyebrow">My contribution</p><h2>What I brought to the work.</h2><p>{e(p['contribution'])}</p></section><section id="product"><p class="eyebrow">The product</p><h2>What it makes possible.</h2>'''
  if p.get('legacy'):
   body+=legacy_body(p)

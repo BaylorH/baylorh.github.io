@@ -25,3 +25,37 @@ for item in json.loads((r/'content/projects.json').read_text()):
   with Image.open(r/item['image']) as image:
    assert image.size==(item['imageWidth'],item['imageHeight']), item['id']
 print('PASS: source image dimensions match generated aspect ratios')
+
+# Real brand art must retain an intrinsic ratio and appear in the directory and story.
+from html.parser import HTMLParser
+class BrandImages(HTMLParser):
+ def __init__(self,html):
+  super().__init__(); self.images=[]; self.feed(html)
+ def handle_starttag(self,tag,attrs):
+  if tag=='img':self.images.append(dict(attrs))
+items=json.loads((r/'content/projects.json').read_text())
+for pid in ['fiftyflowers','till','create-spaces','axiom','sitesift','ai-media-manager']:
+ item=next(p for p in items if p['id']==pid)
+ assert item.get('logo'), f'{pid}: real brand art is missing'
+ assert item.get('logoWidth',0)>0 and item.get('logoHeight',0)>0, f'{pid}: missing intrinsic logo dimensions'
+ path=r/item['logo']
+ if path.suffix=='.svg':
+  import xml.etree.ElementTree as ET
+  svg=ET.fromstring(path.read_text())
+  actual=tuple(map(float,svg.attrib['viewBox'].split()[2:]))
+  for node in svg.iter():
+   assert node.tag.split('}')[-1] not in ['script','foreignObject','image'], f'{pid}: unsafe SVG content'
+   assert all(not key.lower().startswith('on') and key.split('}')[-1] not in ['href','src'] for key in node.attrib), f'{pid}: active or external SVG content'
+ else:
+  with Image.open(path) as image:actual=image.size
+ assert actual==(item['logoWidth'],item['logoHeight']), f'{pid}: dimensions differ from original art'
+ for page in ['index.html',pid+'.html']:
+  matches=[im for im in BrandImages((r/page).read_text()).images if im.get('src')==item['logo']]
+  assert matches, f'{page}: missing {pid} brand art'
+  assert all(im.get('width')==str(item['logoWidth']) and im.get('height')==str(item['logoHeight']) for im in matches), f'{page}: brand ratio not reserved'
+for pid in ['till','engineering-platform']:
+ item=next(p for p in items if p['id']==pid)
+ assert item.get('image','').startswith('images/product-screens/'), f'{pid}: selected story should show the reviewed interface'
+ assert item['imageCaption'], f'{pid}: interface evidence requires its caption'
+ assert item['imageCaption'] in (r/(pid+'.html')).read_text(), f'{pid}: caption was lost'
+print('PASS: verified brand art and reviewed selected-work screenshots retain dimensions and captions')

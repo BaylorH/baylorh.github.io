@@ -76,7 +76,11 @@
         "width": 1260,
         "height": 648
       }
-    ]
+    ],
+    "logo": "images/brands/fiftyflowers.svg",
+    "logoWidth": 180,
+    "logoHeight": 83,
+    "logoKind": "wordmark"
   },
   {
     "id": "till",
@@ -127,7 +131,15 @@
         "width": 994,
         "height": 729
       }
-    ]
+    ],
+    "logoWidth": 312,
+    "logoHeight": 152,
+    "logoKind": "wordmark",
+    "image": "images/product-screens/hal-overview.webp",
+    "imageAlt": "HAL lending dashboard with private operating figures redacted",
+    "imageCaption": "The live HAL overview brings scoring activity and decision reporting together. Private operating figures are redacted; no settings were changed.",
+    "imageWidth": 994,
+    "imageHeight": 729
   },
   {
     "id": "engineering-platform",
@@ -181,7 +193,12 @@
         "width": 976,
         "height": 644
       }
-    ]
+    ],
+    "image": "images/product-screens/record-workspace.webp",
+    "imageAlt": "The Record developer workspace with projects and development tools",
+    "imageCaption": "The Record: the working dashboard, with owned projects and development tools together. Shared third-party work is excluded from this crop.",
+    "imageWidth": 976,
+    "imageHeight": 644
   },
   {
     "id": "create-spaces",
@@ -223,7 +240,10 @@
     ],
     "next": "Make the bookings export reliable, then add recurring exports and summaries. A conversational reporting workspace and further workflows remain planned.",
     "evidence": "This page describes a proof of concept and its next steps. It does not publish client sales data or represent the planned dashboard as built.",
-    "logo": "images/create-spaces-logo.png"
+    "logo": "images/create-spaces-logo.png",
+    "logoWidth": 800,
+    "logoHeight": 221,
+    "logoKind": "wordmark"
   },
   {
     "id": "axiom",
@@ -278,7 +298,11 @@
     "imageAlt": "Axiom source explorer showing proposals, actuals and workbook collections",
     "imageCaption": "The source explorer organizes historical proposal documents, engagement records and fee workbooks. Source reconciliation and estimation remain separate work.",
     "imageWidth": 1022,
-    "imageHeight": 628
+    "imageHeight": 628,
+    "logo": "images/brands/axiom.png",
+    "logoWidth": 371,
+    "logoHeight": 178,
+    "logoKind": "wordmark"
   },
   {
     "id": "sitesift",
@@ -340,7 +364,11 @@
     "imageAlt": "SiteSift dashboard with two stopped demonstration campaigns",
     "imageCaption": "Existing demonstration account: campaign status and progress at a glance. No campaign was started or message sent during this walkthrough.",
     "imageWidth": 1600,
-    "imageHeight": 685
+    "imageHeight": 685,
+    "logo": "images/brands/sitesift.png",
+    "logoWidth": 669,
+    "logoHeight": 291,
+    "logoKind": "wordmark"
   },
   {
     "id": "ai-media-manager",
@@ -395,7 +423,11 @@
     "imageAlt": "AI Media Manager social account and post library",
     "imageCaption": "Research prototype: an existing account library with imported posts. This is a dated capture, not proof of a fresh sync or production adoption.",
     "imageWidth": 1010,
-    "imageHeight": 684
+    "imageHeight": 684,
+    "logo": "images/brands/ai-media-manager.svg",
+    "logoWidth": 32,
+    "logoHeight": 32,
+    "logoKind": "icon"
   },
   {
     "id": "client-portal",

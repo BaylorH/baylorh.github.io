@@ -1,0 +1,30 @@
+[
+  {
+    "project": "fiftyflowers",
+    "source": "/Users/baylorharrison/Documents/GitHub.nosync/fiftyflowers-product-images/public/fiftyflowers-logo.svg",
+    "destination": "images/brands/fiftyflowers.svg",
+    "sha256": "5279e28d73297dc088c24fbfd691ca100864fe2cd73b4524d82457ac7b01c55c",
+    "treatment": "Unmodified copy of existing product artwork; no generated logo or private application content."
+  },
+  {
+    "project": "axiom",
+    "source": "/Users/baylorharrison/Documents/GitHub.nosync/jarvis-os/jarvis-os/record/public/img/clients/axiom.png",
+    "destination": "images/brands/axiom.png",
+    "sha256": "85317678a999b8d4028d8a132906271c977d2108359ff78bec7d323fc946e694",
+    "treatment": "Unmodified copy of existing product artwork; no generated logo or private application content."
+  },
+  {
+    "project": "sitesift",
+    "source": "/Users/baylorharrison/Documents/GitHub.nosync/jarvis-os/jarvis-os/record/public/img/clients/sitesift-wordmark.png",
+    "destination": "images/brands/sitesift.png",
+    "sha256": "b54a87428b931372a5851254b7161ca8bce6619d673b75394eee78492a4a0adf",
+    "treatment": "Unmodified copy of existing product artwork; no generated logo or private application content."
+  },
+  {
+    "project": "ai-media-manager",
+    "source": "/Users/baylorharrison/Documents/GitHub.nosync/aimedia-manager/public/favicon.svg",
+    "destination": "images/brands/ai-media-manager.svg",
+    "sha256": "5270c54d59253528b69f22be5b47e8b64fe21082dd0f99d9cc26c097475053a3",
+    "treatment": "Unmodified copy of existing product artwork; no generated logo or private application content."
+  }
+]
