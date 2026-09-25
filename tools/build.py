@@ -97,6 +97,9 @@ def case(p,n):
  else:
   body+='<div class="feature-groups">'+''.join(f'<details><summary><span>{i:02d}</span>{e(g[0])}<b aria-hidden="true">+</b></summary><p>{e(g[1])}</p></details>' for i,g in enumerate(p['groups'],1))+'</div>'
   body+='<div class="flow-panel"><p class="eyebrow">At a glance / simplified product view</p><ol>'+''.join(f'<li><span>{i:02d}</span>{e(x)}</li>' for i,x in enumerate(p['flow'],1))+'</ol></div>'
+ screens=[im for im in p.get('screens',[]) if im['src']!=p.get('image')]
+ if screens:
+  body+='<div class="product-screens"><p class="eyebrow">Inside the software</p><h3>See the actual workspace.</h3>'+''.join(f'<figure><img src="{e(im["src"])}" alt="{e(im["alt"])}" width="{im["width"]}" height="{im["height"]}" loading="lazy"><figcaption>{e(im["caption"])}</figcaption></figure>' for im in screens)+'</div>'
  body+='</section><section id="next"><p class="eyebrow">Where it stands</p><h2>The work keeps moving.</h2><p>'+e(p.get('next','This project remains part of the earlier-work collection. The original materials show the implementation at that point in time; they are not a claim about current operation.'))+'</p></section></div></div>'
  nxt=PROJECTS[(n+1)%len(PROJECTS)]
  body+=f'<a class="next-project" href="{nxt["id"]}.html"><span class="eyebrow">Keep exploring</span><strong>{e(nxt["name"])} <span aria-hidden="true">↗</span></strong></a>'

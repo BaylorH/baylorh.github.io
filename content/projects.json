@@ -60,7 +60,23 @@
     "imageAlt": "FiftyFlowers Internal AI customer inquiry screen with empty fields and navigation to the four support apps",
     "imageWidth": 1280,
     "imageHeight": 720,
-    "imageCaption": "Internal AI, September 2026. The customer inquiry interface shown with empty fields; no customer records are displayed."
+    "imageCaption": "Internal AI, September 2026. The customer inquiry interface shown with empty fields; no customer records are displayed.",
+    "screens": [
+      {
+        "src": "images/product-screens/image-studio.webp",
+        "alt": "FiftyFlowers Image Studio with an empty photo workspace",
+        "caption": "Image Studio: a real interface for photo input and reusable image workflows. No image generation was run for this capture.",
+        "width": 1260,
+        "height": 654
+      },
+      {
+        "src": "images/product-screens/company-brain.webp",
+        "alt": "Company Second Brain department overview",
+        "caption": "Company Second Brain: the departmental overview. Marketing and company-wide integration remain MVP work; Engineering is a beta.",
+        "width": 1260,
+        "height": 648
+      }
+    ]
   },
   {
     "id": "till",
@@ -102,7 +118,16 @@
     ],
     "next": "Keep scoring behavior, reporting and policy changes understandable as the lending workflow evolves.",
     "evidence": "The workflow represents the documented service and dashboard. No customer applications or private financial records are included.",
-    "logo": "images/till-logo.png"
+    "logo": "images/till-logo.png",
+    "screens": [
+      {
+        "src": "images/product-screens/hal-overview.webp",
+        "alt": "HAL lending dashboard with private operating figures redacted",
+        "caption": "The live HAL overview brings scoring activity and decision reporting together. Private operating figures are redacted; no settings were changed.",
+        "width": 994,
+        "height": 729
+      }
+    ]
   },
   {
     "id": "engineering-platform",
@@ -147,7 +172,16 @@
       "Jarvis OS"
     ],
     "next": "Bring project context and engineering memory into a more unified assistant experience. The complete proposed integration is not presented as a finished autonomous platform.",
-    "evidence": "This is a conceptual map of the actual product responsibilities. It deliberately omits private prompts, credentials and implementation details."
+    "evidence": "This is a conceptual map of the actual product responsibilities. It deliberately omits private prompts, credentials and implementation details.",
+    "screens": [
+      {
+        "src": "images/product-screens/record-workspace.webp",
+        "alt": "The Record developer workspace with projects and development tools",
+        "caption": "The Record: the working dashboard, with owned projects and development tools together. Shared third-party work is excluded from this crop.",
+        "width": 976,
+        "height": 644
+      }
+    ]
   },
   {
     "id": "create-spaces",
@@ -230,7 +264,21 @@
       "Estimating context"
     ],
     "next": "Build on the research and estimating workflows as business requirements become clearer. The executive-briefing prototype remains distinct from launched work.",
-    "evidence": "Attribution follows the reviewed professional profile. No confidential proposals, fee records or client identities are exposed."
+    "evidence": "Attribution follows the reviewed professional profile. No confidential proposals, fee records or client identities are exposed.",
+    "screens": [
+      {
+        "src": "images/product-screens/axiom-explorer.webp",
+        "alt": "Axiom source explorer showing proposals, actuals and workbook collections",
+        "caption": "The source explorer organizes historical proposal documents, engagement records and fee workbooks. Source reconciliation and estimation remain separate work.",
+        "width": 1022,
+        "height": 628
+      }
+    ],
+    "image": "images/product-screens/axiom-explorer.webp",
+    "imageAlt": "Axiom source explorer showing proposals, actuals and workbook collections",
+    "imageCaption": "The source explorer organizes historical proposal documents, engagement records and fee workbooks. Source reconciliation and estimation remain separate work.",
+    "imageWidth": 1022,
+    "imageHeight": 628
   },
   {
     "id": "sitesift",
@@ -271,7 +319,28 @@
       "Review & follow-up"
     ],
     "next": "Improve extraction accuracy and make conversation handling and automation dependable. The product remains beta.",
-    "evidence": "Capability overview only. No private correspondence or live prospect information is included."
+    "evidence": "Capability overview only. No private correspondence or live prospect information is included.",
+    "screens": [
+      {
+        "src": "images/product-screens/sitesift-dashboard.webp",
+        "alt": "SiteSift dashboard with two stopped demonstration campaigns",
+        "caption": "Existing demonstration account: campaign status and progress at a glance. No campaign was started or message sent during this walkthrough.",
+        "width": 1600,
+        "height": 685
+      },
+      {
+        "src": "images/product-screens/sitesift-landing.webp",
+        "alt": "SiteSift public landing page with product introduction",
+        "caption": "The public product introduction complements the operational dashboard.",
+        "width": 1600,
+        "height": 685
+      }
+    ],
+    "image": "images/product-screens/sitesift-dashboard.webp",
+    "imageAlt": "SiteSift dashboard with two stopped demonstration campaigns",
+    "imageCaption": "Existing demonstration account: campaign status and progress at a glance. No campaign was started or message sent during this walkthrough.",
+    "imageWidth": 1600,
+    "imageHeight": 685
   },
   {
     "id": "ai-media-manager",
@@ -312,7 +381,21 @@
       "Research library"
     ],
     "next": "Reliable syncing, broader import coverage and additional research tools remain in development.",
-    "evidence": "This is a prototype capability map, not a claim of complete or reliable platform-wide synchronization."
+    "evidence": "This is a prototype capability map, not a claim of complete or reliable platform-wide synchronization.",
+    "screens": [
+      {
+        "src": "images/product-screens/media-library.webp",
+        "alt": "AI Media Manager social account and post library",
+        "caption": "Research prototype: an existing account library with imported posts. This is a dated capture, not proof of a fresh sync or production adoption.",
+        "width": 1010,
+        "height": 684
+      }
+    ],
+    "image": "images/product-screens/media-library.webp",
+    "imageAlt": "AI Media Manager social account and post library",
+    "imageCaption": "Research prototype: an existing account library with imported posts. This is a dated capture, not proof of a fresh sync or production adoption.",
+    "imageWidth": 1010,
+    "imageHeight": 684
   },
   {
     "id": "client-portal",

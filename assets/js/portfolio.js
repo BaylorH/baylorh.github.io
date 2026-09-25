@@ -34,7 +34,7 @@ if (filters) {
 const viewer = document.querySelector("#image-viewer");
 if (viewer && typeof viewer.showModal === "function") {
   let trigger;
-  document.querySelectorAll(".legacy-content img, .case-visual .image-visual img").forEach((image) => {
+  document.querySelectorAll(".legacy-content img, .case-visual .image-visual img, .product-screens img").forEach((image) => {
     if (image.closest("a")) return;
     const button = document.createElement("button");
     button.type = "button";
@@ -46,7 +46,9 @@ if (viewer && typeof viewer.showModal === "function") {
       trigger = button;
       viewer.querySelector("img").src = image.src;
       viewer.querySelector("img").alt = image.alt;
-      viewer.querySelector("p").textContent = image.alt;
+      const caption = image.closest("figure")?.querySelector("figcaption")
+        || image.closest(".case-visual")?.querySelector(".image-caption");
+      viewer.querySelector("p").textContent = caption?.textContent?.trim() || image.alt;
       viewer.showModal();
     });
   });

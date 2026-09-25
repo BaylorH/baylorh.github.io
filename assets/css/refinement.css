@@ -63,3 +63,11 @@ html { scroll-padding-top:30px; }
 .directory-section .score-orbit,.featured-media .score-orbit{margin-left:0;transform:translateX(-50%);}
 @media(max-width:1100px){.featured-media .platform-stack{top:52px}.featured-media .platform-stack>div{height:64px;padding:12px 14px;margin-bottom:10px;}.featured-media .platform-stack b{font-size:19px}.featured-media .platform-stack small{font-size:8px}}
 @media(max-width:540px){.featured-media .platform-stack{top:50px}.featured-media .platform-stack>div{height:57px;padding:9px 12px;}.directory-section .platform-stack{top:57px}.directory-section .platform-stack>div{height:53px;padding:10px 14px}.directory-section .platform-stack b{font-size:16px}.directory-section .platform-stack small{font-size:8px}.directory-section .report-art{top:75px}}
+
+/* Real interface evidence stays legible and separate from capability artwork. */
+.product-screens { margin-top: 3rem; }
+.product-screens h3 { font-size: clamp(1.3rem, 2vw, 1.75rem); margin: .5rem 0 1.5rem; }
+.product-screens figure { margin: 0 0 2rem; }
+.product-screens img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line, #ddd); }
+.product-screens figcaption { margin-top: .75rem; color: #555e57; font-size: .88rem; line-height: 1.65; max-width: 68ch; }
+.product-screens .image-expand { display:block; width:100%; }
