@@ -33,3 +33,7 @@ The previous Y-axis tilt combined with forward perspective widened projected scr
 ## Current direction: restore the first full-screen hero
 
 At Baylor’s request, reverted the subsequent screenshot proportion, spacing, sizing and perspective experiments to the first full-screen hero in commit 1a3c570. The compact footer and phone-number removal remain. Rebuilt the release, passed the existing checks and visually confirmed the restored local preview. Earlier follow-up notes above are historical, not the current design.
+
+## Follow-up: responsive hero spacing
+
+Kept the restored animation and removed the requirement for the hero to occupy all available viewport height. Desktop height now follows available width with a 560–720px range; mobile has a 680px cap and content-safe padding. At the current 1135×942 browser size the hero decreased from 844 to 590px and the empty gap above its introduction decreased from 214 to 82px. The discipline strip and beginning of selected work are now visible sooner. Desktop/mobile visual checks and the existing automated suite passed. Public release remains pending.
