@@ -56,25 +56,25 @@
     ],
     "next": "Continue the migration cleanup and handoff, and develop the company knowledge workspace beyond its MVP. Individual tools have different levels of maturity; the whole platform is not one finished autonomous system.",
     "evidence": "Scope reflects the reviewed project records and the saved September 2026 professional profile. The diagram is a capability map, not a screenshot or proof of company-wide adoption.",
-    "image": "images/fiftyflowers-internal-ai.png",
+    "image": "images/product-screens/internal-ai.webp",
     "imageAlt": "FiftyFlowers Internal AI customer inquiry screen with empty fields and navigation to the four support apps",
-    "imageWidth": 1280,
-    "imageHeight": 720,
+    "imageWidth": 1440,
+    "imageHeight": 900,
     "imageCaption": "Internal AI, September 2026. The customer inquiry interface shown with empty fields; no customer records are displayed.",
     "screens": [
       {
         "src": "images/product-screens/image-studio.webp",
         "alt": "FiftyFlowers Image Studio with an empty photo workspace",
         "caption": "Image Studio: a real interface for photo input and reusable image workflows. No image generation was run for this capture.",
-        "width": 1260,
-        "height": 654
+        "width": 1440,
+        "height": 900
       },
       {
         "src": "images/product-screens/company-brain.webp",
         "alt": "Company Second Brain department overview",
         "caption": "Company Second Brain: the departmental overview. Marketing and company-wide integration remain MVP work; Engineering is a beta.",
-        "width": 1260,
-        "height": 648
+        "width": 1440,
+        "height": 900
       }
     ],
     "logo": "images/brands/fiftyflowers.svg",
@@ -128,8 +128,8 @@
         "src": "images/product-screens/hal-overview.webp",
         "alt": "HAL lending dashboard with private operating figures redacted",
         "caption": "The live HAL overview brings scoring activity and decision reporting together. Private operating figures are redacted; no settings were changed.",
-        "width": 994,
-        "height": 729
+        "width": 1425,
+        "height": 891
       }
     ],
     "logoWidth": 312,
@@ -138,8 +138,8 @@
     "image": "images/product-screens/hal-overview.webp",
     "imageAlt": "HAL lending dashboard with private operating figures redacted",
     "imageCaption": "The live HAL overview brings scoring activity and decision reporting together. Private operating figures are redacted; no settings were changed.",
-    "imageWidth": 994,
-    "imageHeight": 729
+    "imageWidth": 1425,
+    "imageHeight": 891
   },
   {
     "id": "engineering-platform",
@@ -189,16 +189,16 @@
       {
         "src": "images/product-screens/record-workspace.webp",
         "alt": "The Record developer workspace with projects and development tools",
-        "caption": "The Record: the working dashboard, with owned projects and development tools together. Shared third-party work is excluded from this crop.",
-        "width": 976,
-        "height": 644
+        "caption": "The Record’s live developer workspace, captured September 24, 2026. Private client and shared-project names are covered; the full dashboard layout is preserved.",
+        "width": 1440,
+        "height": 900
       }
     ],
     "image": "images/product-screens/record-workspace.webp",
     "imageAlt": "The Record developer workspace with projects and development tools",
-    "imageCaption": "The Record: the working dashboard, with owned projects and development tools together. Shared third-party work is excluded from this crop.",
-    "imageWidth": 976,
-    "imageHeight": 644
+    "imageCaption": "The Record’s live developer workspace, captured September 24, 2026. Private client and shared-project names are covered; the full dashboard layout is preserved.",
+    "imageWidth": 1440,
+    "imageHeight": 900
   },
   {
     "id": "create-spaces",
@@ -289,16 +289,16 @@
       {
         "src": "images/product-screens/axiom-explorer.webp",
         "alt": "Axiom source explorer showing proposals, actuals and workbook collections",
-        "caption": "The source explorer organizes historical proposal documents, engagement records and fee workbooks. Source reconciliation and estimation remain separate work.",
-        "width": 1022,
-        "height": 628
+        "caption": "The live source explorer organizes proposals, engagement records and fee workbooks. Private counts and account details are covered; source reconciliation and estimation remain separate work.",
+        "width": 1440,
+        "height": 900
       }
     ],
     "image": "images/product-screens/axiom-explorer.webp",
     "imageAlt": "Axiom source explorer showing proposals, actuals and workbook collections",
-    "imageCaption": "The source explorer organizes historical proposal documents, engagement records and fee workbooks. Source reconciliation and estimation remain separate work.",
-    "imageWidth": 1022,
-    "imageHeight": 628,
+    "imageCaption": "The live source explorer organizes proposals, engagement records and fee workbooks. Private counts and account details are covered; source reconciliation and estimation remain separate work.",
+    "imageWidth": 1440,
+    "imageHeight": 900,
     "logo": "images/brands/axiom.png",
     "logoWidth": 371,
     "logoHeight": 178,
@@ -415,15 +415,15 @@
         "src": "images/product-screens/media-library.webp",
         "alt": "AI Media Manager social account and post library",
         "caption": "Research prototype: an existing account library with imported posts. This is a dated capture, not proof of a fresh sync or production adoption.",
-        "width": 1010,
-        "height": 684
+        "width": 1425,
+        "height": 891
       }
     ],
     "image": "images/product-screens/media-library.webp",
     "imageAlt": "AI Media Manager social account and post library",
     "imageCaption": "Research prototype: an existing account library with imported posts. This is a dated capture, not proof of a fresh sync or production adoption.",
-    "imageWidth": 1010,
-    "imageHeight": 684,
+    "imageWidth": 1425,
+    "imageHeight": 891,
     "logo": "images/brands/ai-media-manager.svg",
     "logoWidth": 32,
     "logoHeight": 32,
@@ -470,8 +470,10 @@
       "Firebase"
     ],
     "problem": "An agency needed a domain-focused SEO optimization interface.",
-    "contribution": "Co-developed application features with the engineering team. The original project demonstration is retained below.",
-    "legacy": true
+    "contribution": "Co-developed application features with the engineering team. The original project demonstration is retained above.",
+    "legacy": true,
+    "videoId": "rbcvWOjfI3E",
+    "videoCaption": "Original ALPHA SEO product demonstration from the 2024 internship. Historical footage; co-developed with the agency engineering team."
   },
   {
     "id": "machine-learning-visualization",

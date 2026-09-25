@@ -77,3 +77,34 @@ if (sections.length) {
   window.addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(update); } }, { passive: true });
   update();
 }
+
+// Play historical previews only in view; preserve explicit pause and reduced-motion choices.
+for (const root of document.querySelectorAll('[data-video-preview]')) {
+  const frame = root.querySelector('iframe');
+  const button = root.querySelector('.video-toggle');
+  const preference = matchMedia('(prefers-reduced-motion: reduce)');
+  const base = new URL(frame.src);
+  let visible = false;
+  let paused = preference.matches;
+  let playing = false;
+  function update() {
+    const shouldPlay = visible && !paused && !document.hidden;
+    if (shouldPlay !== playing) {
+      playing = shouldPlay;
+      frame.hidden = !playing;
+      if (playing) {
+        const url = new URL(base); url.searchParams.set('autoplay', '1');
+        frame.src = url.href;
+      } else frame.removeAttribute('src');
+    }
+    button.textContent = paused ? 'Play preview' : 'Pause preview';
+    button.setAttribute('aria-label', `${paused ? 'Play' : 'Pause'} ALPHA SEO preview`);
+  }
+  frame.removeAttribute('src'); frame.hidden = true; button.hidden = false;
+  button.addEventListener('click', () => { paused = !paused; update(); });
+  preference.addEventListener('change', () => { paused = preference.matches; update(); });
+  document.addEventListener('visibilitychange', update);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(entries => { visible = entries[0].isIntersecting; update(); }, { threshold: .15 }).observe(root);
+  } else { visible = true; update(); }
+}

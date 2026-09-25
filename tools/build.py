@@ -30,6 +30,10 @@ def page(title,description,body,path,active=''):
  return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f3ed"><meta name="analytics-id" content="{ANALYTICS_ID}"><title>{e(title)} · Baylor Harrison</title><meta name="description" content="{e(description)}"><link rel="canonical" href="{SITE}/{path}"><meta property="og:title" content="{e(title)} · Baylor Harrison"><meta property="og:description" content="{e(description)}"><meta property="og:type" content="website"><meta property="og:url" content="{SITE}/{path}"><meta property="og:image" content="{SITE}/images/portfolio-social.png"><link rel="icon" type="image/svg+xml" href="images/portfolio-mark.svg"><link rel="stylesheet" href="assets/css/portfolio.css"><link rel="stylesheet" href="assets/css/refinement.css"><script defer src="assets/js/portfolio.js"></script><script defer src="assets/js/analytics.js"></script><script type="module" src="assets/js/motion.js"></script></head><body>{header(active)}<main id="main">{body}</main>{footer()}<dialog id="image-viewer" aria-label="Expanded project image"><button type="button" class="viewer-close" aria-label="Close image">Close ×</button><img alt=""><p></p></dialog></body></html>'''
 
 def visual(p,large=False):
+ if p.get('videoId'):
+  video=e(p['videoId']); fallback=visual({k:v for k,v in p.items() if k!='videoId'},large)
+  caption=f'<p class="image-caption">{e(p["videoCaption"])}</p>' if large else ''
+  return f'<div class="video-preview" data-video-preview data-video-id="{video}"><div class="video-poster">{fallback}</div><iframe src="https://www.youtube-nocookie.com/embed/{video}?mute=1&amp;loop=1&amp;playlist={video}&amp;playsinline=1" title="{e(p["name"])} original product demonstration" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><button type="button" class="video-toggle" hidden>Pause preview</button></div>'+caption
  if p.get('image'):
   caption = f'<p class="image-caption">{e(p["imageCaption"])}</p>' if large and p.get('imageCaption') else ''
   return f'<div class="project-visual {p["color"]} image-visual"><img src="{p["image"]}" alt="{e(p.get("imageAlt", p["name"] + " — original project screen"))}" loading="lazy" width="{p.get("imageWidth",1200)}" height="{p.get("imageHeight",800)}"></div>'+caption
@@ -62,7 +66,9 @@ def brand_art(p, context, decorative=False):
  return f'<div class="brand-art brand-art--{kind} {context}"'+(' aria-hidden="true"' if decorative else '')+f'>{image}{name}</div>'
 
 def card(p,n):
- return f'''<article class="project-card" data-category="{p['category']}"><a class="visual-link" href="{p['id']}.html" aria-label="Explore {e(p['name'])}">{visual(p)}</a><div class="card-meta"><span>{e(p['sector'])}</span><span>{n:02d}</span></div>{brand_art(p,"directory-brand",True)}<h3><a href="{p['id']}.html">{e(p['name'])}<span aria-hidden="true">↗</span></a></h3><p>{e(p['short'])}</p><span class="status"><i></i>{e(p['status'])}</span></article>'''
+ media=visual(p)
+ preview=f'<div class="visual-link">{media}</div>' if p.get('videoId') else f'<a class="visual-link" href="{p["id"]}.html" aria-label="Explore {e(p["name"])}">{media}</a>'
+ return f'''<article class="project-card" data-category="{p['category']}">{preview}<div class="card-meta"><span>{e(p['sector'])}</span><span>{n:02d}</span></div>{brand_art(p,"directory-brand",True)}<h3><a href="{p['id']}.html">{e(p['name'])}<span aria-hidden="true">↗</span></a></h3><p>{e(p['short'])}</p><span class="status"><i></i>{e(p['status'])}</span></article>'''
 
 def home():
  from homepage import homepage
@@ -81,6 +87,9 @@ def legacy_body(p):
  raw=raw.replace('alt=""',f'alt="{e(p["name"])} original project image"')
  raw=re.sub(r'<img\s', '<img loading="lazy" ',raw)
  raw=re.sub(r'<a href="alpha-seo.html"[^>]*>(\s*<iframe.*?</iframe>)\s*</a>',r'\1',raw,flags=re.S)
+ # The original demonstration now leads the case study; avoid a second simultaneous player.
+ if p.get('videoId'):
+  raw=re.sub(r'<iframe\b[^>]*>.*?</iframe>','<p>The original demonstration at the top of this page shows the application as it existed during the internship.</p>',raw,flags=re.S)
  # Keep legacy pages readable as product stories, with implementation retained in source history.
  if p['id']=='client-portal':
   captions=[('A shared client workspace','A central interface brings client communication and project information together.'),('Sign-in and notifications','The application connects account access with the relevant client experience and updates.'),('Client onboarding','An onboarding workflow creates a new client portal and its account.'),('Staff visibility','The staff dashboard organizes client portals and their associated information.'),('Profile management','Staff can maintain their profile information within the application.')]
