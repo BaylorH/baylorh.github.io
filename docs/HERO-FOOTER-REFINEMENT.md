@@ -29,3 +29,7 @@ The hero now animates image elements directly at their native proportions, witho
 ## Follow-up: proportional, taller images
 
 The previous Y-axis tilt combined with forward perspective widened projected screenshots near the viewport edges, even though their underlying layout ratios were correct. Removed the tilt so depth scaling remains uniform. Images are now sized from the hero height (60% desktop, 48% mobile before perspective), with a capped scale and an outward exit trajectory. The hero uses the existing taller SiteSift settings screenshot instead of its panoramic cover; galleries are unchanged. Browser measurements at 1440×900 and 390×844 matched source aspect ratios within 0.00002 and showed no horizontal overflow. The 36-second cycle, motion controls and frameless presentation remain.
+
+## Current direction: restore the first full-screen hero
+
+At Baylor’s request, reverted the subsequent screenshot proportion, spacing, sizing and perspective experiments to the first full-screen hero in commit 1a3c570. The compact footer and phone-number removal remain. Rebuilt the release, passed the existing checks and visually confirmed the restored local preview. Earlier follow-up notes above are historical, not the current design.
