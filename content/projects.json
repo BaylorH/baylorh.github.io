@@ -63,9 +63,9 @@
     "imageCaption": "Internal AI, September 2026. The customer inquiry interface shown with empty fields; no customer records are displayed.",
     "screens": [
       {
-        "src": "images/product-screens/image-studio.webp",
-        "alt": "FiftyFlowers Image Studio with an empty photo workspace",
-        "caption": "Image Studio: a real interface for photo input and reusable image workflows. No image generation was run for this capture.",
+        "src": "images/product-screens/internal-ai.webp",
+        "alt": "FiftyFlowers Internal AI customer inquiry screen with empty fields and navigation to the four support apps",
+        "caption": "Internal AI, September 2026. The customer inquiry interface shown with empty fields; no customer records are displayed.",
         "width": 1440,
         "height": 900
       },
@@ -73,6 +73,13 @@
         "src": "images/product-screens/company-brain.webp",
         "alt": "Company Second Brain department overview",
         "caption": "Company Second Brain: the departmental overview. Marketing and company-wide integration remain MVP work; Engineering is a beta.",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "images/product-screens/image-studio.webp",
+        "alt": "FiftyFlowers Image Studio with an empty photo workspace",
+        "caption": "Image Studio: a real interface for photo input and reusable image workflows. No image generation was run for this capture.",
         "width": 1440,
         "height": 900
       }
@@ -128,6 +135,13 @@
         "src": "images/product-screens/hal-overview.webp",
         "alt": "HAL lending dashboard with private operating figures redacted",
         "caption": "The live HAL overview brings scoring activity and decision reporting together. Private operating figures are redacted; no settings were changed.",
+        "width": 1425,
+        "height": 891
+      },
+      {
+        "src": "images/product-screens/hal-sources.webp",
+        "alt": "HAL lead-source analytics showing trend charts with private values covered",
+        "caption": "Lead-source reporting, captured September 24, 2026. Source names and operating figures are covered; the visible data-health status is retained.",
         "width": 1425,
         "height": 891
       }
@@ -192,6 +206,13 @@
         "caption": "The Record’s live developer workspace, captured September 24, 2026. Private client and shared-project names are covered; the full dashboard layout is preserved.",
         "width": 1440,
         "height": 900
+      },
+      {
+        "src": "images/product-screens/record-milestones.webp",
+        "alt": "The Record milestone grid grouping completed outcomes and remaining work",
+        "caption": "The Record milestone overview, captured September 24, 2026. Completed outcomes and work in progress remain separate, with evidence available in each milestone.",
+        "width": 1425,
+        "height": 891
       }
     ],
     "image": "images/product-screens/record-workspace.webp",
@@ -287,6 +308,13 @@
     "evidence": "Attribution follows the reviewed professional profile. No confidential proposals, fee records or client identities are exposed.",
     "screens": [
       {
+        "src": "images/product-screens/axiom-analytics.webp",
+        "alt": "Axiom analytics dashboard with sector distribution and fee-analysis charts",
+        "caption": "Analytics across historical proposal and fee data. Private amounts, sample counts and account details are covered. The interface is shown as captured, not as independent validation of the analysis.",
+        "width": 1440,
+        "height": 900
+      },
+      {
         "src": "images/product-screens/axiom-explorer.webp",
         "alt": "Axiom source explorer showing proposals, actuals and workbook collections",
         "caption": "The live source explorer organizes proposals, engagement records and fee workbooks. Private counts and account details are covered; source reconciliation and estimation remain separate work.",
@@ -294,81 +322,16 @@
         "height": 900
       }
     ],
-    "image": "images/product-screens/axiom-explorer.webp",
-    "imageAlt": "Axiom source explorer showing proposals, actuals and workbook collections",
-    "imageCaption": "The live source explorer organizes proposals, engagement records and fee workbooks. Private counts and account details are covered; source reconciliation and estimation remain separate work.",
+    "image": "images/product-screens/axiom-analytics.webp",
+    "imageAlt": "Axiom analytics dashboard with sector distribution and fee-analysis charts",
+    "imageCaption": "Analytics across historical proposal and fee data. Private amounts, sample counts and account details are covered. The interface is shown as captured, not as independent validation of the analysis.",
     "imageWidth": 1440,
     "imageHeight": 900,
     "logo": "images/brands/axiom.png",
     "logoWidth": 371,
     "logoHeight": 178,
-    "logoKind": "wordmark"
-  },
-  {
-    "id": "sitesift",
-    "title": "Keep the property search in context.",
-    "name": "SiteSift AI",
-    "category": "business",
-    "sector": "Commercial real estate",
-    "status": "Beta",
-    "color": "purple",
-    "visual": "sitesift",
-    "short": "Connect property lists, broker correspondence and decisions in one research workflow.",
-    "role": "Founder & Software Engineer",
-    "stack": [
-      "Email integration",
-      "Structured data",
-      "AI workflows",
-      "Web dashboard"
-    ],
-    "problem": "Commercial property research moves between lists, correspondence and follow-up decisions. Those parts need to remain connected as information changes.",
-    "contribution": "Built a beta connecting property lists, broker emails and a dashboard for tracking decisions and follow-up.",
-    "groups": [
-      [
-        "Property context",
-        "Keep candidate properties and their associated information organized for research."
-      ],
-      [
-        "Correspondence",
-        "Connect broker communication with the relevant property workflow."
-      ],
-      [
-        "Review & follow-up",
-        "A dashboard helps surface decisions and next actions while the underlying information is refined."
-      ]
-    ],
-    "flow": [
-      "Property lists",
-      "Correspondence",
-      "Review & follow-up"
-    ],
-    "next": "Improve extraction accuracy and make conversation handling and automation dependable. The product remains beta.",
-    "evidence": "Capability overview only. No private correspondence or live prospect information is included.",
-    "screens": [
-      {
-        "src": "images/product-screens/sitesift-dashboard.webp",
-        "alt": "SiteSift dashboard with two stopped demonstration campaigns",
-        "caption": "Existing demonstration account: campaign status and progress at a glance. No campaign was started or message sent during this walkthrough.",
-        "width": 1600,
-        "height": 685
-      },
-      {
-        "src": "images/product-screens/sitesift-landing.webp",
-        "alt": "SiteSift public landing page with product introduction",
-        "caption": "The public product introduction complements the operational dashboard.",
-        "width": 1600,
-        "height": 685
-      }
-    ],
-    "image": "images/product-screens/sitesift-dashboard.webp",
-    "imageAlt": "SiteSift dashboard with two stopped demonstration campaigns",
-    "imageCaption": "Existing demonstration account: campaign status and progress at a glance. No campaign was started or message sent during this walkthrough.",
-    "imageWidth": 1600,
-    "imageHeight": 685,
-    "logo": "images/brands/sitesift.png",
-    "logoWidth": 669,
-    "logoHeight": 291,
-    "logoKind": "wordmark"
+    "logoKind": "wordmark",
+    "previewMode": "single"
   },
   {
     "id": "ai-media-manager",
@@ -430,6 +393,79 @@
     "logoKind": "icon"
   },
   {
+    "id": "sitesift",
+    "title": "Keep the property search in context.",
+    "name": "SiteSift AI",
+    "category": "business",
+    "sector": "Commercial real estate",
+    "status": "Beta",
+    "color": "purple",
+    "visual": "sitesift",
+    "short": "Connect property lists, broker correspondence and decisions in one research workflow.",
+    "role": "Founder & Software Engineer",
+    "stack": [
+      "Email integration",
+      "Structured data",
+      "AI workflows",
+      "Web dashboard"
+    ],
+    "problem": "Commercial property research moves between lists, correspondence and follow-up decisions. Those parts need to remain connected as information changes.",
+    "contribution": "Built a beta connecting property lists, broker emails and a dashboard for tracking decisions and follow-up.",
+    "groups": [
+      [
+        "Property context",
+        "Keep candidate properties and their associated information organized for research."
+      ],
+      [
+        "Correspondence",
+        "Connect broker communication with the relevant property workflow."
+      ],
+      [
+        "Review & follow-up",
+        "A dashboard helps surface decisions and next actions while the underlying information is refined."
+      ]
+    ],
+    "flow": [
+      "Property lists",
+      "Correspondence",
+      "Review & follow-up"
+    ],
+    "next": "Improve extraction accuracy and make conversation handling and automation dependable. The product remains beta.",
+    "evidence": "Capability overview only. No private correspondence or live prospect information is included.",
+    "screens": [
+      {
+        "src": "images/product-screens/sitesift-dashboard.webp",
+        "alt": "SiteSift dashboard with two stopped demonstration campaigns",
+        "caption": "Existing demonstration account: campaign status and progress at a glance. No campaign was started or message sent during this walkthrough.",
+        "width": 1600,
+        "height": 685
+      },
+      {
+        "src": "images/product-screens/sitesift-settings.webp",
+        "alt": "SiteSift settings with appearance and signature configuration",
+        "caption": "Account settings and signature configuration. Contact details are covered; no form was saved or campaign started.",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "src": "images/product-screens/sitesift-landing.webp",
+        "alt": "SiteSift public landing page with product introduction",
+        "caption": "The public product introduction complements the operational dashboard.",
+        "width": 1600,
+        "height": 685
+      }
+    ],
+    "image": "images/product-screens/sitesift-dashboard.webp",
+    "imageAlt": "SiteSift dashboard with two stopped demonstration campaigns",
+    "imageCaption": "Existing demonstration account: campaign status and progress at a glance. No campaign was started or message sent during this walkthrough.",
+    "imageWidth": 1600,
+    "imageHeight": 685,
+    "logo": "images/brands/sitesift.png",
+    "logoWidth": 669,
+    "logoHeight": 291,
+    "logoKind": "wordmark"
+  },
+  {
     "id": "client-portal",
     "name": "Client Portal",
     "title": "A shared place for client work.",
@@ -437,7 +473,7 @@
     "sector": "Digital agency · 2024 internship",
     "status": "Historical project",
     "color": "blue",
-    "image": "images/clientPortalClientDashboard.png",
+    "image": "images/product-screens/client-portal-updates.webp",
     "short": "The first client portal for an agency’s communication and project workflows.",
     "role": "Web Developer Intern",
     "stack": [
@@ -450,7 +486,25 @@
     "contribution": "Independently developed the first version, working with the lead developer on setup and CSS and collaborating on the visual direction.",
     "legacy": true,
     "imageWidth": 2534,
-    "imageHeight": 1372
+    "imageHeight": 1372,
+    "screens": [
+      {
+        "src": "images/product-screens/client-portal-updates.webp",
+        "alt": "Client portal updates feed and navigation with personal details covered",
+        "caption": "Client updates feed from the original 2024 portal. Personal details and profile illustrations are covered.",
+        "width": 2534,
+        "height": 1372
+      },
+      {
+        "src": "images/product-screens/client-portal-notifications.webp",
+        "alt": "Client portal notifications for approvals, documents and updates",
+        "caption": "Notification history from the original 2024 portal. Browser chrome is removed and email addresses are covered.",
+        "width": 2194,
+        "height": 1190
+      }
+    ],
+    "imageAlt": "Client portal updates feed and navigation with personal details covered",
+    "imageCaption": "Client updates feed from the original 2024 portal. Personal details and profile illustrations are covered."
   },
   {
     "id": "alpha-seo",
@@ -476,6 +530,51 @@
     "videoCaption": "Original ALPHA SEO product demonstration from the 2024 internship. Historical footage; co-developed with the agency engineering team."
   },
   {
+    "id": "pacman",
+    "name": "Java Pacman",
+    "title": "A familiar game, with room to experiment.",
+    "category": "earlier",
+    "sector": "Game development",
+    "status": "Independent project",
+    "color": "ink",
+    "image": "images/Pacmanpic2.jpg",
+    "short": "A state-based Java game with two-player and free-movement variations.",
+    "role": "Independent developer",
+    "stack": [
+      "Java",
+      "State machines",
+      "Game systems"
+    ],
+    "problem": "Recreating a familiar game offered a way to explore game states, movement and rule variations.",
+    "contribution": "Developed a Java Pacman game with two-player mode, free movement and expanded traversal. The original code and feature walkthrough are preserved.",
+    "legacy": true,
+    "imageWidth": 1916,
+    "imageHeight": 1438,
+    "screens": [
+      {
+        "src": "images/product-screens/pacman-1.webp",
+        "alt": "Java Pacman gameplay with the maze, ghosts, score and active power-up bar.",
+        "caption": "Maze gameplay and power-up state · historical Java build.",
+        "width": 1466,
+        "height": 1100
+      },
+      {
+        "src": "images/product-screens/pacman-2.webp",
+        "alt": "Pacman start menu with a Play button and two-player option.",
+        "caption": "Start menu and two-player option · historical Java build.",
+        "width": 1469,
+        "height": 1100
+      },
+      {
+        "src": "images/product-screens/pacman-3.webp",
+        "alt": "Another Java Pacman gameplay state with remaining lives and an inactive power-up bar.",
+        "caption": "A second gameplay state with remaining lives · historical Java build.",
+        "width": 1469,
+        "height": 1100
+      }
+    ]
+  },
+  {
     "id": "machine-learning-visualization",
     "name": "3D Machine Learning",
     "title": "Make the data something to explore.",
@@ -496,29 +595,23 @@
     "contribution": "Worked in a team of five on a 3D visualization tool for an ASU professor. The original walkthrough includes data positioning and interactive predictions.",
     "legacy": true,
     "imageWidth": 1786,
-    "imageHeight": 1002
-  },
-  {
-    "id": "pacman",
-    "name": "Java Pacman",
-    "title": "A familiar game, with room to experiment.",
-    "category": "earlier",
-    "sector": "Game development",
-    "status": "Independent project",
-    "color": "ink",
-    "image": "images/Pacmanpic2.jpg",
-    "short": "A state-based Java game with two-player and free-movement variations.",
-    "role": "Independent developer",
-    "stack": [
-      "Java",
-      "State machines",
-      "Game systems"
-    ],
-    "problem": "Recreating a familiar game offered a way to explore game states, movement and rule variations.",
-    "contribution": "Developed a Java Pacman game with two-player mode, free movement and expanded traversal. The original code and feature walkthrough are preserved.",
-    "legacy": true,
-    "imageWidth": 1916,
-    "imageHeight": 1438
+    "imageHeight": 1002,
+    "screens": [
+      {
+        "src": "images/product-screens/machine-learning-visualization-1.webp",
+        "alt": "Interactive 3D Iris classifier with flower-measurement inputs, a data plot and prediction legend.",
+        "caption": "Interactive Iris classification and 3D data exploration · ASU team capstone.",
+        "width": 1600,
+        "height": 898
+      },
+      {
+        "src": "images/product-screens/machine-learning-visualization-2.webp",
+        "alt": "ASU-branded 3D Machine Learning Visualizer menu with dataset choices.",
+        "caption": "Dataset selection · ASU team capstone.",
+        "width": 1600,
+        "height": 898
+      }
+    ]
   },
   {
     "id": "lunar-base",
@@ -541,7 +634,51 @@
     "contribution": "Designed a moon-base environment with custom terrain, skybox and animations, including a third-person controller. Original imagery and the animation-state diagram are retained.",
     "legacy": true,
     "imageWidth": 1790,
-    "imageHeight": 1004
+    "imageHeight": 1004,
+    "screens": [
+      {
+        "src": "images/product-screens/lunar-base-1.webp",
+        "alt": "Third-person character overlooking modular lunar buildings from a raised platform.",
+        "caption": "Rooftop exploration and the base exterior · historical Unity build.",
+        "width": 1600,
+        "height": 897
+      },
+      {
+        "src": "images/product-screens/lunar-base-2.webp",
+        "alt": "Third-person character inside the lunar base with a large interior floor and doorways.",
+        "caption": "Base interior and third-person scale · historical Unity build.",
+        "width": 1600,
+        "height": 899
+      },
+      {
+        "src": "images/product-screens/lunar-base-3.webp",
+        "alt": "Lunar base interior with storage racks, stairs and overhead piping.",
+        "caption": "Interior detail, stairs and storage · historical Unity build.",
+        "width": 1600,
+        "height": 896
+      },
+      {
+        "src": "images/product-screens/lunar-base-4.webp",
+        "alt": "Third-person character standing on uneven lunar terrain beneath a starry sky.",
+        "caption": "Terrain exploration and skybox · historical Unity build.",
+        "width": 1600,
+        "height": 897
+      },
+      {
+        "src": "images/product-screens/lunar-base-5.webp",
+        "alt": "Wide Unity scene view of the lunar base within the surrounding terrain.",
+        "caption": "Environment overview in the Unity editor · historical scene view.",
+        "width": 1600,
+        "height": 845
+      },
+      {
+        "src": "images/product-screens/lunar-base-6.webp",
+        "alt": "Unity animation state machine linking idle, directional sprint and jump states.",
+        "caption": "Character animation state machine · original implementation diagram.",
+        "width": 1480,
+        "height": 760
+      }
+    ]
   },
   {
     "id": "ai-travel-companion",
@@ -564,6 +701,36 @@
     "contribution": "Built an iOS app that uses conversation to create and update an itinerary, with integrated map and location features. Original screens remain in the walkthrough.",
     "legacy": true,
     "imageWidth": 1179,
-    "imageHeight": 2556
+    "imageHeight": 2556,
+    "screens": [
+      {
+        "src": "images/product-screens/ai-travel-companion-1.webp",
+        "alt": "iOS travel app showing a Los Angeles map above an itinerary-planning conversation.",
+        "caption": "Map and planning conversation · historical iOS prototype.",
+        "width": 600,
+        "height": 1301
+      },
+      {
+        "src": "images/product-screens/ai-travel-companion-2.webp",
+        "alt": "Travel app showing a dated itinerary and a conversation used to add plans.",
+        "caption": "Conversation connected to an itinerary · historical iOS prototype.",
+        "width": 600,
+        "height": 1301
+      },
+      {
+        "src": "images/product-screens/ai-travel-companion-3.webp",
+        "alt": "Travel app trip list containing Los Angeles, Italy and Bahamas.",
+        "caption": "Trip list · historical iOS prototype.",
+        "width": 600,
+        "height": 1301
+      },
+      {
+        "src": "images/product-screens/ai-travel-companion-4.webp",
+        "alt": "Travel itinerary item editor with an event title, start time, end time and save control.",
+        "caption": "Editing an itinerary item · historical iOS prototype.",
+        "width": 600,
+        "height": 1301
+      }
+    ]
   }
 ]

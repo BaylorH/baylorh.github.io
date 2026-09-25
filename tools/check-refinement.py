@@ -59,3 +59,24 @@ for pid in ['till','engineering-platform']:
  assert item['imageCaption'], f'{pid}: interface evidence requires its caption'
  assert item['imageCaption'] in (r/(pid+'.html')).read_text(), f'{pid}: caption was lost'
 print('PASS: verified brand art and reviewed selected-work screenshots retain dimensions and captions')
+
+# Keep requested editorial order and gallery sources reliable as the collection grows.
+expected=['fiftyflowers','till','engineering-platform','create-spaces','axiom','ai-media-manager','sitesift','client-portal','alpha-seo','pacman','machine-learning-visualization','lunar-base','ai-travel-companion']
+assert [x['id'] for x in items]==expected, 'Requested directory order changed'
+import sys
+sys.path.insert(0,str(r/'tools'))
+from screen_gallery import screen_gallery,preview_screens
+for item in items:
+ screens=item.get('screens',[])
+ assert len({s['src'] for s in screens})==len(screens), item['id']+' repeated a screen'
+ for s in screens:
+  with Image.open(r/s['src']) as image:assert image.size==(s['width'],s['height']),s['src']
+ if len(preview_screens(item))>1:
+  html=screen_gallery(item,layered=True)
+  assert html.count('class="screen-shot ')==len(screens)
+  assert html.count('data-screen-index=')==len(screens)
+  assert html.count('aria-hidden="true"')==len(screens)-1
+  assert 'screen-caption' in html and 'data-caption=' in html
+assert next(x for x in items if x['id']=='axiom')['previewMode']=='single'
+assert 'object-fit:contain' in (r/'assets/css/refinement.css').read_text()
+print('PASS: directory order, unique screen sources, dimensions, keyboard-ready controls and singular Axiom cover')

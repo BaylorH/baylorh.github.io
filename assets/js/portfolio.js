@@ -108,3 +108,34 @@ for (const root of document.querySelectorAll('[data-video-preview]')) {
     new IntersectionObserver(entries => { visible = entries[0].isIntersecting; update(); }, { threshold: .15 }).observe(root);
   } else { visible = true; update(); }
 }
+
+// Screen changes are deliberate, scoped to one gallery, and never auto-advance.
+for (const gallery of document.querySelectorAll('[data-screen-gallery]')) {
+  const shots = [...gallery.querySelectorAll('.screen-shot')];
+  const buttons = [...gallery.querySelectorAll('[data-screen-index]')];
+  const controls = gallery.querySelector('.screen-controls');
+  controls.hidden = false;
+  function select(index) {
+    shots.forEach((shot, i) => {
+      shot.classList.toggle('is-front', i === index);
+      shot.classList.toggle('is-back', i === (index + 1) % shots.length);
+      shot.classList.toggle('is-third', gallery.classList.contains('is-portrait') && i === (index + 2) % shots.length);
+      shot.tabIndex = i === index ? 0 : -1;
+      shot.setAttribute('aria-hidden', String(i !== index));
+      buttons[i].setAttribute('aria-pressed', String(i === index));
+    });
+    gallery.querySelector('.screen-count').textContent = `${index + 1} / ${shots.length}`;
+    const caption = gallery.querySelector('.screen-caption');
+    if (caption) caption.textContent = buttons[index].dataset.caption;
+  }
+  buttons.forEach((button, index) => {
+    button.addEventListener('click', () => select(index));
+    button.addEventListener('keydown', event => {
+      const offset = event.key === 'ArrowRight' ? 1 : event.key === 'ArrowLeft' ? -1 : 0;
+      if (!offset) return;
+      event.preventDefault();
+      const next = (index + offset + shots.length) % shots.length;
+      select(next); buttons[next].focus();
+    });
+  });
+}

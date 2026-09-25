@@ -2,6 +2,7 @@
 from pathlib import Path
 from html import escape as e
 import json, re, subprocess, os
+from screen_gallery import preview_screens, screen_gallery
 ROOT = Path(__file__).resolve().parents[1]
 PROJECTS = json.loads((ROOT/'content/projects.json').read_text())
 # Original source is recoverable from the committed baseline; local copies never ship.
@@ -29,7 +30,9 @@ def footer():
 def page(title,description,body,path,active=''):
  return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f3ed"><meta name="analytics-id" content="{ANALYTICS_ID}"><title>{e(title)} · Baylor Harrison</title><meta name="description" content="{e(description)}"><link rel="canonical" href="{SITE}/{path}"><meta property="og:title" content="{e(title)} · Baylor Harrison"><meta property="og:description" content="{e(description)}"><meta property="og:type" content="website"><meta property="og:url" content="{SITE}/{path}"><meta property="og:image" content="{SITE}/images/portfolio-social.png"><link rel="icon" type="image/svg+xml" href="images/portfolio-mark.svg"><link rel="stylesheet" href="assets/css/portfolio.css"><link rel="stylesheet" href="assets/css/refinement.css"><script defer src="assets/js/portfolio.js"></script><script defer src="assets/js/analytics.js"></script><script type="module" src="assets/js/motion.js"></script></head><body>{header(active)}<main id="main">{body}</main>{footer()}<dialog id="image-viewer" aria-label="Expanded project image"><button type="button" class="viewer-close" aria-label="Close image">Close ×</button><img alt=""><p></p></dialog></body></html>'''
 
-def visual(p,large=False):
+def visual(p,large=False,layered=False):
+ if not large and not p.get("videoId") and len(preview_screens(p))>1:
+  return screen_gallery(p,layered)
  if p.get('videoId'):
   video=e(p['videoId']); fallback=visual({k:v for k,v in p.items() if k!='videoId'},large)
   caption=f'<p class="image-caption">{e(p["videoCaption"])}</p>' if large else ''
@@ -67,7 +70,7 @@ def brand_art(p, context, decorative=False):
 
 def card(p,n):
  media=visual(p)
- preview=f'<div class="visual-link">{media}</div>' if p.get('videoId') else f'<a class="visual-link" href="{p["id"]}.html" aria-label="Explore {e(p["name"])}">{media}</a>'
+ preview=f'<div class="visual-link">{media}</div>' if p.get('videoId') or len(preview_screens(p))>1 else f'<a class="visual-link" href="{p["id"]}.html" aria-label="Explore {e(p["name"])}">{media}</a>'
  return f'''<article class="project-card" data-category="{p['category']}">{preview}<div class="card-meta"><span>{e(p['sector'])}</span><span>{n:02d}</span></div>{brand_art(p,"directory-brand",True)}<h3><a href="{p['id']}.html">{e(p['name'])}<span aria-hidden="true">↗</span></a></h3><p>{e(p['short'])}</p><span class="status"><i></i>{e(p['status'])}</span></article>'''
 
 def home():
@@ -116,7 +119,7 @@ def case(p,n):
   body+='<div class="feature-groups">'+''.join(f'<details><summary><span>{i:02d}</span>{e(g[0])}<b aria-hidden="true">+</b></summary><p>{e(g[1])}</p></details>' for i,g in enumerate(p['groups'],1))+'</div>'
   body+='<div class="flow-panel"><p class="eyebrow">At a glance / simplified product view</p><ol>'+''.join(f'<li><span>{i:02d}</span>{e(x)}</li>' for i,x in enumerate(p['flow'],1))+'</ol></div>'
  screens=[im for im in p.get('screens',[]) if im['src']!=p.get('image')]
- if screens:
+ if screens and not p.get('legacy'):
   body+='<div class="product-screens"><p class="eyebrow">Inside the software</p><h3>See the actual workspace.</h3>'+''.join(f'<figure><img src="{e(im["src"])}" alt="{e(im["alt"])}" width="{im["width"]}" height="{im["height"]}" loading="lazy"><figcaption>{e(im["caption"])}</figcaption></figure>' for im in screens)+'</div>'
  body+='</section><section id="next"><p class="eyebrow">Where it stands</p><h2>The work keeps moving.</h2><p>'+e(p.get('next','This project remains part of the earlier-work collection. The original materials show the implementation at that point in time; they are not a claim about current operation.'))+'</p></section></div></div>'
  nxt=PROJECTS[(n+1)%len(PROJECTS)]
