@@ -108,20 +108,31 @@ for (const root of document.querySelectorAll('[data-video-preview]')) {
   let playRequested = false;
   let pausing = false;
   let player;
+  let playbackTimeout;
   const wantsPlayback = () => visible && !paused && !document.hidden;
   function label() {
     button.textContent = paused ? 'Play preview' : playing ? 'Pause preview' : 'Loading preview…';
     button.setAttribute('aria-label', `${button.textContent} · ALPHA SEO`);
   }
+  function stopPlaybackWatch() { clearTimeout(playbackTimeout); playbackTimeout = undefined; }
+  function watchPlayback(retried = false) {
+    stopPlaybackWatch();
+    playbackTimeout = setTimeout(() => {
+      playbackTimeout = undefined;
+      if (!wantsPlayback() || playing) return;
+      if (!retried) { player.mute(); player.playVideo(); watchPlayback(true); }
+      else { paused = true; playRequested = false; pausing = false; player.pauseVideo(); label(); }
+    }, 4000);
+  }
   function update() {
     if (ready) {
-      if (wantsPlayback()) { playRequested = true; player.mute(); player.playVideo(); }
-      else { pausing = playing || playRequested; player.pauseVideo(); }
+      if (wantsPlayback()) { playRequested = true; player.mute(); player.playVideo(); if (!playing && !playbackTimeout) watchPlayback(); }
+      else { stopPlaybackWatch(); pausing = playing || playRequested; player.pauseVideo(); }
     }
     label();
   }
   // If the API cannot load, retain YouTube's own play/error controls.
-  const nativeFallback = () => { button.hidden = true; frame.hidden = false; fallback.hidden = false; };
+  const nativeFallback = () => { stopPlaybackWatch(); button.hidden = true; frame.hidden = false; fallback.hidden = false; };
   const startupTimeout = setTimeout(nativeFallback, 15000);
   button.hidden = false;
   label();
@@ -138,16 +149,18 @@ for (const root of document.querySelectorAll('[data-video-preview]')) {
         onStateChange(event) {
           playing = event.data === 1;
           if (playing) {
+            stopPlaybackWatch();
             // Honor native Play as user intent, but finish pending automatic pauses.
             if (!visible || document.hidden || (pausing && paused)) player.pauseVideo();
             else { paused = false; pausing = false; }
           } else if (event.data === 2) {
+            stopPlaybackWatch();
             if (!pausing && visible && !document.hidden) paused = true;
             pausing = false; playRequested = false;
           }
           label();
         },
-        onAutoplayBlocked() { paused = true; playing = false; label(); },
+        onAutoplayBlocked() { stopPlaybackWatch(); paused = true; playing = false; label(); },
         onError() { clearTimeout(startupTimeout); nativeFallback(); }
       }
     });

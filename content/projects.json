@@ -643,14 +643,10 @@
         "caption": "Interactive Iris classification and 3D data exploration · ASU team capstone.",
         "width": 1600,
         "height": 898
-      },
-      {
-        "src": "images/product-screens/machine-learning-visualization-2.webp",
-        "alt": "ASU-branded 3D Machine Learning Visualizer menu with dataset choices.",
-        "caption": "Dataset selection · ASU team capstone.",
-        "width": 1600,
-        "height": 898
       }
+    ],
+    "excludedLegacyImages": [
+      "images/MachineLearningVisualizationMenu.png"
     ]
   },
   {

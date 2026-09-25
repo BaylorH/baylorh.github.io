@@ -1,4 +1,5 @@
-import { animate, scroll } from 'motion';
+import { animate, scroll, stagger, inView } from 'motion';
+import './ambient.js';
 const preference = matchMedia('(prefers-reduced-motion: reduce)');
 const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
 let cleanup = () => {};
@@ -6,23 +7,33 @@ function mount() {
   cleanup();
   if (preference.matches) return;
   const disposers = [];
-  const layers = [...document.querySelectorAll('.scene-layer')];
-  layers.forEach((layer, i) => {
-    const controls = animate(layer, { opacity: [0, 1], y: [22, 0] }, { duration: .65, delay: i * .09, ease: [.22, 1, .36, 1] });
-    disposers.push(() => { controls.cancel(); layer.style.removeProperty('opacity'); layer.style.removeProperty('transform'); });
+  // Split only display headings; normal paragraphs remain untouched and readable.
+  document.querySelectorAll('[data-reveal-heading]').forEach(heading => {
+    if (!heading.querySelector('.reveal-word')) {
+      [...heading.childNodes].filter(node => node.nodeType === Node.TEXT_NODE).forEach(node => {
+        const fragment = document.createDocumentFragment();
+        node.textContent.split(/(\s+)/).forEach(word => {
+          if (!word.trim()) fragment.append(document.createTextNode(word));
+          else { const span = document.createElement('span'); span.className = 'reveal-word'; span.textContent = word; fragment.append(span); }
+        });
+        node.replaceWith(fragment);
+      });
+    }
+    const words = [...heading.querySelectorAll('.reveal-word')];
+    const controls = animate(words, {opacity:[.5,1], y:[12,0]}, {delay:stagger(.055), ease:'linear'});
+    const stop = scroll(controls, {target:heading, offset:['start 94%','end 72%']});
+    disposers.push(() => { stop(); controls.cancel(); words.forEach(word => {word.style.removeProperty('opacity');word.style.removeProperty('transform');}); });
   });
-  const scene = document.querySelector('.studio-scene');
-  const depth = scene?.querySelector('.scene-depth');
-  if (depth && finePointer.matches) {
-    const move = event => {
-      const bounds = scene.getBoundingClientRect();
-      const x = Math.max(-.5, Math.min(.5, (event.clientX-bounds.left)/bounds.width-.5));
-      const y = Math.max(-.5, Math.min(.5, (event.clientY-bounds.top)/bounds.height-.5));
-      depth.style.transform = `rotateX(${-y*5}deg) rotateY(${x*6}deg) translate3d(${x*5}px,${y*5}px,0)`;
-    };
-    const reset = () => depth.style.removeProperty('transform');
-    scene.addEventListener('pointermove', move); scene.addEventListener('pointerleave', reset);
-    disposers.push(() => { scene.removeEventListener('pointermove',move);scene.removeEventListener('pointerleave',reset);reset(); });
+  const stopCards = inView('.project-card, .approach-grid article', element => {
+    const controls = animate(element, {opacity:[.65,1], y:[20,0]}, {duration:.5, ease:[.22,1,.36,1]});
+    disposers.push(() => {controls.cancel();element.style.removeProperty('opacity');element.style.removeProperty('transform');});
+  }, {margin:'0px 0px -30px 0px'});
+  disposers.push(stopCards);
+  const signature = document.querySelector('.footer-signature');
+  if (signature) {
+    const controls = animate(signature, {y:[32,0], opacity:[.45,1]}, {ease:'linear'});
+    const stop = scroll(controls,{target:signature.closest('footer'),offset:['start end','end end']});
+    disposers.push(() => {stop();controls.cancel();signature.style.removeProperty('transform');signature.style.removeProperty('opacity');});
   }
   if (matchMedia('(min-width: 761px)').matches) {
     document.querySelectorAll('.featured-media').forEach(media => {

@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const source = fs.readFileSync('assets/js/portfolio.js', 'utf8');
 function setup(reduced = false) {
   const listeners = {}, mediaListeners = {}, buttonListeners = {};
+  const timers = new Map(); let timerId = 0;
   let intersection, events, loads = 0, plays = 0, pauses = 0, muted = false;
   let src = 'https://www.youtube-nocookie.com/embed/rbcvWOjfI3E?enablejsapi=1';
   const frame = { hidden:false, get src(){return src;}, set src(v){src=v;loads++;}, removeAttribute(){src='';loads++;} };
@@ -14,11 +15,11 @@ function setup(reduced = false) {
   const player = {mute(){muted=true;},playVideo(){assert.ok(muted,'mute before autoplay');plays++;},pauseVideo(){pauses++;}};
   const document = {hidden:false, querySelector:()=>null, querySelectorAll:s=>s==='[data-video-preview]'?[root]:[],addEventListener(t,f){listeners[t]=f;},createElement:()=>({}),head:{append(){}}};
   const window = {YT:{Player:function(f,opts){events=opts.events;return player;}},addEventListener(){}};
-  const context = {window,document,URL,location:{origin:'http://localhost'},matchMedia:()=>preference,IntersectionObserver:class {constructor(f){intersection=f;}observe(){}},setTimeout:()=>1,clearTimeout(){},console};
+  const context = {window,document,URL,location:{origin:'http://localhost'},matchMedia:()=>preference,IntersectionObserver:class {constructor(f){intersection=f;}observe(){}},setTimeout:(f,ms)=>{timers.set(++timerId,{f,ms});return timerId;},clearTimeout(id){timers.delete(id);},console};
   window.IntersectionObserver=context.IntersectionObserver;
   vm.runInNewContext(source,context);
   const tick=()=>new Promise(resolve=>setImmediate(resolve));
-  return {frame,button,fallback,document,preference,tick, get events(){return events;},get plays(){return plays;},get pauses(){return pauses;},get loads(){return loads;},show(v){intersection([{isIntersecting:v}]);},click(){buttonListeners.click();},background(v){document.hidden=v;listeners.visibilitychange();},motion(v){preference.matches=v;mediaListeners.change();}};
+  return {frame,button,fallback,document,preference,tick,expire(ms){for(const [id,t] of [...timers])if(t.ms===ms){timers.delete(id);t.f();}}, get events(){return events;},get plays(){return plays;},get pauses(){return pauses;},get loads(){return loads;},show(v){intersection([{isIntersecting:v}]);},click(){buttonListeners.click();},background(v){document.hidden=v;listeners.visibilitychange();},motion(v){preference.matches=v;mediaListeners.change();}};
 }
 (async()=>{
  const h=setup();h.show(true);h.show(false);h.show(true);
@@ -34,6 +35,7 @@ function setup(reduced = false) {
  const late=setup();late.show(true);late.show(false);await late.tick();late.events.onReady({target:{}});assert.equal(late.plays,0,'late readiness must not play offscreen');
  const native=setup();native.show(true);await native.tick();native.events.onReady({target:{}});native.events.onStateChange({data:1});native.events.onStateChange({data:2});assert.equal(native.button.textContent,'Play preview','native pause must update intent');const before=native.plays;native.show(false);native.show(true);assert.equal(native.plays,before,'native pause survives re-entry');native.events.onStateChange({data:1});assert.equal(native.button.textContent,'Pause preview','native play is honored');
  const nativeReduced=setup(true);nativeReduced.show(true);await nativeReduced.tick();nativeReduced.events.onReady({target:{}});const pausesBefore=nativeReduced.pauses;nativeReduced.events.onStateChange({data:1});assert.equal(nativeReduced.pauses,pausesBefore,'native user play overrides reduced-motion autoplay choice');
+ const stalled=setup();stalled.show(true);await stalled.tick();stalled.events.onReady();stalled.expire(4000);assert.equal(stalled.plays,2,'a silent failed autoplay gets one muted retry');stalled.expire(4000);assert.equal(stalled.button.textContent,'Play preview','silent autoplay failure cannot stay loading forever');const stalledPauses=stalled.pauses;stalled.events.onStateChange({data:1});assert.equal(stalled.pauses,stalledPauses,'native Play after timeout does not require a PAUSED acknowledgment');stalled.events.onStateChange({data:2});stalled.click();assert.equal(stalled.plays,3,'manual retry remains available');stalled.show(false);stalled.expire(4000);assert.equal(stalled.plays,3,'no retries offscreen');
  h.events.onError();assert.equal(h.button.hidden,true,'native error/play controls remain usable');assert.equal(h.frame.hidden,false);assert.equal(h.fallback.hidden,false,'failed embed offers original video link');
  console.log('PASS: persistent player, delayed readiness, viewport/tab pause, manual retry, reduced motion and native error fallback');
 })().catch(e=>{console.error(e);process.exitCode=1;});

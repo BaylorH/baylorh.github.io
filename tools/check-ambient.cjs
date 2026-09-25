@@ -1,0 +1,12 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const source=fs.existsSync('assets/js/source/ambient.js')?fs.readFileSync('assets/js/source/ambient.js','utf8'):'';
+assert.ok(source,'ambient motion controller exists');
+const listeners={},preference={matches:false,addEventListener(t,f){this.change=f},removeEventListener(){}};
+const nodes=[{},{}].map(()=>({running:false,classList:{toggle(k,v){this.owner.running=v}},}));nodes.forEach(n=>n.classList.owner=n);
+const buttons=[{},{}].map(()=>({hidden:true,addEventListener(t,f){this.click=f},removeEventListener(){},setAttribute(){}}));
+const doc={hidden:false,querySelectorAll:s=>s==='.ambient-toggle'?buttons:nodes,addEventListener(t,f){listeners[t]=f},removeEventListener(){}};
+let observer;const win={addEventListener(){}};
+vm.runInNewContext(source,{document:doc,window:win,matchMedia:()=>preference,IntersectionObserver:class{constructor(f){observer=f;}observe(){}disconnect(){}}});
+observer(nodes.map(target=>({target,isIntersecting:true})));assert.ok(nodes.every(n=>n.running));buttons[0].click();assert.ok(nodes.every(n=>!n.running));assert.ok(buttons.every(b=>b.textContent==='Play motion'));buttons[1].click();assert.ok(nodes.every(n=>n.running));
+doc.hidden=true;listeners.visibilitychange();assert.ok(nodes.every(n=>!n.running));doc.hidden=false;listeners.visibilitychange();assert.ok(nodes.every(n=>n.running));preference.matches=true;preference.change();assert.ok(nodes.every(n=>!n.running));assert.ok(buttons.every(b=>b.disabled));
+console.log('PASS: ambient motion pauses offscreen/background, synchronizes both controls, and respects reduced motion');

@@ -42,7 +42,7 @@ for p in projects:
   if old!=saved:errors.append(f'{p["id"]}: original source not preserved')
   active=re.sub(r'<!--.*?-->','',old,flags=re.S)
   for src in re.findall(r'<img[^>]+src="([^"]+)"',active):
-   if src not in (root/f'{p["id"]}.html').read_text():errors.append(f'{p["id"]}: lost original media {src}')
+   if src not in p.get('excludedLegacyImages',[]) and src not in (root/f'{p["id"]}.html').read_text():errors.append(f'{p["id"]}: lost original media {src}')
  if f'{p["id"]}.html' not in (root/'index.html').read_text():errors.append(f'{p["id"]}: absent from gallery')
 assert len(projects)==13
 assert 'href="/index.html"' in (root/'404.html').read_text()

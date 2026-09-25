@@ -27,3 +27,7 @@ The homepage card displayed the illustration and “Pause preview” while the i
 Reference: https://developers.google.com/youtube/iframe_api_reference
 
 External video availability and browser autoplay policy remain dependencies. Manual playback/fallback is available when autoplay is unavailable. No public deployment, sharing or product data changes occurred.
+
+## Follow-up: silent playback recovery
+
+A ready player can fail to emit either PLAYING or an autoplay-blocked event. The new watchdog retries once after four seconds, then exposes manual Play after another four seconds instead of retaining Loading indefinitely. Tests cover this silent path, cancellation offscreen and native Play without a PAUSED acknowledgment. Fresh in-app reloads reached playback. See MOTION-POLISH-VERIFICATION.md for the accompanying UI pass.
