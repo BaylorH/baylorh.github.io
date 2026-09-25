@@ -29,12 +29,6 @@ function mount() {
     disposers.push(() => {controls.cancel();element.style.removeProperty('opacity');element.style.removeProperty('transform');});
   }, {margin:'0px 0px -30px 0px'});
   disposers.push(stopCards);
-  const signature = document.querySelector('.footer-signature');
-  if (signature) {
-    const controls = animate(signature, {y:[32,0], opacity:[.45,1]}, {ease:'linear'});
-    const stop = scroll(controls,{target:signature.closest('footer'),offset:['start end','end end']});
-    disposers.push(() => {stop();controls.cancel();signature.style.removeProperty('transform');signature.style.removeProperty('opacity');});
-  }
   if (matchMedia('(min-width: 761px)').matches) {
     document.querySelectorAll('.featured-media').forEach(media => {
       const controls=animate(media,{scale:[.94,1],y:[24,0]},{ease:'linear'});

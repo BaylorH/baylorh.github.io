@@ -2,7 +2,7 @@
 let ambientPaused = false;
 function mountAmbient() {
   const preference = matchMedia('(prefers-reduced-motion: reduce)');
-  const roots = [...document.querySelectorAll('[data-image-stream], .contact-stage')];
+  const roots = [...document.querySelectorAll('[data-image-stream]')];
   const buttons = [...document.querySelectorAll('.ambient-toggle')];
   const visible = new Set();
   const update = () => {
