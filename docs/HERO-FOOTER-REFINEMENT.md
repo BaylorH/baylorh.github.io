@@ -21,3 +21,7 @@ Evidence screenshots are attached to the Portfolio Record milestone “A full-sc
 ## Next
 
 Review the localhost preview. Publish the prepared release through the owner-run public release process, then verify the live hero/footer and directly fetch the résumé and preview to confirm the privacy changes are served.
+
+## Follow-up: let the screenshots breathe
+
+The hero now animates image elements directly at their native proportions, without a painted card, border, letterboxing or shadow. Seven screenshots are divided between the two rails instead of duplicating all seven on both sides. The cycle increased from 22 to 36 seconds; narrower images and a slightly tighter rail spread provide a longer interval where a whole screenshot fits on screen. This change applies only to the hero animation. Existing page galleries retain their layout.
