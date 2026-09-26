@@ -87,7 +87,18 @@
     "logo": "images/brands/fiftyflowers.svg",
     "logoWidth": 180,
     "logoHeight": 83,
-    "logoKind": "wordmark"
+    "logoKind": "wordmark",
+    "decisions": [
+      [
+        "Bring related tools into one platform.",
+        "Evolved support applications, a browser extension, marketing tools and company knowledge into a shared internal platform, while retaining the different workflows each team needs."
+      ],
+      [
+        "Make the rollout boundaries visible.",
+        "Customer-service knowledge supports the operational apps. Marketing and engineering knowledge form developing parts of the broader company second brain; they are not presented as equally mature."
+      ]
+    ],
+    "decisionNote": "The platform combines production workflows with MVP and beta work. The product groups above identify those differences."
   },
   {
     "id": "till",
@@ -98,7 +109,7 @@
     "status": "Scoring service + dashboard",
     "color": "blue",
     "visual": "till",
-    "short": "Machine-learning loan scoring and an operating dashboard for the lending workflow.",
+    "short": "A scoring API saving $2,000 a month. A separate five-view dashboard for understanding lending performance.",
     "role": "Software Engineer · Manifold",
     "stack": [
       "Machine learning",
@@ -110,16 +121,28 @@
     "contribution": "Built a machine-learning scoring service integrated with the lender’s application system, plus a dashboard for reviewing scoring activity, approval thresholds, lead sources and loan performance.",
     "groups": [
       [
-        "Scoring integration",
-        "Receives application inputs and returns scoring results to the existing lending system."
+        "Scoring API · $24K annualized savings",
+        "Returns scores inside the existing loan application workflow. The service saves $2,000 per month; $24,000 expresses that saving over twelve months."
       ],
       [
-        "Operational visibility",
-        "Brings scoring activity, policy thresholds, source information and historical performance into one dashboard."
+        "Overview · see the activity",
+        "Review scoring activity and decision patterns in one place."
       ],
       [
-        "Business outcome",
-        "The service saves $2,000 per month, equivalent to $24,000 annualized. The annualized figure expresses the monthly savings over twelve months."
+        "Thresholds · manage policy",
+        "Review and adjust approval thresholds, with a recorded history of changes."
+      ],
+      [
+        "Lead Sources · compare channels",
+        "Explore where applications come from and how each source performs."
+      ],
+      [
+        "Funded History · follow performance",
+        "Review funded-loan history with clear reporting periods and funding definitions."
+      ],
+      [
+        "Scenario analysis · explore tradeoffs",
+        "Explore modeled exclusions alongside observed outcomes. Scenarios support investigation; they do not prove the effect of a policy change."
       ]
     ],
     "flow": [
@@ -127,7 +150,7 @@
       "Scoring service",
       "Decision & reporting"
     ],
-    "next": "Keep scoring behavior, reporting and policy changes understandable as the lending workflow evolves.",
+    "next": "Scoring activity updates independently from imported loan-history data. Next steps focus on repeatable data refreshes and more precise links between policy changes and affected loans.",
     "evidence": "The workflow represents the documented service and dashboard. No customer applications or private financial records are included.",
     "logo": "images/till-logo.png",
     "screens": [
@@ -153,7 +176,18 @@
     "imageAlt": "HAL lending dashboard with private operating figures redacted",
     "imageCaption": "The live HAL overview brings scoring activity and decision reporting together. Private operating figures are redacted; no settings were changed.",
     "imageWidth": 1425,
-    "imageHeight": 891
+    "imageHeight": 891,
+    "decisions": [
+      [
+        "Protect policy changes from conflicting edits.",
+        "The policy editor checks the latest saved state before applying a change, preserves unrelated edits and keeps a change history. An adjustment is a recorded action, not an invisible replacement."
+      ],
+      [
+        "Separate observation from simulation.",
+        "The analysis distinguishes observed funded outcomes from modeled exclusions. A scenario helps explore a decision; it is not presented as proof that a policy change caused an outcome."
+      ]
+    ],
+    "decisionNote": "These are documented implementation choices. Private policy settings, borrower information and model details are intentionally omitted."
   },
   {
     "id": "engineering-platform",
@@ -219,7 +253,18 @@
     "imageAlt": "The Record developer workspace with projects and development tools",
     "imageCaption": "The Record’s live developer workspace, captured September 24, 2026. Private client and shared-project names are covered; the full dashboard layout is preserved.",
     "imageWidth": 1440,
-    "imageHeight": 900
+    "imageHeight": 900,
+    "decisions": [
+      [
+        "Give each product a clear responsibility.",
+        "The Record holds project scope and evidence, Brain retains engineering context, and Jarvis OS explores supervised agent execution. Keeping those responsibilities explicit makes unfinished integration visible."
+      ],
+      [
+        "Treat work as a reviewable scope.",
+        "Milestones group related features, their environment and evidence. Planning defines the next scope; execution updates the record; review decides what happens next."
+      ]
+    ],
+    "decisionNote": "These are internal engineering products. Record and Brain are used in the workflow; Jarvis OS remains an orchestration prototype with deeper integration in development."
   },
   {
     "id": "create-spaces",
@@ -230,7 +275,7 @@
     "status": "Working local dashboard · cloud connected",
     "color": "sand",
     "visual": "reports",
-    "short": "A reporting workspace connects booking reports, export history and cloud schedule visibility.",
+    "short": "Booking reports become a workspace for sales trends, export visibility and AI answers with cited sources.",
     "role": "Software Engineer · Manifold",
     "stack": [
       "Hedberg",
@@ -238,24 +283,24 @@
       "Cloud environments",
       "AI analysis"
     ],
-    "problem": "Useful sales data lives inside business software. Before a conversational dashboard can be dependable, exports must land somewhere the analysis workflow can actually read.",
-    "contribution": "Developed the Hedberg bookings-report workflow and a local reporting dashboard connected to private cloud storage. The workspace brings PDF-derived data, saved reports and export status into one interface, while keeping the future conversational layer separate.",
+    "problem": "Sales information was locked inside reports. The team needed a way to collect them, understand bookings and ask follow-up questions without losing the original source.",
+    "contribution": "Built the cloud report-export workflow and a local reporting workspace. It connects booking data, saved PDFs, export visibility and AI questions with cited report pages.",
     "groups": [
       [
-        "Review bookings",
-        "The overview presents accepted booking data alongside report coverage and freshness. Figures can be traced back to the source report."
+        "Understand bookings",
+        "Review booking data with coverage and freshness visible alongside the figures."
       ],
       [
-        "Keep report history",
-        "Saved report versions retain their date ranges and source PDF links. Repeated exports remain distinct from newly covered reporting periods."
+        "Ask questions · inspect the answer",
+        "Reports & AI opens cited PDF pages and highlights source text beside the conversation."
       ],
       [
-        "Inspect the export workflow",
-        "The dashboard displays the cloud export schedule, pause control, expandable run history and read-only Booking Report configuration."
+        "Keep the history",
+        "Saved report versions retain their dates and original PDFs, so an answer can be checked against its source."
       ],
       [
-        "Build toward conversation",
-        "A conversational AI workspace, editable export frequency and Sync now remain planned."
+        "See what is collected",
+        "Export and spending views show managed reports, collection activity and cost."
       ]
     ],
     "flow": [
@@ -263,8 +308,8 @@
       "Validated report history",
       "Reporting workspace"
     ],
-    "next": "Validate sustained daily reliability and a Mac-off trial. Editable frequency, Sync now and a conversational AI experience remain planned; the dashboard shown here is a working local build, not a public deployment.",
-    "evidence": "Screenshots captured September 24, 2026 at 10:30 PM Arizona. The working local dashboard is connected to private cloud storage and uses real PDF-derived data. Confidential values are redacted. These images demonstrate interface state, not uninterrupted daily reliability or a Mac-off trial.",
+    "next": "The workspace runs locally and connects to private cloud storage. Sustained daily reliability, company hosting, shared conversation history and conversational dashboard editing remain in development.",
+    "evidence": "The September 24 screenshots show the earlier local reporting interface, with confidential values redacted. AI questions and source highlighting were verified in the current code and project record; they are not pictured in this set. The screenshots do not prove uninterrupted daily reliability.",
     "logo": "images/create-spaces-logo.png",
     "logoWidth": 800,
     "logoHeight": 221,
@@ -299,12 +344,23 @@
       {
         "src": "images/product-screens/create-spaces-04-report-configuration.webp",
         "alt": "Read-only Booking Report workflow and settings with private identifiers redacted.",
-        "caption": "Read-only Booking Report configuration. Editable frequency, Sync now and conversational AI remain planned.",
+        "caption": "Read-only report configuration in the September 24 local build, with private identifiers redacted. The current AI conversation interface is not pictured in this set.",
         "width": 1440,
         "height": 900
       }
     ],
-    "previewMode": "single"
+    "previewMode": "single",
+    "decisions": [
+      [
+        "Verify a report before replacing the current data.",
+        "The export workflow independently checks the report before accepting a new version. A failed check keeps the last accepted dataset available instead of promoting incomplete or inconsistent information."
+      ],
+      [
+        "Retain the source, not just the dashboard.",
+        "Saved report versions and their original PDFs remain part of the reporting workspace. That makes the displayed information traceable to an accepted export."
+      ]
+    ],
+    "decisionNote": "Working local software connected to private cloud storage. Company deployment and sustained daily reliability remain ahead; the screenshots predate the cited AI workspace."
   },
   {
     "id": "axiom",

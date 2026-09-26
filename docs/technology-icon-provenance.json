@@ -1,0 +1,12 @@
+{
+  "source": "https://raw.githubusercontent.com/devicons/devicon/v2.16.0/",
+  "license": "MIT; brands remain their respective owners; no endorsement implied",
+  "icons": [
+    "react",
+    "typescript",
+    "nodejs",
+    "python",
+    "firebase",
+    "swift"
+  ]
+}
