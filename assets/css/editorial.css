@@ -44,3 +44,18 @@
 @media(max-width:380px){.featured-outcomes{grid-template-columns:1fr;gap:16px}}
 
 .workspace-art .workspace-window{max-width:260px;align-self:start;margin-top:5px}.workspace-art .workspace-note{bottom:0;color:#bdc9bf}.system-connector{justify-content:center}
+
+/* Scroll chapters: native sticky panels, with distinct opaque surfaces. */
+@media(min-width:851px){
+ .has-scroll-scenes{position:relative;padding-bottom:96px}
+ .has-scroll-scenes .featured-story{position:sticky;top:48px;min-height:560px;padding:48px 40px;gap:44px;margin-bottom:100px;border:1px solid #d1d8c9;border-radius:24px;box-shadow:0 -10px 35px -24px #34442b50;background:#e9eee2;scroll-margin-top:48px}
+ .has-scroll-scenes .featured-story:nth-of-type(2){background:#e6ecee;border-color:#ced7db}
+ .has-scroll-scenes .featured-story:nth-of-type(3){background:#eeeae1;border-color:#d9d2c4;margin-bottom:0}
+ .has-scroll-scenes .featured-copy h3{font-size:clamp(30px,3vw,43px)}
+ .has-scroll-scenes .featured-caption{font-size:10px}
+ .has-scroll-scenes .featured-media{max-width:min(100%,max(280px,calc((100svh - 340px)*1.35)));margin:auto}
+}
+@media(prefers-reduced-motion:reduce){
+ .has-scroll-scenes .featured-story{position:relative;top:auto;transform:none!important}
+ .featured-media,.project-card>.visual-link,[data-section-reveal]{transform:none!important}
+}

@@ -34,3 +34,9 @@ finePointer.addEventListener('change',mount);
 const desktop=matchMedia('(min-width: 851px)');desktop.addEventListener('change',mount);
 window.addEventListener('pagehide',()=>cleanup());
 window.addEventListener('pageshow',event=>{if(event.persisted)mount();});
+
+// Re-evaluate panel fit after resizing, including short landscape windows.
+let resizeFrame;
+window.addEventListener('resize',()=>{cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(mount);});
+
+document.fonts?.ready.then(mount);
