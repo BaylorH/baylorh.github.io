@@ -15,12 +15,96 @@
         "axiom",
         "sitesift"
       ],
-      "bullets": [
-        "Built a machine-learning loan-scoring service for Till, delivering $24,000 in annual savings, plus a five-view dashboard for lending performance.",
-        "Built connected reporting and AI workflows for Create Spaces and property-research software for SiteSift AI. Led Axiom’s AI-assisted proposal-data project, with dashboard implementation by collaborating developers.",
-        "Created The Record, Brain and Jarvis OS: tools for project management, persistent engineering knowledge and supervised AI-agent orchestration."
-      ],
-      "earlier": "Earlier client work includes a custom website for Butala Branding and WordPress improvements for Axiom."
+      "earlier": "Earlier client work includes a custom website for Butala Branding and WordPress improvements for Axiom.",
+      "intro": "Founded an AI development studio delivering business applications, workflow automation and an internal suite for managing AI-assisted engineering.",
+      "groups": [
+        {
+          "title": "Till",
+          "context": "Lending & financial services",
+          "projects": [
+            {
+              "name": "Machine-learning scoring API",
+              "text": "Built loan scoring inside the existing application workflow, returning model scores and policy decisions while delivering $24,000 in annual savings.",
+              "record": "till-hal-api"
+            },
+            {
+              "name": "HAL operating dashboard",
+              "text": "Built five connected workstations for scoring activity, approval thresholds, lead-source economics, funded-loan history and reject-band analysis, with live reporting and saved policy changes.",
+              "record": "till-dashboard"
+            }
+          ]
+        },
+        {
+          "title": "Create Spaces",
+          "context": "Office furniture & workplace services",
+          "projects": [
+            {
+              "name": "Hedberg reporting & AI workspace",
+              "text": "Built a cloud agent to export business reports and a connected dashboard for booking trends, report history and export controls. AI answers open cited source pages; team rollout continues.",
+              "record": "create-spaces-hedberg"
+            }
+          ]
+        },
+        {
+          "title": "Axiom",
+          "context": "Structural engineering",
+          "projects": [
+            {
+              "name": "Proposal research & fee estimation",
+              "text": "Directed delivery and subcontracted development of AI-assisted document extraction, historical proposal research and estimating tools. Collaborating developers implemented the dashboard.",
+              "record": "axiom-data-explore"
+            },
+            {
+              "name": "Executive briefing workspace",
+              "text": "Led a separate build bringing priorities, tasks, messages and meetings into a personalized briefing, with an assistant-driven sync view. The application was not launched.",
+              "record": "lee-dashboard"
+            }
+          ]
+        },
+        {
+          "title": "SiteSift AI",
+          "context": "Commercial real estate",
+          "projects": [
+            {
+              "name": "Property research & broker communication",
+              "text": "Built a workspace connecting property lists, broker email, extracted information, follow-ups and advisor decisions. Beta work focuses on reliable automation and accurate property-level data.",
+              "record": "sitesift-ai"
+            }
+          ]
+        },
+        {
+          "title": "AI Development Platform",
+          "context": "Internal engineering products",
+          "projects": [
+            {
+              "name": "The Record",
+              "text": "Built project management for developers, clients and connected AI agents: scoped milestones, progress, questions, screenshots and evidence, with shared client dashboards.",
+              "record": "the-record"
+            },
+            {
+              "name": "Brain",
+              "text": "Built persistent engineering knowledge across projects and coding sessions, with searchable documents, visual relationship maps, reusable workflows and explicit handoffs.",
+              "record": "brain"
+            },
+            {
+              "name": "Jarvis OS",
+              "text": "Built orchestration for assigning and supervising coding agents, preserving work state and checking results. Integration with The Record and Brain remains in development.",
+              "record": "jarvis-os"
+            }
+          ]
+        },
+        {
+          "title": "AI Media Manager",
+          "context": "Social-media research",
+          "projects": [
+            {
+              "name": "Instagram research library",
+              "text": "Built an organization-based dashboard for accounts, imported posts, visual media and sync status. More complete media capture and research discovery remain in development.",
+              "record": "aimedia-manager"
+            }
+          ]
+        }
+      ]
     },
     {
       "company": "FiftyFlowers",
@@ -31,18 +115,69 @@
         {
           "role": "AI Solutions Engineer",
           "period": "Jan 2026 – Present",
-          "bullets": [
-            "Built four connected AI customer-service apps, delivering $24,000 in annual savings, with shared conversation history and a Chrome extension.",
-            "Built AI image-editing and content tools, departmental knowledge workspaces and an AI roadmap dashboard. Migrated the internal platform from AWS Lambda to Firebase and Google Cloud.",
-            "Developed product-data migration tools for DIY flower kits and implemented an event-proposal application from supplied wireframes."
+          "intro": "Built a connected portfolio of AI and operational tools across customer service, marketing, shopping and product data.",
+          "products": [
+            {
+              "name": "Customer service AI",
+              "text": "Built four apps for inquiries, reviews, claims and payment disputes, with shared chat, case history and a Chrome extension. The apps deliver $24,000 in annual savings; the platform moved from AWS to Firebase and Google Cloud.",
+              "record": "fiftyflowers-internal-ai"
+            },
+            {
+              "name": "Company Second Brain",
+              "text": "Unified departmental knowledge: production support policies used by the apps, marketing guidance at MVP stage and an engineering beta used in my own coding. Added visual navigation and knowledge-aware chat.",
+              "record": "fiftyflowers-engineering-brain"
+            },
+            {
+              "name": "Image Studio & Farm Exports",
+              "text": "Built AI product-image editing, reusable style presets and cutouts, plus a separate catalog-photo preparation workflow for the Farm Exports sales channel.",
+              "record": "fiftyflowers-image-studio"
+            },
+            {
+              "name": "FAQ & Content Engine",
+              "text": "Built customer-question analysis, answer-coverage exploration and a review queue for FAQ and blog drafts, following AI discoverability research and a company roadmap.",
+              "record": "fiftyflowers-faq-blogs"
+            },
+            {
+              "name": "Proposal Manager",
+              "text": "Implemented supplied wireframes as an event-planning application with flower recipes, presentations and shopping lists. Launch was paused when DIY migration took priority.",
+              "record": "fiftyflowers-proposal-manager"
+            },
+            {
+              "name": "DIY Kits Migration",
+              "text": "Built tools to reconcile farm spreadsheets with store products and move kit recipes and purchase links into a test store, with source tracking and validation for the production handoff.",
+              "record": "fiftyflowers-diy-kits-migration"
+            },
+            {
+              "name": "AI roadmap & project visibility",
+              "text": "Built a FiftyFlowers dashboard in The Record, linked from Internal AI, so stakeholders can see each initiative, milestone, completed feature and supporting evidence.",
+              "record": "the-record"
+            }
           ]
         },
         {
           "role": "AI & Process Innovation Associate",
           "period": "Jul 2025 – Jan 2026",
-          "bullets": [
-            "Built early AI shopping and DIY-kit assistants, connecting natural-language requests to product and recipe data.",
-            "Implemented Share Your Flair submission processing and urgent-order workflows across Shopify, Asana and AWS."
+          "products": [
+            {
+              "name": "Shopping assistant",
+              "text": "Built the early flower-selection chatbot, storefront interface and cloud services, connecting conversational requests to catalog filters, product results and saved conversations.",
+              "record": "fiftyflowers-shopping-assistant"
+            },
+            {
+              "name": "Share Your Flair",
+              "text": "Built wedding-submission processing that connects customer stories and media to Asana review and Shopify Make This Look workflows; repaired historical media delivery.",
+              "record": "fiftyflowers-share-your-flair"
+            },
+            {
+              "name": "Rush Orders",
+              "text": "Implemented the storefront request form and notification workflow that routes urgent-delivery requests to customer service and operations.",
+              "record": "fiftyflowers-rush-order"
+            },
+            {
+              "name": "DIY-kit assistant",
+              "text": "Built a conversational interface for questions about kit reference data, distinct from the later recipe-data migration.",
+              "record": "public-work-experience"
+            }
           ]
         }
       ]
@@ -53,11 +188,24 @@
       "role": "Web Developer · Internship",
       "context": "Digital marketing agency",
       "logo": "client-portal",
-      "bullets": [
-        "Independently built the company’s first client portal in two weeks; adopted by all 17 employees for client communication and project workflows.",
-        "Co-developed frontend and backend features for ALPHA SEO with the engineering team, and maintained client content through DNN and Sanity."
-      ],
-      "note": "Collaborated with the art director on visual direction, with lead-developer support on initial setup and CSS."
+      "note": "Collaborated with the art director on visual direction, with lead-developer support on initial setup and CSS.",
+      "products": [
+        {
+          "name": "Client Portal",
+          "text": "Independently built the company’s first client portal in two weeks; adopted by all 17 employees for client communication and project workflows.",
+          "record": "client-portal"
+        },
+        {
+          "name": "ALPHA SEO",
+          "text": "Co-developed frontend and backend features for the domain-focused SEO platform with the engineering team.",
+          "record": "alpha-seo"
+        },
+        {
+          "name": "Client websites & content",
+          "text": "Created and maintained client blogs and website pages through DNN and Sanity CMS.",
+          "record": "webmarkets"
+        }
+      ]
     }
   ],
   "education": {
