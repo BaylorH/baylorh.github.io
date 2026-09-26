@@ -8,7 +8,7 @@
     "status": "Production tools + ongoing work",
     "color": "green",
     "visual": "flowers",
-    "short": "Support, product imagery and company knowledge—connected in one internal platform.",
+    "short": "AI for customer service, product image editing and company knowledge—in one internal platform.",
     "role": "AI Solutions Engineer",
     "stack": [
       "React",
@@ -106,10 +106,10 @@
     "name": "Till",
     "category": "business",
     "sector": "Financial services · Lending",
-    "status": "Scoring service + dashboard",
+    "status": "Machine learning + lending analytics",
     "color": "blue",
     "visual": "till",
-    "short": "A scoring API saving $2,000 a month. A separate five-view dashboard for understanding lending performance.",
+    "short": "Machine-learning loan scoring saving $2,000 a month, with a five-view lending dashboard.",
     "role": "Software Engineer · Manifold",
     "stack": [
       "Machine learning",
@@ -122,7 +122,7 @@
     "groups": [
       [
         "Scoring API · $24K annualized savings",
-        "Returns scores inside the existing loan application workflow. The service saves $2,000 per month; $24,000 expresses that saving over twelve months."
+        "Machine-learning scores returned inside the existing loan application workflow. The service saves $2,000 per month; $24,000 expresses that saving over twelve months."
       ],
       [
         "Overview · see the activity",
@@ -147,7 +147,7 @@
     ],
     "flow": [
       "Loan application",
-      "Scoring service",
+      "Machine-learning scoring",
       "Decision & reporting"
     ],
     "next": "Scoring activity updates independently from imported loan-history data. Next steps focus on repeatable data refreshes and more precise links between policy changes and affected loans.",
@@ -195,10 +195,10 @@
     "name": "AI Development Platform",
     "category": "engineering",
     "sector": "Internal products · Developer experience",
-    "status": "Working tools + orchestration prototype",
+    "status": "Project management · memory · orchestration",
     "color": "ink",
     "visual": "platform",
-    "short": "Project management, durable engineering memory and supervised coding-agent workflows.",
+    "short": "A development suite for AI agents: project management, engineering memory and orchestration.",
     "role": "Founder & Software Engineer",
     "stack": [
       "Agent connections",
@@ -219,7 +219,7 @@
       ],
       [
         "Jarvis OS · coordinate execution",
-        "An orchestration prototype for assigning and supervising coding agents. It explores how agent work can connect with the project record and engineering memory."
+        "Orchestration for assigning and supervising coding agents, connecting their work with project context and engineering knowledge."
       ],
       [
         "The working cycle",
@@ -264,7 +264,7 @@
         "Milestones group related features, their environment and evidence. Planning defines the next scope; execution updates the record; review decides what happens next."
       ]
     ],
-    "decisionNote": "These are internal engineering products. Record and Brain are used in the workflow; Jarvis OS remains an orchestration prototype with deeper integration in development."
+    "decisionNote": "The Record and Brain support the development workflow. Deeper integration with Jarvis OS is the next step."
   },
   {
     "id": "create-spaces",
@@ -368,11 +368,11 @@
     "name": "Axiom",
     "category": "business",
     "sector": "Structural engineering",
-    "status": "Research & estimating tools",
+    "status": "Manifold delivery · development partners",
     "color": "clay",
     "visual": "axiom",
-    "short": "Tools for exploring proposal history, project fees and hours to inform new estimates.",
-    "role": "Product development & coordination",
+    "short": "Proposal research and estimating dashboards. Led delivery through Manifold Engineering with subcontracted development.",
+    "role": "Project direction & subcontractor management",
     "stack": [
       "Data exploration",
       "Search",
@@ -380,7 +380,7 @@
       "Delivery coordination"
     ],
     "problem": "Historical proposals contain useful information for estimating new work, but finding and comparing that information can be difficult.",
-    "contribution": "Led product development and coordinated subcontractors on tools for searching past proposals and exploring fees and hours. The role includes product direction and delivery coordination rather than a claim of sole implementation.",
+    "contribution": "Led the engagement through Manifold Engineering, directing the project and managing subcontracted development. Collaborating developers implemented the dashboard and its research tools.",
     "groups": [
       [
         "Proposal research",
@@ -392,7 +392,7 @@
       ],
       [
         "Executive briefing",
-        "Built a separate executive-briefing prototype. It was not launched."
+        "A separate executive-briefing exploration, distinct from the research dashboard. It was not launched."
       ]
     ],
     "flow": [
@@ -401,7 +401,7 @@
       "Estimating context"
     ],
     "next": "Build on the research and estimating workflows as business requirements become clearer. The executive-briefing prototype remains distinct from launched work.",
-    "evidence": "Attribution follows the reviewed professional profile. No confidential proposals, fee records or client identities are exposed.",
+    "evidence": "Dashboard implementation by collaborating developers; project direction and subcontractor management by Baylor through Manifold Engineering. No confidential proposals, fee records or client identities are exposed.",
     "screens": [
       {
         "src": "images/product-screens/axiom-analytics.webp",
@@ -566,11 +566,11 @@
     "name": "Client Portal",
     "title": "A shared place for client work.",
     "category": "earlier",
-    "sector": "Digital agency · 2024 internship",
-    "status": "Historical project",
+    "sector": "WebMarkets · Digital marketing agency",
+    "status": "Independent build · 2024 internship",
     "color": "blue",
     "image": "images/product-screens/client-portal-updates.webp",
-    "short": "The first client portal for an agency’s communication and project workflows.",
+    "short": "WebMarkets’ first client portal, independently built in two weeks during my internship.",
     "role": "Web Developer Intern",
     "stack": [
       "Preact",
@@ -578,8 +578,8 @@
       "Node.js",
       "Firebase"
     ],
-    "problem": "An agency needed a central platform for client communication.",
-    "contribution": "Independently developed the first version, working with the lead developer on setup and CSS and collaborating on the visual direction.",
+    "problem": "WebMarkets needed a central workspace for client communication, project updates and account management.",
+    "contribution": "Independently built WebMarkets’ first client portal in two weeks during my 2024 internship—my first professional software assignment. The lead developer helped with initial setup and CSS, with shared input on visual direction.",
     "legacy": true,
     "imageWidth": 2534,
     "imageHeight": 1372,
@@ -600,18 +600,23 @@
       }
     ],
     "imageAlt": "Client portal updates feed and navigation with personal details covered",
-    "imageCaption": "Client updates feed from the original 2024 portal. Personal details and profile illustrations are covered."
+    "imageCaption": "Client updates feed from the original 2024 portal. Personal details and profile illustrations are covered.",
+    "logo": "images/brands/webmarkets.webp",
+    "logoWidth": 1034,
+    "logoHeight": 156,
+    "logoKind": "wordmark",
+    "logoLabel": "WebMarkets"
   },
   {
     "id": "alpha-seo",
     "name": "ALPHA SEO",
     "title": "Tools for focused search optimization.",
     "category": "earlier",
-    "sector": "Digital agency · 2024 internship",
+    "sector": "WebMarkets · Digital marketing agency",
     "status": "Collaborative project",
     "color": "green",
     "visual": "seo",
-    "short": "Frontend and backend contributions to a domain-focused SEO tool.",
+    "short": "Frontend and backend contributions to WebMarkets’ domain-focused SEO platform.",
     "role": "Web Developer Intern",
     "stack": [
       "React",
@@ -619,11 +624,16 @@
       "Node.js",
       "Firebase"
     ],
-    "problem": "An agency needed a domain-focused SEO optimization interface.",
-    "contribution": "Co-developed application features with the engineering team. The original project demonstration is retained above.",
+    "problem": "WebMarkets needed a domain-focused SEO optimization interface.",
+    "contribution": "Co-developed frontend and backend features with the WebMarkets engineering team during my 2024 internship. The original project demonstration is retained above.",
     "legacy": true,
     "videoId": "rbcvWOjfI3E",
-    "videoCaption": "Original ALPHA SEO product demonstration from the 2024 internship. Historical footage; co-developed with the agency engineering team."
+    "videoCaption": "Original ALPHA SEO product demonstration from the 2024 internship. Historical footage; co-developed with the agency engineering team.",
+    "logo": "images/brands/webmarkets.webp",
+    "logoWidth": 1034,
+    "logoHeight": 156,
+    "logoKind": "wordmark",
+    "logoLabel": "WebMarkets"
   },
   {
     "id": "pacman",

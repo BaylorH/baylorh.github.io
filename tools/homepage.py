@@ -1,14 +1,14 @@
 """Editorial homepage composition; existing case-study content stays in the shared builder."""
 from html import escape as e
 from atmosphere import stream
-from editorial import closing_sections
+from editorial import closing_sections, capability_strip
 
 def homepage(projects, visual, card, brand_art):
- hero='''<section class="studio-hero"><div class="studio-intro"><p class="studio-byline">Baylor Harrison · Manifold Engineering</p><h1>Useful AI.<br>Thoughtfully engineered.</h1><p class="studio-deck">I turn business information, everyday workflows and ambitious ideas into software people can actually use.</p><div class="hero-actions"><a class="button dark" href="#selected-work">Explore selected work <span aria-hidden="true">↓</span></a><a class="text-link" href="#about">Meet the engineer</a></div><p class="studio-location">Independent engineer & founder <span>Based in Arizona</span></p></div>'''+stream(projects)+'''</section><div class="studio-disciplines"><span>AI applications</span><span>Full-stack products</span><span>Cloud integrations</span><span>Engineering tools</span></div>'''
+ hero='''<section class="studio-hero"><div class="studio-intro"><p class="studio-byline">Baylor Harrison · Manifold Engineering</p><h1>Useful AI.<br>Thoughtfully engineered.</h1><p class="studio-deck">I turn business information, everyday workflows and ambitious ideas into software people can actually use.</p><div class="hero-actions"><a class="button dark" href="#selected-work">Explore selected work <span aria-hidden="true">↓</span></a><a class="text-link" href="#about">Meet the engineer</a></div><p class="studio-location">Independent engineer & founder <span>Based in Arizona</span></p></div>'''+stream(projects)+'</section>'+capability_strip()
  stories={
- 'fiftyflowers':('One workspace. More ways to help.','Connected tools for customer support, product imagery and company knowledge.', [('Customer support','4 connected applications'),('Marketing','Reusable image & content workflows')]),
- 'till':('Lower costs. Clearer lending decisions.','Scoring built into the lending workflow, with a separate dashboard for tracking performance.', [('Scoring API','$24K annualized savings'),('Lending dashboard','5 connected views')]),
- 'engineering-platform':('Know what’s built. Know what’s next.','A shared view of project progress, with engineering knowledge that carries into the next session.', [('The Record','Scope, progress & evidence'),('Brain + Jarvis OS','Working memory · orchestration prototype')])}
+ 'fiftyflowers':('One workspace. More ways to help.','AI for customer service, product image editing and company knowledge—all in one workspace.', [('AI customer service','4 connected applications'),('AI image editing','Reusable presets & content workflows')]),
+ 'till':('Lower costs. Clearer lending decisions.','Machine-learning loan scoring, paired with a dashboard for understanding lending performance.', [('Machine-learning API','$24K annualized savings'),('Lending dashboard','5 connected views')]),
+ 'engineering-platform':('Know what’s built. Know what’s next.','A shared view of project progress, with engineering knowledge that carries into the next session.', [('The Record','Scope, progress & evidence'),('Brain + Jarvis OS','Engineering memory · agent orchestration')])}
  featured='<section id="selected-work" class="selected-work"><div class="selected-heading"><p class="studio-byline">Selected work</p><h2 data-reveal-heading>Built around<br>the real problem.</h2><p>A few ways that takes shape.</p></div>'
  for pid,(title,desc,outcomes) in stories.items():
   p=next(p for p in projects if p['id']==pid)
