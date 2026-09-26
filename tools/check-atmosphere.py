@@ -11,7 +11,7 @@ assert 'aria-hidden="true" class="stream-world"' in html, 'duplicated decorative
 for page in ['index.html','alpha-seo.html','create-spaces.html']:
  text=(r/page).read_text()
  assert 'class="contact-stage"' in text and 'mailto:baylor@manifoldengineering.ai' in text
- assert 'href="resume.html"' in text and 'href="index.html#work"' in text
+ assert 'href="/resume/"' in text and 'href="/#work"' in text
 css=(r/'assets/css/atmosphere.css').read_text()
 assert 'prefers-reduced-motion:reduce' in css and 'animation-play-state:paused' in css
 print('PASS: product-only ML imagery, decorative hero semantics/pause, responsive motion fallback and usable footer navigation')

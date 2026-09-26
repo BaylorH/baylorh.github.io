@@ -45,7 +45,7 @@
     else if(/\.pdf(?:$|[?#])/.test(href))emit('event','document_click',{document_name:href.split('/').pop().split(/[?#]/)[0]});
     else {
       const url=new URL(href,location.href);
-      if(url.origin===location.origin&&/\.html$/.test(url.pathname))emit('event','project_open',{page_path:url.pathname});
+      if(url.origin===location.origin&&/^\/(?!resume\/)[a-z0-9-]+\/$/.test(url.pathname))emit('event','project_open',{page_path:url.pathname});
     }
   });
 })();

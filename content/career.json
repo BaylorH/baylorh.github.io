@@ -1,0 +1,85 @@
+{
+  "updated": "September 2026",
+  "name": "Baylor Harrison",
+  "headline": "AI & Software Engineer | Founder, Manifold Engineering",
+  "summary": "Builds AI applications, machine-learning services and cloud systems that connect business knowledge, automate workflows and make information useful. Combines hands-on engineering with project direction and delivery.",
+  "experience": [
+    {
+      "company": "Manifold Engineering",
+      "period": "Aug 2024 – Present",
+      "role": "Founder & Software Engineer",
+      "context": "Independent AI development studio",
+      "clients": [
+        "till",
+        "create-spaces",
+        "axiom",
+        "sitesift"
+      ],
+      "bullets": [
+        "Built a machine-learning loan-scoring service for Till, delivering $24,000 in annual savings, plus a five-view dashboard for lending performance.",
+        "Built connected reporting and AI workflows for Create Spaces and property-research software for SiteSift AI. Led Axiom’s AI-assisted proposal-data project, with dashboard implementation by collaborating developers.",
+        "Created The Record, Brain and Jarvis OS: tools for project management, persistent engineering knowledge and supervised AI-agent orchestration."
+      ],
+      "earlier": "Earlier client work includes a custom website for Butala Branding and WordPress improvements for Axiom."
+    },
+    {
+      "company": "FiftyFlowers",
+      "period": "Jul 2025 – Present",
+      "context": "E-commerce · Retail & wholesale",
+      "logo": "fiftyflowers",
+      "roles": [
+        {
+          "role": "AI Solutions Engineer",
+          "period": "Jan 2026 – Present",
+          "bullets": [
+            "Built four connected AI customer-service apps, delivering $24,000 in annual savings, with shared conversation history and a Chrome extension.",
+            "Built AI image-editing and content tools, departmental knowledge workspaces and an AI roadmap dashboard. Migrated the internal platform from AWS Lambda to Firebase and Google Cloud.",
+            "Developed product-data migration tools for DIY flower kits and implemented an event-proposal application from supplied wireframes."
+          ]
+        },
+        {
+          "role": "AI & Process Innovation Associate",
+          "period": "Jul 2025 – Jan 2026",
+          "bullets": [
+            "Built early AI shopping and DIY-kit assistants, connecting natural-language requests to product and recipe data.",
+            "Implemented Share Your Flair submission processing and urgent-order workflows across Shopify, Asana and AWS."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "WebMarkets",
+      "period": "May 2024 – Aug 2024",
+      "role": "Web Developer · Internship",
+      "context": "Digital marketing agency",
+      "logo": "client-portal",
+      "bullets": [
+        "Independently built the company’s first client portal in two weeks; adopted by all 17 employees for client communication and project workflows.",
+        "Co-developed frontend and backend features for ALPHA SEO with the engineering team, and maintained client content through DNN and Sanity."
+      ],
+      "note": "Collaborated with the art director on visual direction, with lead-developer support on initial setup and CSS."
+    }
+  ],
+  "education": {
+    "school": "Arizona State University",
+    "degree": "Bachelor of Science · Computer Science",
+    "period": "2021 – 2025",
+    "completed": "May 2025",
+    "details": "Dean’s List · Merit scholarship recipient",
+    "project": "Team capstone: interactive 3D machine-learning visualization for an ASU course."
+  },
+  "skills": [
+    [
+      "AI & data",
+      "Machine learning, AI integrations, retrieval and knowledge systems, workflow automation, data visualization"
+    ],
+    [
+      "Application engineering",
+      "Python, TypeScript, JavaScript, React, Node.js, SQL, API design"
+    ],
+    [
+      "Cloud & delivery",
+      "Firebase, Google Cloud, AWS, Git, testing, deployment, technical handoffs"
+    ]
+  ]
+}

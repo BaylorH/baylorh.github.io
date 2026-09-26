@@ -197,3 +197,32 @@ for (const gallery of document.querySelectorAll('[data-screen-gallery]')) {
     });
   });
 }
+
+// Center the complete Approach panel; keep tall mobile layouts readable from the top.
+(() => {
+  const section = document.querySelector('#approach');
+  if (!section) return;
+  function centerApproach(smooth = false) {
+    let top = 0;
+    for (let node = section; node; node = node.offsetParent) top += node.offsetTop;
+    const height = section.offsetHeight;
+    const inset = height <= innerHeight - 32 ? (innerHeight - height) / 2 : 24;
+    window.scrollTo({ top: Math.max(0, top - inset), behavior: smooth && !matchMedia('(prefers-reduced-motion: reduce)').matches ? 'smooth' : 'instant' });
+  }
+  document.addEventListener('click', event => {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    const link = event.target.closest('a[href]');
+    if (!link || link.target || link.hasAttribute('download')) return;
+    const url = new URL(link.href, location.href);
+    if (url.origin !== location.origin || !['/', '/index.html'].includes(url.pathname) || url.hash !== '#approach') return;
+    event.preventDefault();
+    history.pushState(null, '', '/'+url.search+'#approach');
+    centerApproach(true);
+  });
+  const alignHash = () => { if (location.hash === '#approach') requestAnimationFrame(() => centerApproach()); };
+  window.addEventListener('hashchange', alignHash);
+  window.addEventListener('popstate', alignHash);
+  // Wait for the initial layout without changing subsequent manual scrolling.
+  const loaded = document.readyState === 'complete' ? Promise.resolve() : new Promise(resolve => window.addEventListener('load', resolve, { once: true }));
+  Promise.all([loaded, document.fonts?.ready]).then(alignHash);
+})();

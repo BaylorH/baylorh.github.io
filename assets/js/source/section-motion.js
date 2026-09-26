@@ -39,7 +39,7 @@ export function mountSectionMotion({animate, scroll, root = document, desktop = 
   root.querySelectorAll('.project-card').forEach((card, index) => {
     const media = card.querySelector('.visual-link');
     if (media) bind(media,
-      [desktop ? `translateY(90px) rotate(${index % 2 ? 3 : -3}deg) scale(.88)` : 'translateY(48px) scale(.94)', 'translateY(0px) rotate(0deg) scale(1)'],
+      [desktop ? `translateY(-32px) rotate(${index % 2 ? 3 : -3}deg) scale(.88)` : 'translateY(-16px) scale(.94)', 'translateY(0px) rotate(0deg) scale(1)'],
       card, ['start 98%', 'start 45%']);
   });
   root.querySelectorAll('[data-section-reveal], .case-visual').forEach(section => {

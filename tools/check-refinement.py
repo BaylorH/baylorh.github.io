@@ -50,7 +50,7 @@ for pid in ['fiftyflowers','till','create-spaces','axiom','sitesift','ai-media-m
   with Image.open(path) as image:actual=image.size
  assert actual==(item['logoWidth'],item['logoHeight']), f'{pid}: dimensions differ from original art'
  for page in ['index.html',pid+'.html']:
-  matches=[im for im in BrandImages((r/page).read_text()).images if im.get('src')==item['logo']]
+  matches=[im for im in BrandImages((r/page).read_text()).images if im.get('src','').lstrip('/')==item['logo']]
   assert matches, f'{page}: missing {pid} brand art'
   assert all(im.get('width')==str(item['logoWidth']) and im.get('height')==str(item['logoHeight']) for im in matches), f'{page}: brand ratio not reserved'
 for pid in ['till','engineering-platform']:

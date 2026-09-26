@@ -8,7 +8,7 @@
     "status": "Production tools + ongoing work",
     "color": "green",
     "visual": "flowers",
-    "short": "AI for customer service, product image editing and company knowledge—in one internal platform.",
+    "short": "AI customer-service apps delivering $24,000 in annual savings, alongside AI image editing and company knowledge.",
     "role": "AI Solutions Engineer",
     "stack": [
       "React",
@@ -22,7 +22,7 @@
     "groups": [
       [
         "Customer service",
-        "Four applications for customer questions, reviews, claims and payment disputes, with shared chat, case history and a Chrome extension. The serving layer moved from AWS Lambda to Firebase and Google Cloud."
+        "Four applications for customer questions, reviews, claims and payment disputes, with shared chat, case history and a Chrome extension. The serving layer moved from AWS Lambda to Firebase and Google Cloud. The customer-service apps alone deliver $24,000 in annual savings."
       ],
       [
         "Company Second Brain",
@@ -109,7 +109,7 @@
     "status": "Machine learning + lending analytics",
     "color": "blue",
     "visual": "till",
-    "short": "Machine-learning loan scoring saving $2,000 a month, with a five-view lending dashboard.",
+    "short": "Machine-learning loan scoring delivering $24,000 in annual savings, with a five-view lending dashboard.",
     "role": "Software Engineer · Manifold",
     "stack": [
       "Machine learning",
@@ -121,8 +121,8 @@
     "contribution": "Built a machine-learning scoring service integrated with the lender’s application system, plus a dashboard for reviewing scoring activity, approval thresholds, lead sources and loan performance.",
     "groups": [
       [
-        "Scoring API · $24K annualized savings",
-        "Machine-learning scores returned inside the existing loan application workflow. The service saves $2,000 per month; $24,000 expresses that saving over twelve months."
+        "Machine-learning API · $24K annual savings",
+        "Machine-learning scores returned inside the existing loan application workflow, delivering $24,000 in annual savings."
       ],
       [
         "Overview · see the activity",
@@ -371,7 +371,7 @@
     "status": "Manifold delivery · development partners",
     "color": "clay",
     "visual": "axiom",
-    "short": "Proposal research and estimating dashboards. Led delivery through Manifold Engineering with subcontracted development.",
+    "short": "AI-assisted PDF extraction turns proposal history into an estimating dashboard. Led delivery with subcontracted development.",
     "role": "Project direction & subcontractor management",
     "stack": [
       "Data exploration",
@@ -379,12 +379,12 @@
       "Dashboards",
       "Delivery coordination"
     ],
-    "problem": "Historical proposals contain useful information for estimating new work, but finding and comparing that information can be difficult.",
+    "problem": "Useful estimating context was buried in historical proposal PDFs. AI-assisted extraction makes that information available for research and comparison.",
     "contribution": "Led the engagement through Manifold Engineering, directing the project and managing subcontracted development. Collaborating developers implemented the dashboard and its research tools.",
     "groups": [
       [
         "Proposal research",
-        "Search and investigate earlier proposal information to understand comparable work."
+        "AI-assisted extraction makes historical proposal PDFs searchable and usable in the dashboard."
       ],
       [
         "Estimating context",
