@@ -1539,26 +1539,44 @@
    "Estimating context"
   ],
   "next": "The research workspace is delivered. Estimates depend on reconciling the source records first, so the estimating tools are treated as exploratory until that matching is complete. A separate executive-briefing prototype was not launched.",
-  "evidence": "Dashboard implementation by collaborating developers; project direction and subcontractor management by Baylor through Manifold Engineering. No confidential proposals, fee records or client identities are exposed.",
+  "evidence": "Every picture is a local run of the product’s own code with invented records: no real project, client, person, fee or hour is shown, and the name of the client’s accounting system is replaced by a neutral phrase. Dashboard implementation by collaborating developers; project direction and subcontractor management by Baylor through Manifold Engineering.",
   "screens": [
    {
-    "src": "images/product-screens/axiom-analytics.webp",
-    "alt": "Axiom analytics dashboard with sector distribution and fee-analysis charts",
-    "caption": "Analytics across historical proposal and fee data. Amounts, counts, chart shapes, account details and the name of the client’s accounting system are covered. The interface is shown as captured, not as independent validation of the analysis.",
+    "src": "images/product-screens/axiom-landing.webp",
+    "alt": "A dark dashboard page with three cards for Word proposals, accounting projects and Excel workbooks",
+    "caption": "The research workspace’s landing page: three sources of project history. A local run of the product’s code with invented records.",
     "width": 1440,
-    "height": 900
+    "height": 900,
+    "label": "Three sources, one project memory"
    },
    {
-    "src": "images/product-screens/axiom-explorer.webp",
-    "alt": "Axiom source explorer showing proposals, actuals and workbook collections",
-    "caption": "The live source explorer organizes proposals, engagement records and fee workbooks. Private counts, account details and the name of the client’s accounting system are covered; source reconciliation and estimation remain separate work.",
+    "src": "images/product-screens/axiom-analytics-word.webp",
+    "alt": "An analytics page with headline figures, a donut chart, a bar chart and an area chart",
+    "caption": "Analytics across the proposal history. Local run, invented records.",
+    "width": 1184,
+    "height": 1449,
+    "label": "Proposals, in aggregate"
+   },
+   {
+    "src": "images/product-screens/axiom-evidence.webp",
+    "alt": "Extraction evidence rows with confidence badges, then a document divided into sections",
+    "caption": "Every extracted value keeps its confidence and the lines it was read from. Local run, invented records.",
+    "width": 1184,
+    "height": 1910,
+    "label": "Every value keeps its evidence"
+   },
+   {
+    "src": "images/product-screens/axiom-regions.webp",
+    "alt": "A spreadsheet with coloured blocks marking tables, labels and formulas, above a colour legend",
+    "caption": "A fee workbook read as typed regions. A drawing of the annotated file, invented workbook.",
     "width": 1440,
-    "height": 900
+    "height": 2331,
+    "label": "A workbook read as typed regions"
    }
   ],
-  "image": "images/product-screens/axiom-analytics.webp",
-  "imageAlt": "Axiom analytics dashboard with sector distribution and fee-analysis charts",
-  "imageCaption": "Analytics across historical proposal and fee data. Amounts, counts, chart shapes, account details and the name of the client’s accounting system are covered. The interface is shown as captured, not as independent validation of the analysis.",
+  "image": "images/product-screens/axiom-landing.webp",
+  "imageAlt": "A dark dashboard page with three cards for Word proposals, accounting projects and Excel workbooks",
+  "imageCaption": "The research workspace’s landing page: three sources of project history. A local run of the product’s code with invented records.",
   "imageWidth": 1440,
   "imageHeight": 900,
   "logo": "images/brands/axiom.png",
@@ -1569,7 +1587,229 @@
   "stage": "built",
   "nextTitle": "Delivered, with validation ahead.",
   "created": "2025-12",
-  "createdFrom": "repository 3 Dec 2025"
+  "createdFrom": "repository 3 Dec 2025",
+  "chapters": [
+   {
+    "id": "explore",
+    "nav": "The three sources",
+    "eyebrow": "The research workspace",
+    "title": "Proposal history you can search, with the evidence kept.",
+    "intro": "The workspace brings three kinds of history together: the proposals themselves, the project records from the accounting system, and the Excel fee workbooks. Collaborating developers implemented the dashboard under my direction. These pictures are its own code running on my machine with invented records: no real project, client, person or figure appears, and the name of the client’s accounting system is replaced by a neutral phrase.",
+    "note": "Local run, invented records.",
+    "stage": "built",
+    "status": "Delivered with development partners · estimates not yet validated",
+    "screens": [
+     {
+      "src": "images/product-screens/axiom-landing.webp",
+      "alt": "A dark dashboard page with three cards for Word proposals, accounting projects and Excel workbooks",
+      "label": "Three sources, one project memory",
+      "caption": "The landing page: Word proposals, the accounting system’s projects and Excel fee workbooks, each with what it holds and a way in.",
+      "width": 1440,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/axiom-word.webp",
+      "alt": "A table of proposals with sector chips and filters, then the same table filtered to six rows",
+      "label": "Proposals you can search",
+      "caption": "The table of extracted proposals, and the same table narrowed by a search word, a sector and a material.",
+      "width": 1184,
+      "height": 1570
+     },
+     {
+      "src": "images/product-screens/axiom-evidence.webp",
+      "alt": "Extraction evidence rows with confidence badges, then a document divided into sections",
+      "label": "Every value keeps its evidence",
+      "caption": "Each extracted value carries a confidence level and the lines of the document it was read from; the document itself is kept in sections.",
+      "width": 1184,
+      "height": 1910
+     },
+     {
+      "src": "images/product-screens/axiom-fees.webp",
+      "alt": "A fee breakdown with a phase bar, and an extraction quality card",
+      "label": "Fees by scope and phase",
+      "caption": "The fee breakdown read from a proposal, and the quality card that says which method supplied each field.",
+      "width": 1184,
+      "height": 1650
+     },
+     {
+      "src": "images/product-screens/axiom-accounting.webp",
+      "alt": "A table of projects with status badges, then one project’s hours and phases",
+      "label": "What was actually delivered",
+      "caption": "Project records from the accounting system: the list, and one project with its hours by phase and top contributors.",
+      "width": 1184,
+      "height": 2470
+     },
+     {
+      "src": "images/product-screens/axiom-workbooks.webp",
+      "alt": "A table of workbooks, then one workbook’s page with sheet tabs and a project info section",
+      "label": "Fee workbooks, sheet by sheet",
+      "caption": "Extracted Excel fee workbooks: the list, and one workbook with its sheets and sections.",
+      "width": 1184,
+      "height": 1910
+     }
+    ]
+   },
+   {
+    "id": "method",
+    "nav": "How a workbook is read",
+    "eyebrow": "Extraction",
+    "title": "Spreadsheets become structured records without a model guessing.",
+    "intro": "Fee workbooks are read by rule: a tool finds the regions of each sheet and types them, and sheets that match a known template become sections. A sheet that matches nothing is kept as raw regions, so nothing is invented to fill a gap.",
+    "note": "Local run, invented records.",
+    "screens": [
+     {
+      "src": "images/product-screens/axiom-regions.webp",
+      "alt": "A spreadsheet with coloured blocks marking tables, labels and formulas, above a colour legend",
+      "label": "A workbook read as typed regions",
+      "caption": "A fee sheet after the region tool has coloured it: label-and-value pairs, tables, notes and formulas each become a typed region. A drawing of the annotated file, with the legend the tool adds.",
+      "width": 1440,
+      "height": 2331,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/axiom-sections.webp",
+      "alt": "Four sections of a workbook page: bill rates, hour estimate, fee matrix and past projects",
+      "label": "From regions to sections",
+      "caption": "What the extractor finds in one workbook: roles and bill rates, the hour estimate, the fee matrix and the past projects the estimate cites.",
+      "width": 1184,
+      "height": 3218
+     }
+    ]
+   },
+   {
+    "id": "analytics",
+    "nav": "Analytics and comparison",
+    "eyebrow": "Across the history",
+    "title": "The same records, in aggregate and side by side.",
+    "intro": "Charts over each source, and a page that sets up to three proposals beside each other. Every figure is the invented dataset’s.",
+    "note": "Local run, invented records.",
+    "screens": [
+     {
+      "src": "images/product-screens/axiom-analytics-word.webp",
+      "alt": "An analytics page with headline figures, a donut chart, a bar chart and an area chart",
+      "label": "Proposals, in aggregate",
+      "caption": "Value by sector, fee per square foot by size band, and proposal volume and value by year.",
+      "width": 1184,
+      "height": 1449
+     },
+     {
+      "src": "images/product-screens/axiom-analytics-excel.webp",
+      "alt": "An analytics page with workbook counts and three bar charts",
+      "label": "Workbooks, in aggregate",
+      "caption": "How many workbooks matched a template, workbooks by year, fee totals by phase and the spread of bill rates.",
+      "width": 1184,
+      "height": 1514
+     },
+     {
+      "src": "images/product-screens/axiom-compare.webp",
+      "alt": "A comparison table of three proposals with coloured differences",
+      "label": "Three proposals side by side",
+      "caption": "Area, cost, fees, materials and client for three proposals, with the difference from the first in colour.",
+      "width": 1184,
+      "height": 1053
+     }
+    ]
+   },
+   {
+    "id": "workbench",
+    "nav": "The estimating workbench",
+    "eyebrow": "Exploratory",
+    "title": "From a new project to a fee, one step at a time.",
+    "intro": "The workbench walks a new project through six steps: describe it, find similar past work, estimate hours, work out the fee, draft, review. It is exploratory until the source records are reconciled. Two of its steps call a model; no model was called for these pictures, so those steps are shown as their form and waiting state.",
+    "note": "Local run, invented records.",
+    "stage": "development",
+    "status": "Exploratory · estimates not yet validated",
+    "screens": [
+     {
+      "src": "images/product-screens/axiom-wb-start.webp",
+      "alt": "Three views of a small start card: new project, the six steps, and a saved draft",
+      "label": "Six steps, with drafts to resume",
+      "caption": "The workbench opens on a start card: a new project, a saved draft, or one of six steps.",
+      "width": 1440,
+      "height": 427,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/axiom-wb-params.webp",
+      "alt": "A project parameters form filled in, then the client and team section",
+      "label": "Describe the project",
+      "caption": "Step 1: identity, scope, client and team for an invented project.",
+      "width": 1184,
+      "height": 1530
+     },
+     {
+      "src": "images/product-screens/axiom-wb-similar.webp",
+      "alt": "A similarity search form, then two result cards with score bars on a canvas",
+      "label": "Find similar past work",
+      "caption": "Step 2: the search, and the best proposal match and the best workbook match with their score bars. The ranking is the product’s own scoring code; no model is involved.",
+      "width": 1184,
+      "height": 1810
+     },
+     {
+      "src": "images/product-screens/axiom-wb-result.webp",
+      "alt": "A result page for a workbook with a score breakdown and a linked proposal",
+      "label": "Why a result matched",
+      "caption": "A workbook result opened: its hours, fee and area, the score breakdown and the proposal it is linked to.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/axiom-wb-calc.webp",
+      "alt": "A fee calculation grid of phases against roles, then a financial summary",
+      "label": "Work out the fee",
+      "caption": "Step 4: hours by phase and role give the billable base, cost, margin and total fee, with diagnostics and the fee by phase.",
+      "width": 1184,
+      "height": 1910
+     },
+     {
+      "src": "images/product-screens/axiom-wb-model.webp",
+      "alt": "Four views: an estimator form, a waiting state, a draft form and a waiting state",
+      "label": "The two steps that call a model",
+      "caption": "The hours estimator and the draft generator, each as its form and its waiting state. Their results are a model’s output and are not shown: no model was called for these pictures.",
+      "width": 1184,
+      "height": 2518
+     }
+    ]
+   },
+   {
+    "id": "briefing",
+    "nav": "The executive briefing",
+    "eyebrow": "A separate prototype · not launched",
+    "title": "A morning briefing assembled by a browser assistant.",
+    "intro": "A separate prototype: a personal briefing of priorities, tasks, emails and meetings, filled by a browser assistant that reads the user’s own tools. It was paused before launch. These pictures are its own code with an invented user and invented items.",
+    "note": "Local run, invented user and items.",
+    "stage": "earlier",
+    "status": "Prototype · paused before launch",
+    "screens": [
+     {
+      "src": "images/product-screens/axiom-briefing-home.webp",
+      "alt": "A dark briefing page with a greeting, four priorities, a task list and an email list",
+      "label": "A morning briefing",
+      "caption": "Priorities with progress rings, tasks grouped by where they came from, and the emails that need a reply.",
+      "width": 1040,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/axiom-briefing-week.webp",
+      "alt": "A week of meetings in seven columns above priorities and tasks",
+      "label": "The week opened",
+      "caption": "Seven day columns with their meetings above the same briefing.",
+      "width": 1040,
+      "height": 1076
+     },
+     {
+      "src": "images/product-screens/axiom-briefing-sync.webp",
+      "alt": "A list of three connected platforms, then one expanded with its synced items",
+      "label": "Where the data comes from",
+      "caption": "Three connected platforms, and one opened to what arrived from it and the prompt the page prepares for a browser assistant.",
+      "width": 1060,
+      "height": 1965
+     }
+    ]
+   }
+  ],
+  "productNote": "Five parts follow: the three sources, how a workbook is read, analytics, the estimating workbench, and a separate briefing prototype."
  },
  {
   "id": "fiftyflowers-proposal-manager",
