@@ -29,13 +29,17 @@ assert [c[1] for c in cards]==[x['id'] for x in listed], 'Directory order differ
 assert [c[0] for c in cards]==[x['category'] for x in listed] and set(p.projects)<={'companies','products','earlier'}, 'Unknown directory kind'
 assert 'class="directory-group"' not in home and 'by company' not in home, 'The directory is one mixed collection'
 assert home.count('href="/fiftyflowers/"')>=1, 'The company overview stays reachable from the featured story'
-current=[x for x in listed if x['category']!='earlier']
-assert listed[len(current):]==[x for x in listed if x['category']=='earlier'], 'Earlier work closes the collection'
+# The collection runs loosely in order of creation, newest first, and the games close it.
+months=lambda x:int(x['created'][:4])*12+int(x['created'][5:7])
+games=[x for x in listed if x.get('game')]; rest=[x for x in listed if not x.get('game')]
+assert listed==rest+games and [x['id'] for x in games]==['ai-arena','lunar-base','pacman'], 'The games close the collection'
+assert all(months(b)-months(a)<=3 for i,a in enumerate(rest) for b in rest[i+1:]), 'A card sits ahead of one that is more than three months newer'
+assert all(months(a)>=months(b) for a,b in zip(games,games[1:])), 'The games run newest first'
 company=lambda x:x.get('parent') or x['id']
-assert all(company(a)!=company(b) for a,b in zip(current,current[1:])), 'Two products of one company sit side by side'
-assert len({company(x) for x in current[:3]})==3, 'The collection must open on three different places'
+assert sum(company(a)==company(b) for a,b in zip(rest,rest[1:]))<=1, 'Products of one company stack up in the collection'
+assert len({company(x) for x in rest[:3]})==3, 'The collection must open on three different places'
 assert 'sitesift' not in p.features, 'A product in development is not featured'
-print('PASS: selected stories, mixed directory without a company overview card, and release motion budget')
+print('PASS: selected stories, a collection in loose order of creation with the games last, and release motion budget')
 
 import json
 from PIL import Image
@@ -80,7 +84,7 @@ for pid in ['till','create-spaces','engineering-platform']:
 print('PASS: verified brand art and reviewed selected-work screenshots retain dimensions and captions')
 
 # Keep requested editorial order and gallery sources reliable as the collection grows.
-expected=['fiftyflowers', 'fiftyflowers-support-ai', 'till', 'create-spaces', 'fiftyflowers-image-studio', 'engineering-platform', 'fiftyflowers-second-brain', 'axiom', 'fiftyflowers-shopping-assistant', 'sitesift', 'fiftyflowers-storefront-requests', 'ai-arena', 'fiftyflowers-proposal-manager', 'ai-media-manager', 'fiftyflowers-diy-migration', 'client-portal', 'alpha-seo', 'pacman', 'machine-learning-visualization', 'lunar-base', 'ai-travel-companion']
+expected=['fiftyflowers', 'create-spaces', 'fiftyflowers-diy-migration', 'engineering-platform', 'fiftyflowers-second-brain', 'ai-media-manager', 'fiftyflowers-image-studio', 'axiom', 'fiftyflowers-proposal-manager', 'fiftyflowers-support-ai', 'till', 'fiftyflowers-storefront-requests', 'sitesift', 'fiftyflowers-shopping-assistant', 'ai-travel-companion', 'client-portal', 'alpha-seo', 'machine-learning-visualization', 'ai-arena', 'lunar-base', 'pacman']
 assert [x['id'] for x in items]==expected, 'Requested directory order changed'
 import sys
 sys.path.insert(0,str(r/'tools'))

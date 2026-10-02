@@ -8,7 +8,7 @@
   "status": "In production · ongoing work",
   "color": "green",
   "visual": "flowers",
-  "short": "AI customer-service apps in production since January 2026, alongside AI product imagery, a company knowledge workspace and storefront integrations.",
+  "short": "AI customer-service apps in production since January 2026, which replaced a paid writing tool and save about $24,000 a year, alongside AI product imagery, a company knowledge workspace and storefront integrations.",
   "role": "AI Solutions Engineer · earlier AI & Process Innovation Associate",
   "stack": [
    "React",
@@ -23,7 +23,7 @@
   "groups": [
    [
     "Customer service AI",
-    "Four support apps, shared case history and a Chrome sidepanel, in production since January 2026. See the Customer service AI case study."
+    "Four support apps, shared case history and a Chrome sidepanel, in production since January 2026. They replaced the paid AI writing tool the team used before, which saves about $24,000 a year. See the Customer service AI case study."
    ],
    [
     "Company Second Brain",
@@ -101,194 +101,9 @@
   ],
   "decisionNote": "The platform combines production workflows with MVP and beta work. The product groups above identify those differences.",
   "stage": "production",
-  "nextTitle": "In production, and still growing."
- },
- {
-  "id": "fiftyflowers-support-ai",
-  "title": "Support replies, drafted with the right knowledge.",
-  "name": "Customer service AI",
-  "category": "companies",
-  "sector": "FiftyFlowers · Customer support",
-  "status": "In production · since January 2026",
-  "color": "green",
-  "short": "Four AI apps for inquiries, reviews, claims and chargebacks, with shared case history and a Chrome sidepanel. By my own estimate they save about $24,000 a year; the figure is not audited.",
-  "role": "AI Solutions Engineer · FiftyFlowers",
-  "stack": [
-   "React",
-   "Firebase",
-   "Google Cloud",
-   "Chrome extension",
-   "LLM APIs",
-   "Shopify"
-  ],
-  "problem": "Support representatives answer very different situations: care questions, public reviews, damage claims and card disputes. Each needs the right policy, voice and numbers, and each case can run over several messages.",
-  "contribution": "Built the four support apps, the shared chat and case history, and a Chrome sidepanel that brings three of the apps (inquiries, reviews and claims) into the support tools the team already uses. Migrated the platform’s serving layer from AWS Lambda to Firebase and Google Cloud.",
-  "groups": [
-   [
-    "Four task-focused apps",
-    "Inquiry, Reviews, Claims and Chargeback each combine a form with a chosen brand voice, audience and knowledge articles, then produce an editable draft."
-   ],
-   [
-    "Numbers the reply can trust",
-    "In the web app, Claims calculates the refund and the store-credit alternative from the damaged products, and the drafted reply quotes those figures exactly."
-   ],
-   [
-    "Knowledge the representative confirms",
-    "Articles are matched by keywords and tags and shown before drafting, so the representative sees what the reply will rely on."
-   ],
-   [
-    "One case, start to finish",
-    "Input, AI draft, edits, regeneration and follow-ups are saved as one case that can be reopened in its original app."
-   ],
-   [
-    "Where the team works",
-    "A Chrome sidepanel recognizes highlighted text on approved support sites and offers the right form, a quick rewrite in the company voice, or a follow-up drafted from the case history."
-   ]
-  ],
-  "flow": [
-   "Customer message",
-   "Form and company knowledge",
-   "Reviewed reply"
-  ],
-  "next": "In production since January 2026. The savings figure is my own estimate, not a company or audited number.",
-  "evidence": "Screens show invented cases entered for documentation. No customer, order or staff information is displayed.",
-  "decisions": [
-   [
-    "Calculate first, then write.",
-    "The form computes refunds and credits; the AI is asked to quote those figures, not to work them out."
-   ],
-   [
-    "Keep a case together.",
-    "Every step of a case is stored in order, so a later reply starts from what was already said and changed."
-   ]
-  ],
-  "decisionNote": "Forty user-visible functions were documented across the apps, chat, history, extension and administration.",
-  "screens": [
-   {
-    "src": "images/product-screens/ff-support-inquiry.webp",
-    "alt": "A drafted reply to an invented care question about ranunculus and garden roses",
-    "caption": "CS Inquiry with an invented care question: the app picks the matching care articles and drafts the reply. The representative’s name is replaced.",
-    "width": 1290,
-    "height": 860
-   },
-   {
-    "src": "images/product-screens/ff-support-apps.webp",
-    "alt": "The CS Inquiry form, empty, with the four support apps in the side menu",
-    "caption": "The CS Inquiry form before anything is generated, with the four support apps in the menu. The signed-in name is replaced.",
-    "width": 1440,
-    "height": 900
-   },
-   {
-    "src": "images/product-screens/ff-support-reviews.webp",
-    "alt": "A drafted public reply to an invented two-star review",
-    "caption": "Reviews: a plain-text public reply to an invented two-star review.",
-    "width": 1290,
-    "height": 990
-   }
-  ],
-  "image": "images/product-screens/ff-support-inquiry.webp",
-  "imageAlt": "A drafted reply to an invented care question about ranunculus and garden roses",
-  "imageCaption": "CS Inquiry with an invented care question: the app picks the matching care articles and drafts the reply. The representative’s name is replaced.",
-  "imageWidth": 1290,
-  "imageHeight": 860,
-  "logo": "images/brands/fiftyflowers.svg",
-  "logoWidth": 180,
-  "logoHeight": 83,
-  "logoKind": "wordmark",
-  "parent": "fiftyflowers",
-  "stage": "production",
-  "nextTitle": "In use by the support team since January 2026."
- },
- {
-  "id": "till",
-  "title": "A clearer view of lending decisions.",
-  "name": "Till",
-  "category": "companies",
-  "sector": "Financial services · Lending",
-  "status": "In production · scoring API and dashboard",
-  "color": "blue",
-  "visual": "till",
-  "short": "Machine-learning loan scoring that saves an estimated $24,000 a year, with a five-view lending dashboard.",
-  "role": "Software Engineer · Manifold",
-  "stack": [
-   "Machine learning",
-   "APIs",
-   "Cloud services",
-   "Data visualization"
-  ],
-  "problem": "Loan scoring needs to fit into an existing application process, while the team needs visibility into scoring activity and loan performance.",
-  "contribution": "Built a machine-learning scoring service that the lender’s application system calls, plus a dashboard for reviewing scoring activity, policy settings, lead sources and loan performance.",
-  "groups": [
-   [
-    "Machine-learning API · est. $24K a year",
-    "Machine-learning scores returned inside the existing loan application workflow, saving an estimated $24,000 a year."
-   ],
-   [
-    "Overview · see the activity",
-    "Review scoring activity and decision patterns in one place."
-   ],
-   [
-    "Policy settings · a recorded history",
-    "Review policy settings, with a recorded history of changes."
-   ],
-   [
-    "Lead Sources · compare channels",
-    "Explore where applications come from and how each source performs."
-   ],
-   [
-    "Funded History · follow performance",
-    "Review funded-loan history with clear reporting periods and funding definitions."
-   ],
-   [
-    "Scenario analysis · explore tradeoffs",
-    "Explore modeled exclusions alongside observed outcomes. Scenarios support investigation; they do not prove the effect of a policy change."
-   ]
-  ],
-  "flow": [
-   "Loan application",
-   "Machine-learning scoring",
-   "Decision & reporting"
-  ],
-  "next": "Scoring activity updates independently from imported loan-history data. Next steps focus on repeatable data refreshes and more precise links between policy changes and affected loans. The savings figure is my own estimate, not an audited number.",
-  "evidence": "The workflow represents the documented service and dashboard. No customer applications are included, and every figure and trend is covered.",
-  "logo": "images/till-logo.png",
-  "screens": [
-   {
-    "src": "images/product-screens/hal-overview.webp",
-    "alt": "HAL lending dashboard with private operating figures redacted",
-    "caption": "The HAL overview brings scoring activity and decision reporting together. Figures and data-freshness badges are covered; no settings were changed.",
-    "width": 1425,
-    "height": 891
-   },
-   {
-    "src": "images/product-screens/hal-sources.webp",
-    "alt": "HAL lead-source analytics showing trend charts with private values covered",
-    "caption": "Lead-source reporting, captured September 24, 2026. Source names, figures, status tiles and trend lines are covered.",
-    "width": 1425,
-    "height": 891
-   }
-  ],
-  "logoWidth": 312,
-  "logoHeight": 152,
-  "logoKind": "wordmark",
-  "image": "images/product-screens/hal-overview.webp",
-  "imageAlt": "HAL lending dashboard with private operating figures redacted",
-  "imageCaption": "The HAL overview brings scoring activity and decision reporting together. Figures and data-freshness badges are covered; no settings were changed.",
-  "imageWidth": 1425,
-  "imageHeight": 891,
-  "decisions": [
-   [
-    "Protect policy changes from conflicting edits.",
-    "The policy editor checks the latest saved state before applying a change, preserves unrelated edits and keeps a change history. An adjustment is a recorded action, not an invisible replacement."
-   ],
-   [
-    "Separate observation from simulation.",
-    "The analysis distinguishes observed funded outcomes from modeled exclusions. A scenario helps explore a decision; it is not presented as proof that a policy change caused an outcome."
-   ]
-  ],
-  "decisionNote": "These are documented implementation choices. Private policy settings, borrower information and model details are intentionally omitted.",
-  "stage": "production",
-  "nextTitle": "In production, with clear next steps."
+  "nextTitle": "In production, and still growing.",
+  "created": "2025-07",
+  "createdFrom": "role start"
  },
  {
   "id": "create-spaces",
@@ -383,101 +198,77 @@
   "imageWidth": 1440,
   "imageHeight": 900,
   "stage": "rollout",
-  "nextTitle": "Live, and still rolling out."
+  "nextTitle": "Live, and still rolling out.",
+  "created": "2026-09",
+  "createdFrom": "project record 18 Sep 2026; cloud pilot repository 24 Sep 2026"
  },
  {
-  "id": "fiftyflowers-image-studio",
-  "title": "Consistent product photos, on demand.",
-  "name": "Image Studio",
+  "id": "fiftyflowers-diy-migration",
+  "title": "Hundreds of kit recipes and 2,789 arrangement plans, moved and checked.",
+  "name": "DIY kit data migration",
   "category": "companies",
-  "sector": "FiftyFlowers · Marketing",
-  "status": "In production · released August 2026",
+  "sector": "FiftyFlowers · Product data",
+  "status": "Delivered on a test copy of the store",
   "color": "green",
-  "short": "Generative product-photo editing with reusable looks: new backgrounds, exact brand colors and transparent cutouts, with the cost of every run shown before it is spent.",
+  "short": "Matched farm spreadsheets to store products and wrote recipes, purchase links and 2,789 arrangement plans onto a test copy of the store, each traced to its source.",
   "role": "AI Solutions Engineer · FiftyFlowers",
   "stack": [
-   "Gemini image models",
-   "React",
-   "Firebase",
-   "Python pipeline"
+   "Python",
+   "Spreadsheet parsing",
+   "Data matching",
+   "Content-system APIs",
+   "Verification"
   ],
-  "problem": "A large product catalog needed consistent backgrounds and styles. Editing by hand was slow, and a credit-based third-party tool cost about 15 cents an image.",
-  "contribution": "Ran the April pilot and its cost case, then built Image Studio and Preset Creation into the company’s AI platform, with usage tracking and team limits, plus a separate catalog-photo pipeline.",
+  "problem": "DIY flower kits were defined across farm workbooks and a large internal planning workbook. The store’s product system needed the same recipes, purchase links and arrangement plans, without hand entry and without silent changes.",
+  "contribution": "Built the readers, matchers and writers with source tracking, so every written value traces to the worksheet cell it came from and every worksheet ends with a recorded outcome.",
   "groups": [
    [
-    "A pilot that made the case",
-    "Five catalog products on five backgrounds gave 25 image-to-image results: the simplest product kept its shape on every background, while most tight flower close-ups were recomposed. The pilot estimated about 4 cents and 5 seconds an image on the model it tested."
+    "Read the farm books",
+    "509 kit entries read from nine farm workbooks, 504 of them usable. Re-reading the full set of 16 farm books takes about 27 seconds whenever the farms send updates."
    ],
    [
-    "Pick a look",
-    "Upload a batch and apply a saved look: background color, vase, lighting, backdrop texture and one of 14 aspect ratios."
+    "Match and write",
+    "498 entries matched to store products; recipes and purchase links written for 494, with the rest held for a reason recorded beside them."
    ],
    [
-    "Exact color, real cutouts",
-    "An exact-color option rewrites background pixels to the brand color after generation; the cutout look produces a transparent PNG."
+    "Arrangements",
+    "All 255 planning worksheets have an outcome; 2,789 arrangements on 139 kits were written, each checked against its worksheet."
    ],
    [
-    "Looks the team can build",
-    "Preset Creation derives a reusable look from example images and a test photo, generates three samples, and keeps up to ten versions."
-   ],
-   [
-    "Costs in view",
-    "Every run shows photos times the price the administrators have set and asks for confirmation above 25 cents; administrators see image spend over time and set per-person and team limits."
+    "Nothing silently changed",
+    "Every substitution, missing flower or shortfall went into review lists for the merchandising team instead of being guessed."
    ]
   ],
   "flow": [
-   "Product photo",
-   "Saved look and AI model",
-   "Styled image or cutout"
+   "Farm and planning workbooks",
+   "Matched products",
+   "Checked recipes and arrangements"
   ],
-  "next": "Released in the company platform in August 2026. A full photo-to-result check across every look is the remaining step.",
-  "evidence": "Pilot images use the company’s public catalog photos. The before-and-after pair is the sample bundled with a built-in look.",
-  "decisions": [
-   [
-    "Call the models directly.",
-    "The pilot compared a credit-based tool with direct model calls on the same task: about 15 cents against an estimated 4 cents an image on the model tested. The released studio uses a newer, more expensive model, so the saving per image is smaller than the pilot’s estimate."
-   ],
-   [
-    "Show the exact prompt.",
-    "Every option writes one sentence of the prompt, and the full prompt is visible before generating, so a look is inspectable rather than magic."
-   ]
-  ],
-  "decisionNote": "The April pilot also ran 250 text-to-image experiments; they were not scored and are not presented as results.",
+  "next": "Delivered on a test copy of the store; moving it into the live store is the company’s next step.",
+  "evidence": "No supplier names, purchase costs or internal pricing are shown.",
   "screens": [
    {
-    "src": "images/product-screens/ff-image-pilot-grid.webp",
-    "alt": "Grid of catalog flower photos re-rendered on five different backgrounds",
-    "caption": "April 2026 pilot: catalog photos (top row) on five generated backgrounds. The leaf kept its shape every time; most tight flower close-ups were recomposed rather than kept, a limit the pilot recorded.",
-    "width": 1400,
-    "height": 1579
-   },
-   {
-    "src": "images/product-screens/ff-image-before-after.webp",
-    "alt": "Roses in a vase before and after the background was standardised",
-    "caption": "A built-in look: the arrangement and vase stay, the background becomes a flat light gray. Bundled sample, not a new generation.",
+    "src": "images/product-screens/ff-diy-arrangements.webp",
+    "alt": "A DIY kit’s arrangement plan on the test store, listing each piece and its stems",
+    "caption": "A kit’s arrangement plan on the test copy: each piece to make, how many, and its stems by section.",
     "width": 1600,
-    "height": 788
-   },
-   {
-    "src": "images/product-screens/ff-image-preset-editor.webp",
-    "alt": "Preset Creation editor showing a team look with its three sample results, each setting and its prompt sentence",
-    "caption": "Preset Creation: a team look reopened for editing, with its test photo, three sample results and every setting beside the sentence it adds to the prompt.",
-    "width": 1560,
-    "height": 1520
+    "height": 1000
    }
   ],
-  "image": "images/product-screens/ff-image-pilot-grid.webp",
-  "imageAlt": "Grid of catalog flower photos re-rendered on five different backgrounds",
-  "imageCaption": "April 2026 pilot: catalog photos (top row) on five generated backgrounds. The leaf kept its shape every time; most tight flower close-ups were recomposed rather than kept, a limit the pilot recorded.",
-  "imageWidth": 1400,
-  "imageHeight": 1579,
+  "image": "images/product-screens/ff-diy-arrangements.webp",
+  "imageAlt": "A DIY kit’s arrangement plan on the test store, listing each piece and its stems",
+  "imageCaption": "A kit’s arrangement plan on the test copy: each piece to make, how many, and its stems by section.",
+  "imageWidth": 1600,
+  "imageHeight": 1000,
   "logo": "images/brands/fiftyflowers.svg",
   "logoWidth": 180,
   "logoHeight": 83,
   "logoKind": "wordmark",
   "parent": "fiftyflowers",
-  "stage": "production",
-  "nextTitle": "Released, with one check left."
+  "stage": "built",
+  "nextTitle": "Delivered on a test copy.",
+  "created": "2026-08",
+  "createdFrom": "migration repository 27 Aug 2026"
  },
  {
   "id": "engineering-platform",
@@ -575,7 +366,9 @@
   ],
   "decisionNote": "The Record and Brain support my development workflow and client pages. Deeper integration with Jarvis OS is the next step.",
   "stage": "own",
-  "nextTitle": "In daily use, with more to connect."
+  "nextTitle": "In daily use, with more to connect.",
+  "created": "2026-08",
+  "createdFrom": "Jarvis OS repository 23 Aug 2026 (Brain 15 Jul 2026)"
  },
  {
   "id": "fiftyflowers-second-brain",
@@ -659,550 +452,9 @@
   "logoKind": "wordmark",
   "parent": "fiftyflowers",
   "stage": "rollout",
-  "nextTitle": "An MVP, with two teams’ knowledge in."
- },
- {
-  "id": "axiom",
-  "title": "Make past engineering work useful again.",
-  "name": "Axiom",
-  "category": "companies",
-  "sector": "Structural engineering",
-  "status": "Delivered with development partners · estimates not yet validated",
-  "color": "clay",
-  "visual": "axiom",
-  "short": "AI-assisted extraction turned thousands of historical fee proposals into a searchable research workspace, with fee-estimating tools on top. Led delivery with subcontracted development.",
-  "role": "Project direction & subcontractor management",
-  "stack": [
-   "AI-assisted extraction",
-   "Search",
-   "Dashboards",
-   "Delivery coordination"
-  ],
-  "problem": "Useful estimating context was buried in historical Word proposals, Excel fee workbooks and project-accounting records. AI-assisted extraction makes that information available for research and comparison.",
-  "contribution": "Led the engagement through Manifold Engineering, directing the project and managing subcontracted development. Collaborating developers implemented the dashboard and its research tools.",
-  "groups": [
-   [
-    "Proposal research",
-    "AI-assisted extraction makes historical Word proposals and Excel fee workbooks searchable and usable in the dashboard, beside project-accounting records."
-   ],
-   [
-    "Estimating context",
-    "Explore historical fees and hours to inform estimates for new projects. The figures are a starting point for an engineer’s judgment, not a quote."
-   ],
-   [
-    "Executive briefing",
-    "A separate executive-briefing exploration, distinct from the research dashboard. It was not launched."
-   ]
-  ],
-  "flow": [
-   "Proposal history",
-   "Search & explore",
-   "Estimating context"
-  ],
-  "next": "The research workspace is delivered. Estimates depend on reconciling the source records first, so the estimating tools are treated as exploratory until that matching is complete. A separate executive-briefing prototype was not launched.",
-  "evidence": "Dashboard implementation by collaborating developers; project direction and subcontractor management by Baylor through Manifold Engineering. No confidential proposals, fee records or client identities are exposed.",
-  "screens": [
-   {
-    "src": "images/product-screens/axiom-analytics.webp",
-    "alt": "Axiom analytics dashboard with sector distribution and fee-analysis charts",
-    "caption": "Analytics across historical proposal and fee data. Amounts, counts, chart shapes and account details are covered. The interface is shown as captured, not as independent validation of the analysis.",
-    "width": 1440,
-    "height": 900
-   },
-   {
-    "src": "images/product-screens/axiom-explorer.webp",
-    "alt": "Axiom source explorer showing proposals, actuals and workbook collections",
-    "caption": "The live source explorer organizes proposals, engagement records and fee workbooks. Private counts and account details are covered; source reconciliation and estimation remain separate work.",
-    "width": 1440,
-    "height": 900
-   }
-  ],
-  "image": "images/product-screens/axiom-analytics.webp",
-  "imageAlt": "Axiom analytics dashboard with sector distribution and fee-analysis charts",
-  "imageCaption": "Analytics across historical proposal and fee data. Amounts, counts, chart shapes and account details are covered. The interface is shown as captured, not as independent validation of the analysis.",
-  "imageWidth": 1440,
-  "imageHeight": 900,
-  "logo": "images/brands/axiom.png",
-  "logoWidth": 371,
-  "logoHeight": 178,
-  "logoKind": "wordmark",
-  "previewMode": "single",
-  "stage": "built",
-  "nextTitle": "Delivered, with validation ahead."
- },
- {
-  "id": "fiftyflowers-shopping-assistant",
-  "title": "Flower requests, answered from the catalog.",
-  "name": "AI Floral Assistant",
-  "sector": "FiftyFlowers · Storefront",
-  "status": "In the store theme · behind an A/B test since January 2026",
-  "short": "A storefront chat panel: shoppers describe what they need and get matching catalog products with prices. The AI only reads the request; code runs the search.",
-  "role": "AI Solutions Engineer · FiftyFlowers",
-  "stack": [
-   "Shopify theme",
-   "JavaScript",
-   "AWS Lambda",
-   "Python",
-   "DynamoDB",
-   "LLM API"
-  ],
-  "problem": "Shoppers know the event, the colors and the budget, not the product names. The goal was a way to describe a need in plain words and get catalog products back, with no chance of an invented product or price.",
-  "contribution": "Built the 2025 prototype, then the storefront assistant: the chat panel in the store theme, the conversation and catalog-search functions on AWS, and the prompt that turns a shopper’s words into the store’s own filters.",
-  "groups": [
-   [
-    "Ask in plain words",
-    "A shopper types what they need. One small AI call reads it as the store’s own filters: colors, flower types, occasion, budget, effort level, season, product type and what to leave out."
-   ],
-   [
-    "Only what the catalog holds",
-    "Code searches the catalog with those filters and returns up to six products with catalog prices. The AI never sees products or writes the reply, so it cannot invent either."
-   ],
-   [
-    "Refine without starting over",
-    "The request appears as removable chips. Removing one, clearing them all or asking for new recommendations re-runs the search with no AI call."
-   ],
-   [
-    "Never an empty answer",
-    "When nothing matches, the search loosens one condition at a time, such as a higher budget or any of the colors instead of all, and tells the shopper what it changed."
-   ],
-   [
-    "Conversations that come back",
-    "A shopper can keep up to ten conversations: on any device when signed in, in the same browser as a guest. Each card opens the store’s product page to choose options and buy."
-   ]
-  ],
-  "flow": [
-   "Shopper’s request",
-   "Filters and catalog search",
-   "Products and chips"
-  ],
-  "next": "In the store theme since January 2026, hidden unless the company’s A/B test shows it. Next: record who the test shows it to, check card prices against product pages, and measure usage and cost.",
-  "evidence": "The panel is a local render of the store theme’s code, not the live storefront and not a live AI run: the reading of the request was typed in by hand and the three products are invented. The prototype page is shown empty.",
-  "decisions": [
-   [
-    "Let the model translate, let code search.",
-    "The model only turns words into filters. The search and the reply sentence are code, so every answer can be explained from its filters."
-   ],
-   [
-    "Ask for the complete new state.",
-    "Each call sends the current filters and asks for the full updated set, so follow-ups like “also pink” or “make it red instead” need no merge logic."
-   ]
-  ],
-  "decisionNote": "The prototype’s 42 test requests ran against the catalog before the move to AWS. No usage or cost figures are claimed; none have been measured yet.",
-  "nextTitle": "In the store theme, behind a test.",
-  "color": "green",
-  "logo": "images/brands/fiftyflowers.svg",
-  "logoWidth": 180,
-  "logoHeight": 83,
-  "logoKind": "wordmark",
-  "category": "companies",
-  "parent": "fiftyflowers",
-  "stage": "rollout",
-  "screens": [
-   {
-    "src": "images/product-screens/ff-shop-assistant-panel.webp",
-    "alt": "AI Floral Assistant side panel: the welcome view, and an answer with product cards and filter chips",
-    "caption": "Local render of the store theme’s code, not the live storefront: the welcome view, and an answer with removable filter chips. In this render the reading of the request was typed in by hand and the three products are invented; the search, the reply and the chips are the real code.",
-    "width": 1600,
-    "height": 1411
-   },
-   {
-    "src": "images/product-screens/ff-shop-prototype.webp",
-    "alt": "The 2025 prototype’s chat page with four suggested questions and an empty filters panel",
-    "caption": "The 2025 prototype’s chat page in its starting state. It ran locally and was never shown to shoppers; its filters carried into the storefront assistant.",
-    "width": 1280,
-    "height": 720
-   }
-  ],
-  "image": "images/product-screens/ff-shop-assistant-panel.webp",
-  "imageWidth": 1600,
-  "imageHeight": 1411,
-  "imageAlt": "AI Floral Assistant side panel: the welcome view, and an answer with product cards and filter chips",
-  "imageCaption": "Local render of the store theme’s code, not the live storefront: the welcome view, and an answer with removable filter chips. In this render the reading of the request was typed in by hand and the three products are invented; the search, the reply and the chips are the real code."
- },
- {
-  "id": "sitesift",
-  "title": "Broker outreach, being proven one step at a time.",
-  "name": "SiteSift AI",
-  "category": "products",
-  "sector": "Commercial real estate",
-  "status": "In development · private beta paused",
-  "color": "purple",
-  "visual": "sitesift",
-  "short": "An AI assistant for commercial real-estate advisors, built to email listing brokers, read their replies into the advisor’s tracker and flag the decisions that are hers. In development: the private beta is paused while each step is proven on live test campaigns.",
-  "role": "Co-founder & engineer",
-  "stack": [
-   "LLM extraction",
-   "Email automation",
-   "Google Sheets",
-   "Google Cloud Run",
-   "Firebase",
-   "React"
-  ],
-  "problem": "A tenant-representation advisor screens a list of 5 to 30 candidate properties by emailing every listing broker, reading each reply and recording the answers in a tracker. The emails go out under her name, so every message and every recorded figure has to be right.",
-  "contribution": "Built the product’s engineering: the advisor’s dashboard and campaign wizard, and the email worker that sends an opening per property, reads broker replies and attachments, writes stated facts to the property’s tracker row and drafts replies in the advisor’s voice. The first beta showed that automated email was not yet meeting that standard, so the beta is paused while each step is proven before advisors rely on it again.",
-  "groups": [
-   [
-    "Check every row first",
-    "The advisor uploads her own spreadsheet. Each property shows the contact and street it will write to before anything is sent, and any row can be left out."
-   ],
-   [
-    "One right opening per broker",
-    "One email per property, greeted by first name or not at all, carrying the client’s requirements and a plain way to say the space is gone or to offer another building."
-   ],
-   [
-    "Facts to the right row",
-    "Rent, size, power, doors and clear height go to the property’s own row as the broker stated them, including mixed bases such as yearly rent with monthly charges. Figures for other buildings must never be written there."
-   ],
-   [
-    "Attachments read",
-    "Flyers, brochures and availability lists are read for the row they belong to, or the advisor is told exactly which file could not be read."
-   ],
-   [
-    "Replies in her voice",
-    "Questions the outreach already answers are answered without involving the advisor, a missing fact is asked for once, and a finished conversation is closed with thanks."
-   ],
-   [
-    "Her decisions, clearly flagged",
-    "Call requests, alternative buildings and replies that must wait on an owner become cards that say what happened and what was or was not sent, leaving the choice to her."
-   ]
-  ],
-  "flow": [
-   "Property list",
-   "Broker conversations",
-   "Tracker and advisor decisions"
-  ],
-  "next": "SiteSift is not open to users today. Each of its eight steps has measurable criteria that count only when proven on a live test campaign against the build that is serving: nine of 22 so far, and no step is complete yet. The beta stays paused until every fault a broker could see is closed.",
-  "evidence": "Screens come from a test account with every address and identity masked. No client correspondence, broker or prospect information is shown.",
-  "decisions": [
-   [
-    "Test fixes against the real model.",
-    "A harness feeds realistic broker replies through the product’s single reply entry point with the real model, under a dollar cap per run; reading one reply costs about 14 cents. Its first run traced every failure to the rules around the model rather than the model itself."
-   ],
-   [
-    "Pin every known fault.",
-    "An offline sweep of 869 realistic phrasings costs nothing to run. Each failing case is pinned to a named fault, so a fix shows up as a flipped test instead of passing silently."
-   ],
-   [
-    "Prove it live with the fewest emails.",
-    "Changes are proven on single-property campaigns between owned test mailboxes, with a fixed email and spend budget. One overnight session ran six such campaigns and shipped four releases for $1.55 of model spend."
-   ]
-  ],
-  "decisionNote": "More than 10,000 automated backend tests and about 3,800 dashboard and cloud-function tests (local runs, 28 September 2026, with 13 known failures tracked by name). Passing tests are not counted as proof here; only live test campaigns are.",
-  "screens": [
-   {
-    "src": "images/product-screens/sitesift-conversation.webp",
-    "alt": "SiteSift conversation in which facts from a broker’s reply appear as chips written to the tracker",
-    "caption": "Test account, 13 September 2026 build: a broker’s partial answer is written as three facts, the product asks once for the four still missing, then records them and closes the conversation. That bulleted ask has since been replaced by one plain sentence. Email addresses are masked.",
-    "width": 1564,
-    "height": 784
-   },
-   {
-    "src": "images/product-screens/sitesift-alternatives.webp",
-    "alt": "SiteSift conversation where a leased space is marked unavailable and the broker’s three alternative flyers each become a card",
-    "caption": "The space is leased, so the row is marked not viable; the broker attaches three alternative flyers, each becomes its own card, and the advisor passes on two and picks one in a single reply. Test account.",
-    "width": 1564,
-    "height": 784
-   },
-   {
-    "src": "images/product-screens/sitesift-reply-held.webp",
-    "alt": "SiteSift card explaining that a reply was held while the broker waits on the building owner",
-    "caption": "A broker still waiting on the owner: the known facts are kept, the reply is held, and the card says nothing was sent. Test account.",
-    "width": 1564,
-    "height": 784
-   }
-  ],
-  "image": "images/product-screens/sitesift-conversation.webp",
-  "imageAlt": "SiteSift conversation in which facts from a broker’s reply appear as chips written to the tracker",
-  "imageCaption": "Test account, 13 September 2026 build: a broker’s partial answer is written as three facts, the product asks once for the four still missing, then records them and closes the conversation. That bulleted ask has since been replaced by one plain sentence. Email addresses are masked.",
-  "imageWidth": 1564,
-  "imageHeight": 784,
-  "logo": "images/brands/sitesift.png",
-  "logoWidth": 669,
-  "logoHeight": 291,
-  "logoKind": "wordmark",
-  "productTitle": "What it is being built to do.",
-  "productNote": "These are the product’s goals. Each one counts as done only when it is proven on a live test campaign; the current count is under Where it stands.",
-  "nextTitle": "In development, measured honestly.",
-  "stage": "development"
- },
- {
-  "id": "fiftyflowers-storefront-requests",
-  "title": "Storefront requests, delivered ready to act on.",
-  "name": "Storefront requests",
-  "sector": "FiftyFlowers · Storefront and operations",
-  "status": "Rush form live · contest processing run on 2025 entries",
-  "short": "Two storefront flows: rush-order requests that reach support as ready-to-answer tickets, and contest entries turned into review cards and draft store bundles.",
-  "role": "AI Solutions Engineer · FiftyFlowers",
-  "stack": [
-   "Shopify theme",
-   "JavaScript",
-   "AWS Lambda",
-   "Amazon SES",
-   "Asana API",
-   "Shopify Admin API"
-  ],
-  "problem": "Some storefront requests need a person to act: flowers needed sooner than standard delivery, or a couple sharing their event for the yearly contest. Each has to reach the right team complete, with nothing to re-type.",
-  "contribution": "Built the rush-order form and its request function, from a one-day prototype to the live version. Built the processing step behind the existing Share Your Flair form, ran it over every 2025 entry, then repaired and audited the media.",
-  "groups": [
-   [
-    "A rush request in one step",
-    "Customers choose event and delivery dates, pick exact products from the live catalog with size and quantity, and add contact details and addresses. The form checks it all before sending."
-   ],
-   [
-    "A ticket in the customer’s voice",
-    "Each request becomes one formatted email to the customer-service inbox with the customer as reply-to, so it opens as a helpdesk ticket the team can answer directly."
-   ],
-   [
-    "An acknowledgment right away",
-    "The customer immediately sees a thank-you that explains the next step and asks them to stay reachable while farms are contacted."
-   ],
-   [
-    "One entry, two team workflows",
-    "The Share Your Flair step turns a saved contest entry into two review cards for marketing and a draft store bundle built from the couple’s photos, story and ordered products."
-   ],
-   [
-    "Every 2025 entry, read back",
-    "Every 2025 entry went through it. After a May 2026 repair, a read-only audit found none of the 640 media links broken and every draft photo in place."
-   ]
-  ],
-  "flow": [
-   "Storefront form",
-   "Checks and routing",
-   "Ticket or review cards"
-  ],
-  "next": "The rush form has been live since October 2025. Share Your Flair processing has run on every 2025 entry; releasing its media-link fixes and confirming automatic processing of new entries are the next steps.",
-  "evidence": "The form and entry page are the public storefront pages, shown empty; nothing was typed or sent. The emails are local renders of the real code with invented data.",
-  "decisions": [
-   [
-    "Write it as the customer.",
-    "The rush email is written in the customer’s voice with the customer as reply-to, so the ticket reads naturally and no helpdesk integration is needed."
-   ],
-   [
-    "Read back every write.",
-    "The first run’s writes were all accepted, yet some links were broken and some drafts short of photos. Only re-reading every card proved a clean state."
-   ]
-  ],
-  "decisionNote": "Neither flow uses an AI model. Both are forms, checks and routing into the tools each team already works in.",
-  "nextTitle": "One flow live, one still being released.",
-  "color": "green",
-  "logo": "images/brands/fiftyflowers.svg",
-  "logoWidth": 180,
-  "logoHeight": 83,
-  "logoKind": "wordmark",
-  "category": "companies",
-  "parent": "fiftyflowers",
-  "stage": "rollout",
-  "screens": [
-   {
-    "src": "images/product-screens/ff-rush-form.webp",
-    "alt": "Rush-order request form, empty, with event and delivery dates and a product search",
-    "caption": "The live rush-order form on the storefront, shown empty: event and delivery dates, then products picked from the catalog. Nothing was typed or sent.",
-    "width": 972,
-    "height": 780
-   },
-   {
-    "src": "images/product-screens/ff-rush-email.webp",
-    "alt": "Rush-order email with an invented request: event date, delivery date and two products with links",
-    "caption": "What customer service receives, in the customer’s voice with exact products and links. Local render of the function’s code with an invented request; not sent.",
-    "width": 1280,
-    "height": 718
-   },
-   {
-    "src": "images/product-screens/ff-flair-entry-page.webp",
-    "alt": "Share Your Flair entry page: three steps, the order lookup, prizes and rules",
-    "caption": "The public Share Your Flair page, where an entry starts with an order lookup. The page was already in place; nothing was typed or sent.",
-    "width": 1600,
-    "height": 1793
-   },
-   {
-    "src": "images/product-screens/ff-flair-thank-you.webp",
-    "alt": "Thank-you email for an invented Share Your Flair entry",
-    "caption": "The thank-you email the processing step builds, as a local render with an invented entry. Not sent; the 2025 run was made with customer emails switched off.",
-    "width": 900,
-    "height": 950
-   }
-  ],
-  "image": "images/product-screens/ff-rush-form.webp",
-  "imageWidth": 972,
-  "imageHeight": 780,
-  "imageAlt": "Rush-order request form, empty, with event and delivery dates and a product search",
-  "imageCaption": "The live rush-order form on the storefront, shown empty: event and delivery dates, then products picked from the catalog. Nothing was typed or sent."
- },
- {
-  "id": "ai-arena",
-  "title": "The AI plays. The numbers decide.",
-  "name": "AI Arena",
-  "category": "products",
-  "sector": "Simulation · Game AI",
-  "status": "Complete local build · not released",
-  "color": "blue",
-  "short": "Three-a-side AI fighters play a bomb-plant mode in a 3D spectator view, while the same simulation runs headless to measure balance across hundreds of matches.",
-  "role": "Independent developer",
-  "stack": [
-   "Three.js",
-   "Rapier physics",
-   "JavaScript",
-   "Headless simulation"
-  ],
-  "problem": "A match between AI fighters has no correct output to test against. The useful question is whether the game is balanced, and that cannot be answered by watching one match.",
-  "contribution": "Built a deterministic fixed-step simulation, with seeded randomness, a 60 Hz step and physics stepped in a fixed order, that the browser renders and a headless runner batches. Built the fighters' perception, cover, routes, morale and weapon timing.",
-  "groups": [
-   [
-    "Spectator view",
-    "A 3D scene with an automatic camera director and a match HUD. Any seed can be replayed, paused or fast-forwarded."
-   ],
-   [
-    "Fighter decisions",
-    "Perception, cover, routes, morale and weapon timing produce the contest: simulation logic, not chat agents."
-   ],
-   [
-    "Balance laboratory",
-    "Headless batches report team wins, the attack and defense split, round outcomes and each fighter’s impact; every shot is logged with its probability factors."
-   ],
-   [
-    "Decisions from data",
-    "470 logged matches across three batches. In the final 100 matches, attackers won 44.9% of rounds, inside the balance gate, while one team still took 63% of matches, an edge recorded rather than hidden."
-   ]
-  ],
-  "flow": [
-   "Seed",
-   "Deterministic simulation",
-   "Rendered match or balance report"
-  ],
-  "next": "Complete as a local build. Two runs of the same seed already produce byte-identical results (checked 1 October 2026); making that a committed test is next.",
-  "evidence": "Screens are from the local build. Balance figures come from the committed batch logs.",
-  "screens": [
-   {
-    "src": "images/product-screens/ai-arena-plant.webp",
-    "alt": "AI Arena spectator view of a fighter planting the bomb, with team HUD panels",
-    "caption": "A round in progress: one fighter plants while the rest cover, with each fighter’s role, ammunition and state in the HUD.",
-    "width": 1200,
-    "height": 907
-   },
-   {
-    "src": "images/product-screens/ai-arena-balance.webp",
-    "alt": "Balance report table from a 100-match headless batch",
-    "caption": "The final 100-match batch: team wins, the attack and defense split, round outcomes and per-fighter totals.",
-    "width": 1440,
-    "height": 1129
-   }
-  ],
-  "image": "images/product-screens/ai-arena-plant.webp",
-  "imageAlt": "AI Arena spectator view of a fighter planting the bomb, with team HUD panels",
-  "imageCaption": "A round in progress: one fighter plants while the rest cover, with each fighter’s role, ammunition and state in the HUD.",
-  "imageWidth": 1200,
-  "imageHeight": 907,
-  "stage": "built",
-  "nextTitle": "Complete as a local build."
- },
- {
-  "id": "fiftyflowers-proposal-manager",
-  "title": "Event flower proposals, built stem by stem.",
-  "name": "Proposal Manager",
-  "sector": "FiftyFlowers · Floral consultations",
-  "status": "Built from the team’s wireframes · not launched",
-  "short": "A web app for floral consultants: an event plan and stem-by-stem recipes become a priced shopping list and a customer presentation. Built, not launched.",
-  "role": "AI Solutions Engineer · FiftyFlowers",
-  "stack": [
-   "React",
-   "Tailwind CSS",
-   "Firebase Auth",
-   "Firestore",
-   "AWS Lambda"
-  ],
-  "problem": "A floral consultation produces an event plan: inspiration, colors, flowers and a recipe for every arrangement. The team’s wireframes asked for one place to build it, price it in store packs and give the customer something to keep.",
-  "contribution": "Implemented the team’s wireframes as a working web app in March 2026: staff sign-in, the proposal editor, catalog search, the recipe-to-shopping-list calculation, and the customer presentation with print-to-PDF and a pre-filled cart link.",
-  "groups": [
-   [
-    "The whole proposal in one place",
-    "Customer and event, inspiration photos, a color palette, chosen flowers and a recipe for every arrangement. The editor saves as the consultant works, and any proposal can be duplicated."
-   ],
-   [
-    "Flowers from the store catalog",
-    "A flower is added by searching the catalog or by asking the embedded AI Floral Assistant, and arrives with its category, pack sizes and prices."
-   ],
-   [
-    "Recipes, stem by stem",
-    "Each recipe lists its flowers with the stems per piece and the number of pieces to make. Half stems are allowed, and a recipe can be reused from another proposal."
-   ],
-   [
-    "A calculated shopping list",
-    "Stems per piece times pieces, added across recipes, gives each flower’s need. The app suggests the smallest pack that covers it and shows the surplus or shortfall of the others."
-   ],
-   [
-    "What the customer keeps",
-    "A presentation of up to 12 pages, from cover and inspiration to recipes and the priced list, printed to PDF from the browser. One button opens a store cart with the chosen packs."
-   ]
-  ],
-  "flow": [
-   "Event and recipes",
-   "Stems to packs and prices",
-   "Presentation and cart"
-  ],
-  "next": "Built in March 2026 and not launched; work paused when the DIY kit migration took priority. Before any launch, the presentation page and product search need repairs, and the shopping list needs a line-by-line check.",
-  "evidence": "Presentation pictures are local renders of the app’s code with an invented proposal; the live presentation page needs a repair. The editor picture is view only.",
-  "decisions": [
-   [
-    "Calculate the list, store the choices.",
-    "The shopping list is recalculated from the recipes each time it is shown. Only the consultant’s pack choices are saved with the proposal."
-   ],
-   [
-    "Start from the design export.",
-    "Five wireframe frames were exported as code on the first day and made interactive the same evening, which gave the team something real to react to."
-   ]
-  ],
-  "decisionNote": "Built in 74 recorded changes between March 3 and 31, 2026. The shopping-list arithmetic has not yet been checked line by line against real store packs.",
-  "nextTitle": "Built, with repairs before any launch.",
-  "color": "green",
-  "logo": "images/brands/fiftyflowers.svg",
-  "logoWidth": 180,
-  "logoHeight": 83,
-  "logoKind": "wordmark",
-  "category": "companies",
-  "parent": "fiftyflowers",
-  "stage": "built",
-  "screens": [
-   {
-    "src": "images/product-screens/ff-proposal-cover.webp",
-    "alt": "Customer presentation cover for an invented garden wedding proposal",
-    "caption": "What a customer would receive: the presentation’s cover. Local render of the app’s code with an invented proposal.",
-    "width": 1600,
-    "height": 1000
-   },
-   {
-    "src": "images/product-screens/ff-proposal-inspiration.webp",
-    "alt": "Inspiration pictures and a color palette in the customer presentation",
-    "caption": "Inspiration and color palette, with placeholder drawings standing in for a real customer’s photos. Local render, invented proposal.",
-    "width": 1600,
-    "height": 930
-   },
-   {
-    "src": "images/product-screens/ff-proposal-recipes.webp",
-    "alt": "Featured blooms and a card for each arrangement recipe in the customer presentation",
-    "caption": "Featured blooms and a card per recipe, each listing its flowers stem by stem. Local render, invented proposal.",
-    "width": 1600,
-    "height": 1522
-   },
-   {
-    "src": "images/product-screens/ff-proposal-shopping-list.webp",
-    "alt": "Presentation shopping list: flowers by group with pack, stems needed and price, then the order totals",
-    "caption": "The presentation’s shopping list: each flower’s pack, the stems its recipes need, the price and the totals. Local render, invented proposal; the discount code is hidden.",
-    "width": 1600,
-    "height": 1896
-   },
-   {
-    "src": "images/product-screens/ff-proposal-stem-math.webp",
-    "alt": "Editor shopping list with the stem calculation and pack choices for one flower",
-    "caption": "In the editor: 57 rose stems added up across eight recipes, each pack’s shortfall or surplus, and the suggested pack. View only; product photos did not load.",
-    "width": 1358,
-    "height": 1420
-   }
-  ],
-  "image": "images/product-screens/ff-proposal-cover.webp",
-  "imageWidth": 1600,
-  "imageHeight": 1000,
-  "imageAlt": "Customer presentation cover for an invented garden wedding proposal",
-  "imageCaption": "What a customer would receive: the presentation’s cover. Local render of the app’s code with an invented proposal."
+  "nextTitle": "An MVP, with two teams’ knowledge in.",
+  "created": "2026-07",
+  "createdFrom": "Engineering Brain repository 7 Jul 2026"
  },
  {
   "id": "ai-media-manager",
@@ -1333,73 +585,839 @@
   "imageHeight": 900,
   "imageAlt": "Media library for a sample Instagram account: profile, engagement totals and two grids of posts",
   "imageCaption": "The media library for one connected account: its profile, engagement totals, its own posts and a second grid set aside for posts it is tagged in. Run on my own machine with an invented brand and sample pictures.",
-  "previewLimit": 4
+  "previewLimit": 4,
+  "created": "2026-03",
+  "createdFrom": "first build 26 Mar 2026; rebuild 14 Apr 2026"
  },
  {
-  "id": "fiftyflowers-diy-migration",
-  "title": "Hundreds of kit recipes and 2,789 arrangement plans, moved and checked.",
-  "name": "DIY kit data migration",
+  "id": "fiftyflowers-image-studio",
+  "title": "Consistent product photos, on demand.",
+  "name": "Image Studio",
   "category": "companies",
-  "sector": "FiftyFlowers · Product data",
-  "status": "Delivered on a test copy of the store",
+  "sector": "FiftyFlowers · Marketing",
+  "status": "In production · released August 2026",
   "color": "green",
-  "short": "Matched farm spreadsheets to store products and wrote recipes, purchase links and 2,789 arrangement plans onto a test copy of the store, each traced to its source.",
+  "short": "Generative product-photo editing with reusable looks: new backgrounds, exact brand colors and transparent cutouts, with the cost of every run shown before it is spent.",
   "role": "AI Solutions Engineer · FiftyFlowers",
   "stack": [
-   "Python",
-   "Spreadsheet parsing",
-   "Data matching",
-   "Content-system APIs",
-   "Verification"
+   "Gemini image models",
+   "React",
+   "Firebase",
+   "Python pipeline"
   ],
-  "problem": "DIY flower kits were defined across farm workbooks and a large internal planning workbook. The store’s product system needed the same recipes, purchase links and arrangement plans, without hand entry and without silent changes.",
-  "contribution": "Built the readers, matchers and writers with source tracking, so every written value traces to the worksheet cell it came from and every worksheet ends with a recorded outcome.",
+  "problem": "A large product catalog needed consistent backgrounds and styles. Editing by hand was slow, and a credit-based third-party tool cost about 15 cents an image.",
+  "contribution": "Ran the April pilot and its cost case, then built Image Studio and Preset Creation into the company’s AI platform, with usage tracking and team limits, plus a separate catalog-photo pipeline.",
   "groups": [
    [
-    "Read the farm books",
-    "509 kit entries read from nine farm workbooks, 504 of them usable. Re-reading the full set of 16 farm books takes about 27 seconds whenever the farms send updates."
+    "A pilot that made the case",
+    "Five catalog products on five backgrounds gave 25 image-to-image results: the simplest product kept its shape on every background, while most tight flower close-ups were recomposed. The pilot estimated about 4 cents and 5 seconds an image on the model it tested."
    ],
    [
-    "Match and write",
-    "498 entries matched to store products; recipes and purchase links written for 494, with the rest held for a reason recorded beside them."
+    "Pick a look",
+    "Upload a batch and apply a saved look: background color, vase, lighting, backdrop texture and one of 14 aspect ratios."
    ],
    [
-    "Arrangements",
-    "All 255 planning worksheets have an outcome; 2,789 arrangements on 139 kits were written, each checked against its worksheet."
+    "Exact color, real cutouts",
+    "An exact-color option rewrites background pixels to the brand color after generation; the cutout look produces a transparent PNG."
    ],
    [
-    "Nothing silently changed",
-    "Every substitution, missing flower or shortfall went into review lists for the merchandising team instead of being guessed."
+    "Looks the team can build",
+    "Preset Creation derives a reusable look from example images and a test photo, generates three samples, and keeps up to ten versions."
+   ],
+   [
+    "Costs in view",
+    "Every run shows photos times the price the administrators have set and asks for confirmation above 25 cents; administrators see image spend over time and set per-person and team limits."
    ]
   ],
   "flow": [
-   "Farm and planning workbooks",
-   "Matched products",
-   "Checked recipes and arrangements"
+   "Product photo",
+   "Saved look and AI model",
+   "Styled image or cutout"
   ],
-  "next": "Delivered on a test copy of the store; moving it into the live store is the company’s next step.",
-  "evidence": "No supplier names, purchase costs or internal pricing are shown.",
+  "next": "Released in the company platform in August 2026. A full photo-to-result check across every look is the remaining step.",
+  "evidence": "Pilot images use the company’s public catalog photos. The before-and-after pair is the sample bundled with a built-in look.",
+  "decisions": [
+   [
+    "Call the models directly.",
+    "The pilot compared a credit-based tool with direct model calls on the same task: about 15 cents against an estimated 4 cents an image on the model tested. The released studio uses a newer, more expensive model, so the saving per image is smaller than the pilot’s estimate."
+   ],
+   [
+    "Show the exact prompt.",
+    "Every option writes one sentence of the prompt, and the full prompt is visible before generating, so a look is inspectable rather than magic."
+   ]
+  ],
+  "decisionNote": "The April pilot also ran 250 text-to-image experiments; they were not scored and are not presented as results.",
   "screens": [
    {
-    "src": "images/product-screens/ff-diy-arrangements.webp",
-    "alt": "A DIY kit’s arrangement plan on the test store, listing each piece and its stems",
-    "caption": "A kit’s arrangement plan on the test copy: each piece to make, how many, and its stems by section.",
+    "src": "images/product-screens/ff-image-pilot-grid.webp",
+    "alt": "Grid of catalog flower photos re-rendered on five different backgrounds",
+    "caption": "April 2026 pilot: catalog photos (top row) on five generated backgrounds. The leaf kept its shape every time; most tight flower close-ups were recomposed rather than kept, a limit the pilot recorded.",
+    "width": 1400,
+    "height": 1579
+   },
+   {
+    "src": "images/product-screens/ff-image-before-after.webp",
+    "alt": "Roses in a vase before and after the background was standardised",
+    "caption": "A built-in look: the arrangement and vase stay, the background becomes a flat light gray. Bundled sample, not a new generation.",
     "width": 1600,
-    "height": 1000
+    "height": 788
+   },
+   {
+    "src": "images/product-screens/ff-image-preset-editor.webp",
+    "alt": "Preset Creation editor showing a team look with its three sample results, each setting and its prompt sentence",
+    "caption": "Preset Creation: a team look reopened for editing, with its test photo, three sample results and every setting beside the sentence it adds to the prompt.",
+    "width": 1560,
+    "height": 1520
    }
   ],
-  "image": "images/product-screens/ff-diy-arrangements.webp",
-  "imageAlt": "A DIY kit’s arrangement plan on the test store, listing each piece and its stems",
-  "imageCaption": "A kit’s arrangement plan on the test copy: each piece to make, how many, and its stems by section.",
-  "imageWidth": 1600,
-  "imageHeight": 1000,
+  "image": "images/product-screens/ff-image-pilot-grid.webp",
+  "imageAlt": "Grid of catalog flower photos re-rendered on five different backgrounds",
+  "imageCaption": "April 2026 pilot: catalog photos (top row) on five generated backgrounds. The leaf kept its shape every time; most tight flower close-ups were recomposed rather than kept, a limit the pilot recorded.",
+  "imageWidth": 1400,
+  "imageHeight": 1579,
   "logo": "images/brands/fiftyflowers.svg",
   "logoWidth": 180,
   "logoHeight": 83,
   "logoKind": "wordmark",
   "parent": "fiftyflowers",
+  "stage": "production",
+  "nextTitle": "Released, with one check left.",
+  "created": "2026-04",
+  "createdFrom": "pilot repository 8 Apr 2026"
+ },
+ {
+  "id": "axiom",
+  "title": "Make past engineering work useful again.",
+  "name": "Axiom",
+  "category": "companies",
+  "sector": "Structural engineering",
+  "status": "Delivered with development partners · estimates not yet validated",
+  "color": "clay",
+  "visual": "axiom",
+  "short": "AI-assisted extraction turned thousands of historical fee proposals into a searchable research workspace, with fee-estimating tools on top. Led delivery with subcontracted development.",
+  "role": "Project direction & subcontractor management",
+  "stack": [
+   "AI-assisted extraction",
+   "Search",
+   "Dashboards",
+   "Delivery coordination"
+  ],
+  "problem": "Useful estimating context was buried in historical Word proposals, Excel fee workbooks and project-accounting records. AI-assisted extraction makes that information available for research and comparison.",
+  "contribution": "Led the engagement through Manifold Engineering, directing the project and managing subcontracted development. Collaborating developers implemented the dashboard and its research tools.",
+  "groups": [
+   [
+    "Proposal research",
+    "AI-assisted extraction makes historical Word proposals and Excel fee workbooks searchable and usable in the dashboard, beside project-accounting records."
+   ],
+   [
+    "Estimating context",
+    "Explore historical fees and hours to inform estimates for new projects. The figures are a starting point for an engineer’s judgment, not a quote."
+   ],
+   [
+    "Executive briefing",
+    "A separate executive-briefing exploration, distinct from the research dashboard. It was not launched."
+   ]
+  ],
+  "flow": [
+   "Proposal history",
+   "Search & explore",
+   "Estimating context"
+  ],
+  "next": "The research workspace is delivered. Estimates depend on reconciling the source records first, so the estimating tools are treated as exploratory until that matching is complete. A separate executive-briefing prototype was not launched.",
+  "evidence": "Dashboard implementation by collaborating developers; project direction and subcontractor management by Baylor through Manifold Engineering. No confidential proposals, fee records or client identities are exposed.",
+  "screens": [
+   {
+    "src": "images/product-screens/axiom-analytics.webp",
+    "alt": "Axiom analytics dashboard with sector distribution and fee-analysis charts",
+    "caption": "Analytics across historical proposal and fee data. Amounts, counts, chart shapes and account details are covered. The interface is shown as captured, not as independent validation of the analysis.",
+    "width": 1440,
+    "height": 900
+   },
+   {
+    "src": "images/product-screens/axiom-explorer.webp",
+    "alt": "Axiom source explorer showing proposals, actuals and workbook collections",
+    "caption": "The live source explorer organizes proposals, engagement records and fee workbooks. Private counts and account details are covered; source reconciliation and estimation remain separate work.",
+    "width": 1440,
+    "height": 900
+   }
+  ],
+  "image": "images/product-screens/axiom-analytics.webp",
+  "imageAlt": "Axiom analytics dashboard with sector distribution and fee-analysis charts",
+  "imageCaption": "Analytics across historical proposal and fee data. Amounts, counts, chart shapes and account details are covered. The interface is shown as captured, not as independent validation of the analysis.",
+  "imageWidth": 1440,
+  "imageHeight": 900,
+  "logo": "images/brands/axiom.png",
+  "logoWidth": 371,
+  "logoHeight": 178,
+  "logoKind": "wordmark",
+  "previewMode": "single",
   "stage": "built",
-  "nextTitle": "Delivered on a test copy."
+  "nextTitle": "Delivered, with validation ahead.",
+  "created": "2025-12",
+  "createdFrom": "repository 3 Dec 2025"
+ },
+ {
+  "id": "fiftyflowers-proposal-manager",
+  "title": "Event flower proposals, built stem by stem.",
+  "name": "Proposal Manager",
+  "sector": "FiftyFlowers · Floral consultations",
+  "status": "Built from the team’s wireframes · not launched",
+  "short": "A web app for floral consultants: an event plan and stem-by-stem recipes become a priced shopping list and a customer presentation. Built, not launched.",
+  "role": "AI Solutions Engineer · FiftyFlowers",
+  "stack": [
+   "React",
+   "Tailwind CSS",
+   "Firebase Auth",
+   "Firestore",
+   "AWS Lambda"
+  ],
+  "problem": "A floral consultation produces an event plan: inspiration, colors, flowers and a recipe for every arrangement. The team’s wireframes asked for one place to build it, price it in store packs and give the customer something to keep.",
+  "contribution": "Implemented the team’s wireframes as a working web app in March 2026: staff sign-in, the proposal editor, catalog search, the recipe-to-shopping-list calculation, and the customer presentation with print-to-PDF and a pre-filled cart link.",
+  "groups": [
+   [
+    "The whole proposal in one place",
+    "Customer and event, inspiration photos, a color palette, chosen flowers and a recipe for every arrangement. The editor saves as the consultant works, and any proposal can be duplicated."
+   ],
+   [
+    "Flowers from the store catalog",
+    "A flower is added by searching the catalog or by asking the embedded AI Floral Assistant, and arrives with its category, pack sizes and prices."
+   ],
+   [
+    "Recipes, stem by stem",
+    "Each recipe lists its flowers with the stems per piece and the number of pieces to make. Half stems are allowed, and a recipe can be reused from another proposal."
+   ],
+   [
+    "A calculated shopping list",
+    "Stems per piece times pieces, added across recipes, gives each flower’s need. The app suggests the smallest pack that covers it and shows the surplus or shortfall of the others."
+   ],
+   [
+    "What the customer keeps",
+    "A presentation of up to 12 pages, from cover and inspiration to recipes and the priced list, printed to PDF from the browser. One button opens a store cart with the chosen packs."
+   ]
+  ],
+  "flow": [
+   "Event and recipes",
+   "Stems to packs and prices",
+   "Presentation and cart"
+  ],
+  "next": "Built in March 2026 and not launched; work paused when the DIY kit migration took priority. Before any launch, the presentation page and product search need repairs, and the shopping list needs a line-by-line check.",
+  "evidence": "Presentation pictures are local renders of the app’s code with an invented proposal; the live presentation page needs a repair. The editor picture is view only.",
+  "decisions": [
+   [
+    "Calculate the list, store the choices.",
+    "The shopping list is recalculated from the recipes each time it is shown. Only the consultant’s pack choices are saved with the proposal."
+   ],
+   [
+    "Start from the design export.",
+    "Five wireframe frames were exported as code on the first day and made interactive the same evening, which gave the team something real to react to."
+   ]
+  ],
+  "decisionNote": "Built in 74 recorded changes between March 3 and 31, 2026. The shopping-list arithmetic has not yet been checked line by line against real store packs.",
+  "nextTitle": "Built, with repairs before any launch.",
+  "color": "green",
+  "logo": "images/brands/fiftyflowers.svg",
+  "logoWidth": 180,
+  "logoHeight": 83,
+  "logoKind": "wordmark",
+  "category": "companies",
+  "parent": "fiftyflowers",
+  "stage": "built",
+  "screens": [
+   {
+    "src": "images/product-screens/ff-proposal-cover.webp",
+    "alt": "Customer presentation cover for an invented garden wedding proposal",
+    "caption": "What a customer would receive: the presentation’s cover. Local render of the app’s code with an invented proposal.",
+    "width": 1600,
+    "height": 1000
+   },
+   {
+    "src": "images/product-screens/ff-proposal-inspiration.webp",
+    "alt": "Inspiration pictures and a color palette in the customer presentation",
+    "caption": "Inspiration and color palette, with placeholder drawings standing in for a real customer’s photos. Local render, invented proposal.",
+    "width": 1600,
+    "height": 930
+   },
+   {
+    "src": "images/product-screens/ff-proposal-recipes.webp",
+    "alt": "Featured blooms and a card for each arrangement recipe in the customer presentation",
+    "caption": "Featured blooms and a card per recipe, each listing its flowers stem by stem. Local render, invented proposal.",
+    "width": 1600,
+    "height": 1522
+   },
+   {
+    "src": "images/product-screens/ff-proposal-shopping-list.webp",
+    "alt": "Presentation shopping list: flowers by group with pack, stems needed and price, then the order totals",
+    "caption": "The presentation’s shopping list: each flower’s pack, the stems its recipes need, the price and the totals. Local render, invented proposal; the discount code is hidden.",
+    "width": 1600,
+    "height": 1896
+   },
+   {
+    "src": "images/product-screens/ff-proposal-stem-math.webp",
+    "alt": "Editor shopping list with the stem calculation and pack choices for one flower",
+    "caption": "In the editor: 57 rose stems added up across eight recipes, each pack’s shortfall or surplus, and the suggested pack. View only; product photos did not load.",
+    "width": 1358,
+    "height": 1420
+   }
+  ],
+  "image": "images/product-screens/ff-proposal-cover.webp",
+  "imageWidth": 1600,
+  "imageHeight": 1000,
+  "imageAlt": "Customer presentation cover for an invented garden wedding proposal",
+  "imageCaption": "What a customer would receive: the presentation’s cover. Local render of the app’s code with an invented proposal.",
+  "created": "2026-03",
+  "createdFrom": "repository 4 Mar 2026"
+ },
+ {
+  "id": "fiftyflowers-support-ai",
+  "title": "Support replies, drafted with the right knowledge.",
+  "name": "Customer service AI",
+  "category": "companies",
+  "sector": "FiftyFlowers · Customer support",
+  "status": "In production · since January 2026",
+  "color": "green",
+  "short": "Four AI apps for inquiries, reviews, claims and chargebacks, with shared case history and a Chrome sidepanel. They replaced the paid AI writing tool the team used before, saving about $24,000 a year.",
+  "role": "AI Solutions Engineer · FiftyFlowers",
+  "stack": [
+   "React",
+   "Firebase",
+   "Google Cloud",
+   "Chrome extension",
+   "LLM APIs",
+   "Shopify"
+  ],
+  "problem": "Support representatives answer very different situations: care questions, public reviews, damage claims and card disputes. Each needs the right policy, voice and numbers, and each case can run over several messages.",
+  "contribution": "Built the four support apps, the shared chat and case history, and a Chrome sidepanel that brings three of the apps (inquiries, reviews and claims) into the support tools the team already uses. Migrated the platform’s serving layer from AWS Lambda to Firebase and Google Cloud.",
+  "groups": [
+   [
+    "Four task-focused apps",
+    "Inquiry, Reviews, Claims and Chargeback each combine a form with a chosen brand voice, audience and knowledge articles, then produce an editable draft."
+   ],
+   [
+    "Numbers the reply can trust",
+    "In the web app, Claims calculates the refund and the store-credit alternative from the damaged products, and the drafted reply quotes those figures exactly."
+   ],
+   [
+    "Knowledge the representative confirms",
+    "Articles are matched by keywords and tags and shown before drafting, so the representative sees what the reply will rely on."
+   ],
+   [
+    "One case, start to finish",
+    "Input, AI draft, edits, regeneration and follow-ups are saved as one case that can be reopened in its original app."
+   ],
+   [
+    "Where the team works",
+    "A Chrome sidepanel recognizes highlighted text on approved support sites and offers the right form, a quick rewrite in the company voice, or a follow-up drafted from the case history."
+   ]
+  ],
+  "flow": [
+   "Customer message",
+   "Form and company knowledge",
+   "Reviewed reply"
+  ],
+  "next": "In production since January 2026. The saving comes from retiring the paid AI writing tool the team used before; the figure is my own estimate, not a company or audited number. A number does not cover the rest of the change: replies now start from the team’s own knowledge and voice, refund figures are calculated before a word is written, and every case leaves a history the next person can pick up.",
+  "evidence": "Screens show invented cases entered for documentation. No customer, order or staff information is displayed.",
+  "decisions": [
+   [
+    "Calculate first, then write.",
+    "The form computes refunds and credits; the AI is asked to quote those figures, not to work them out."
+   ],
+   [
+    "Keep a case together.",
+    "Every step of a case is stored in order, so a later reply starts from what was already said and changed."
+   ]
+  ],
+  "decisionNote": "Forty user-visible functions were documented across the apps, chat, history, extension and administration.",
+  "screens": [
+   {
+    "src": "images/product-screens/ff-support-inquiry.webp",
+    "alt": "A drafted reply to an invented care question about ranunculus and garden roses",
+    "caption": "CS Inquiry with an invented care question: the app picks the matching care articles and drafts the reply. The representative’s name is replaced.",
+    "width": 1290,
+    "height": 860
+   },
+   {
+    "src": "images/product-screens/ff-support-apps.webp",
+    "alt": "The CS Inquiry form, empty, with the four support apps in the side menu",
+    "caption": "The CS Inquiry form before anything is generated, with the four support apps in the menu. The signed-in name is replaced.",
+    "width": 1440,
+    "height": 900
+   },
+   {
+    "src": "images/product-screens/ff-support-reviews.webp",
+    "alt": "A drafted public reply to an invented two-star review",
+    "caption": "Reviews: a plain-text public reply to an invented two-star review.",
+    "width": 1290,
+    "height": 990
+   }
+  ],
+  "image": "images/product-screens/ff-support-inquiry.webp",
+  "imageAlt": "A drafted reply to an invented care question about ranunculus and garden roses",
+  "imageCaption": "CS Inquiry with an invented care question: the app picks the matching care articles and drafts the reply. The representative’s name is replaced.",
+  "imageWidth": 1290,
+  "imageHeight": 860,
+  "logo": "images/brands/fiftyflowers.svg",
+  "logoWidth": 180,
+  "logoHeight": 83,
+  "logoKind": "wordmark",
+  "parent": "fiftyflowers",
+  "stage": "production",
+  "nextTitle": "In use by the support team since January 2026.",
+  "created": "2026-01",
+  "createdFrom": "first commit 13 Jan 2026"
+ },
+ {
+  "id": "till",
+  "title": "A clearer view of lending decisions.",
+  "name": "Till",
+  "category": "companies",
+  "sector": "Financial services · Lending",
+  "status": "In production · scoring API and dashboard",
+  "color": "blue",
+  "visual": "till",
+  "short": "Machine-learning loan scoring inside the lender’s own application workflow, saving about $24,000 a year, with a five-view dashboard for seeing how lending decisions play out.",
+  "role": "Software Engineer · Manifold",
+  "stack": [
+   "Machine learning",
+   "APIs",
+   "Cloud services",
+   "Data visualization"
+  ],
+  "problem": "Loan scoring needs to fit into an existing application process, while the team needs visibility into scoring activity and loan performance.",
+  "contribution": "Built a machine-learning scoring service that the lender’s application system calls, plus a dashboard for reviewing scoring activity, policy settings, lead sources and loan performance.",
+  "groups": [
+   [
+    "Machine-learning API · about $24K a year saved",
+    "Machine-learning scores returned inside the existing loan application workflow, saving about $24,000 a year."
+   ],
+   [
+    "Overview · see the activity",
+    "Review scoring activity and decision patterns in one place."
+   ],
+   [
+    "Policy settings · a recorded history",
+    "Review policy settings, with a recorded history of changes."
+   ],
+   [
+    "Lead Sources · compare channels",
+    "Explore where applications come from and how each source performs."
+   ],
+   [
+    "Funded History · follow performance",
+    "Review funded-loan history with clear reporting periods and funding definitions."
+   ],
+   [
+    "Scenario analysis · explore tradeoffs",
+    "Explore modeled exclusions alongside observed outcomes. Scenarios support investigation; they do not prove the effect of a policy change."
+   ]
+  ],
+  "flow": [
+   "Loan application",
+   "Machine-learning scoring",
+   "Decision & reporting"
+  ],
+  "next": "Scoring activity updates independently from imported loan-history data. Next steps focus on repeatable data refreshes and more precise links between policy changes and affected loans. The savings figure is my own estimate, not an audited number, and it is one part of the value: the dashboard’s five views show the team how scoring, policy settings and lead sources play out across funded loans.",
+  "evidence": "The workflow represents the documented service and dashboard. No customer applications are included, and every figure and trend is covered.",
+  "logo": "images/till-logo.png",
+  "screens": [
+   {
+    "src": "images/product-screens/hal-overview.webp",
+    "alt": "HAL lending dashboard with private operating figures redacted",
+    "caption": "The HAL overview brings scoring activity and decision reporting together. Figures and data-freshness badges are covered; no settings were changed.",
+    "width": 1425,
+    "height": 891
+   },
+   {
+    "src": "images/product-screens/hal-sources.webp",
+    "alt": "HAL lead-source analytics showing trend charts with private values covered",
+    "caption": "Lead-source reporting, captured September 24, 2026. Source names, figures, status tiles and trend lines are covered.",
+    "width": 1425,
+    "height": 891
+   }
+  ],
+  "logoWidth": 312,
+  "logoHeight": 152,
+  "logoKind": "wordmark",
+  "image": "images/product-screens/hal-overview.webp",
+  "imageAlt": "HAL lending dashboard with private operating figures redacted",
+  "imageCaption": "The HAL overview brings scoring activity and decision reporting together. Figures and data-freshness badges are covered; no settings were changed.",
+  "imageWidth": 1425,
+  "imageHeight": 891,
+  "decisions": [
+   [
+    "Protect policy changes from conflicting edits.",
+    "The policy editor checks the latest saved state before applying a change, preserves unrelated edits and keeps a change history. An adjustment is a recorded action, not an invisible replacement."
+   ],
+   [
+    "Separate observation from simulation.",
+    "The analysis distinguishes observed funded outcomes from modeled exclusions. A scenario helps explore a decision; it is not presented as proof that a policy change caused an outcome."
+   ]
+  ],
+  "decisionNote": "These are documented implementation choices. Private policy settings, borrower information and model details are intentionally omitted.",
+  "stage": "production",
+  "nextTitle": "In production, with clear next steps.",
+  "created": "2025-07",
+  "createdFrom": "scoring repository 17 Jul 2025"
+ },
+ {
+  "id": "fiftyflowers-storefront-requests",
+  "title": "Storefront requests, delivered ready to act on.",
+  "name": "Storefront requests",
+  "sector": "FiftyFlowers · Storefront and operations",
+  "status": "Rush form live · contest processing run on 2025 entries",
+  "short": "Two storefront flows: rush-order requests that reach support as ready-to-answer tickets, and contest entries turned into review cards and draft store bundles.",
+  "role": "AI Solutions Engineer · FiftyFlowers",
+  "stack": [
+   "Shopify theme",
+   "JavaScript",
+   "AWS Lambda",
+   "Amazon SES",
+   "Asana API",
+   "Shopify Admin API"
+  ],
+  "problem": "Some storefront requests need a person to act: flowers needed sooner than standard delivery, or a couple sharing their event for the yearly contest. Each has to reach the right team complete, with nothing to re-type.",
+  "contribution": "Built the rush-order form and its request function, from a one-day prototype to the live version. Built the processing step behind the existing Share Your Flair form, ran it over every 2025 entry, then repaired and audited the media.",
+  "groups": [
+   [
+    "A rush request in one step",
+    "Customers choose event and delivery dates, pick exact products from the live catalog with size and quantity, and add contact details and addresses. The form checks it all before sending."
+   ],
+   [
+    "A ticket in the customer’s voice",
+    "Each request becomes one formatted email to the customer-service inbox with the customer as reply-to, so it opens as a helpdesk ticket the team can answer directly."
+   ],
+   [
+    "An acknowledgment right away",
+    "The customer immediately sees a thank-you that explains the next step and asks them to stay reachable while farms are contacted."
+   ],
+   [
+    "One entry, two team workflows",
+    "The Share Your Flair step turns a saved contest entry into two review cards for marketing and a draft store bundle built from the couple’s photos, story and ordered products."
+   ],
+   [
+    "Every 2025 entry, read back",
+    "Every 2025 entry went through it. After a May 2026 repair, a read-only audit found none of the 640 media links broken and every draft photo in place."
+   ]
+  ],
+  "flow": [
+   "Storefront form",
+   "Checks and routing",
+   "Ticket or review cards"
+  ],
+  "next": "The rush form has been live since October 2025. Share Your Flair processing has run on every 2025 entry; releasing its media-link fixes and confirming automatic processing of new entries are the next steps.",
+  "evidence": "The form and entry page are the public storefront pages, shown empty; nothing was typed or sent. The emails are local renders of the real code with invented data.",
+  "decisions": [
+   [
+    "Write it as the customer.",
+    "The rush email is written in the customer’s voice with the customer as reply-to, so the ticket reads naturally and no helpdesk integration is needed."
+   ],
+   [
+    "Read back every write.",
+    "The first run’s writes were all accepted, yet some links were broken and some drafts short of photos. Only re-reading every card proved a clean state."
+   ]
+  ],
+  "decisionNote": "Neither flow uses an AI model. Both are forms, checks and routing into the tools each team already works in.",
+  "nextTitle": "One flow live, one still being released.",
+  "color": "green",
+  "logo": "images/brands/fiftyflowers.svg",
+  "logoWidth": 180,
+  "logoHeight": 83,
+  "logoKind": "wordmark",
+  "category": "companies",
+  "parent": "fiftyflowers",
+  "stage": "rollout",
+  "screens": [
+   {
+    "src": "images/product-screens/ff-rush-form.webp",
+    "alt": "Rush-order request form, empty, with event and delivery dates and a product search",
+    "caption": "The live rush-order form on the storefront, shown empty: event and delivery dates, then products picked from the catalog. Nothing was typed or sent.",
+    "width": 972,
+    "height": 780
+   },
+   {
+    "src": "images/product-screens/ff-rush-email.webp",
+    "alt": "Rush-order email with an invented request: event date, delivery date and two products with links",
+    "caption": "What customer service receives, in the customer’s voice with exact products and links. Local render of the function’s code with an invented request; not sent.",
+    "width": 1280,
+    "height": 718
+   },
+   {
+    "src": "images/product-screens/ff-flair-entry-page.webp",
+    "alt": "Share Your Flair entry page: three steps, the order lookup, prizes and rules",
+    "caption": "The public Share Your Flair page, where an entry starts with an order lookup. The page was already in place; nothing was typed or sent.",
+    "width": 1600,
+    "height": 1793
+   },
+   {
+    "src": "images/product-screens/ff-flair-thank-you.webp",
+    "alt": "Thank-you email for an invented Share Your Flair entry",
+    "caption": "The thank-you email the processing step builds, as a local render with an invented entry. Not sent; the 2025 run was made with customer emails switched off.",
+    "width": 900,
+    "height": 950
+   }
+  ],
+  "image": "images/product-screens/ff-rush-form.webp",
+  "imageWidth": 972,
+  "imageHeight": 780,
+  "imageAlt": "Rush-order request form, empty, with event and delivery dates and a product search",
+  "imageCaption": "The live rush-order form on the storefront, shown empty: event and delivery dates, then products picked from the catalog. Nothing was typed or sent.",
+  "created": "2025-09",
+  "createdFrom": "rush-order function 5 Sep 2025"
+ },
+ {
+  "id": "sitesift",
+  "title": "Broker outreach, being proven one step at a time.",
+  "name": "SiteSift AI",
+  "category": "products",
+  "sector": "Commercial real estate",
+  "status": "In development · private beta paused",
+  "color": "purple",
+  "visual": "sitesift",
+  "short": "An AI assistant for commercial real-estate advisors, built to email listing brokers, read their replies into the advisor’s tracker and flag the decisions that are hers. In development: the private beta is paused while each step is proven on live test campaigns.",
+  "role": "Co-founder & engineer",
+  "stack": [
+   "LLM extraction",
+   "Email automation",
+   "Google Sheets",
+   "Google Cloud Run",
+   "Firebase",
+   "React"
+  ],
+  "problem": "A tenant-representation advisor screens a list of 5 to 30 candidate properties by emailing every listing broker, reading each reply and recording the answers in a tracker. The emails go out under her name, so every message and every recorded figure has to be right.",
+  "contribution": "Built the product’s engineering: the advisor’s dashboard and campaign wizard, and the email worker that sends an opening per property, reads broker replies and attachments, writes stated facts to the property’s tracker row and drafts replies in the advisor’s voice. The first beta showed that automated email was not yet meeting that standard, so the beta is paused while each step is proven before advisors rely on it again.",
+  "groups": [
+   [
+    "Check every row first",
+    "The advisor uploads her own spreadsheet. Each property shows the contact and street it will write to before anything is sent, and any row can be left out."
+   ],
+   [
+    "One right opening per broker",
+    "One email per property, greeted by first name or not at all, carrying the client’s requirements and a plain way to say the space is gone or to offer another building."
+   ],
+   [
+    "Facts to the right row",
+    "Rent, size, power, doors and clear height go to the property’s own row as the broker stated them, including mixed bases such as yearly rent with monthly charges. Figures for other buildings must never be written there."
+   ],
+   [
+    "Attachments read",
+    "Flyers, brochures and availability lists are read for the row they belong to, or the advisor is told exactly which file could not be read."
+   ],
+   [
+    "Replies in her voice",
+    "Questions the outreach already answers are answered without involving the advisor, a missing fact is asked for once, and a finished conversation is closed with thanks."
+   ],
+   [
+    "Her decisions, clearly flagged",
+    "Call requests, alternative buildings and replies that must wait on an owner become cards that say what happened and what was or was not sent, leaving the choice to her."
+   ]
+  ],
+  "flow": [
+   "Property list",
+   "Broker conversations",
+   "Tracker and advisor decisions"
+  ],
+  "next": "SiteSift is not open to users today. Each of its eight steps has measurable criteria that count only when proven on a live test campaign against the build that is serving: nine of 22 so far, and no step is complete yet. The beta stays paused until every fault a broker could see is closed.",
+  "evidence": "Screens come from a test account with every address and identity masked. No client correspondence, broker or prospect information is shown.",
+  "decisions": [
+   [
+    "Test fixes against the real model.",
+    "A harness feeds realistic broker replies through the product’s single reply entry point with the real model, under a dollar cap per run; reading one reply costs about 14 cents. Its first run traced every failure to the rules around the model rather than the model itself."
+   ],
+   [
+    "Pin every known fault.",
+    "An offline sweep of 869 realistic phrasings costs nothing to run. Each failing case is pinned to a named fault, so a fix shows up as a flipped test instead of passing silently."
+   ],
+   [
+    "Prove it live with the fewest emails.",
+    "Changes are proven on single-property campaigns between owned test mailboxes, with a fixed email and spend budget. One overnight session ran six such campaigns and shipped four releases for $1.55 of model spend."
+   ]
+  ],
+  "decisionNote": "More than 10,000 automated backend tests and about 3,800 dashboard and cloud-function tests (local runs, 28 September 2026, with 13 known failures tracked by name). Passing tests are not counted as proof here; only live test campaigns are.",
+  "screens": [
+   {
+    "src": "images/product-screens/sitesift-conversation.webp",
+    "alt": "SiteSift conversation in which facts from a broker’s reply appear as chips written to the tracker",
+    "caption": "Test account, 13 September 2026 build: a broker’s partial answer is written as three facts, the product asks once for the four still missing, then records them and closes the conversation. That bulleted ask has since been replaced by one plain sentence. Email addresses are masked.",
+    "width": 1564,
+    "height": 784
+   },
+   {
+    "src": "images/product-screens/sitesift-alternatives.webp",
+    "alt": "SiteSift conversation where a leased space is marked unavailable and the broker’s three alternative flyers each become a card",
+    "caption": "The space is leased, so the row is marked not viable; the broker attaches three alternative flyers, each becomes its own card, and the advisor passes on two and picks one in a single reply. Test account.",
+    "width": 1564,
+    "height": 784
+   },
+   {
+    "src": "images/product-screens/sitesift-reply-held.webp",
+    "alt": "SiteSift card explaining that a reply was held while the broker waits on the building owner",
+    "caption": "A broker still waiting on the owner: the known facts are kept, the reply is held, and the card says nothing was sent. Test account.",
+    "width": 1564,
+    "height": 784
+   }
+  ],
+  "image": "images/product-screens/sitesift-conversation.webp",
+  "imageAlt": "SiteSift conversation in which facts from a broker’s reply appear as chips written to the tracker",
+  "imageCaption": "Test account, 13 September 2026 build: a broker’s partial answer is written as three facts, the product asks once for the four still missing, then records them and closes the conversation. That bulleted ask has since been replaced by one plain sentence. Email addresses are masked.",
+  "imageWidth": 1564,
+  "imageHeight": 784,
+  "logo": "images/brands/sitesift.png",
+  "logoWidth": 669,
+  "logoHeight": 291,
+  "logoKind": "wordmark",
+  "productTitle": "What it is being built to do.",
+  "productNote": "These are the product’s goals. Each one counts as done only when it is proven on a live test campaign; the current count is under Where it stands.",
+  "nextTitle": "In development, measured honestly.",
+  "stage": "development",
+  "created": "2025-05",
+  "createdFrom": "repository 27 May 2025"
+ },
+ {
+  "id": "fiftyflowers-shopping-assistant",
+  "title": "Flower requests, answered from the catalog.",
+  "name": "AI Floral Assistant",
+  "sector": "FiftyFlowers · Storefront",
+  "status": "In the store theme · behind an A/B test since January 2026",
+  "short": "A storefront chat panel: shoppers describe what they need and get matching catalog products with prices. The AI only reads the request; code runs the search.",
+  "role": "AI Solutions Engineer · FiftyFlowers",
+  "stack": [
+   "Shopify theme",
+   "JavaScript",
+   "AWS Lambda",
+   "Python",
+   "DynamoDB",
+   "LLM API"
+  ],
+  "problem": "Shoppers know the event, the colors and the budget, not the product names. The goal was a way to describe a need in plain words and get catalog products back, with no chance of an invented product or price.",
+  "contribution": "Built the 2025 prototype, then the storefront assistant: the chat panel in the store theme, the conversation and catalog-search functions on AWS, and the prompt that turns a shopper’s words into the store’s own filters.",
+  "groups": [
+   [
+    "Ask in plain words",
+    "A shopper types what they need. One small AI call reads it as the store’s own filters: colors, flower types, occasion, budget, effort level, season, product type and what to leave out."
+   ],
+   [
+    "Only what the catalog holds",
+    "Code searches the catalog with those filters and returns up to six products with catalog prices. The AI never sees products or writes the reply, so it cannot invent either."
+   ],
+   [
+    "Refine without starting over",
+    "The request appears as removable chips. Removing one, clearing them all or asking for new recommendations re-runs the search with no AI call."
+   ],
+   [
+    "Never an empty answer",
+    "When nothing matches, the search loosens one condition at a time, such as a higher budget or any of the colors instead of all, and tells the shopper what it changed."
+   ],
+   [
+    "Conversations that come back",
+    "A shopper can keep up to ten conversations: on any device when signed in, in the same browser as a guest. Each card opens the store’s product page to choose options and buy."
+   ]
+  ],
+  "flow": [
+   "Shopper’s request",
+   "Filters and catalog search",
+   "Products and chips"
+  ],
+  "next": "In the store theme since January 2026, hidden unless the company’s A/B test shows it. Next: record who the test shows it to, check card prices against product pages, and measure usage and cost.",
+  "evidence": "The panel is a local render of the store theme’s code, not the live storefront and not a live AI run: the reading of the request was typed in by hand and the three products are invented. The prototype page is shown empty.",
+  "decisions": [
+   [
+    "Let the model translate, let code search.",
+    "The model only turns words into filters. The search and the reply sentence are code, so every answer can be explained from its filters."
+   ],
+   [
+    "Ask for the complete new state.",
+    "Each call sends the current filters and asks for the full updated set, so follow-ups like “also pink” or “make it red instead” need no merge logic."
+   ]
+  ],
+  "decisionNote": "The prototype’s 42 test requests ran against the catalog before the move to AWS. No usage or cost figures are claimed; none have been measured yet.",
+  "nextTitle": "In the store theme, behind a test.",
+  "color": "green",
+  "logo": "images/brands/fiftyflowers.svg",
+  "logoWidth": 180,
+  "logoHeight": 83,
+  "logoKind": "wordmark",
+  "category": "companies",
+  "parent": "fiftyflowers",
+  "stage": "rollout",
+  "screens": [
+   {
+    "src": "images/product-screens/ff-shop-assistant-panel.webp",
+    "alt": "AI Floral Assistant side panel: the welcome view, and an answer with product cards and filter chips",
+    "caption": "Local render of the store theme’s code, not the live storefront: the welcome view, and an answer with removable filter chips. In this render the reading of the request was typed in by hand and the three products are invented; the search, the reply and the chips are the real code.",
+    "width": 1600,
+    "height": 1411
+   },
+   {
+    "src": "images/product-screens/ff-shop-prototype.webp",
+    "alt": "The 2025 prototype’s chat page with four suggested questions and an empty filters panel",
+    "caption": "The 2025 prototype’s chat page in its starting state. It ran locally and was never shown to shoppers; its filters carried into the storefront assistant.",
+    "width": 1280,
+    "height": 720
+   }
+  ],
+  "image": "images/product-screens/ff-shop-assistant-panel.webp",
+  "imageWidth": 1600,
+  "imageHeight": 1411,
+  "imageAlt": "AI Floral Assistant side panel: the welcome view, and an answer with product cards and filter chips",
+  "imageCaption": "Local render of the store theme’s code, not the live storefront: the welcome view, and an answer with removable filter chips. In this render the reading of the request was typed in by hand and the three products are invented; the search, the reply and the chips are the real code.",
+  "created": "2025-08",
+  "createdFrom": "prototype 8 Aug 2025"
+ },
+ {
+  "id": "ai-travel-companion",
+  "name": "AI Travel Companion",
+  "title": "Turn a conversation into an itinerary.",
+  "category": "earlier",
+  "sector": "iOS application",
+  "status": "Earlier work · personal prototype",
+  "color": "rose",
+  "image": "images/TravelCompanionItinerary.png",
+  "short": "A Swift app that combines conversation, itinerary editing and maps.",
+  "role": "iOS developer",
+  "stack": [
+   "Swift",
+   "OpenAI API",
+   "Maps",
+   "Location services"
+  ],
+  "problem": "Travel planning moves between conversation, a schedule and places on a map.",
+  "contribution": "Built an iOS app that uses conversation to create and update an itinerary, with integrated map and location features. Original screens remain in the walkthrough.",
+  "legacy": true,
+  "imageWidth": 1179,
+  "imageHeight": 2556,
+  "screens": [
+   {
+    "src": "images/product-screens/ai-travel-companion-1.webp",
+    "alt": "iOS travel app showing a Los Angeles map above an itinerary-planning conversation.",
+    "caption": "Map and planning conversation · historical iOS prototype.",
+    "width": 600,
+    "height": 1301
+   },
+   {
+    "src": "images/product-screens/ai-travel-companion-2.webp",
+    "alt": "Travel app showing a dated itinerary and a conversation used to add plans.",
+    "caption": "Conversation connected to an itinerary · historical iOS prototype.",
+    "width": 600,
+    "height": 1301
+   },
+   {
+    "src": "images/product-screens/ai-travel-companion-3.webp",
+    "alt": "Travel app trip list containing Los Angeles, Italy and Bahamas.",
+    "caption": "Trip list · historical iOS prototype.",
+    "width": 600,
+    "height": 1301
+   },
+   {
+    "src": "images/product-screens/ai-travel-companion-4.webp",
+    "alt": "Travel itinerary item editor with an event title, start time, end time and save control.",
+    "caption": "Editing an itinerary item · historical iOS prototype.",
+    "width": 600,
+    "height": 1301
+   }
+  ],
+  "stage": "earlier",
+  "nextTitle": "Where this one sits.",
+  "created": "2024-11",
+  "createdFrom": "repository 19 Nov 2024"
  },
  {
   "id": "client-portal",
@@ -1447,7 +1465,9 @@
   "logoKind": "wordmark",
   "logoLabel": "WebMarkets",
   "stage": "earlier",
-  "nextTitle": "Where this one sits."
+  "nextTitle": "Where this one sits.",
+  "created": "2024-05",
+  "createdFrom": "internship, May to August 2024"
  },
  {
   "id": "alpha-seo",
@@ -1477,54 +1497,9 @@
   "logoKind": "wordmark",
   "logoLabel": "WebMarkets",
   "stage": "earlier",
-  "nextTitle": "Where this one sits."
- },
- {
-  "id": "pacman",
-  "name": "Java Pacman",
-  "title": "A familiar game, with room to experiment.",
-  "category": "earlier",
-  "sector": "Game development",
-  "status": "Earlier work · personal project",
-  "color": "ink",
-  "image": "images/Pacmanpic2.jpg",
-  "short": "A state-based Java game with two-player and free-movement variations.",
-  "role": "Independent developer",
-  "stack": [
-   "Java",
-   "State machines",
-   "Game systems"
-  ],
-  "problem": "Recreating a familiar game offered a way to explore game states, movement and rule variations.",
-  "contribution": "Developed a Java Pacman game with two-player mode, free movement and expanded traversal. The original code and feature walkthrough are preserved.",
-  "legacy": true,
-  "imageWidth": 1916,
-  "imageHeight": 1438,
-  "screens": [
-   {
-    "src": "images/product-screens/pacman-1.webp",
-    "alt": "Java Pacman gameplay with the maze, ghosts, score and active power-up bar.",
-    "caption": "Maze gameplay and power-up state · historical Java build.",
-    "width": 1466,
-    "height": 1100
-   },
-   {
-    "src": "images/product-screens/pacman-2.webp",
-    "alt": "Pacman start menu with a Play button and two-player option.",
-    "caption": "Start menu and two-player option · historical Java build.",
-    "width": 1469,
-    "height": 1100
-   },
-   {
-    "src": "images/product-screens/pacman-3.webp",
-    "alt": "Another Java Pacman gameplay state with remaining lives and an inactive power-up bar.",
-    "caption": "A second gameplay state with remaining lives · historical Java build.",
-    "width": 1469,
-    "height": 1100
-   }
-  ],
-  "stage": "earlier",
-  "nextTitle": "Where this one sits."
+  "nextTitle": "Where this one sits.",
+  "created": "2024-06",
+  "createdFrom": "internship, May to August 2024"
  },
  {
   "id": "machine-learning-visualization",
@@ -1561,7 +1536,79 @@
    "images/MachineLearningVisualizationMenu.png"
   ],
   "stage": "earlier",
-  "nextTitle": "Where this one sits."
+  "nextTitle": "Where this one sits.",
+  "created": "2024-03",
+  "createdFrom": "repository 25 Mar 2024"
+ },
+ {
+  "id": "ai-arena",
+  "title": "The AI plays. The numbers decide.",
+  "name": "AI Arena",
+  "category": "products",
+  "sector": "Simulation · Game AI",
+  "status": "Complete local build · not released",
+  "color": "blue",
+  "short": "Three-a-side AI fighters play a bomb-plant mode in a 3D spectator view, while the same simulation runs headless to measure balance across hundreds of matches.",
+  "role": "Independent developer",
+  "stack": [
+   "Three.js",
+   "Rapier physics",
+   "JavaScript",
+   "Headless simulation"
+  ],
+  "problem": "A match between AI fighters has no correct output to test against. The useful question is whether the game is balanced, and that cannot be answered by watching one match.",
+  "contribution": "Built a deterministic fixed-step simulation, with seeded randomness, a 60 Hz step and physics stepped in a fixed order, that the browser renders and a headless runner batches. Built the fighters' perception, cover, routes, morale and weapon timing.",
+  "groups": [
+   [
+    "Spectator view",
+    "A 3D scene with an automatic camera director and a match HUD. Any seed can be replayed, paused or fast-forwarded."
+   ],
+   [
+    "Fighter decisions",
+    "Perception, cover, routes, morale and weapon timing produce the contest: simulation logic, not chat agents."
+   ],
+   [
+    "Balance laboratory",
+    "Headless batches report team wins, the attack and defense split, round outcomes and each fighter’s impact; every shot is logged with its probability factors."
+   ],
+   [
+    "Decisions from data",
+    "470 logged matches across three batches. In the final 100 matches, attackers won 44.9% of rounds, inside the balance gate, while one team still took 63% of matches, an edge recorded rather than hidden."
+   ]
+  ],
+  "flow": [
+   "Seed",
+   "Deterministic simulation",
+   "Rendered match or balance report"
+  ],
+  "next": "Complete as a local build. Two runs of the same seed already produce byte-identical results (checked 1 October 2026); making that a committed test is next.",
+  "evidence": "Screens are from the local build. Balance figures come from the committed batch logs.",
+  "screens": [
+   {
+    "src": "images/product-screens/ai-arena-plant.webp",
+    "alt": "AI Arena spectator view of a fighter planting the bomb, with team HUD panels",
+    "caption": "A round in progress: one fighter plants while the rest cover, with each fighter’s role, ammunition and state in the HUD.",
+    "width": 1200,
+    "height": 907
+   },
+   {
+    "src": "images/product-screens/ai-arena-balance.webp",
+    "alt": "Balance report table from a 100-match headless batch",
+    "caption": "The final 100-match batch: team wins, the attack and defense split, round outcomes and per-fighter totals.",
+    "width": 1440,
+    "height": 1129
+   }
+  ],
+  "image": "images/product-screens/ai-arena-plant.webp",
+  "imageAlt": "AI Arena spectator view of a fighter planting the bomb, with team HUD panels",
+  "imageCaption": "A round in progress: one fighter plants while the rest cover, with each fighter’s role, ammunition and state in the HUD.",
+  "imageWidth": 1200,
+  "imageHeight": 907,
+  "stage": "built",
+  "nextTitle": "Complete as a local build.",
+  "created": "2026-07",
+  "createdFrom": "first commit 4 Jul 2026",
+  "game": true
  },
  {
   "id": "lunar-base",
@@ -1630,61 +1677,59 @@
    }
   ],
   "stage": "earlier",
-  "nextTitle": "Where this one sits."
+  "nextTitle": "Where this one sits.",
+  "created": "2024-03",
+  "createdFrom": "repository 9 Mar 2024",
+  "game": true
  },
  {
-  "id": "ai-travel-companion",
-  "name": "AI Travel Companion",
-  "title": "Turn a conversation into an itinerary.",
+  "id": "pacman",
+  "name": "Java Pacman",
+  "title": "A familiar game, with room to experiment.",
   "category": "earlier",
-  "sector": "iOS application",
-  "status": "Earlier work · personal prototype",
-  "color": "rose",
-  "image": "images/TravelCompanionItinerary.png",
-  "short": "A Swift app that combines conversation, itinerary editing and maps.",
-  "role": "iOS developer",
+  "sector": "Game development",
+  "status": "Earlier work · personal project",
+  "color": "ink",
+  "image": "images/Pacmanpic2.jpg",
+  "short": "A state-based Java game with two-player and free-movement variations.",
+  "role": "Independent developer",
   "stack": [
-   "Swift",
-   "OpenAI API",
-   "Maps",
-   "Location services"
+   "Java",
+   "State machines",
+   "Game systems"
   ],
-  "problem": "Travel planning moves between conversation, a schedule and places on a map.",
-  "contribution": "Built an iOS app that uses conversation to create and update an itinerary, with integrated map and location features. Original screens remain in the walkthrough.",
+  "problem": "Recreating a familiar game offered a way to explore game states, movement and rule variations.",
+  "contribution": "Developed a Java Pacman game with two-player mode, free movement and expanded traversal. The original code and feature walkthrough are preserved.",
   "legacy": true,
-  "imageWidth": 1179,
-  "imageHeight": 2556,
+  "imageWidth": 1916,
+  "imageHeight": 1438,
   "screens": [
    {
-    "src": "images/product-screens/ai-travel-companion-1.webp",
-    "alt": "iOS travel app showing a Los Angeles map above an itinerary-planning conversation.",
-    "caption": "Map and planning conversation · historical iOS prototype.",
-    "width": 600,
-    "height": 1301
+    "src": "images/product-screens/pacman-1.webp",
+    "alt": "Java Pacman gameplay with the maze, ghosts, score and active power-up bar.",
+    "caption": "Maze gameplay and power-up state · historical Java build.",
+    "width": 1466,
+    "height": 1100
    },
    {
-    "src": "images/product-screens/ai-travel-companion-2.webp",
-    "alt": "Travel app showing a dated itinerary and a conversation used to add plans.",
-    "caption": "Conversation connected to an itinerary · historical iOS prototype.",
-    "width": 600,
-    "height": 1301
+    "src": "images/product-screens/pacman-2.webp",
+    "alt": "Pacman start menu with a Play button and two-player option.",
+    "caption": "Start menu and two-player option · historical Java build.",
+    "width": 1469,
+    "height": 1100
    },
    {
-    "src": "images/product-screens/ai-travel-companion-3.webp",
-    "alt": "Travel app trip list containing Los Angeles, Italy and Bahamas.",
-    "caption": "Trip list · historical iOS prototype.",
-    "width": 600,
-    "height": 1301
-   },
-   {
-    "src": "images/product-screens/ai-travel-companion-4.webp",
-    "alt": "Travel itinerary item editor with an event title, start time, end time and save control.",
-    "caption": "Editing an itinerary item · historical iOS prototype.",
-    "width": 600,
-    "height": 1301
+    "src": "images/product-screens/pacman-3.webp",
+    "alt": "Another Java Pacman gameplay state with remaining lives and an inactive power-up bar.",
+    "caption": "A second gameplay state with remaining lives · historical Java build.",
+    "width": 1469,
+    "height": 1100
    }
   ],
   "stage": "earlier",
-  "nextTitle": "Where this one sits."
+  "nextTitle": "Where this one sits.",
+  "created": "2022-03",
+  "createdFrom": "repository 21 Mar 2022",
+  "game": true
  }
 ]

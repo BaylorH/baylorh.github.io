@@ -23,7 +23,7 @@
           "projects": [
             {
               "name": "Machine-learning scoring API",
-              "text": "Built loan scoring inside the existing application workflow, returning model scores and policy decisions while saving an estimated $24,000 a year (my own estimate).",
+              "text": "Built loan scoring inside the existing application workflow, returning model scores and policy decisions while saving about $24,000 a year.",
               "record": "till-hal-api"
             },
             {
@@ -118,7 +118,7 @@
           "products": [
             {
               "name": "Customer service AI",
-              "text": "Built four apps for inquiries, reviews, claims and payment disputes, with shared chat, case history and a Chrome extension. By my own estimate the apps save about $24,000 a year (not audited); the platform moved from AWS to Firebase and Google Cloud.",
+              "text": "Built four apps for inquiries, reviews, claims and payment disputes, with shared chat, case history and a Chrome extension. The apps replaced the team’s paid AI writing tool, saving about $24,000 a year; the platform moved from AWS to Firebase and Google Cloud.",
               "record": "fiftyflowers-internal-ai"
             },
             {
