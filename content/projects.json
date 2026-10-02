@@ -565,40 +565,44 @@
    "Jarvis OS"
   ],
   "next": "Bring project context and engineering memory into a more unified assistant experience. The complete proposed integration is not presented as a finished autonomous platform.",
-  "evidence": "Captures cover private client and project names. Prompts, credentials and implementation details are omitted.",
+  "evidence": "Screens are local runs of each product’s own code with invented projects and people. Two existing captures are marked: the real knowledge graph with project names blurred, and a real worker from an August 2026 trial with a name covered.",
   "screens": [
    {
-    "src": "images/product-screens/record-workspace.webp",
-    "alt": "The Record developer workspace with projects and development tools",
-    "caption": "The Record’s live developer workspace, captured September 24, 2026. Private client and shared-project names are covered; the full dashboard layout is preserved.",
+    "src": "images/product-screens/ep-record-home.webp",
+    "alt": "A dark dashboard with project cards and client folders",
+    "caption": "The Record’s workspace home. A local run with invented projects and people; real client pages stay private.",
     "width": 1440,
-    "height": 900
-   },
-   {
-    "src": "images/product-screens/record-milestones.webp",
-    "alt": "The Record milestone grid grouping completed outcomes and remaining work",
-    "caption": "The Record milestone overview, captured September 24, 2026. Completed outcomes and work in progress remain separate, with evidence available in each milestone.",
-    "width": 1425,
-    "height": 891
+    "height": 900,
+    "label": "The workspace home"
    },
    {
     "src": "images/product-screens/brain-graph.webp",
-    "alt": "Brain knowledge graph with page labels blurred",
+    "alt": "A large knowledge graph of linked pages with blurred labels",
     "caption": "Brain’s knowledge graph: projects, repositories, knowledge pages and workflows as one navigable map. Project names are blurred.",
     "width": 1280,
-    "height": 720
+    "height": 720,
+    "label": "The real graph"
    },
    {
-    "src": "images/product-screens/jarvis-terminal.webp",
-    "alt": "Terminal running a Jarvis OS task on the offline test worker",
-    "caption": "Jarvis OS handing a task to its offline test worker and reporting the final state. No paid model was used.",
+    "src": "images/product-screens/ep-jarvis-run.webp",
+    "alt": "Terminal output of a worker run followed by its written instruction",
+    "caption": "Jarvis OS handing one step to its offline test worker, with the assignment as written. No paid model was used.",
     "width": 1440,
-    "height": 1386
+    "height": 900,
+    "label": "One step, handed over in writing"
+   },
+   {
+    "src": "images/product-screens/ep-record-question.webp",
+    "alt": "A question card being answered, beside the same card showing the saved response",
+    "caption": "A client question answered inside its milestone, and the owner’s view of the saved response.",
+    "width": 1800,
+    "height": 814,
+    "label": "A question answered where the work is"
    }
   ],
-  "image": "images/product-screens/record-workspace.webp",
-  "imageAlt": "The Record developer workspace with projects and development tools",
-  "imageCaption": "The Record’s live developer workspace, captured September 24, 2026. Private client and shared-project names are covered; the full dashboard layout is preserved.",
+  "image": "images/product-screens/ep-record-home.webp",
+  "imageAlt": "A dark dashboard with project cards and client folders",
+  "imageCaption": "The Record’s workspace home. A local run of the product’s own code with invented projects and people; real client pages stay private.",
   "imageWidth": 1440,
   "imageHeight": 900,
   "decisions": [
@@ -615,7 +619,192 @@
   "stage": "own",
   "nextTitle": "In daily use, with more to connect.",
   "created": "2026-08",
-  "createdFrom": "Jarvis OS repository 23 Aug 2026 (Brain 15 Jul 2026)"
+  "createdFrom": "Jarvis OS repository 23 Aug 2026 (Brain 15 Jul 2026)",
+  "chapters": [
+   {
+    "id": "record",
+    "nav": "The Record",
+    "eyebrow": "The Record · manage the work",
+    "title": "One page per project that people and agents both keep current.",
+    "intro": "The Record holds what a project is, what is built, what is checked and what is needed next, on a page a client can read. Its owner edits it, a reader answers questions where they arise, and an approved AI agent updates it through commands that cannot be applied twice.",
+    "note": "Local run of the product’s own code with invented projects and people.",
+    "screens": [
+     {
+      "src": "images/product-screens/ep-record-home.webp",
+      "alt": "A dark dashboard with project cards and client folders",
+      "label": "The workspace home",
+      "caption": "Personal projects, development pages and client folders across one page, with work shared by others on the right.",
+      "width": 1440,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ep-record-views.webp",
+      "alt": "Two versions of a project page side by side",
+      "label": "One page, two views",
+      "caption": "The same project page for its owner, with the controls to edit and share, and for a reader, with none of them.",
+      "width": 1800,
+      "height": 745
+     },
+     {
+      "src": "images/product-screens/ep-record-question.webp",
+      "alt": "A question card being answered, beside the same card showing the saved response",
+      "label": "A question answered where the work is",
+      "caption": "A client question sits inside its milestone: the reader answers there, and the owner sees the saved response in the same place.",
+      "width": 1800,
+      "height": 814
+     },
+     {
+      "src": "images/product-screens/ep-record-progress.webp",
+      "alt": "Milestone cards, four headline numbers and step bars",
+      "label": "Progress that can be counted",
+      "caption": "Milestones with a percentage or the words Not measured, headline figures, and step bars that say where each step is waiting.",
+      "width": 1800,
+      "height": 869
+     },
+     {
+      "src": "images/product-screens/ep-record-agent.webp",
+      "alt": "An approval page above a terminal showing a save and its replay",
+      "label": "An agent connects, saves, and cannot save twice",
+      "caption": "A person approves a seven-day connection; the agent’s save comes back with a receipt, and the same command sent again is answered as a replay.",
+      "width": 1200,
+      "height": 1865
+     }
+    ]
+   },
+   {
+    "id": "brain",
+    "nav": "Brain",
+    "eyebrow": "Brain · preserve the context",
+    "title": "Engineering memory that the next session can find.",
+    "intro": "Brain keeps project state, findings, repository maps, workflows and handoff notes as linked pages, with a search tool every session starts from and a viewer for reading them as a graph.",
+    "note": "Local run of the product’s own code with invented projects and people. The first picture is an existing capture of the real graph with project names blurred.",
+    "screens": [
+     {
+      "src": "images/product-screens/brain-graph.webp",
+      "alt": "A large knowledge graph of linked pages with blurred labels",
+      "label": "The real graph",
+      "caption": "Brain’s knowledge graph: projects, repositories, knowledge pages and workflows as one navigable map. An existing capture; project names are blurred.",
+      "width": 1280,
+      "height": 720,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ep-brain-reader.webp",
+      "alt": "A graph on the left and a rendered page with headings on the right",
+      "label": "A finding, read beside the graph",
+      "caption": "One finding open in the reader: what was seen, what was decided, where it is proven and what it led to.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ep-brain-backlogs.webp",
+      "alt": "Columns of backlog cards grouped by project",
+      "label": "Every project’s backlog",
+      "caption": "One section per project with active, open, deferred and done columns.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ep-brain-search.webp",
+      "alt": "Terminal output of three searches with ranked result lines",
+      "label": "Search from the terminal",
+      "caption": "The search every session starts with: ranked results as path, title and a snippet.",
+      "width": 1440,
+      "height": 660
+     },
+     {
+      "src": "images/product-screens/ep-brain-handoff.webp",
+      "alt": "A terminal showing a handoff note in Markdown",
+      "label": "A handoff note",
+      "caption": "What carries work to the next session: where to resume, who can unblock it, what is finished, half done and only looks finished, and the exact next action.",
+      "width": 1440,
+      "height": 900
+     }
+    ]
+   },
+   {
+    "id": "jarvis",
+    "nav": "Jarvis OS",
+    "eyebrow": "Jarvis OS · coordinate execution",
+    "title": "A supervisor that reports each worker’s real final state.",
+    "intro": "Jarvis OS writes a goal down as steps with a test for each, hands one step to a worker inside a fence, and says plainly when a step is blocked. An offline test worker makes the whole loop checkable without a paid run; real workers were used in recorded trials.",
+    "note": "Local run of the product’s own code with invented projects and people. The worker in the terminal pictures is the offline test worker; the last picture is an existing capture of a real worker from an August 2026 trial.",
+    "stage": "development",
+    "status": "Prototype · bounded trials, the full conversational cycle is still proposed",
+    "screens": [
+     {
+      "src": "images/product-screens/ep-jarvis-plan.webp",
+      "alt": "Terminal output listing three plan steps with their tests",
+      "label": "A goal becomes steps with a test",
+      "caption": "A goal written down as three steps, each with a done-when test; the step with nothing to prove it is refused one.",
+      "width": 1440,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ep-jarvis-run.webp",
+      "alt": "Terminal output of a worker run followed by its written instruction",
+      "label": "One step, handed over in writing",
+      "caption": "A step given to a worker, and the assignment as written: what to do, how it will be judged, where it may write and the one command it may run.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ep-jarvis-fence.webp",
+      "alt": "Terminal output of allowed and blocked actions with exit codes",
+      "label": "The fence, tried by hand",
+      "caption": "A write inside the worker’s folder is allowed; a write elsewhere, an edit to standing instructions and any other command are blocked.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ep-jarvis-unattended.webp",
+      "alt": "Terminal output of a loop over two plans, then a written account and a refusal",
+      "label": "The unattended loop, and its refusal",
+      "caption": "The loop working through plans with the test worker, the account it leaves, and its refusal to drive a real worker unattended until the fence is proved on one.",
+      "width": 1440,
+      "height": 1390
+     },
+     {
+      "src": "images/product-screens/ep-jarvis-real-worker.webp",
+      "alt": "A terminal window where an AI coding tool creates a file, reads it back and reports",
+      "label": "A real worker, August 2026",
+      "caption": "A real Claude Code worker started by the supervising prototype with one bounded task, doing it step by step in its own window. An existing capture; a name and an account line are covered.",
+      "width": 1120,
+      "height": 720
+     }
+    ]
+   },
+   {
+    "id": "origins",
+    "nav": "Where it came from",
+    "eyebrow": "Earlier experiments",
+    "title": "The ideas that were kept.",
+    "intro": "A repository that acted as an assistant came first: hooks that loaded saved state at the start of a session and held work at a planning gate. Its memory and enforcement ideas fed Brain; its delegation ideas became Jarvis OS.",
+    "note": "Local run of the product’s own code with invented projects and people. The hooks are the earlier product’s own scripts run over invented state.",
+    "screens": [
+     {
+      "src": "images/product-screens/ep-jarvis1-retrieval.webp",
+      "alt": "Terminal output of a retrieval receipt and session-start context",
+      "label": "The first assistant’s retrieval receipt",
+      "caption": "What the earliest version put in front of the assistant when a session opened: what was loaded, the active thread, key facts and the projects table.",
+      "width": 1440,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ep-jarvis-parts.webp",
+      "alt": "A diagram of a user, an assistant, project managers and builders",
+      "label": "The moving parts, as designed",
+      "caption": "The product’s own explainer: the user, one front door, a project manager per live goal and the builders each one runs.",
+      "width": 1440,
+      "height": 900
+     }
+    ]
+   }
+  ],
+  "productNote": "Four parts follow: The Record, Brain, Jarvis OS and the earlier experiments. The screens are local runs of each product’s own code with invented projects and people; two are existing captures, marked as such."
  },
  {
   "id": "fiftyflowers-second-brain",
@@ -807,7 +996,7 @@
     "title": "The repository the AI coding agents work through, as a map.",
     "intro": "The Engineering view draws the shared engineering repository as it stood at the end of July 2026: one point per page, one line per link, beside a file tree and a reader. Bringing the view up to date with the repository is the next step.",
     "note": "Local run; the map is the July snapshot that ships with the platform, and one picture is an existing capture of the live site.",
-    "stage": "beta",
+    "stage": "development",
     "status": "Beta · still shows its July 2026 snapshot",
     "screens": [
      {
