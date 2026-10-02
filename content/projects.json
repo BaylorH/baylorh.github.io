@@ -664,35 +664,46 @@
    "Answer with sources"
   ],
   "next": "An MVP, live since July 2026. Customer-service knowledge is in production use; the marketing brain is drawn but holds no knowledge yet, four team brains are placeholders, and the engineering view is a beta that still shows its July snapshot.",
-  "evidence": "The signed-in name is replaced; no personal memory content is shown.",
+  "evidence": "Screens are local runs of the platform’s own code with an invented team member and invented knowledge; every reply shown is test stand-in text, not a model’s answer. The Engineering map is the July 2026 snapshot that ships with the platform.",
   "screens": [
    {
-    "src": "images/product-screens/ff-second-brain-overview.webp",
-    "alt": "Second Brain overview with a person’s own memory at the center and team brains around it",
-    "caption": "Second Brain: each person’s own memory at the center, with the team brains around it. Most team brains are still empty.",
-    "width": 1280,
-    "height": 720
+    "src": "images/product-screens/ff-sb-overview.webp",
+    "alt": "A dark map with one central cluster and seven labelled clusters around it",
+    "caption": "Second Brain: a person’s own memory in the middle and the team brains around it. A local run with an invented team member; most team brains are still empty.",
+    "width": 1440,
+    "height": 900,
+    "label": "The map of brains"
    },
    {
-    "src": "images/product-screens/ff-second-brain-chat-home.webp",
-    "alt": "The platform’s chat start screen with the tool menu at the left",
-    "caption": "Chat on the platform home: it remembers a personal brain, pulls in company knowledge when it helps, and accepts notes and chat exports. The signed-in name is replaced.",
-    "width": 1440,
-    "height": 900
+    "src": "images/product-screens/ff-sb-answer.webp",
+    "alt": "A chat reply with a consulted line, above a saved page listing its sources",
+    "caption": "A reply names the brains it consulted, and a saved answer lists the pages it was drawn from. The reply shown is test stand-in text.",
+    "width": 1225,
+    "height": 1910,
+    "label": "An answer, and where it came from"
    },
    {
     "src": "images/product-screens/ff-engineering-brain.webp",
-    "alt": "The Engineering Brain constellation with the workflow router page open in the reader",
-    "caption": "The Engineering Brain: each page of the July 2026 snapshot of the shared repository as a point; the workflows are highlighted and the router page is open in the reader.",
+    "alt": "A constellation of repository pages beside a file tree and a page reader",
+    "caption": "The Engineering Brain: each page of the July 2026 snapshot of the shared repository as a point.",
     "width": 1440,
-    "height": 900
+    "height": 900,
+    "label": "The repository as a constellation"
+   },
+   {
+    "src": "images/product-screens/ff-sb-manage.webp",
+    "alt": "A side drawer listing knowledge articles with edit and delete buttons",
+    "caption": "Managing a team brain: voices, audiences and knowledge, each editable in place.",
+    "width": 1225,
+    "height": 900,
+    "label": "Managing what a brain knows"
    }
   ],
-  "image": "images/product-screens/ff-second-brain-overview.webp",
-  "imageAlt": "Second Brain overview with a person’s own memory at the center and team brains around it",
-  "imageCaption": "Second Brain: each person’s own memory at the center, with the team brains around it. Most team brains are still empty.",
-  "imageWidth": 1280,
-  "imageHeight": 720,
+  "image": "images/product-screens/ff-sb-overview.webp",
+  "imageAlt": "A dark map with one central cluster and seven labelled clusters around it",
+  "imageCaption": "Second Brain: a person’s own memory in the middle and the team brains around it. A local run of the platform’s own code with an invented team member; most team brains are still empty.",
+  "imageWidth": 1440,
+  "imageHeight": 900,
   "logo": "images/brands/fiftyflowers.svg",
   "logoWidth": 180,
   "logoHeight": 83,
@@ -701,7 +712,160 @@
   "stage": "rollout",
   "nextTitle": "An MVP, with two teams’ knowledge in.",
   "created": "2026-07",
-  "createdFrom": "Engineering Brain repository 7 Jul 2026"
+  "createdFrom": "Engineering Brain repository 7 Jul 2026",
+  "chapters": [
+   {
+    "id": "brains",
+    "nav": "Team brains",
+    "eyebrow": "Second Brain",
+    "title": "One brain per team, around each person’s own.",
+    "intro": "Second Brain draws the company’s knowledge as a map: a person’s own memory in the middle and a brain for each team around it. A team brain opens into its knowledge, the voices it writes in and the audiences it writes for, and each can be managed in place.",
+    "note": "Local run of the platform’s own code with an invented team member and invented knowledge.",
+    "screens": [
+     {
+      "src": "images/product-screens/ff-sb-overview.webp",
+      "alt": "A dark map with one central cluster and seven labelled clusters around it",
+      "label": "The map of brains",
+      "caption": "The overview: a personal brain in the middle and seven team brains around it, each marked live, forming or not taught yet.",
+      "width": 1440,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-sb-team-brain.webp",
+      "alt": "A team brain view with a constellation and an assistant panel",
+      "label": "A team brain, opened",
+      "caption": "Customer Service opened: its knowledge, voices and audiences as a slowly turning map, with an assistant for creating and managing them.",
+      "width": 1225,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-sb-manage.webp",
+      "alt": "A side drawer listing knowledge articles with edit and delete buttons",
+      "label": "Managing what a brain knows",
+      "caption": "The manage drawer: voices, audiences and knowledge with counts, a search box, and edit and remove on every article.",
+      "width": 1225,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-sb-forming.webp",
+      "alt": "Two sparse brain views, each with a note that it has no knowledge yet",
+      "label": "Honest about what is empty",
+      "caption": "A brain that knows its apps but holds no knowledge yet says so, and a team that has not been taught shows only a faint outline.",
+      "width": 1225,
+      "height": 1580
+     }
+    ]
+   },
+   {
+    "id": "chat",
+    "nav": "The chat",
+    "eyebrow": "Chat",
+    "title": "A chat that reads the brains and says which ones.",
+    "intro": "For each question a small model picks the brains it needs, readers pull the best-matching pages, and the reply is shown under a line naming the brains it consulted. An answer can be saved as a page that lists what it was drawn from, and the chat can read up on a topic, take in files and check its own notes.",
+    "note": "Local run of the platform’s own code with an invented team member and invented knowledge. Every reply shown is the repository’s test stand-in text, not a model’s answer.",
+    "screens": [
+     {
+      "src": "images/product-screens/ff-sb-chat-home.webp",
+      "alt": "A chat page with a glowing orb, a small constellation and a welcome card",
+      "label": "Chat home",
+      "caption": "The chat opens on the person’s own memory, greets them by first name and offers three ways to start.",
+      "width": 1440,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-sb-answer.webp",
+      "alt": "A chat reply with a consulted line, above a saved page listing its sources",
+      "label": "An answer, and where it came from",
+      "caption": "Top: a reply under the line naming the brains consulted. Below: the same answer saved as a page, with the list of pages it was drawn from. The reply is test stand-in text.",
+      "width": 1225,
+      "height": 1910
+     },
+     {
+      "src": "images/product-screens/ff-sb-more.webp",
+      "alt": "Three chat threads showing research, a file being read and a checkup card",
+      "label": "Research, files and a checkup",
+      "caption": "Research on a topic, a text file read into one page, and a checkup of its own notes. The replies are test stand-in text and nothing was searched on the web.",
+      "width": 835,
+      "height": 1264
+     },
+     {
+      "src": "images/product-screens/ff-sb-voice.webp",
+      "alt": "A chat reply with the orb pulsing while it speaks",
+      "label": "Read aloud",
+      "caption": "A reply being read aloud, with the orb in its speaking state. A live spoken conversation needs a paid voice session and is not shown.",
+      "width": 1225,
+      "height": 640
+     }
+    ]
+   },
+   {
+    "id": "engineering",
+    "nav": "Engineering Brain",
+    "eyebrow": "Engineering Brain",
+    "title": "The repository the AI coding agents work through, as a map.",
+    "intro": "The Engineering view draws the shared engineering repository as it stood at the end of July 2026: one point per page, one line per link, beside a file tree and a reader. Bringing the view up to date with the repository is the next step.",
+    "note": "Local run; the map is the July snapshot that ships with the platform, and one picture is an existing capture of the live site.",
+    "stage": "beta",
+    "status": "Beta · still shows its July 2026 snapshot",
+    "screens": [
+     {
+      "src": "images/product-screens/ff-engineering-brain.webp",
+      "alt": "A constellation of repository pages beside a file tree and a page reader",
+      "label": "The repository as a constellation",
+      "caption": "Each page of the July 2026 snapshot as a point, with the workflows highlighted and the router open in the reader. An existing capture.",
+      "width": 1440,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-sb-find-workflow.webp",
+      "alt": "A graph with four highlighted points, above a reader showing a workflow page",
+      "label": "Finding a workflow",
+      "caption": "Pointing at Workflows in the legend lights the four workflow pages; the router then opens from the tree in the reader.",
+      "width": 1225,
+      "height": 1910
+     }
+    ]
+   },
+   {
+    "id": "memory",
+    "nav": "Personal memory",
+    "eyebrow": "A memory that grows",
+    "title": "Each person’s own memory, drawn the same way.",
+    "intro": "After a reply the chat saves what is worth remembering to the person’s own brain, and pages made from a document name their source. The same map can be turned with hand gestures from a camera.",
+    "note": "Local run of the platform’s own code with an invented team member and invented knowledge. The pages shown are samples or come from the repository’s own test values.",
+    "screens": [
+     {
+      "src": "images/product-screens/ff-sb-personal.webp",
+      "alt": "A sparse constellation of a personal memory beside a file tree",
+      "label": "A person’s own brain",
+      "caption": "The Personal view: a few pages as a constellation, with the same legend, tree and reader as the team brains.",
+      "width": 1225,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-sb-citations.webp",
+      "alt": "A reader showing a short page with a citations list",
+      "label": "A page that names its source",
+      "caption": "A page distilled from a text file, ending in a Citations section with the file and the day it was read.",
+      "width": 1225,
+      "height": 640
+     },
+     {
+      "src": "images/product-screens/ff-sb-hand.webp",
+      "alt": "The engineering map with a small green camera tile labelled hand nav on",
+      "label": "Hand navigation, switched on",
+      "caption": "The hand button lit and the camera’s small self-view at the edge. The camera picture here is the browser’s test image, not a person.",
+      "width": 1225,
+      "height": 900
+     }
+    ]
+   }
+  ],
+  "productNote": "Four parts follow: the team brains, the chat that reads them, the Engineering Brain view and personal memory. The screens are local runs of the platform’s own code with an invented team member and invented knowledge; replies are test stand-in text."
  },
  {
   "id": "fiftyflowers-content-engine",
