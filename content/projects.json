@@ -153,7 +153,7 @@
    "Dashboard and ChatGPT answers"
   ],
   "next": "The verified history, the dashboard and the ChatGPT connection are live on the company’s own AWS account, behind a company sign-in. The daily schedule is being proven run by run.",
-  "evidence": "Screens use invented sample data generated in the report’s exact format, except the calendar of report days, which shows the real coverage and no figures.",
+  "evidence": "Screens are local runs of the product’s own code with invented bookings generated in the report’s exact format, except the calendar of report days, which is a capture of the live dashboard and shows coverage, not figures.",
   "decisions": [
    [
     "Verify before keeping.",
@@ -171,36 +171,283 @@
   "logoKind": "wordmark",
   "screens": [
    {
-    "src": "images/product-screens/create-spaces-overview-sample.webp",
-    "alt": "Create Spaces dashboard overview with invented sample bookings by salesperson",
-    "caption": "Dashboard overview on invented sample data in the report’s exact format. Real figures stay private.",
+    "src": "images/product-screens/cs-overview.webp",
+    "alt": "A dashboard page with a daily summary card and four period totals",
+    "caption": "The dashboard’s Overview: yesterday’s summary and the totals for the chosen period. A local run with invented bookings; real figures stay private.",
     "width": 1440,
-    "height": 900
+    "height": 900,
+    "label": "The morning view"
    },
    {
-    "src": "images/product-screens/create-spaces-exports-days.webp",
-    "alt": "Calendar of every report day received from 2009 to September 2026",
-    "caption": "Report days received: the latest 31 days on a calendar, beside the count of every day received since January 2009.",
-    "width": 730,
-    "height": 420
+    "src": "images/product-screens/cs-row-context.webp",
+    "alt": "Spreadsheet rows of a booking report with one row highlighted",
+    "caption": "Every figure opens the Excel row it came from, shown as the report printed it.",
+    "width": 1240,
+    "height": 900,
+    "label": "The row among its neighbours"
    },
    {
-    "src": "images/product-screens/create-spaces-connections.webp",
-    "alt": "Connections page guiding a person through linking their own ChatGPT",
-    "caption": "Connections as it looked before the connection was switched on: five steps for each person to link their own ChatGPT, read-only. The live page now walks through the same set-up in eight picture steps.",
-    "width": 1440,
-    "height": 834
+    "src": "images/product-screens/cs-exports.webp",
+    "alt": "An exports page with a report card, a calendar of days and a usage figure",
+    "caption": "What is collected, when it last arrived, the days received and the month’s cost against its budget.",
+    "width": 1240,
+    "height": 900,
+    "label": "What is collected, and when"
+   },
+   {
+    "src": "images/product-screens/cs-questions.webp",
+    "alt": "A list of example questions above privacy and help notes",
+    "caption": "The ChatGPT connection, written for the person setting it up: questions to try and how to stay private.",
+    "width": 1060,
+    "height": 880,
+    "label": "Questions to try, and how to stay private"
    }
   ],
-  "image": "images/product-screens/create-spaces-overview-sample.webp",
-  "imageAlt": "Create Spaces dashboard overview with invented sample bookings by salesperson",
-  "imageCaption": "Dashboard overview on invented sample data in the report’s exact format. Real figures stay private.",
+  "image": "images/product-screens/cs-overview.webp",
+  "imageAlt": "A dashboard page with a daily summary card and four period totals",
+  "imageCaption": "The dashboard’s Overview: yesterday’s summary and the totals for the chosen period. A local run of the product’s own code with invented bookings in the report’s exact format; real figures stay private.",
   "imageWidth": 1440,
   "imageHeight": 900,
   "stage": "rollout",
   "nextTitle": "Live, and still rolling out.",
   "created": "2026-09",
-  "createdFrom": "project record 18 Sep 2026; cloud pilot repository 24 Sep 2026"
+  "createdFrom": "project record 18 Sep 2026; cloud pilot repository 24 Sep 2026",
+  "chapters": [
+   {
+    "id": "dashboard",
+    "nav": "The dashboard",
+    "eyebrow": "The dashboard",
+    "title": "Yesterday’s bookings, then any period, without opening a report.",
+    "intro": "The dashboard opens on the latest report day in one paragraph of figures, then shows bookings, gross profit, margin and orders for the latest day, the last seven days, the month so far or everything saved, ranked by salesperson.",
+    "note": "Local run of the product’s own code with invented bookings in the report’s exact format.",
+    "screens": [
+     {
+      "src": "images/product-screens/cs-overview.webp",
+      "alt": "A dashboard page with a daily summary card and four period totals",
+      "label": "The morning view",
+      "caption": "Yesterday’s summary with its largest bookings and what is worth a look, above the totals for the chosen period.",
+      "width": 1440,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/cs-month.webp",
+      "alt": "Period totals above a bar chart of bookings by day and a ranked list of salespeople",
+      "label": "The month so far",
+      "caption": "Month to date: the four totals against the same days last month, bookings by report day and the salespeople ranked.",
+      "width": 1240,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/cs-details.webp",
+      "alt": "A table of bookings with filters and a report-row column",
+      "label": "Every booking, searchable",
+      "caption": "Booking details with search, salesperson, booking type and sort; each line ends with the report day and row it came from.",
+      "width": 1240,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/cs-period-refused.webp",
+      "alt": "A dashboard with a notice that the chosen period would split a saved report",
+      "label": "It says what it cannot answer",
+      "caption": "Asked for a period that would split a multi-day report, the page declines and says why instead of showing a partial total.",
+      "width": 1240,
+      "height": 800
+     }
+    ]
+   },
+   {
+    "id": "rows",
+    "nav": "Back to the row",
+    "eyebrow": "Sources",
+    "title": "Every figure opens the Excel row it came from.",
+    "intro": "Nothing on the dashboard is a number on its own. A figure links to its line in the saved report, shown exactly as it was exported, and the original workbook can be downloaded.",
+    "note": "Local run of the product’s own code with invented bookings in the report’s exact format.",
+    "screens": [
+     {
+      "src": "images/product-screens/cs-row-from-figure.webp",
+      "alt": "A reports page with one spreadsheet row highlighted",
+      "label": "From a figure to its row",
+      "caption": "The largest booking on the Overview, opened in Reports: the row is found and highlighted in the original report.",
+      "width": 1240,
+      "height": 640,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/cs-row-context.webp",
+      "alt": "Spreadsheet rows of a booking report with one row highlighted",
+      "label": "The row among its neighbours",
+      "caption": "The same row in place, with the customer totals and salesperson totals around it as the report printed them.",
+      "width": 1240,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/cs-workbook.webp",
+      "alt": "A spreadsheet rendered as a table with a selection block and booking rows",
+      "label": "The workbook itself",
+      "caption": "One exported workbook as a table: the selection block that records how the report was run, then the bookings grouped by salesperson. A plain render of the file’s cells.",
+      "width": 1170,
+      "height": 1100
+     },
+     {
+      "src": "images/product-screens/cs-growing.webp",
+      "alt": "A form for dates and a salesperson above calculated totals and booking lines",
+      "label": "A calculated view across reports",
+      "caption": "A view calculated over whole saved reports for one salesperson and one month, each line linked to its original row.",
+      "width": 1240,
+      "height": 900
+     }
+    ]
+   },
+   {
+    "id": "export",
+    "nav": "The daily export",
+    "eyebrow": "Collection",
+    "title": "An agent collects the report; every file is checked before it is kept.",
+    "intro": "An AI agent with its own cloud computer is set to open the business system each morning and export the previous day’s report. The Exports page shows what is collected, when it last arrived and when the next one is due, and each file is kept only if its lines add up to the report’s own printed totals.",
+    "note": "Local run of the product’s own code with invented bookings in the report’s exact format. The calendar of real report days is an existing capture of the live dashboard and shows no figures.",
+    "stage": "rollout",
+    "status": "First supervised run passed every check · the daily schedule is being proven run by run",
+    "screens": [
+     {
+      "src": "images/product-screens/cs-exports.webp",
+      "alt": "An exports page with a report card, a calendar of days and a usage figure",
+      "label": "What is collected, and when",
+      "caption": "The report being collected, its health, the last and next delivery, the days received and the month’s service cost against its budget.",
+      "width": 1240,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/cs-steps.webp",
+      "alt": "A list of six numbered steps under a report card",
+      "label": "The steps the agent follows",
+      "caption": "The six steps written out for the people who rely on the report: which report, which records, which day, how it is grouped, and that it is exported and checked.",
+      "width": 1240,
+      "height": 610
+     },
+     {
+      "src": "images/product-screens/cs-receipt.webp",
+      "alt": "A verification receipt in two columns above a table of booking lines",
+      "label": "The check each file must pass",
+      "caption": "The receipt written for one workbook: its fingerprints, row and subtotal counts, the report’s printed totals, and eight checks that must all be true, above the checked table of its booking lines.",
+      "width": 1170,
+      "height": 1093
+     },
+     {
+      "src": "images/product-screens/create-spaces-exports-days.webp",
+      "alt": "Calendar of every report day received from 2009 to September 2026",
+      "label": "Every day received",
+      "caption": "Report days received on the live dashboard: the latest 31 days on a calendar, beside the count of every day received since January 2009. An existing capture; it shows coverage, not figures.",
+      "width": 730,
+      "height": 420
+     },
+     {
+      "src": "images/product-screens/cs-failed.webp",
+      "alt": "An exports page with a Late badge and a sentence about the failed delivery",
+      "label": "When a delivery fails",
+      "caption": "A failed delivery is stated in plain words: the newest report is late, earlier reports are unaffected, and it is retried after review.",
+      "width": 1240,
+      "height": 560
+     },
+     {
+      "src": "images/product-screens/cs-brief.webp",
+      "alt": "A one-page document of totals and small tables",
+      "label": "The one-page morning brief",
+      "caption": "The brief built from the same saved reports: the day’s totals, the change against earlier days, new against changed bookings and the largest bookings, each with its source row.",
+      "width": 780,
+      "height": 1022
+     }
+    ]
+   },
+   {
+    "id": "ask",
+    "nav": "Ask in ChatGPT",
+    "eyebrow": "The ChatGPT connection",
+    "title": "Each person asks in their own ChatGPT; the connection can only read.",
+    "intro": "The connection gives ChatGPT a small set of read-only tools over the saved reports. Every answer carries the report, sheet and row behind each figure, and a request without a valid company sign-in is refused before any data is read.",
+    "note": "Local run of the product’s own code with invented bookings in the report’s exact format. The terminal pictures are the product’s own proof scripts run on this machine against stand-in storage; no AI answer is shown.",
+    "screens": [
+     {
+      "src": "images/product-screens/cs-connections.webp",
+      "alt": "A connections page with a ChatGPT card saying it is ready to connect",
+      "label": "Set-up, written for the person doing it",
+      "caption": "The Connections page: what is needed, how long it takes, before the eight numbered steps, which are ticked off as they are done.",
+      "width": 1240,
+      "height": 428,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/cs-questions.webp",
+      "alt": "A list of example questions above privacy and help notes",
+      "label": "Questions to try, and how to stay private",
+      "caption": "Eight questions to copy, a plain statement that ChatGPT can only read, how to keep chats out of training, and answers to the usual set-up problems.",
+      "width": 1060,
+      "height": 880
+     },
+     {
+      "src": "images/product-screens/cs-tool-call.webp",
+      "alt": "Terminal output of a request and a structured answer with totals and a citation",
+      "label": "One question, as the connection answers it",
+      "caption": "A tool call as ChatGPT would send it and what comes back: the period covered, exact totals, one group per salesperson, and a citation naming the report, sheet and row.",
+      "width": 1300,
+      "height": 1638
+     },
+     {
+      "src": "images/product-screens/cs-refusals.webp",
+      "alt": "Terminal output listing refused requests with their status codes",
+      "label": "What it refuses",
+      "caption": "The same proof run: no sign-in, a forged or expired sign-in, the wrong app and an uninvited person are each refused, and storage is not read until an invited person asks.",
+      "width": 1300,
+      "height": 1153
+     }
+    ]
+   },
+   {
+    "id": "access",
+    "nav": "Who gets in",
+    "eyebrow": "Access and operation",
+    "title": "Private to the company, with the controls kept for the operator.",
+    "intro": "The reports sit behind a company sign-in that admits only invited addresses. The schedule, the monthly budget and the pause switch are shown to the service operator alone.",
+    "note": "Local run of the product’s own code with invented bookings in the report’s exact format.",
+    "screens": [
+     {
+      "src": "images/product-screens/cs-front-door.webp",
+      "alt": "A front page with a headline about each morning’s booking report and a sign-in button",
+      "label": "The front door",
+      "caption": "What anyone without a sign-in sees: one sentence about what this is, and that access is by invitation.",
+      "width": 1440,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/cs-refusal.webp",
+      "alt": "A page saying this account is not invited yet",
+      "label": "Not invited yet",
+      "caption": "A real sign-in from an address that is not on the guest list is told so, and that nothing was opened.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/cs-proof.webp",
+      "alt": "Terminal output of status codes for signed-out, forged, outsider and invited requests",
+      "label": "The front door, proven",
+      "caption": "The dashboard’s own proof script: the front door answers, data without a session or with a forged one is refused, an outsider is refused, and storage is read only once an invited person asks.",
+      "width": 1300,
+      "height": 690
+     },
+     {
+      "src": "images/product-screens/cs-operator.webp",
+      "alt": "An operator panel with schedule, budget figures and daily charges",
+      "label": "The operator’s controls",
+      "caption": "The operator’s local console: the active schedule and next start, the monthly budget with what is used and what remains, and the day-by-day cost of each run.",
+      "width": 1240,
+      "height": 900
+     }
+    ]
+   }
+  ],
+  "productNote": "Five parts follow: the dashboard, the report rows behind each figure, the daily export and its checks, the ChatGPT connection, and who gets in. Each screen is a local run of the product’s own code with invented bookings; the company’s real figures stay private."
  },
  {
   "id": "fiftyflowers-diy-migration",
