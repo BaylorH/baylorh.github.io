@@ -7,7 +7,7 @@ The previous career page compressed multiple products into three Manifold bullet
 ## Coverage decisions
 
 - Till: two separate products — machine-learning scoring API and five-workstation operating dashboard.
-- Create Spaces: one Hedberg reporting and AI workspace, including cloud exports, report history, export controls and source-cited answers. Those features do not become several artificial project entries.
+- Create Spaces: one booking-reporting and AI workspace, including cloud exports, report history, export controls and source-cited answers. Those features do not become several artificial project entries.
 - Axiom: proposal research/estimation and the separate unlaunched executive briefing. Implementation credit for the research dashboard remains with collaborating developers.
 - SiteSift: one property-research and communication product; beta reliability work remains explicit.
 - AI Development Platform: The Record, Brain and Jarvis OS each have their own bullet. Earlier experiments remain development history rather than inflated product counts.

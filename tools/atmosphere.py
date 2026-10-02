@@ -2,7 +2,7 @@
 from html import escape as e
 
 def stream(projects):
- selected=['fiftyflowers','till','engineering-platform','create-spaces','axiom','sitesift','ai-media-manager']
+ selected=['fiftyflowers','till','engineering-platform','create-spaces','axiom','sitesift','fiftyflowers-second-brain']
  images=[next(p for p in projects if p['id']==pid)['image'] for pid in selected]
  keys=[];cards=[]
  for direction,name in [(1,'stream-right'),(-1,'stream-left')]:

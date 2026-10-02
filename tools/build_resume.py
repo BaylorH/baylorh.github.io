@@ -48,6 +48,6 @@ for x in c['experience'][1:]:role_body(x)
 story+=[p('EDUCATION','section'),heading('Arizona State University','2021 - 2025'),p('Bachelor of Science in Computer Science | Graduated May 2025'),p("Dean's List | Merit scholarship recipient",'contact')]
 def footer(canvas,doc):
  canvas.setStrokeColor(line);canvas.line(42,32,570,32);canvas.setFillColor(muted);canvas.setFont('Helvetica',8);canvas.drawString(42,20,'Baylor Harrison | '+c['updated']);canvas.drawRightString(570,20,str(doc.page))
-doc=SimpleDocTemplate(str(r/'files/Baylor-Harrison-Resume.pdf'),pagesize=(612,792),leftMargin=42,rightMargin=42,topMargin=36,bottomMargin=42,title='Baylor Harrison - AI & Software Engineer',author='Baylor Harrison',subject='Professional resume - September 2026')
+doc=SimpleDocTemplate(str(r/'files/Baylor-Harrison-Resume.pdf'),pagesize=(612,792),leftMargin=42,rightMargin=42,topMargin=36,bottomMargin=42,title='Baylor Harrison - AI & Software Engineer',author='Baylor Harrison',subject='Professional resume - October 2026')
 doc.build(story,onFirstPage=footer,onLaterPages=footer)
 print('Updated public résumé')

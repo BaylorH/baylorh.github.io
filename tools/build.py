@@ -3,6 +3,7 @@ from pathlib import Path
 from html import escape as e
 import json, re, subprocess, os, hashlib
 from screen_gallery import preview_screens, screen_gallery
+from stack_icons import chip
 ROOT = Path(__file__).resolve().parents[1]
 CONTROLLER_HASH = hashlib.sha256((ROOT/'assets/js/portfolio.js').read_bytes()).hexdigest()[:12]
 PROJECTS = json.loads((ROOT/'content/projects.json').read_text())
@@ -73,7 +74,7 @@ def brand_art(p, context, decorative=False):
 def card(p,n):
  media=visual(p)
  preview=f'<div class="visual-link">{media}</div>' if p.get('videoId') or len(preview_screens(p))>1 else f'<a class="visual-link" href="{p["id"]}.html" aria-label="Explore {e(p["name"])}">{media}</a>'
- return f'''<article class="project-card" data-category="{p['category']}">{preview}<div class="card-meta"><span>{e(p['sector'])}</span><span>{n:02d}</span></div>{brand_art(p,"directory-brand",True)}<h3><a href="{p['id']}.html">{e(p['name'])}<span aria-hidden="true">↗</span></a></h3><p>{e(p['short'])}</p><span class="status"><i></i>{e(p['status'])}</span></article>'''
+ return f'''<article class="project-card" data-category="{p['category']}">{preview}<div class="card-meta"><span>{e(p['sector'])}</span><span>{n:02d}</span></div>{brand_art(p,"directory-brand",True)}<h3><a href="{p['id']}.html">{e(p['name'])}<span aria-hidden="true">↗</span></a></h3><p>{e(p['short'])}</p><span class="status" data-stage="{e(p.get('stage','earlier'))}"><i></i>{e(p['status'])}</span></article>'''
 
 def home():
  from homepage import homepage
@@ -113,22 +114,43 @@ def legacy_body(p):
  raw=re.sub(r'<p>\s*The following.*?code.*?</p>','',raw,flags=re.S)
  return '<section class="legacy-content" aria-label="Original project walkthrough"><p class="eyebrow">Original project / selected screens & walkthrough</p><p class="archive-note">The original project imagery and product explanation are retained here. These are historical project materials; current availability may differ.</p>'+raw+'</section>'
 
+def family(p):
+ # A client with several products: the overview lists its products, each product lists its siblings.
+ kids=[x for x in PROJECTS if x.get('parent')==p['id']]
+ sibs=[x for x in PROJECTS if p.get('parent') and x.get('parent')==p['parent'] and x['id']!=p['id']]
+ items=[x for x in (kids or sibs) if x.get('image')]
+ if not items:return ''
+ parent=p if kids else next(x for x in PROJECTS if x['id']==p['parent'])
+ heading='The products, one by one.' if kids else f'More from {parent["name"]}.'
+ lead='' if kids else f'<a class="text-link family-parent" href="{parent["id"]}.html">{e(parent["name"])} overview <span aria-hidden="true">↗</span></a>'
+ cards=''.join(f'<a class="family-card" href="{x["id"]}.html"><span class="family-thumb"><img src="{e(x["image"])}" alt="" width="{x.get("imageWidth",1200)}" height="{x.get("imageHeight",800)}" loading="lazy"></span><b>{e(x["name"])}</b><small class="status" data-stage="{e(x.get("stage","earlier"))}"><i></i>{e(x["status"])}</small></a>' for x in items)
+ return f'<section id="family" class="family"><p class="eyebrow">{"Inside "+e(p["name"]) if kids else "Same company"}</p><h2>{e(heading)}</h2>{lead}<div class="family-grid">{cards}</div></section>'
+
 def case(p,n):
- chips=''.join(f'<span>{e(t)}</span>' for t in p['stack'])
+ chips='<p class="tech-label">Built with</p>'+''.join(chip(t) for t in p['stack'])
+ note=f'<p class="product-note">{e(p["productNote"])}</p>' if p.get('productNote') else ''
+ fam=family(p); is_parent=any(x.get('parent')==p['id'] for x in PROJECTS)
+ fam_link='' if not fam else '<a href="#family">The products</a>' if is_parent else '<a href="#family">Same company</a>'
  brand=brand_art(p,"client-brand")
- body=f'''<section class="case-hero"><a class="back-link" href="index.html#work">← All work</a><p class="eyebrow">{e(p['sector'])}</p>{brand}<h1>{e(p['title'])}</h1><p class="case-deck">{e(p['short'])}</p><div class="case-meta"><div><span>PROJECT</span><b>{e(p['name'])}</b></div><div><span>MY ROLE</span><b>{e(p['role'])}</b></div><div><span>STAGE</span><b>{e(p['status'])}</b></div></div></section><div class="case-visual">{visual(p,True)}</div><div class="case-body"><aside class="case-aside"><p class="eyebrow">Inside this project</p><a href="#context">The context</a><a href="#contribution">My contribution</a><a href="#product">The product</a>{'<a href="#decisions">Engineering choices</a>' if p.get("decisions") else ""}<a href="#next">Where it stands</a><div class="tech-tags">{chips}</div></aside><div class="case-story"><section id="context"><p class="eyebrow">The context</p><h2>A problem worth solving.</h2><p>{e(p['problem'])}</p></section><section id="contribution"><p class="eyebrow">My contribution</p><h2>What I brought to the work.</h2><p>{e(p['contribution'])}</p></section><section id="product"><p class="eyebrow">The product</p><h2>What it makes possible.</h2>'''
+ body=f'''<section class="case-hero"><a class="back-link" href="index.html#work">← All work</a><p class="eyebrow">{e(p['sector'])}</p>{brand}<h1>{e(p['title'])}</h1><p class="case-deck">{e(p['short'])}</p><div class="case-meta"><div><span>PROJECT</span><b>{e(p['name'])}</b></div><div><span>MY ROLE</span><b>{e(p['role'])}</b></div><div><span>STAGE</span><b class="stage-line" data-stage="{e(p.get('stage','earlier'))}"><i aria-hidden="true"></i>{e(p['status'])}</b></div></div></section><div class="case-visual">{visual(p,True)}</div><div class="case-body"><aside class="case-aside"><p class="eyebrow">Inside this project</p><a href="#context">The context</a><a href="#contribution">My contribution</a><a href="#product">The product</a>{fam_link if is_parent else ''}{'<a href="#decisions">Engineering choices</a>' if p.get("decisions") else ""}<a href="#next">Where it stands</a>{'' if is_parent else fam_link}<div class="tech-tags">{chips}</div></aside><div class="case-story"><section id="context"><p class="eyebrow">The context</p><h2>A problem worth solving.</h2><p>{e(p['problem'])}</p></section><section id="contribution"><p class="eyebrow">My contribution</p><h2>What I brought to the work.</h2><p>{e(p['contribution'])}</p></section><section id="product"><p class="eyebrow">The product</p><h2>{e(p.get('productTitle','What it makes possible.'))}</h2>{note}'''
  if p.get('legacy'):
   body+=legacy_body(p)
  else:
-  body+='<div class="feature-groups">'+''.join(f'<details><summary><span>{i:02d}</span>{e(g[0])}<b aria-hidden="true">+</b></summary><p>{e(g[1])}</p></details>' for i,g in enumerate(p['groups'],1))+'</div>'
+  body+='<div class="feature-cards">'+''.join(f'<article><span>{i:02d}</span><h3>{e(g[0])}</h3><p>{e(g[1])}</p></article>' for i,g in enumerate(p['groups'],1))+'</div>'
   body+='<div class="flow-panel"><p class="eyebrow">At a glance / simplified product view</p><ol>'+''.join(f'<li><span>{i:02d}</span>{e(x)}</li>' for i,x in enumerate(p['flow'],1))+'</ol></div>'
  screens=[im for im in p.get('screens',[]) if im['src']!=p.get('image')]
  if screens and not p.get('legacy'):
-  body+='<div class="product-screens"><p class="eyebrow">Inside the software</p><h3>See the actual workspace.</h3>'+''.join(f'<figure><img src="{e(im["src"])}" alt="{e(im["alt"])}" width="{im["width"]}" height="{im["height"]}" loading="lazy"><figcaption>{e(im["caption"])}</figcaption></figure>' for im in screens)+'</div>'
+  figures='';group=None
+  for im in screens:
+   if im.get('group') and im['group']!=group:
+    group=im['group'];figures+=f'<h4 class="screens-group">{e(group)}</h4>'
+   figures+=f'<figure><img src="{e(im["src"])}" alt="{e(im["alt"])}" width="{im["width"]}" height="{im["height"]}" loading="lazy"><figcaption>{e(im["caption"])}</figcaption></figure>'
+  body+='<div class="product-screens"><p class="eyebrow">Inside the software</p><h3>See the actual workspace.</h3>'+figures+'</div>'
  body+='</section>'
+ if is_parent: body+=fam
  if p.get('decisions'):
   body+='<section id="decisions"><p class="eyebrow">Engineering choices</p><h2>The decisions behind the interface.</h2><div class="engineering-decisions">'+''.join(f'<article class="decision-card"><span>{i:02d}</span><div><h3>{e(title)}</h3><p>{e(detail)}</p></div></article>' for i,(title,detail) in enumerate(p['decisions'],1))+'</div><p class="decision-note">'+e(p['decisionNote'])+'</p></section>'
- body+='<section id="next"><p class="eyebrow">Where it stands</p><h2>The work keeps moving.</h2><p>'+e(p.get('next','This project remains part of the earlier-work collection. The original materials show the implementation at that point in time; they are not a claim about current operation.'))+'</p></section></div></div>'
+ body+='<section id="next"><p class="eyebrow">Where it stands</p><h2>'+e(p.get('nextTitle','The work keeps moving.'))+'</h2><p>'+e(p.get('next','This project remains part of the earlier-work collection. The original materials show the implementation at that point in time; they are not a claim about current operation.'))+'</p></section>'+('' if is_parent else fam)+'</div></div>'
  nxt=PROJECTS[(n+1)%len(PROJECTS)]
  body+=f'<a class="next-project" href="{nxt["id"]}.html"><span class="eyebrow">Keep exploring</span><strong>{e(nxt["name"])} <span aria-hidden="true">↗</span></strong></a>'
  return page(p['name'],p['short'],body,p['id']+'.html','work')

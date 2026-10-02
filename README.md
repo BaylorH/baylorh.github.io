@@ -1,6 +1,6 @@
 # Baylor Harrison portfolio
 
-A static portfolio with 13 case studies, responsive layouts and a small progressive-enhancement layer. Content is readable without JavaScript. All existing project URLs and images remain available.
+A static portfolio with 21 case studies, responsive layouts and a small progressive-enhancement layer. Content is readable without JavaScript. All existing project URLs and images remain available.
 
 ## Edit and preview
 

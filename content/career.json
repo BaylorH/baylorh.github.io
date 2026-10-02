@@ -1,5 +1,5 @@
 {
-  "updated": "September 2026",
+  "updated": "October 2026",
   "name": "Baylor Harrison",
   "headline": "AI & Software Engineer | Founder, Manifold Engineering",
   "summary": "Builds AI applications, machine-learning services and cloud systems that connect business knowledge, automate workflows and make information useful. Combines hands-on engineering with project direction and delivery.",
@@ -12,8 +12,7 @@
       "clients": [
         "till",
         "create-spaces",
-        "axiom",
-        "sitesift"
+        "axiom"
       ],
       "earlier": "Earlier client work includes a custom website for Butala Branding and WordPress improvements for Axiom.",
       "intro": "Founded an AI development studio delivering business applications, workflow automation and an internal suite for managing AI-assisted engineering.",
@@ -24,12 +23,12 @@
           "projects": [
             {
               "name": "Machine-learning scoring API",
-              "text": "Built loan scoring inside the existing application workflow, returning model scores and policy decisions while delivering $24,000 in annual savings.",
+              "text": "Built loan scoring inside the existing application workflow, returning model scores and policy decisions while saving an estimated $24,000 a year (my own estimate).",
               "record": "till-hal-api"
             },
             {
               "name": "HAL operating dashboard",
-              "text": "Built five connected workstations for scoring activity, approval thresholds, lead-source economics, funded-loan history and reject-band analysis, with live reporting and saved policy changes.",
+              "text": "Built five connected workstations for scoring activity, approval thresholds, lead sources, funded-loan history and scenario research, with live scoring rollups and a saved history of policy changes.",
               "record": "till-dashboard"
             }
           ]
@@ -39,9 +38,9 @@
           "context": "Office furniture & workplace services",
           "projects": [
             {
-              "name": "Hedberg reporting & AI workspace",
-              "text": "Built a cloud agent to export business reports and a connected dashboard for booking trends, report history and export controls. AI answers open cited source pages; team rollout continues.",
-              "record": "create-spaces-hedberg"
+              "name": "Booking reporting & AI workspace",
+              "text": "Built the company’s booking-data platform on its own AWS account: history back to 2009 verified to the cent, a dashboard behind company sign-in, an AI agent built to export the daily report from the company’s business system, and a read-only ChatGPT connection that ties each figure to its report row. The dashboard is live; the daily export is being proven run by run and the ChatGPT connection is not yet switched on.",
+              "record": "create-spaces"
             }
           ]
         },
@@ -56,18 +55,18 @@
             },
             {
               "name": "Executive briefing workspace",
-              "text": "Led a separate build bringing priorities, tasks, messages and meetings into a personalized briefing, with an assistant-driven sync view. The application was not launched.",
+              "text": "Led a separate prototype of a personalized executive briefing (priorities, tasks, messages and meetings) with an assistant-driven sync view. It was paused before launch.",
               "record": "lee-dashboard"
             }
           ]
         },
         {
           "title": "SiteSift AI",
-          "context": "Commercial real estate",
+          "context": "Commercial real estate · co-founded product",
           "projects": [
             {
               "name": "Property research & broker communication",
-              "text": "Built a workspace connecting property lists, broker email, extracted information, follow-ups and advisor decisions. Beta work focuses on reliable automation and accurate property-level data.",
+              "text": "Built an AI email workflow designed to contact each property’s listing broker, read replies and attachments into the advisor’s tracker and draft replies in her voice. In development: the private beta is paused while each step is proven on live test campaigns.",
               "record": "sitesift-ai"
             }
           ]
@@ -115,21 +114,21 @@
         {
           "role": "AI Solutions Engineer",
           "period": "Jan 2026 – Present",
-          "intro": "Built a connected portfolio of AI and operational tools across customer service, marketing, shopping and product data.",
+          "intro": "Build and run a connected set of AI and operational tools across customer service, marketing, shopping and product data.",
           "products": [
             {
               "name": "Customer service AI",
-              "text": "Built four apps for inquiries, reviews, claims and payment disputes, with shared chat, case history and a Chrome extension. The apps deliver $24,000 in annual savings; the platform moved from AWS to Firebase and Google Cloud.",
+              "text": "Built four apps for inquiries, reviews, claims and payment disputes, with shared chat, case history and a Chrome extension. By my own estimate the apps save about $24,000 a year (not audited); the platform moved from AWS to Firebase and Google Cloud.",
               "record": "fiftyflowers-internal-ai"
             },
             {
               "name": "Company Second Brain",
-              "text": "Unified departmental knowledge: production support policies used by the apps, marketing guidance at MVP stage and an engineering beta used in my own coding. Added visual navigation and knowledge-aware chat.",
+              "text": "Built a company knowledge workspace: support policies in production use by the apps, an engineering knowledge base used in my own coding, and room for five more teams whose brains are still empty. Added visual navigation and knowledge-aware chat.",
               "record": "fiftyflowers-engineering-brain"
             },
             {
-              "name": "Image Studio & Farm Exports",
-              "text": "Built AI product-image editing, reusable style presets and cutouts, plus a separate catalog-photo preparation workflow for the Farm Exports sales channel.",
+              "name": "Image Studio",
+              "text": "Built AI product-image editing, reusable style presets and cutouts, plus a separate batch photo-preparation tool.",
               "record": "fiftyflowers-image-studio"
             },
             {
@@ -144,7 +143,7 @@
             },
             {
               "name": "DIY Kits Migration",
-              "text": "Built tools to reconcile farm spreadsheets with store products and move kit recipes and purchase links into a test store, with source tracking and validation for the production handoff.",
+              "text": "Built tools to reconcile farm spreadsheets with store products and move kit recipes and purchase links into a test store, with source tracking and validation ahead of the move to the live store.",
               "record": "fiftyflowers-diy-kits-migration"
             },
             {
@@ -165,12 +164,12 @@
             },
             {
               "name": "Share Your Flair",
-              "text": "Built wedding-submission processing that connects customer stories and media to Asana review and Shopify Make This Look workflows; repaired historical media delivery.",
+              "text": "Built wedding-submission processing that turns customer stories and media into review cards and Make This Look drafts, run for every 2025 entry; repaired historical media delivery.",
               "record": "fiftyflowers-share-your-flair"
             },
             {
               "name": "Rush Orders",
-              "text": "Implemented the storefront request form and notification workflow that routes urgent-delivery requests to customer service and operations.",
+              "text": "Implemented the storefront request form and notification workflow that routes urgent-delivery requests to customer service.",
               "record": "fiftyflowers-rush-order"
             },
             {
@@ -214,7 +213,7 @@
     "period": "2021 – 2025",
     "completed": "May 2025",
     "details": "Dean’s List · Merit scholarship recipient",
-    "project": "Team capstone: interactive 3D machine-learning visualization for an ASU course."
+    "project": "Team capstone: interactive 3D machine-learning visualization built for an ASU professor."
   },
   "skills": [
     [

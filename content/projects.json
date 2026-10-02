@@ -1,838 +1,1690 @@
 [
-  {
-    "id": "fiftyflowers",
-    "title": "AI across the flower business.",
-    "name": "FiftyFlowers",
-    "category": "business",
-    "sector": "E-commerce · Retail & wholesale",
-    "status": "Production tools + ongoing work",
-    "color": "green",
-    "visual": "flowers",
-    "short": "AI customer-service apps delivering $24,000 in annual savings, alongside AI image editing and company knowledge.",
-    "role": "AI Solutions Engineer",
-    "stack": [
-      "React",
-      "Firebase",
-      "Google Cloud",
-      "Shopify",
-      "AI APIs"
-    ],
-    "problem": "An online flower retailer has very different workflows across customer support, marketing and storefront operations. The challenge is connecting useful AI to each team’s actual information and tools.",
-    "contribution": "Built and evolved the internal AI platform, support applications, a Chrome extension, marketing tools and commerce integrations. The work spans full-stack application development, cloud services, product-data workflows and visibility into the company’s AI roadmap.",
-    "groups": [
-      [
-        "Customer service",
-        "Four applications for customer questions, reviews, claims and payment disputes, with shared chat, case history and a Chrome extension. The serving layer moved from AWS Lambda to Firebase and Google Cloud. The customer-service apps alone deliver $24,000 in annual savings."
-      ],
-      [
-        "Company Second Brain",
-        "An umbrella MVP connecting departmental knowledge and tools. Customer Service knowledge, voice and policies support production apps; Marketing demonstrates image-tool guidance and presets; Engineering is a beta used in my own AI-assisted coding."
-      ],
-      [
-        "Marketing workflows",
-        "Image Studio supports consistent product photos, reusable presets and transparent cutouts. Farm Exports supports catalog-image work. The FAQ & Content Engine helps identify unanswered questions and review content drafts."
-      ],
-      [
-        "Shopping & operations",
-        "The flower-selection assistant, Share Your Flair wedding submissions and urgent-order requests connect storefront interactions with operational workflows. Earlier implementations and later improvements are distinct parts of the work."
-      ],
-      [
-        "Proposal Manager",
-        "Implemented supplied wireframes as a tool for event planning, flower recipes, presentations and shopping lists. It was not launched; work paused when DIY Migration took priority."
-      ],
-      [
-        "DIY Kits Migration",
-        "Tools match farm spreadsheets with store products and transfer kit recipes and purchase links to a test store, with source tracking and checks. Data cleanup and the production handoff remain ongoing."
-      ],
-      [
-        "Project visibility",
-        "A dedicated FiftyFlowers dashboard in The Record, linked from Internal AI, gives access to the AI roadmap, project milestones, completed work and evidence."
-      ]
-    ],
-    "flow": [
-      "Team workflows",
-      "Connected AI tools",
-      "Human review"
-    ],
-    "next": "Continue the migration cleanup and handoff, and develop the company knowledge workspace beyond its MVP. Individual tools have different levels of maturity; the whole platform is not one finished autonomous system.",
-    "evidence": "Scope reflects the reviewed project records and the saved September 2026 professional profile. The diagram is a capability map, not a screenshot or proof of company-wide adoption.",
-    "image": "images/product-screens/internal-ai.webp",
-    "imageAlt": "FiftyFlowers Internal AI customer inquiry screen with empty fields and navigation to the four support apps",
-    "imageWidth": 1440,
-    "imageHeight": 900,
-    "imageCaption": "Internal AI, September 2026. The customer inquiry interface shown with empty fields; no customer records are displayed.",
-    "screens": [
-      {
-        "src": "images/product-screens/internal-ai.webp",
-        "alt": "FiftyFlowers Internal AI customer inquiry screen with empty fields and navigation to the four support apps",
-        "caption": "Internal AI, September 2026. The customer inquiry interface shown with empty fields; no customer records are displayed.",
-        "width": 1440,
-        "height": 900
-      },
-      {
-        "src": "images/product-screens/company-brain.webp",
-        "alt": "Company Second Brain department overview",
-        "caption": "Company Second Brain: the departmental overview. Marketing and company-wide integration remain MVP work; Engineering is a beta.",
-        "width": 1440,
-        "height": 900
-      },
-      {
-        "src": "images/product-screens/image-studio.webp",
-        "alt": "FiftyFlowers Image Studio with an empty photo workspace",
-        "caption": "Image Studio: a real interface for photo input and reusable image workflows. No image generation was run for this capture.",
-        "width": 1440,
-        "height": 900
-      }
-    ],
-    "logo": "images/brands/fiftyflowers.svg",
-    "logoWidth": 180,
-    "logoHeight": 83,
-    "logoKind": "wordmark",
-    "decisions": [
-      [
-        "Bring related tools into one platform.",
-        "Evolved support applications, a browser extension, marketing tools and company knowledge into a shared internal platform, while retaining the different workflows each team needs."
-      ],
-      [
-        "Make the rollout boundaries visible.",
-        "Customer-service knowledge supports the operational apps. Marketing and engineering knowledge form developing parts of the broader company second brain; they are not presented as equally mature."
-      ]
-    ],
-    "decisionNote": "The platform combines production workflows with MVP and beta work. The product groups above identify those differences."
-  },
-  {
-    "id": "till",
-    "title": "A clearer view of lending decisions.",
-    "name": "Till",
-    "category": "business",
-    "sector": "Financial services · Lending",
-    "status": "Machine learning + lending analytics",
-    "color": "blue",
-    "visual": "till",
-    "short": "Machine-learning loan scoring delivering $24,000 in annual savings, with a five-view lending dashboard.",
-    "role": "Software Engineer · Manifold",
-    "stack": [
-      "Machine learning",
-      "APIs",
-      "Cloud services",
-      "Data visualization"
-    ],
-    "problem": "Loan scoring needs to fit into an existing application process, while the team needs visibility into scoring activity and loan performance.",
-    "contribution": "Built a machine-learning scoring service integrated with the lender’s application system, plus a dashboard for reviewing scoring activity, approval thresholds, lead sources and loan performance.",
-    "groups": [
-      [
-        "Machine-learning API · $24K annual savings",
-        "Machine-learning scores returned inside the existing loan application workflow, delivering $24,000 in annual savings."
-      ],
-      [
-        "Overview · see the activity",
-        "Review scoring activity and decision patterns in one place."
-      ],
-      [
-        "Thresholds · manage policy",
-        "Review and adjust approval thresholds, with a recorded history of changes."
-      ],
-      [
-        "Lead Sources · compare channels",
-        "Explore where applications come from and how each source performs."
-      ],
-      [
-        "Funded History · follow performance",
-        "Review funded-loan history with clear reporting periods and funding definitions."
-      ],
-      [
-        "Scenario analysis · explore tradeoffs",
-        "Explore modeled exclusions alongside observed outcomes. Scenarios support investigation; they do not prove the effect of a policy change."
-      ]
-    ],
-    "flow": [
-      "Loan application",
-      "Machine-learning scoring",
-      "Decision & reporting"
-    ],
-    "next": "Scoring activity updates independently from imported loan-history data. Next steps focus on repeatable data refreshes and more precise links between policy changes and affected loans.",
-    "evidence": "The workflow represents the documented service and dashboard. No customer applications or private financial records are included.",
-    "logo": "images/till-logo.png",
-    "screens": [
-      {
-        "src": "images/product-screens/hal-overview.webp",
-        "alt": "HAL lending dashboard with private operating figures redacted",
-        "caption": "The live HAL overview brings scoring activity and decision reporting together. Private operating figures are redacted; no settings were changed.",
-        "width": 1425,
-        "height": 891
-      },
-      {
-        "src": "images/product-screens/hal-sources.webp",
-        "alt": "HAL lead-source analytics showing trend charts with private values covered",
-        "caption": "Lead-source reporting, captured September 24, 2026. Source names and operating figures are covered; the visible data-health status is retained.",
-        "width": 1425,
-        "height": 891
-      }
-    ],
-    "logoWidth": 312,
-    "logoHeight": 152,
-    "logoKind": "wordmark",
-    "image": "images/product-screens/hal-overview.webp",
-    "imageAlt": "HAL lending dashboard with private operating figures redacted",
-    "imageCaption": "The live HAL overview brings scoring activity and decision reporting together. Private operating figures are redacted; no settings were changed.",
-    "imageWidth": 1425,
-    "imageHeight": 891,
-    "decisions": [
-      [
-        "Protect policy changes from conflicting edits.",
-        "The policy editor checks the latest saved state before applying a change, preserves unrelated edits and keeps a change history. An adjustment is a recorded action, not an invisible replacement."
-      ],
-      [
-        "Separate observation from simulation.",
-        "The analysis distinguishes observed funded outcomes from modeled exclusions. A scenario helps explore a decision; it is not presented as proof that a policy change caused an outcome."
-      ]
-    ],
-    "decisionNote": "These are documented implementation choices. Private policy settings, borrower information and model details are intentionally omitted."
-  },
-  {
-    "id": "engineering-platform",
-    "title": "Better systems for building systems.",
-    "name": "AI Development Platform",
-    "category": "engineering",
-    "sector": "Internal products · Developer experience",
-    "status": "Project management · memory · orchestration",
-    "color": "ink",
-    "visual": "platform",
-    "short": "A development suite for AI agents: project management, engineering memory and orchestration.",
-    "role": "Founder & Software Engineer",
-    "stack": [
-      "Agent connections",
-      "Project management",
-      "Knowledge systems",
-      "Cloud applications"
-    ],
-    "problem": "AI-assisted work can lose context across sessions and scatter decisions across repositories, conversations and tools. Planning and delivery need a shared structure that humans can inspect.",
-    "contribution": "Built an internal product suite around three distinct responsibilities: managing the work, retaining engineering knowledge and supervising agent assignments. These tools support my own development process; deeper integration remains in development.",
-    "groups": [
-      [
-        "The Record · manage the work",
-        "A project-management system for developers, clients and connected coding agents. It organizes scoped milestones, progress, decisions and evidence of completed work in a shared workspace."
-      ],
-      [
-        "Brain · preserve the context",
-        "Reusable engineering memory for project context, repository knowledge, decisions, workflows and handoffs across coding sessions."
-      ],
-      [
-        "Jarvis OS · coordinate execution",
-        "Orchestration for assigning and supervising coding agents, connecting their work with project context and engineering knowledge."
-      ],
-      [
-        "The working cycle",
-        "Plan a bounded milestone, pursue that work, capture questions and evidence, then review the outcome before planning the next scope. Engineering judgment and release accountability stay with the developer."
-      ]
-    ],
-    "flow": [
-      "The Record",
-      "Brain",
-      "Jarvis OS"
-    ],
-    "next": "Bring project context and engineering memory into a more unified assistant experience. The complete proposed integration is not presented as a finished autonomous platform.",
-    "evidence": "This is a conceptual map of the actual product responsibilities. It deliberately omits private prompts, credentials and implementation details.",
-    "screens": [
-      {
-        "src": "images/product-screens/record-workspace.webp",
-        "alt": "The Record developer workspace with projects and development tools",
-        "caption": "The Record’s live developer workspace, captured September 24, 2026. Private client and shared-project names are covered; the full dashboard layout is preserved.",
-        "width": 1440,
-        "height": 900
-      },
-      {
-        "src": "images/product-screens/record-milestones.webp",
-        "alt": "The Record milestone grid grouping completed outcomes and remaining work",
-        "caption": "The Record milestone overview, captured September 24, 2026. Completed outcomes and work in progress remain separate, with evidence available in each milestone.",
-        "width": 1425,
-        "height": 891
-      }
-    ],
-    "image": "images/product-screens/record-workspace.webp",
-    "imageAlt": "The Record developer workspace with projects and development tools",
-    "imageCaption": "The Record’s live developer workspace, captured September 24, 2026. Private client and shared-project names are covered; the full dashboard layout is preserved.",
-    "imageWidth": 1440,
-    "imageHeight": 900,
-    "decisions": [
-      [
-        "Give each product a clear responsibility.",
-        "The Record holds project scope and evidence, Brain retains engineering context, and Jarvis OS explores supervised agent execution. Keeping those responsibilities explicit makes unfinished integration visible."
-      ],
-      [
-        "Treat work as a reviewable scope.",
-        "Milestones group related features, their environment and evidence. Planning defines the next scope; execution updates the record; review decides what happens next."
-      ]
-    ],
-    "decisionNote": "The Record and Brain support the development workflow. Deeper integration with Jarvis OS is the next step."
-  },
-  {
-    "id": "create-spaces",
-    "title": "From business reports to useful answers.",
-    "name": "Create Spaces",
-    "category": "business",
-    "sector": "Office furniture · Workplace services",
-    "status": "Working local dashboard · cloud connected",
-    "color": "sand",
-    "visual": "reports",
-    "short": "Booking reports become a workspace for sales trends, export visibility and AI answers with cited sources.",
-    "role": "Software Engineer · Manifold",
-    "stack": [
-      "Hedberg",
-      "Report exports",
-      "Cloud environments",
-      "AI analysis"
-    ],
-    "problem": "Sales information was locked inside reports. The team needed a way to collect them, understand bookings and ask follow-up questions without losing the original source.",
-    "contribution": "Built the cloud report-export workflow and a local reporting workspace. It connects booking data, saved PDFs, export visibility and AI questions with cited report pages.",
-    "groups": [
-      [
-        "Understand bookings",
-        "Review booking data with coverage and freshness visible alongside the figures."
-      ],
-      [
-        "Ask questions · inspect the answer",
-        "Reports & AI opens cited PDF pages and highlights source text beside the conversation."
-      ],
-      [
-        "Keep the history",
-        "Saved report versions retain their dates and original PDFs, so an answer can be checked against its source."
-      ],
-      [
-        "See what is collected",
-        "Export and spending views show managed reports, collection activity and cost."
-      ]
-    ],
-    "flow": [
-      "Cloud report exports",
-      "Validated report history",
-      "Reporting workspace"
-    ],
-    "next": "The workspace runs locally and connects to private cloud storage. Sustained daily reliability, company hosting, shared conversation history and conversational dashboard editing remain in development.",
-    "evidence": "The September 24 screenshots show the earlier local reporting interface, with confidential values redacted. AI questions and source highlighting were verified in the current code and project record; they are not pictured in this set. The screenshots do not prove uninterrupted daily reliability.",
-    "logo": "images/create-spaces-logo.png",
-    "logoWidth": 800,
-    "logoHeight": 221,
-    "logoKind": "wordmark",
-    "image": "images/product-screens/create-spaces-01-overview.webp",
-    "imageAlt": "Redacted booking totals with report coverage and export freshness.",
-    "imageCaption": "Create Spaces reporting workspace — a working local dashboard for verified cloud exports, with confidential information redacted.",
-    "imageWidth": 1440,
-    "imageHeight": 900,
-    "screens": [
-      {
-        "src": "images/product-screens/create-spaces-01-overview.webp",
-        "alt": "Redacted booking totals with report coverage and export freshness.",
-        "caption": "Create Spaces reporting workspace — a working local dashboard for verified cloud exports, with confidential information redacted.",
-        "width": 1440,
-        "height": 900
-      },
-      {
-        "src": "images/product-screens/create-spaces-02-report-history.webp",
-        "alt": "Saved report versions with date ranges and source PDF links.",
-        "caption": "Report history in the working local dashboard. Saved versions preserve the original report dates and links to source PDFs; confidential information is redacted.",
-        "width": 1440,
-        "height": 900
-      },
-      {
-        "src": "images/product-screens/create-spaces-03-export-controls.webp",
-        "alt": "Cloud export schedule with pause control and expandable run history.",
-        "caption": "Cloud export schedule and run-history controls in the local dashboard. This capture does not establish uninterrupted daily reliability or a Mac-off trial.",
-        "width": 1440,
-        "height": 900
-      },
-      {
-        "src": "images/product-screens/create-spaces-04-report-configuration.webp",
-        "alt": "Read-only Booking Report workflow and settings with private identifiers redacted.",
-        "caption": "Read-only report configuration in the September 24 local build, with private identifiers redacted. The current AI conversation interface is not pictured in this set.",
-        "width": 1440,
-        "height": 900
-      }
-    ],
-    "previewMode": "single",
-    "decisions": [
-      [
-        "Verify a report before replacing the current data.",
-        "The export workflow independently checks the report before accepting a new version. A failed check keeps the last accepted dataset available instead of promoting incomplete or inconsistent information."
-      ],
-      [
-        "Retain the source, not just the dashboard.",
-        "Saved report versions and their original PDFs remain part of the reporting workspace. That makes the displayed information traceable to an accepted export."
-      ]
-    ],
-    "decisionNote": "Working local software connected to private cloud storage. Company deployment and sustained daily reliability remain ahead; the screenshots predate the cited AI workspace."
-  },
-  {
-    "id": "axiom",
-    "title": "Make past engineering work useful again.",
-    "name": "Axiom",
-    "category": "business",
-    "sector": "Structural engineering",
-    "status": "Manifold delivery · development partners",
-    "color": "clay",
-    "visual": "axiom",
-    "short": "AI-assisted PDF extraction turns proposal history into an estimating dashboard. Led delivery with subcontracted development.",
-    "role": "Project direction & subcontractor management",
-    "stack": [
-      "Data exploration",
-      "Search",
-      "Dashboards",
-      "Delivery coordination"
-    ],
-    "problem": "Useful estimating context was buried in historical proposal PDFs. AI-assisted extraction makes that information available for research and comparison.",
-    "contribution": "Led the engagement through Manifold Engineering, directing the project and managing subcontracted development. Collaborating developers implemented the dashboard and its research tools.",
-    "groups": [
-      [
-        "Proposal research",
-        "AI-assisted extraction makes historical proposal PDFs searchable and usable in the dashboard."
-      ],
-      [
-        "Estimating context",
-        "Explore project fees and hours to inform estimates for new projects."
-      ],
-      [
-        "Executive briefing",
-        "A separate executive-briefing exploration, distinct from the research dashboard. It was not launched."
-      ]
-    ],
-    "flow": [
-      "Proposal history",
-      "Search & explore",
-      "Estimating context"
-    ],
-    "next": "Build on the research and estimating workflows as business requirements become clearer. The executive-briefing prototype remains distinct from launched work.",
-    "evidence": "Dashboard implementation by collaborating developers; project direction and subcontractor management by Baylor through Manifold Engineering. No confidential proposals, fee records or client identities are exposed.",
-    "screens": [
-      {
-        "src": "images/product-screens/axiom-analytics.webp",
-        "alt": "Axiom analytics dashboard with sector distribution and fee-analysis charts",
-        "caption": "Analytics across historical proposal and fee data. Private amounts, sample counts and account details are covered. The interface is shown as captured, not as independent validation of the analysis.",
-        "width": 1440,
-        "height": 900
-      },
-      {
-        "src": "images/product-screens/axiom-explorer.webp",
-        "alt": "Axiom source explorer showing proposals, actuals and workbook collections",
-        "caption": "The live source explorer organizes proposals, engagement records and fee workbooks. Private counts and account details are covered; source reconciliation and estimation remain separate work.",
-        "width": 1440,
-        "height": 900
-      }
-    ],
-    "image": "images/product-screens/axiom-analytics.webp",
-    "imageAlt": "Axiom analytics dashboard with sector distribution and fee-analysis charts",
-    "imageCaption": "Analytics across historical proposal and fee data. Private amounts, sample counts and account details are covered. The interface is shown as captured, not as independent validation of the analysis.",
-    "imageWidth": 1440,
-    "imageHeight": 900,
-    "logo": "images/brands/axiom.png",
-    "logoWidth": 371,
-    "logoHeight": 178,
-    "logoKind": "wordmark",
-    "previewMode": "single"
-  },
-  {
-    "id": "ai-media-manager",
-    "title": "A visual library for social research.",
-    "name": "AI Media Manager",
-    "category": "engineering",
-    "sector": "Social-media research",
-    "status": "Prototype",
-    "color": "rose",
-    "visual": "media",
-    "short": "Organize Instagram accounts and imported posts into an inspectable media library.",
-    "role": "Founder & Software Engineer",
-    "stack": [
-      "Web application",
-      "Media imports",
-      "Account organization",
-      "Visual library"
-    ],
-    "problem": "Research starts with a usable collection of accounts and content. A visual library makes imported material easier to inspect before more advanced analysis is added.",
-    "contribution": "Built a prototype for organizing Instagram accounts and imported posts in a visual library, with account management and sync visibility.",
-    "groups": [
-      [
-        "Account organization",
-        "Group the accounts relevant to a research workflow."
-      ],
-      [
-        "Imported content",
-        "Inspect imported posts and media in a shared visual library."
-      ],
-      [
-        "Sync visibility",
-        "Make import and sync status part of the interface instead of hiding incomplete work."
-      ]
-    ],
-    "flow": [
-      "Accounts",
-      "Imported posts",
-      "Research library"
-    ],
-    "next": "Reliable syncing, broader import coverage and additional research tools remain in development.",
-    "evidence": "This is a prototype capability map, not a claim of complete or reliable platform-wide synchronization.",
-    "screens": [
-      {
-        "src": "images/product-screens/media-library.webp",
-        "alt": "AI Media Manager social account and post library",
-        "caption": "Research prototype: an existing account library with imported posts. This is a dated capture, not proof of a fresh sync or production adoption.",
-        "width": 1425,
-        "height": 891
-      }
-    ],
-    "image": "images/product-screens/media-library.webp",
-    "imageAlt": "AI Media Manager social account and post library",
-    "imageCaption": "Research prototype: an existing account library with imported posts. This is a dated capture, not proof of a fresh sync or production adoption.",
-    "imageWidth": 1425,
-    "imageHeight": 891,
-    "logo": "images/brands/ai-media-manager.svg",
-    "logoWidth": 32,
-    "logoHeight": 32,
-    "logoKind": "icon"
-  },
-  {
-    "id": "sitesift",
-    "title": "Keep the property search in context.",
-    "name": "SiteSift AI",
-    "category": "business",
-    "sector": "Commercial real estate",
-    "status": "Beta",
-    "color": "purple",
-    "visual": "sitesift",
-    "short": "Connect property lists, broker correspondence and decisions in one research workflow.",
-    "role": "Founder & Software Engineer",
-    "stack": [
-      "Email integration",
-      "Structured data",
-      "AI workflows",
-      "Web dashboard"
-    ],
-    "problem": "Commercial property research moves between lists, correspondence and follow-up decisions. Those parts need to remain connected as information changes.",
-    "contribution": "Built a beta connecting property lists, broker emails and a dashboard for tracking decisions and follow-up.",
-    "groups": [
-      [
-        "Property context",
-        "Keep candidate properties and their associated information organized for research."
-      ],
-      [
-        "Correspondence",
-        "Connect broker communication with the relevant property workflow."
-      ],
-      [
-        "Review & follow-up",
-        "A dashboard helps surface decisions and next actions while the underlying information is refined."
-      ]
-    ],
-    "flow": [
-      "Property lists",
-      "Correspondence",
-      "Review & follow-up"
-    ],
-    "next": "Improve extraction accuracy and make conversation handling and automation dependable. The product remains beta.",
-    "evidence": "Capability overview only. No private correspondence or live prospect information is included.",
-    "screens": [
-      {
-        "src": "images/product-screens/sitesift-dashboard.webp",
-        "alt": "SiteSift dashboard with two stopped demonstration campaigns",
-        "caption": "Existing demonstration account: campaign status and progress at a glance. No campaign was started or message sent during this walkthrough.",
-        "width": 1600,
-        "height": 685
-      },
-      {
-        "src": "images/product-screens/sitesift-settings.webp",
-        "alt": "SiteSift settings with appearance and signature configuration",
-        "caption": "Account settings and signature configuration. Contact details are covered; no form was saved or campaign started.",
-        "width": 1440,
-        "height": 900
-      },
-      {
-        "src": "images/product-screens/sitesift-landing.webp",
-        "alt": "SiteSift public landing page with product introduction",
-        "caption": "The public product introduction complements the operational dashboard.",
-        "width": 1600,
-        "height": 685
-      }
-    ],
-    "image": "images/product-screens/sitesift-dashboard.webp",
-    "imageAlt": "SiteSift dashboard with two stopped demonstration campaigns",
-    "imageCaption": "Existing demonstration account: campaign status and progress at a glance. No campaign was started or message sent during this walkthrough.",
-    "imageWidth": 1600,
-    "imageHeight": 685,
-    "logo": "images/brands/sitesift.png",
-    "logoWidth": 669,
-    "logoHeight": 291,
-    "logoKind": "wordmark"
-  },
-  {
-    "id": "client-portal",
-    "name": "Client Portal",
-    "title": "A shared place for client work.",
-    "category": "earlier",
-    "sector": "WebMarkets · Digital marketing agency",
-    "status": "Independent build · 2024 internship",
-    "color": "blue",
-    "image": "images/product-screens/client-portal-updates.webp",
-    "short": "WebMarkets’ first client portal, independently built in two weeks during my internship.",
-    "role": "Web Developer Intern",
-    "stack": [
-      "Preact",
-      "TypeScript",
-      "Node.js",
-      "Firebase"
-    ],
-    "problem": "WebMarkets needed a central workspace for client communication, project updates and account management.",
-    "contribution": "Independently built WebMarkets’ first client portal in two weeks during my 2024 internship—my first professional software assignment. The lead developer helped with initial setup and CSS, with shared input on visual direction.",
-    "legacy": true,
-    "imageWidth": 2534,
-    "imageHeight": 1372,
-    "screens": [
-      {
-        "src": "images/product-screens/client-portal-updates.webp",
-        "alt": "Client portal updates feed and navigation with personal details covered",
-        "caption": "Client updates feed from the original 2024 portal. Personal details and profile illustrations are covered.",
-        "width": 2534,
-        "height": 1372
-      },
-      {
-        "src": "images/product-screens/client-portal-notifications.webp",
-        "alt": "Client portal notifications for approvals, documents and updates",
-        "caption": "Notification history from the original 2024 portal. Browser chrome is removed and email addresses are covered.",
-        "width": 2194,
-        "height": 1190
-      }
-    ],
-    "imageAlt": "Client portal updates feed and navigation with personal details covered",
-    "imageCaption": "Client updates feed from the original 2024 portal. Personal details and profile illustrations are covered.",
-    "logo": "images/brands/webmarkets.webp",
-    "logoWidth": 1034,
-    "logoHeight": 156,
-    "logoKind": "wordmark",
-    "logoLabel": "WebMarkets"
-  },
-  {
-    "id": "alpha-seo",
-    "name": "ALPHA SEO",
-    "title": "Tools for focused search optimization.",
-    "category": "earlier",
-    "sector": "WebMarkets · Digital marketing agency",
-    "status": "Collaborative project",
-    "color": "green",
-    "visual": "seo",
-    "short": "Frontend and backend contributions to WebMarkets’ domain-focused SEO platform.",
-    "role": "Web Developer Intern",
-    "stack": [
-      "React",
-      "TypeScript",
-      "Node.js",
-      "Firebase"
-    ],
-    "problem": "WebMarkets needed a domain-focused SEO optimization interface.",
-    "contribution": "Co-developed frontend and backend features with the WebMarkets engineering team during my 2024 internship. The original project demonstration is retained above.",
-    "legacy": true,
-    "videoId": "rbcvWOjfI3E",
-    "videoCaption": "Original ALPHA SEO product demonstration from the 2024 internship. Historical footage; co-developed with the agency engineering team.",
-    "logo": "images/brands/webmarkets.webp",
-    "logoWidth": 1034,
-    "logoHeight": 156,
-    "logoKind": "wordmark",
-    "logoLabel": "WebMarkets"
-  },
-  {
-    "id": "pacman",
-    "name": "Java Pacman",
-    "title": "A familiar game, with room to experiment.",
-    "category": "earlier",
-    "sector": "Game development",
-    "status": "Independent project",
-    "color": "ink",
-    "image": "images/Pacmanpic2.jpg",
-    "short": "A state-based Java game with two-player and free-movement variations.",
-    "role": "Independent developer",
-    "stack": [
-      "Java",
-      "State machines",
-      "Game systems"
-    ],
-    "problem": "Recreating a familiar game offered a way to explore game states, movement and rule variations.",
-    "contribution": "Developed a Java Pacman game with two-player mode, free movement and expanded traversal. The original code and feature walkthrough are preserved.",
-    "legacy": true,
-    "imageWidth": 1916,
-    "imageHeight": 1438,
-    "screens": [
-      {
-        "src": "images/product-screens/pacman-1.webp",
-        "alt": "Java Pacman gameplay with the maze, ghosts, score and active power-up bar.",
-        "caption": "Maze gameplay and power-up state · historical Java build.",
-        "width": 1466,
-        "height": 1100
-      },
-      {
-        "src": "images/product-screens/pacman-2.webp",
-        "alt": "Pacman start menu with a Play button and two-player option.",
-        "caption": "Start menu and two-player option · historical Java build.",
-        "width": 1469,
-        "height": 1100
-      },
-      {
-        "src": "images/product-screens/pacman-3.webp",
-        "alt": "Another Java Pacman gameplay state with remaining lives and an inactive power-up bar.",
-        "caption": "A second gameplay state with remaining lives · historical Java build.",
-        "width": 1469,
-        "height": 1100
-      }
-    ]
-  },
-  {
-    "id": "machine-learning-visualization",
-    "name": "3D Machine Learning",
-    "title": "Make the data something to explore.",
-    "category": "earlier",
-    "sector": "ASU · Team capstone",
-    "status": "Academic project",
-    "color": "purple",
-    "image": "images/MachineLearningVisualization.png",
-    "short": "An interactive 3D learning environment for machine-learning concepts.",
-    "role": "Member of a five-person team",
-    "stack": [
-      "Unity",
-      "C#",
-      "Machine learning",
-      "3D visualization"
-    ],
-    "problem": "Machine-learning concepts benefit from an environment where learners can inspect and interact with the data.",
-    "contribution": "Worked in a team of five on a 3D visualization tool for an ASU professor. The original walkthrough includes data positioning and interactive predictions.",
-    "legacy": true,
-    "imageWidth": 1786,
-    "imageHeight": 1002,
-    "screens": [
-      {
-        "src": "images/product-screens/machine-learning-visualization-1.webp",
-        "alt": "Interactive 3D Iris classifier with flower-measurement inputs, a data plot and prediction legend.",
-        "caption": "Interactive Iris classification and 3D data exploration · ASU team capstone.",
-        "width": 1600,
-        "height": 898
-      }
-    ],
-    "excludedLegacyImages": [
-      "images/MachineLearningVisualizationMenu.png"
-    ]
-  },
-  {
-    "id": "lunar-base",
-    "name": "Lunar Base",
-    "title": "A small world, built from the ground up.",
-    "category": "earlier",
-    "sector": "Interactive 3D",
-    "status": "Independent project",
-    "color": "sand",
-    "image": "images/LunarBase.png",
-    "short": "A Unity environment with custom terrain, animation and third-person exploration.",
-    "role": "Environment & gameplay developer",
-    "stack": [
-      "Unity",
-      "C#",
-      "Animation",
-      "3D environments"
-    ],
-    "problem": "Create an explorable environment that combines world-building with responsive character control.",
-    "contribution": "Designed a moon-base environment with custom terrain, skybox and animations, including a third-person controller. Original imagery and the animation-state diagram are retained.",
-    "legacy": true,
-    "imageWidth": 1790,
-    "imageHeight": 1004,
-    "screens": [
-      {
-        "src": "images/product-screens/lunar-base-1.webp",
-        "alt": "Third-person character overlooking modular lunar buildings from a raised platform.",
-        "caption": "Rooftop exploration and the base exterior · historical Unity build.",
-        "width": 1600,
-        "height": 897
-      },
-      {
-        "src": "images/product-screens/lunar-base-2.webp",
-        "alt": "Third-person character inside the lunar base with a large interior floor and doorways.",
-        "caption": "Base interior and third-person scale · historical Unity build.",
-        "width": 1600,
-        "height": 899
-      },
-      {
-        "src": "images/product-screens/lunar-base-3.webp",
-        "alt": "Lunar base interior with storage racks, stairs and overhead piping.",
-        "caption": "Interior detail, stairs and storage · historical Unity build.",
-        "width": 1600,
-        "height": 896
-      },
-      {
-        "src": "images/product-screens/lunar-base-4.webp",
-        "alt": "Third-person character standing on uneven lunar terrain beneath a starry sky.",
-        "caption": "Terrain exploration and skybox · historical Unity build.",
-        "width": 1600,
-        "height": 897
-      },
-      {
-        "src": "images/product-screens/lunar-base-5.webp",
-        "alt": "Wide Unity scene view of the lunar base within the surrounding terrain.",
-        "caption": "Environment overview in the Unity editor · historical scene view.",
-        "width": 1600,
-        "height": 845
-      },
-      {
-        "src": "images/product-screens/lunar-base-6.webp",
-        "alt": "Unity animation state machine linking idle, directional sprint and jump states.",
-        "caption": "Character animation state machine · original implementation diagram.",
-        "width": 1480,
-        "height": 760
-      }
-    ]
-  },
-  {
-    "id": "ai-travel-companion",
-    "name": "AI Travel Companion",
-    "title": "Turn a conversation into an itinerary.",
-    "category": "earlier",
-    "sector": "iOS application",
-    "status": "Independent project",
-    "color": "rose",
-    "image": "images/TravelCompanionItinerary.png",
-    "short": "A Swift app that combines conversation, itinerary editing and maps.",
-    "role": "iOS developer",
-    "stack": [
-      "Swift",
-      "OpenAI API",
-      "Maps",
-      "Location services"
-    ],
-    "problem": "Travel planning moves between conversation, a schedule and places on a map.",
-    "contribution": "Built an iOS app that uses conversation to create and update an itinerary, with integrated map and location features. Original screens remain in the walkthrough.",
-    "legacy": true,
-    "imageWidth": 1179,
-    "imageHeight": 2556,
-    "screens": [
-      {
-        "src": "images/product-screens/ai-travel-companion-1.webp",
-        "alt": "iOS travel app showing a Los Angeles map above an itinerary-planning conversation.",
-        "caption": "Map and planning conversation · historical iOS prototype.",
-        "width": 600,
-        "height": 1301
-      },
-      {
-        "src": "images/product-screens/ai-travel-companion-2.webp",
-        "alt": "Travel app showing a dated itinerary and a conversation used to add plans.",
-        "caption": "Conversation connected to an itinerary · historical iOS prototype.",
-        "width": 600,
-        "height": 1301
-      },
-      {
-        "src": "images/product-screens/ai-travel-companion-3.webp",
-        "alt": "Travel app trip list containing Los Angeles, Italy and Bahamas.",
-        "caption": "Trip list · historical iOS prototype.",
-        "width": 600,
-        "height": 1301
-      },
-      {
-        "src": "images/product-screens/ai-travel-companion-4.webp",
-        "alt": "Travel itinerary item editor with an event title, start time, end time and save control.",
-        "caption": "Editing an itinerary item · historical iOS prototype.",
-        "width": 600,
-        "height": 1301
-      }
-    ]
-  }
+ {
+  "id": "fiftyflowers",
+  "title": "AI across the flower business.",
+  "name": "FiftyFlowers",
+  "category": "companies",
+  "sector": "E-commerce · Retail & wholesale",
+  "status": "In production · ongoing work",
+  "color": "green",
+  "visual": "flowers",
+  "short": "AI customer-service apps in production since January 2026, alongside AI product imagery, a company knowledge workspace and storefront integrations.",
+  "role": "AI Solutions Engineer · earlier AI & Process Innovation Associate",
+  "stack": [
+   "React",
+   "Firebase",
+   "Google Cloud",
+   "AWS",
+   "Shopify",
+   "AI APIs"
+  ],
+  "problem": "An online flower retailer has very different workflows across customer support, marketing, storefront and product data. The challenge is connecting useful AI to each team’s actual information and tools.",
+  "contribution": "Built and evolved the internal AI platform, the support applications and Chrome extension, the marketing image tools, the company knowledge workspace, storefront integrations and the DIY-kit data migration, from early prototypes in 2025 to production tools in 2026.",
+  "groups": [
+   [
+    "Customer service AI",
+    "Four support apps, shared case history and a Chrome sidepanel, in production since January 2026. See the Customer service AI case study."
+   ],
+   [
+    "Company Second Brain",
+    "Team knowledge around a personal memory, with a chat that chooses which knowledge to read and lists its sources. Two teams’ knowledge is in so far. See the Company Second Brain case study."
+   ],
+   [
+    "Product imagery",
+    "Image Studio and Preset Creation for consistent product photos, plus a separate batch photo-preparation tool. See the Image Studio case study."
+   ],
+   [
+    "Content from customer questions",
+    "Six months of support conversations classified into customer-question topics and coverage gaps, with a review queue of FAQ and blog drafts built in June 2026. Nothing publishes without a person’s approval."
+   ],
+   [
+    "Storefront",
+    "The AI Floral Assistant, rush-order requests and Share Your Flair contest entries. See the AI Floral Assistant and Storefront requests case studies."
+   ],
+   [
+    "DIY kit data migration",
+    "Farm spreadsheets matched to store products, with recipes, purchase links and 2,789 arrangement plans written to a test copy of the store and checked against their sources. See the DIY kit migration case study."
+   ],
+   [
+    "Proposal Manager",
+    "Implemented supplied wireframes for event planning, flower recipes, presentations and shopping lists. Not launched; work paused when the kit migration took priority. See the Proposal Manager case study."
+   ]
+  ],
+  "flow": [
+   "Team workflows",
+   "Connected AI tools",
+   "Human review"
+  ],
+  "next": "The tools are at different stages: the support apps and the rush-order form are in production, the shopping assistant ships in the store theme behind the company’s A/B test, Share Your Flair processing has handled every 2025 entry, the knowledge workspace is an MVP, and the kit migration is complete on a test copy of the store.",
+  "evidence": "Scope reflects the reviewed project records. Screens show empty or invented cases; no customer, order, staff or supplier information is displayed.",
+  "image": "images/product-screens/internal-ai.webp",
+  "imageAlt": "FiftyFlowers Internal AI customer inquiry screen with empty fields and navigation to the four support apps",
+  "imageWidth": 1440,
+  "imageHeight": 900,
+  "imageCaption": "Internal AI, September 2026. The customer inquiry interface shown with empty fields; no customer records are displayed.",
+  "screens": [
+   {
+    "src": "images/product-screens/internal-ai.webp",
+    "alt": "FiftyFlowers Internal AI customer inquiry screen with empty fields and navigation to the four support apps",
+    "caption": "Internal AI, September 2026. The customer inquiry interface shown with empty fields; no customer records are displayed.",
+    "width": 1440,
+    "height": 900
+   },
+   {
+    "src": "images/product-screens/company-brain.webp",
+    "alt": "Company Second Brain department overview",
+    "caption": "Company Second Brain: the team overview. Customer Service and Engineering hold knowledge; Marketing is forming and four team brains are still empty.",
+    "width": 1440,
+    "height": 900
+   },
+   {
+    "src": "images/product-screens/image-studio.webp",
+    "alt": "FiftyFlowers Image Studio with an empty photo workspace",
+    "caption": "Image Studio: photo input and reusable image workflows. No image generation was run for this capture.",
+    "width": 1440,
+    "height": 900
+   }
+  ],
+  "logo": "images/brands/fiftyflowers.svg",
+  "logoWidth": 180,
+  "logoHeight": 83,
+  "logoKind": "wordmark",
+  "decisions": [
+   [
+    "Bring related tools into one platform.",
+    "Support applications, a browser extension, marketing tools and company knowledge grew into one internal platform while keeping the different workflows each team needs."
+   ],
+   [
+    "Make the rollout boundaries visible.",
+    "Customer-service knowledge supports the operational apps; marketing and engineering knowledge are developing parts of a broader company second brain and are not presented as equally mature."
+   ]
+  ],
+  "decisionNote": "The platform combines production workflows with MVP and beta work. The product groups above identify those differences.",
+  "stage": "production",
+  "nextTitle": "In production, and still growing."
+ },
+ {
+  "id": "fiftyflowers-support-ai",
+  "title": "Support replies, drafted with the right knowledge.",
+  "name": "Customer service AI",
+  "category": "companies",
+  "sector": "FiftyFlowers · Customer support",
+  "status": "In production · since January 2026",
+  "color": "green",
+  "short": "Four AI apps for inquiries, reviews, claims and chargebacks, with shared case history and a Chrome sidepanel. By my own estimate they save about $24,000 a year; the figure is not audited.",
+  "role": "AI Solutions Engineer · FiftyFlowers",
+  "stack": [
+   "React",
+   "Firebase",
+   "Google Cloud",
+   "Chrome extension",
+   "LLM APIs",
+   "Shopify"
+  ],
+  "problem": "Support representatives answer very different situations: care questions, public reviews, damage claims and card disputes. Each needs the right policy, voice and numbers, and each case can run over several messages.",
+  "contribution": "Built the four support apps, the shared chat and case history, and a Chrome sidepanel that brings three of the apps (inquiries, reviews and claims) into the support tools the team already uses. Migrated the platform’s serving layer from AWS Lambda to Firebase and Google Cloud.",
+  "groups": [
+   [
+    "Four task-focused apps",
+    "Inquiry, Reviews, Claims and Chargeback each combine a form with a chosen brand voice, audience and knowledge articles, then produce an editable draft."
+   ],
+   [
+    "Numbers the reply can trust",
+    "In the web app, Claims calculates the refund and the store-credit alternative from the damaged products, and the drafted reply quotes those figures exactly."
+   ],
+   [
+    "Knowledge the representative confirms",
+    "Articles are matched by keywords and tags and shown before drafting, so the representative sees what the reply will rely on."
+   ],
+   [
+    "One case, start to finish",
+    "Input, AI draft, edits, regeneration and follow-ups are saved as one case that can be reopened in its original app."
+   ],
+   [
+    "Where the team works",
+    "A Chrome sidepanel recognizes highlighted text on approved support sites and offers the right form, a quick rewrite in the company voice, or a follow-up drafted from the case history."
+   ]
+  ],
+  "flow": [
+   "Customer message",
+   "Form and company knowledge",
+   "Reviewed reply"
+  ],
+  "next": "In production since January 2026. The savings figure is my own estimate, not a company or audited number.",
+  "evidence": "Screens show invented cases entered for documentation. No customer, order or staff information is displayed.",
+  "decisions": [
+   [
+    "Calculate first, then write.",
+    "The form computes refunds and credits; the AI is asked to quote those figures, not to work them out."
+   ],
+   [
+    "Keep a case together.",
+    "Every step of a case is stored in order, so a later reply starts from what was already said and changed."
+   ]
+  ],
+  "decisionNote": "Forty user-visible functions were documented across the apps, chat, history, extension and administration.",
+  "screens": [
+   {
+    "src": "images/product-screens/ff-support-inquiry.webp",
+    "alt": "A drafted reply to an invented care question about ranunculus and garden roses",
+    "caption": "CS Inquiry with an invented care question: the app picks the matching care articles and drafts the reply. The representative’s name is replaced.",
+    "width": 1290,
+    "height": 860
+   },
+   {
+    "src": "images/product-screens/ff-support-apps.webp",
+    "alt": "The CS Inquiry form, empty, with the four support apps in the side menu",
+    "caption": "The CS Inquiry form before anything is generated, with the four support apps in the menu. The signed-in name is replaced.",
+    "width": 1440,
+    "height": 900
+   },
+   {
+    "src": "images/product-screens/ff-support-reviews.webp",
+    "alt": "A drafted public reply to an invented two-star review",
+    "caption": "Reviews: a plain-text public reply to an invented two-star review.",
+    "width": 1290,
+    "height": 990
+   }
+  ],
+  "image": "images/product-screens/ff-support-inquiry.webp",
+  "imageAlt": "A drafted reply to an invented care question about ranunculus and garden roses",
+  "imageCaption": "CS Inquiry with an invented care question: the app picks the matching care articles and drafts the reply. The representative’s name is replaced.",
+  "imageWidth": 1290,
+  "imageHeight": 860,
+  "logo": "images/brands/fiftyflowers.svg",
+  "logoWidth": 180,
+  "logoHeight": 83,
+  "logoKind": "wordmark",
+  "parent": "fiftyflowers",
+  "stage": "production",
+  "nextTitle": "In use by the support team since January 2026."
+ },
+ {
+  "id": "till",
+  "title": "A clearer view of lending decisions.",
+  "name": "Till",
+  "category": "companies",
+  "sector": "Financial services · Lending",
+  "status": "In production · scoring API and dashboard",
+  "color": "blue",
+  "visual": "till",
+  "short": "Machine-learning loan scoring that saves an estimated $24,000 a year, with a five-view lending dashboard.",
+  "role": "Software Engineer · Manifold",
+  "stack": [
+   "Machine learning",
+   "APIs",
+   "Cloud services",
+   "Data visualization"
+  ],
+  "problem": "Loan scoring needs to fit into an existing application process, while the team needs visibility into scoring activity and loan performance.",
+  "contribution": "Built a machine-learning scoring service that the lender’s application system calls, plus a dashboard for reviewing scoring activity, policy settings, lead sources and loan performance.",
+  "groups": [
+   [
+    "Machine-learning API · est. $24K a year",
+    "Machine-learning scores returned inside the existing loan application workflow, saving an estimated $24,000 a year."
+   ],
+   [
+    "Overview · see the activity",
+    "Review scoring activity and decision patterns in one place."
+   ],
+   [
+    "Policy settings · a recorded history",
+    "Review policy settings, with a recorded history of changes."
+   ],
+   [
+    "Lead Sources · compare channels",
+    "Explore where applications come from and how each source performs."
+   ],
+   [
+    "Funded History · follow performance",
+    "Review funded-loan history with clear reporting periods and funding definitions."
+   ],
+   [
+    "Scenario analysis · explore tradeoffs",
+    "Explore modeled exclusions alongside observed outcomes. Scenarios support investigation; they do not prove the effect of a policy change."
+   ]
+  ],
+  "flow": [
+   "Loan application",
+   "Machine-learning scoring",
+   "Decision & reporting"
+  ],
+  "next": "Scoring activity updates independently from imported loan-history data. Next steps focus on repeatable data refreshes and more precise links between policy changes and affected loans. The savings figure is my own estimate, not an audited number.",
+  "evidence": "The workflow represents the documented service and dashboard. No customer applications are included, and every figure and trend is covered.",
+  "logo": "images/till-logo.png",
+  "screens": [
+   {
+    "src": "images/product-screens/hal-overview.webp",
+    "alt": "HAL lending dashboard with private operating figures redacted",
+    "caption": "The HAL overview brings scoring activity and decision reporting together. Figures and data-freshness badges are covered; no settings were changed.",
+    "width": 1425,
+    "height": 891
+   },
+   {
+    "src": "images/product-screens/hal-sources.webp",
+    "alt": "HAL lead-source analytics showing trend charts with private values covered",
+    "caption": "Lead-source reporting, captured September 24, 2026. Source names, figures, status tiles and trend lines are covered.",
+    "width": 1425,
+    "height": 891
+   }
+  ],
+  "logoWidth": 312,
+  "logoHeight": 152,
+  "logoKind": "wordmark",
+  "image": "images/product-screens/hal-overview.webp",
+  "imageAlt": "HAL lending dashboard with private operating figures redacted",
+  "imageCaption": "The HAL overview brings scoring activity and decision reporting together. Figures and data-freshness badges are covered; no settings were changed.",
+  "imageWidth": 1425,
+  "imageHeight": 891,
+  "decisions": [
+   [
+    "Protect policy changes from conflicting edits.",
+    "The policy editor checks the latest saved state before applying a change, preserves unrelated edits and keeps a change history. An adjustment is a recorded action, not an invisible replacement."
+   ],
+   [
+    "Separate observation from simulation.",
+    "The analysis distinguishes observed funded outcomes from modeled exclusions. A scenario helps explore a decision; it is not presented as proof that a policy change caused an outcome."
+   ]
+  ],
+  "decisionNote": "These are documented implementation choices. Private policy settings, borrower information and model details are intentionally omitted.",
+  "stage": "production",
+  "nextTitle": "In production, with clear next steps."
+ },
+ {
+  "id": "create-spaces",
+  "title": "Every booking since 2009, verified and in one place.",
+  "name": "Create Spaces",
+  "category": "companies",
+  "sector": "Office furniture · Workplace services",
+  "status": "Dashboard live · daily export being proven, ChatGPT connection not yet on",
+  "color": "sand",
+  "visual": "reports",
+  "short": "The company’s booking history back to 2009, verified to the cent in its own AWS storage, with a dashboard live behind a company sign-in. A daily AI export agent and a read-only ChatGPT connection that ties each figure to its report row are built and being switched on step by step.",
+  "role": "Software Engineer · Manifold",
+  "stack": [
+   "AI computer-use agent",
+   "AWS",
+   "Python",
+   "ChatGPT connector",
+   "Dashboard"
+  ],
+  "problem": "Sales information lived inside the company’s desktop business system, as reports someone had to run and export by hand. The team wanted the full history in one place and a safe way to ask questions without losing the original numbers.",
+  "contribution": "Built the export agent and its verification, the storage and alerting on the company’s own AWS account, the dashboard and the read-only ChatGPT connection. An AI agent with its own cloud computer is set to sign in to the business system each morning and export the previous day’s report, so no one’s computer has to be on; every file is checked against the report’s printed totals before it is kept. The first supervised cloud run passed every check, and unattended runs are being confirmed.",
+  "groups": [
+   [
+    "No one’s computer required",
+    "A hosted AI agent with its own cloud computer is scheduled to sign in to the business system each morning and export the previous day’s Booking Report as Excel. The first supervised run passed every check; unattended runs are being proven."
+   ],
+   [
+    "Every line checked",
+    "A report is kept only when its lines add up to the report’s own printed totals to the cent. The full history back to January 2009 was verified the same way."
+   ],
+   [
+    "The company’s own cloud",
+    "Storage sits in Create Spaces’ own AWS account, blocked from public access, with health alarms, a spending alert and an activity log."
+   ],
+   [
+    "Ask in your own ChatGPT",
+    "Each person will connect their own ChatGPT through a read-only connection, built and tested ahead of rollout. The connection returns every figure with the report row it came from and has no way to change the data."
+   ],
+   [
+    "See the business",
+    "A dashboard opens on the latest day, then bookings, gross profit and margin by salesperson for the latest day, the last 7 days, the month so far or all saved history, the original Excel rows, and a calendar of every day received."
+   ]
+  ],
+  "flow": [
+   "Business-system report",
+   "Verified daily export",
+   "Dashboard and ChatGPT answers"
+  ],
+  "next": "The verified history and the dashboard are live on the company’s own AWS account, behind a company sign-in. The daily schedule is being proven run by run, and each person’s ChatGPT connection switches on after that.",
+  "evidence": "Screens use invented sample data generated in the report’s exact format, except the calendar of report days, which shows the real coverage and no figures.",
+  "decisions": [
+   [
+    "Verify before keeping.",
+    "A new report replaces nothing until its rows reconcile with the report’s printed totals. A failure keeps the last good data in place and raises an alert."
+   ],
+   [
+    "Point every answer at its row.",
+    "The ChatGPT connection is read-only and returns the Excel row behind each figure, so an answer can be checked against the source."
+   ]
+  ],
+  "decisionNote": "More than 1,200 automated tests cover the export, verification, dashboard and connection. The dashboard went live on 1 October 2026; the daily schedule and the ChatGPT connection are the remaining rollout steps.",
+  "logo": "images/create-spaces-logo.png",
+  "logoWidth": 800,
+  "logoHeight": 221,
+  "logoKind": "wordmark",
+  "screens": [
+   {
+    "src": "images/product-screens/create-spaces-overview-sample.webp",
+    "alt": "Create Spaces dashboard overview with invented sample bookings by salesperson",
+    "caption": "Dashboard overview on invented sample data in the report’s exact format. Real figures stay private.",
+    "width": 1440,
+    "height": 900
+   },
+   {
+    "src": "images/product-screens/create-spaces-exports-days.webp",
+    "alt": "Calendar of every report day received from 2009 to September 2026",
+    "caption": "Every report day received, from January 2009 to September 2026.",
+    "width": 730,
+    "height": 420
+   },
+   {
+    "src": "images/product-screens/create-spaces-connections.webp",
+    "alt": "Connections page guiding a person through linking their own ChatGPT",
+    "caption": "Connections: five steps for each person to link their own ChatGPT, read-only. Shown before the connection is switched on.",
+    "width": 1440,
+    "height": 834
+   }
+  ],
+  "image": "images/product-screens/create-spaces-overview-sample.webp",
+  "imageAlt": "Create Spaces dashboard overview with invented sample bookings by salesperson",
+  "imageCaption": "Dashboard overview on invented sample data in the report’s exact format. Real figures stay private.",
+  "imageWidth": 1440,
+  "imageHeight": 900,
+  "stage": "rollout",
+  "nextTitle": "Live, and still rolling out."
+ },
+ {
+  "id": "fiftyflowers-image-studio",
+  "title": "Consistent product photos, on demand.",
+  "name": "Image Studio",
+  "category": "companies",
+  "sector": "FiftyFlowers · Marketing",
+  "status": "In production · released August 2026",
+  "color": "green",
+  "short": "Generative product-photo editing with reusable looks: new backgrounds, exact brand colors and transparent cutouts, with the cost of every run shown before it is spent.",
+  "role": "AI Solutions Engineer · FiftyFlowers",
+  "stack": [
+   "Gemini image models",
+   "React",
+   "Firebase",
+   "Python pipeline"
+  ],
+  "problem": "A large product catalog needed consistent backgrounds and styles. Editing by hand was slow, and a credit-based third-party tool cost about 15 cents an image.",
+  "contribution": "Ran the April pilot and its cost case, then built Image Studio and Preset Creation into the company’s AI platform, with usage tracking and team limits, plus a separate catalog-photo pipeline.",
+  "groups": [
+   [
+    "A pilot that made the case",
+    "Five catalog products on five backgrounds gave 25 image-to-image results: the simplest product kept its shape on every background, while most tight flower close-ups were recomposed. The pilot estimated about 4 cents and 5 seconds an image on the model it tested."
+   ],
+   [
+    "Pick a look",
+    "Upload a batch and apply a saved look: background color, vase, lighting, backdrop texture and one of 14 aspect ratios."
+   ],
+   [
+    "Exact color, real cutouts",
+    "An exact-color option rewrites background pixels to the brand color after generation; the cutout look produces a transparent PNG."
+   ],
+   [
+    "Looks the team can build",
+    "Preset Creation derives a reusable look from example images and a test photo, generates three samples, and keeps up to ten versions."
+   ],
+   [
+    "Costs in view",
+    "Every run shows photos times the price the administrators have set and asks for confirmation above 25 cents; administrators see image spend over time and set per-person and team limits."
+   ]
+  ],
+  "flow": [
+   "Product photo",
+   "Saved look and AI model",
+   "Styled image or cutout"
+  ],
+  "next": "Released in the company platform in August 2026. A full photo-to-result check across every look is the remaining step.",
+  "evidence": "Pilot images use the company’s public catalog photos. The before-and-after pair is the sample bundled with a built-in look.",
+  "decisions": [
+   [
+    "Call the models directly.",
+    "The pilot compared a credit-based tool with direct model calls on the same task: about 15 cents against an estimated 4 cents an image on the model tested. The released studio uses a newer, more expensive model, so the saving per image is smaller than the pilot’s estimate."
+   ],
+   [
+    "Show the exact prompt.",
+    "Every option writes one sentence of the prompt, and the full prompt is visible before generating, so a look is inspectable rather than magic."
+   ]
+  ],
+  "decisionNote": "The April pilot also ran 250 text-to-image experiments; they were not scored and are not presented as results.",
+  "screens": [
+   {
+    "src": "images/product-screens/ff-image-pilot-grid.webp",
+    "alt": "Grid of catalog flower photos re-rendered on five different backgrounds",
+    "caption": "April 2026 pilot: catalog photos (top row) on five generated backgrounds. The leaf kept its shape every time; most tight flower close-ups were recomposed rather than kept, a limit the pilot recorded.",
+    "width": 1400,
+    "height": 1579
+   },
+   {
+    "src": "images/product-screens/ff-image-before-after.webp",
+    "alt": "Roses in a vase before and after the background was standardised",
+    "caption": "A built-in look: the arrangement and vase stay, the background becomes a flat light gray. Bundled sample, not a new generation.",
+    "width": 1600,
+    "height": 788
+   },
+   {
+    "src": "images/product-screens/ff-image-preset-editor.webp",
+    "alt": "Preset Creation editor showing a team look with its three sample results, each setting and its prompt sentence",
+    "caption": "Preset Creation: a team look reopened for editing, with its test photo, three sample results and every setting beside the sentence it adds to the prompt.",
+    "width": 1560,
+    "height": 1520
+   }
+  ],
+  "image": "images/product-screens/ff-image-pilot-grid.webp",
+  "imageAlt": "Grid of catalog flower photos re-rendered on five different backgrounds",
+  "imageCaption": "April 2026 pilot: catalog photos (top row) on five generated backgrounds. The leaf kept its shape every time; most tight flower close-ups were recomposed rather than kept, a limit the pilot recorded.",
+  "imageWidth": 1400,
+  "imageHeight": 1579,
+  "logo": "images/brands/fiftyflowers.svg",
+  "logoWidth": 180,
+  "logoHeight": 83,
+  "logoKind": "wordmark",
+  "parent": "fiftyflowers",
+  "stage": "production",
+  "nextTitle": "Released, with one check left."
+ },
+ {
+  "id": "engineering-platform",
+  "title": "Better systems for building systems.",
+  "name": "AI Development Platform",
+  "category": "products",
+  "sector": "Internal products · Developer experience",
+  "status": "In my own daily use · deeper integration in development",
+  "color": "ink",
+  "visual": "platform",
+  "short": "A development suite for AI agents: project management, engineering memory and orchestration.",
+  "role": "Founder & Software Engineer",
+  "stack": [
+   "Agent connections",
+   "Project management",
+   "Knowledge graphs",
+   "Cloud applications",
+   "Python CLI"
+  ],
+  "problem": "AI-assisted work can lose context across sessions and scatter decisions across repositories, conversations and tools. Planning and delivery need a shared structure that humans can inspect.",
+  "contribution": "Built an internal product suite around three responsibilities: managing the work, retaining engineering knowledge and supervising agent assignments. These tools run my own development process and the client pages I share; deeper integration remains in development.",
+  "groups": [
+   [
+    "The Record · manage the work",
+    "Project management for developers, clients and connected coding agents. Agents update pages through revision-checked commands with exact-retry receipts, over connections that expire after seven days and can be revoked."
+   ],
+   [
+    "Brain · preserve the context",
+    "Durable engineering memory for project state, findings, repository maps, workflows and handoffs, navigable as a graph of more than a thousand linked pages."
+   ],
+   [
+    "Jarvis OS · coordinate execution",
+    "A supervisor that has handed bounded tasks to visible Claude Code and Codex workers in recorded trials and reports each one’s real final state. Silence is never treated as success, and an offline worker makes the whole loop testable without paid runs."
+   ],
+   [
+    "Where it came from",
+    "Three earlier experiments, a repository that acted as an assistant, a planner and executor split, and a session cockpit, decided which ideas were kept."
+   ],
+   [
+    "The working cycle",
+    "Plan a bounded milestone, pursue that work, capture questions and evidence, then review the outcome before planning the next scope. Engineering judgment and release accountability stay with the developer."
+   ]
+  ],
+  "flow": [
+   "The Record",
+   "Brain",
+   "Jarvis OS"
+  ],
+  "next": "Bring project context and engineering memory into a more unified assistant experience. The complete proposed integration is not presented as a finished autonomous platform.",
+  "evidence": "Captures cover private client and project names. Prompts, credentials and implementation details are omitted.",
+  "screens": [
+   {
+    "src": "images/product-screens/record-workspace.webp",
+    "alt": "The Record developer workspace with projects and development tools",
+    "caption": "The Record’s live developer workspace, captured September 24, 2026. Private client and shared-project names are covered; the full dashboard layout is preserved.",
+    "width": 1440,
+    "height": 900
+   },
+   {
+    "src": "images/product-screens/record-milestones.webp",
+    "alt": "The Record milestone grid grouping completed outcomes and remaining work",
+    "caption": "The Record milestone overview, captured September 24, 2026. Completed outcomes and work in progress remain separate, with evidence available in each milestone.",
+    "width": 1425,
+    "height": 891
+   },
+   {
+    "src": "images/product-screens/brain-graph.webp",
+    "alt": "Brain knowledge graph with page labels blurred",
+    "caption": "Brain’s knowledge graph: projects, repositories, knowledge pages and workflows as one navigable map. Project names are blurred.",
+    "width": 1280,
+    "height": 720
+   },
+   {
+    "src": "images/product-screens/jarvis-terminal.webp",
+    "alt": "Terminal running a Jarvis OS task on the offline test worker",
+    "caption": "Jarvis OS handing a task to its offline test worker and reporting the final state. No paid model was used.",
+    "width": 1440,
+    "height": 1386
+   }
+  ],
+  "image": "images/product-screens/record-workspace.webp",
+  "imageAlt": "The Record developer workspace with projects and development tools",
+  "imageCaption": "The Record’s live developer workspace, captured September 24, 2026. Private client and shared-project names are covered; the full dashboard layout is preserved.",
+  "imageWidth": 1440,
+  "imageHeight": 900,
+  "decisions": [
+   [
+    "Give each product a clear responsibility.",
+    "The Record holds project scope and evidence, Brain retains engineering context, and Jarvis OS explores supervised agent execution. Keeping those responsibilities explicit makes unfinished integration visible."
+   ],
+   [
+    "Refuse to guess.",
+    "Unknown is a first-class outcome: a worker that cannot prove it finished is reported as unknown, and a retried update has exactly one effect."
+   ]
+  ],
+  "decisionNote": "The Record and Brain support my development workflow and client pages. Deeper integration with Jarvis OS is the next step.",
+  "stage": "own",
+  "nextTitle": "In daily use, with more to connect."
+ },
+ {
+  "id": "fiftyflowers-second-brain",
+  "title": "A company memory, starting with two teams.",
+  "name": "Company Second Brain",
+  "category": "companies",
+  "sector": "FiftyFlowers · Company knowledge",
+  "status": "MVP · live since July 2026, two of seven team brains filled",
+  "color": "green",
+  "short": "Team knowledge around each person’s own memory, and a chat that chooses which knowledge to read and lists its sources, with voice and web research.",
+  "role": "AI Solutions Engineer · FiftyFlowers",
+  "stack": [
+   "Retrieval",
+   "LLM routing",
+   "Graph visualization",
+   "Voice",
+   "Firebase"
+  ],
+  "problem": "Company knowledge was spread across apps, documents and people. Each team needed AI that could use the right part of it and show where an answer came from.",
+  "contribution": "Built the Second Brain workspace: team brains around each person’s memory, the Engineering Brain view of the shared repository that AI coding agents work through, and a chat that routes each question to the knowledge it needs.",
+  "groups": [
+   [
+    "Team brains",
+    "Each person’s own memory sits at the center with seven team brains around it. Two hold knowledge today: Customer Service, which already powers the production support apps, and Engineering. Marketing is forming and four are still empty."
+   ],
+   [
+    "Answers with their sources",
+    "A small router model picks the brains a question needs, readers pull the top pages, and the answer lists the pages it consulted."
+   ],
+   [
+    "A memory that grows",
+    "Add a chat export or a PDF (PDF upload is still to be confirmed on the live site), ask it to research a topic with at most two web searches, or run a check-up for stale and contradictory pages."
+   ],
+   [
+    "Engineering Brain",
+    "The shared engineering repository as it stood at the end of July 2026, 135 pages and 854 links, appears as a navigable constellation with a reader. The repository has since grown to 261 pages; bringing the view up to date is the next step."
+   ],
+   [
+    "Voice and gestures",
+    "Speech in and out, a live spoken conversation, and camera-based hand tracking to turn and zoom the knowledge map."
+   ]
+  ],
+  "flow": [
+   "Question",
+   "Chosen brains and pages",
+   "Answer with sources"
+  ],
+  "next": "An MVP, live since July 2026. Customer-service knowledge is in production use; the marketing brain is drawn but holds no knowledge yet, four team brains are placeholders, and the engineering view is a beta that still shows its July snapshot.",
+  "evidence": "The signed-in name is replaced; no personal memory content is shown.",
+  "screens": [
+   {
+    "src": "images/product-screens/ff-second-brain-overview.webp",
+    "alt": "Second Brain overview with a person’s own memory at the center and team brains around it",
+    "caption": "Second Brain: each person’s own memory at the center, with the team brains around it. Most team brains are still empty.",
+    "width": 1280,
+    "height": 720
+   },
+   {
+    "src": "images/product-screens/ff-second-brain-chat-home.webp",
+    "alt": "The platform’s chat start screen with the tool menu at the left",
+    "caption": "Chat on the platform home: it remembers a personal brain, pulls in company knowledge when it helps, and accepts notes and chat exports. The signed-in name is replaced.",
+    "width": 1440,
+    "height": 900
+   },
+   {
+    "src": "images/product-screens/ff-engineering-brain.webp",
+    "alt": "The Engineering Brain constellation with the workflow router page open in the reader",
+    "caption": "The Engineering Brain: each page of the July 2026 snapshot of the shared repository as a point; the workflows are highlighted and the router page is open in the reader.",
+    "width": 1440,
+    "height": 900
+   }
+  ],
+  "image": "images/product-screens/ff-second-brain-overview.webp",
+  "imageAlt": "Second Brain overview with a person’s own memory at the center and team brains around it",
+  "imageCaption": "Second Brain: each person’s own memory at the center, with the team brains around it. Most team brains are still empty.",
+  "imageWidth": 1280,
+  "imageHeight": 720,
+  "logo": "images/brands/fiftyflowers.svg",
+  "logoWidth": 180,
+  "logoHeight": 83,
+  "logoKind": "wordmark",
+  "parent": "fiftyflowers",
+  "stage": "rollout",
+  "nextTitle": "An MVP, with two teams’ knowledge in."
+ },
+ {
+  "id": "axiom",
+  "title": "Make past engineering work useful again.",
+  "name": "Axiom",
+  "category": "companies",
+  "sector": "Structural engineering",
+  "status": "Delivered with development partners · estimates not yet validated",
+  "color": "clay",
+  "visual": "axiom",
+  "short": "AI-assisted extraction turned thousands of historical fee proposals into a searchable research workspace, with fee-estimating tools on top. Led delivery with subcontracted development.",
+  "role": "Project direction & subcontractor management",
+  "stack": [
+   "AI-assisted extraction",
+   "Search",
+   "Dashboards",
+   "Delivery coordination"
+  ],
+  "problem": "Useful estimating context was buried in historical Word proposals, Excel fee workbooks and project-accounting records. AI-assisted extraction makes that information available for research and comparison.",
+  "contribution": "Led the engagement through Manifold Engineering, directing the project and managing subcontracted development. Collaborating developers implemented the dashboard and its research tools.",
+  "groups": [
+   [
+    "Proposal research",
+    "AI-assisted extraction makes historical Word proposals and Excel fee workbooks searchable and usable in the dashboard, beside project-accounting records."
+   ],
+   [
+    "Estimating context",
+    "Explore historical fees and hours to inform estimates for new projects. The figures are a starting point for an engineer’s judgment, not a quote."
+   ],
+   [
+    "Executive briefing",
+    "A separate executive-briefing exploration, distinct from the research dashboard. It was not launched."
+   ]
+  ],
+  "flow": [
+   "Proposal history",
+   "Search & explore",
+   "Estimating context"
+  ],
+  "next": "The research workspace is delivered. Estimates depend on reconciling the source records first, so the estimating tools are treated as exploratory until that matching is complete. A separate executive-briefing prototype was not launched.",
+  "evidence": "Dashboard implementation by collaborating developers; project direction and subcontractor management by Baylor through Manifold Engineering. No confidential proposals, fee records or client identities are exposed.",
+  "screens": [
+   {
+    "src": "images/product-screens/axiom-analytics.webp",
+    "alt": "Axiom analytics dashboard with sector distribution and fee-analysis charts",
+    "caption": "Analytics across historical proposal and fee data. Amounts, counts, chart shapes and account details are covered. The interface is shown as captured, not as independent validation of the analysis.",
+    "width": 1440,
+    "height": 900
+   },
+   {
+    "src": "images/product-screens/axiom-explorer.webp",
+    "alt": "Axiom source explorer showing proposals, actuals and workbook collections",
+    "caption": "The live source explorer organizes proposals, engagement records and fee workbooks. Private counts and account details are covered; source reconciliation and estimation remain separate work.",
+    "width": 1440,
+    "height": 900
+   }
+  ],
+  "image": "images/product-screens/axiom-analytics.webp",
+  "imageAlt": "Axiom analytics dashboard with sector distribution and fee-analysis charts",
+  "imageCaption": "Analytics across historical proposal and fee data. Amounts, counts, chart shapes and account details are covered. The interface is shown as captured, not as independent validation of the analysis.",
+  "imageWidth": 1440,
+  "imageHeight": 900,
+  "logo": "images/brands/axiom.png",
+  "logoWidth": 371,
+  "logoHeight": 178,
+  "logoKind": "wordmark",
+  "previewMode": "single",
+  "stage": "built",
+  "nextTitle": "Delivered, with validation ahead."
+ },
+ {
+  "id": "fiftyflowers-shopping-assistant",
+  "title": "Flower requests, answered from the catalog.",
+  "name": "AI Floral Assistant",
+  "sector": "FiftyFlowers · Storefront",
+  "status": "In the store theme · behind an A/B test since January 2026",
+  "short": "A storefront chat panel: shoppers describe what they need and get matching catalog products with prices. The AI only reads the request; code runs the search.",
+  "role": "AI Solutions Engineer · FiftyFlowers",
+  "stack": [
+   "Shopify theme",
+   "JavaScript",
+   "AWS Lambda",
+   "Python",
+   "DynamoDB",
+   "LLM API"
+  ],
+  "problem": "Shoppers know the event, the colors and the budget, not the product names. The goal was a way to describe a need in plain words and get catalog products back, with no chance of an invented product or price.",
+  "contribution": "Built the 2025 prototype, then the storefront assistant: the chat panel in the store theme, the conversation and catalog-search functions on AWS, and the prompt that turns a shopper’s words into the store’s own filters.",
+  "groups": [
+   [
+    "Ask in plain words",
+    "A shopper types what they need. One small AI call reads it as the store’s own filters: colors, flower types, occasion, budget, effort level, season, product type and what to leave out."
+   ],
+   [
+    "Only what the catalog holds",
+    "Code searches the catalog with those filters and returns up to six products with catalog prices. The AI never sees products or writes the reply, so it cannot invent either."
+   ],
+   [
+    "Refine without starting over",
+    "The request appears as removable chips. Removing one, clearing them all or asking for new recommendations re-runs the search with no AI call."
+   ],
+   [
+    "Never an empty answer",
+    "When nothing matches, the search loosens one condition at a time, such as a higher budget or any of the colors instead of all, and tells the shopper what it changed."
+   ],
+   [
+    "Conversations that come back",
+    "A shopper can keep up to ten conversations: on any device when signed in, in the same browser as a guest. Each card opens the store’s product page to choose options and buy."
+   ]
+  ],
+  "flow": [
+   "Shopper’s request",
+   "Filters and catalog search",
+   "Products and chips"
+  ],
+  "next": "In the store theme since January 2026, hidden unless the company’s A/B test shows it. Next: record who the test shows it to, check card prices against product pages, and measure usage and cost.",
+  "evidence": "The panel is a local render of the store theme’s code with three invented products, not the live storefront. The prototype page is shown empty.",
+  "decisions": [
+   [
+    "Let the model translate, let code search.",
+    "The model only turns words into filters. The search and the reply sentence are code, so every answer can be explained from its filters."
+   ],
+   [
+    "Ask for the complete new state.",
+    "Each call sends the current filters and asks for the full updated set, so follow-ups like “also pink” or “make it red instead” need no merge logic."
+   ]
+  ],
+  "decisionNote": "The prototype’s 42 test requests ran against the catalog before the move to AWS. No usage or cost figures are claimed; none have been measured yet.",
+  "nextTitle": "In the store theme, behind a test.",
+  "color": "green",
+  "logo": "images/brands/fiftyflowers.svg",
+  "logoWidth": 180,
+  "logoHeight": 83,
+  "logoKind": "wordmark",
+  "category": "companies",
+  "parent": "fiftyflowers",
+  "stage": "rollout",
+  "screens": [
+   {
+    "src": "images/product-screens/ff-shop-assistant-panel.webp",
+    "alt": "AI Floral Assistant side panel: the welcome view, and an answer with product cards and filter chips",
+    "caption": "Local render of the store theme’s code, not the live storefront: the welcome view, and an answer built from three invented products with removable filter chips.",
+    "width": 1600,
+    "height": 1411
+   },
+   {
+    "src": "images/product-screens/ff-shop-prototype.webp",
+    "alt": "The 2025 prototype’s chat page with four suggested questions and an empty filters panel",
+    "caption": "The 2025 prototype’s chat page in its starting state. It ran locally and was never shown to shoppers; its filters carried into the storefront assistant.",
+    "width": 1280,
+    "height": 720
+   }
+  ],
+  "image": "images/product-screens/ff-shop-assistant-panel.webp",
+  "imageWidth": 1600,
+  "imageHeight": 1411,
+  "imageAlt": "AI Floral Assistant side panel: the welcome view, and an answer with product cards and filter chips",
+  "imageCaption": "Local render of the store theme’s code, not the live storefront: the welcome view, and an answer built from three invented products with removable filter chips."
+ },
+ {
+  "id": "sitesift",
+  "title": "Broker outreach, being proven one step at a time.",
+  "name": "SiteSift AI",
+  "category": "products",
+  "sector": "Commercial real estate",
+  "status": "In development · private beta paused",
+  "color": "purple",
+  "visual": "sitesift",
+  "short": "An AI assistant for commercial real-estate advisors, built to email listing brokers, read their replies into the advisor’s tracker and flag the decisions that are hers. In development: the private beta is paused while each step is proven on live test campaigns.",
+  "role": "Co-founder & engineer",
+  "stack": [
+   "LLM extraction",
+   "Email automation",
+   "Google Sheets",
+   "Google Cloud Run",
+   "Firebase",
+   "React"
+  ],
+  "problem": "A tenant-representation advisor screens a list of 5 to 30 candidate properties by emailing every listing broker, reading each reply and recording the answers in a tracker. The emails go out under her name, so every message and every recorded figure has to be right.",
+  "contribution": "Built the product’s engineering: the advisor’s dashboard and campaign wizard, and the email worker that sends an opening per property, reads broker replies and attachments, writes stated facts to the property’s tracker row and drafts replies in the advisor’s voice. The first beta showed that automated email was not yet meeting that standard, so the beta is paused while each step is proven before advisors rely on it again.",
+  "groups": [
+   [
+    "Check every row first",
+    "The advisor uploads her own spreadsheet. Each property shows the contact and street it will write to before anything is sent, and any row can be left out."
+   ],
+   [
+    "One right opening per broker",
+    "One email per property, greeted by first name or not at all, carrying the client’s requirements and a plain way to say the space is gone or to offer another building."
+   ],
+   [
+    "Facts to the right row",
+    "Rent, size, power, doors and clear height go to the property’s own row as the broker stated them, including mixed bases such as yearly rent with monthly charges. Figures for other buildings must never be written there."
+   ],
+   [
+    "Attachments read",
+    "Flyers, brochures and availability lists are read for the row they belong to, or the advisor is told exactly which file could not be read."
+   ],
+   [
+    "Replies in her voice",
+    "Questions the outreach already answers are answered without involving the advisor, a missing fact is asked for once, and a finished conversation is closed with thanks."
+   ],
+   [
+    "Her decisions, clearly flagged",
+    "Call requests, alternative buildings and replies that must wait on an owner become cards that say what happened and what was or was not sent, leaving the choice to her."
+   ]
+  ],
+  "flow": [
+   "Property list",
+   "Broker conversations",
+   "Tracker and advisor decisions"
+  ],
+  "next": "SiteSift is not open to users today. Each of its eight steps has measurable criteria that count only when proven on a live test campaign against the build that is serving: nine of 22 so far, and no step is complete yet. The beta stays paused until every fault a broker could see is closed.",
+  "evidence": "Screens come from a test account with every address and identity masked. No client correspondence, broker or prospect information is shown.",
+  "decisions": [
+   [
+    "Test fixes against the real model.",
+    "A harness feeds realistic broker replies through the product’s single reply entry point with the real model, under a dollar cap per run; reading one reply costs about 14 cents. Its first run traced every failure to the rules around the model rather than the model itself."
+   ],
+   [
+    "Pin every known fault.",
+    "An offline sweep of 869 realistic phrasings costs nothing to run. Each failing case is pinned to a named fault, so a fix shows up as a flipped test instead of passing silently."
+   ],
+   [
+    "Prove it live with the fewest emails.",
+    "Changes are proven on single-property campaigns between owned test mailboxes, with a fixed email and spend budget. One overnight session ran six such campaigns and shipped four releases for $1.55 of model spend."
+   ]
+  ],
+  "decisionNote": "More than 10,000 automated backend tests and about 3,800 dashboard and cloud-function tests (local runs, 28 September 2026, with 13 known failures tracked by name). Passing tests are not counted as proof here; only live test campaigns are.",
+  "screens": [
+   {
+    "src": "images/product-screens/sitesift-conversation.webp",
+    "alt": "SiteSift conversation in which facts from a broker’s reply appear as chips written to the tracker",
+    "caption": "Test account, 13 September 2026 build: a broker’s partial answer is written as three facts, the product asks once for the four still missing, then records them and closes the conversation. That bulleted ask has since been replaced by one plain sentence. Email addresses are masked.",
+    "width": 1564,
+    "height": 784
+   },
+   {
+    "src": "images/product-screens/sitesift-alternatives.webp",
+    "alt": "SiteSift conversation where a leased space is marked unavailable and the broker’s three alternative flyers each become a card",
+    "caption": "The space is leased, so the row is marked not viable; the broker attaches three alternative flyers, each becomes its own card, and the advisor passes on two and picks one in a single reply. Test account.",
+    "width": 1564,
+    "height": 784
+   },
+   {
+    "src": "images/product-screens/sitesift-reply-held.webp",
+    "alt": "SiteSift card explaining that a reply was held while the broker waits on the building owner",
+    "caption": "A broker still waiting on the owner: the known facts are kept, the reply is held, and the card says nothing was sent. Test account.",
+    "width": 1564,
+    "height": 784
+   }
+  ],
+  "image": "images/product-screens/sitesift-conversation.webp",
+  "imageAlt": "SiteSift conversation in which facts from a broker’s reply appear as chips written to the tracker",
+  "imageCaption": "Test account, 13 September 2026 build: a broker’s partial answer is written as three facts, the product asks once for the four still missing, then records them and closes the conversation. That bulleted ask has since been replaced by one plain sentence. Email addresses are masked.",
+  "imageWidth": 1564,
+  "imageHeight": 784,
+  "logo": "images/brands/sitesift.png",
+  "logoWidth": 669,
+  "logoHeight": 291,
+  "logoKind": "wordmark",
+  "productTitle": "What it is being built to do.",
+  "productNote": "These are the product’s goals. Each one counts as done only when it is proven on a live test campaign; the current count is under Where it stands.",
+  "nextTitle": "In development, measured honestly.",
+  "stage": "development"
+ },
+ {
+  "id": "fiftyflowers-storefront-requests",
+  "title": "Storefront requests, delivered ready to act on.",
+  "name": "Storefront requests",
+  "sector": "FiftyFlowers · Storefront and operations",
+  "status": "Rush form live · contest processing run on 2025 entries",
+  "short": "Two storefront flows: rush-order requests that reach support as ready-to-answer tickets, and contest entries turned into review cards and draft store bundles.",
+  "role": "AI Solutions Engineer · FiftyFlowers",
+  "stack": [
+   "Shopify theme",
+   "JavaScript",
+   "AWS Lambda",
+   "Amazon SES",
+   "Asana API",
+   "Shopify Admin API"
+  ],
+  "problem": "Some storefront requests need a person to act: flowers needed sooner than standard delivery, or a couple sharing their event for the yearly contest. Each has to reach the right team complete, with nothing to re-type.",
+  "contribution": "Built the rush-order form and its request function, from a one-day prototype to the live version. Built the processing step behind the existing Share Your Flair form, ran it over every 2025 entry, then repaired and audited the media.",
+  "groups": [
+   [
+    "A rush request in one step",
+    "Customers choose event and delivery dates, pick exact products from the live catalog with size and quantity, and add contact details and addresses. The form checks it all before sending."
+   ],
+   [
+    "A ticket in the customer’s voice",
+    "Each request becomes one formatted email to the customer-service inbox with the customer as reply-to, so it opens as a helpdesk ticket the team can answer directly."
+   ],
+   [
+    "An acknowledgment right away",
+    "The customer immediately sees a thank-you that explains the next step and asks them to stay reachable while farms are contacted."
+   ],
+   [
+    "One entry, two team workflows",
+    "The Share Your Flair step turns a saved contest entry into two review cards for marketing and a draft store bundle built from the couple’s photos, story and ordered products."
+   ],
+   [
+    "Every 2025 entry, read back",
+    "Every 2025 entry went through it. After a May 2026 repair, a read-only audit found none of the 640 media links broken and every draft photo in place."
+   ]
+  ],
+  "flow": [
+   "Storefront form",
+   "Checks and routing",
+   "Ticket or review cards"
+  ],
+  "next": "The rush form has been live since October 2025. Share Your Flair processing has run on every 2025 entry; releasing its media-link fixes and confirming automatic processing of new entries are the next steps.",
+  "evidence": "The form and entry page are the public storefront pages, shown empty; nothing was typed or sent. The emails are local renders of the real code with invented data.",
+  "decisions": [
+   [
+    "Write it as the customer.",
+    "The rush email is written in the customer’s voice with the customer as reply-to, so the ticket reads naturally and no helpdesk integration is needed."
+   ],
+   [
+    "Read back every write.",
+    "The first run’s writes were all accepted, yet some links were broken and some drafts short of photos. Only re-reading every card proved a clean state."
+   ]
+  ],
+  "decisionNote": "Neither flow uses an AI model. Both are forms, checks and routing into the tools each team already works in.",
+  "nextTitle": "One flow live, one still being released.",
+  "color": "green",
+  "logo": "images/brands/fiftyflowers.svg",
+  "logoWidth": 180,
+  "logoHeight": 83,
+  "logoKind": "wordmark",
+  "category": "companies",
+  "parent": "fiftyflowers",
+  "stage": "rollout",
+  "screens": [
+   {
+    "src": "images/product-screens/ff-rush-form.webp",
+    "alt": "Rush-order request form, empty, with event and delivery dates and a product search",
+    "caption": "The live rush-order form on the storefront, shown empty: event and delivery dates, then products picked from the catalog. Nothing was typed or sent.",
+    "width": 972,
+    "height": 780
+   },
+   {
+    "src": "images/product-screens/ff-rush-email.webp",
+    "alt": "Rush-order email with an invented request: event date, delivery date and two products with links",
+    "caption": "What customer service receives, in the customer’s voice with exact products and links. Local render of the function’s code with an invented request; not sent.",
+    "width": 1280,
+    "height": 718
+   },
+   {
+    "src": "images/product-screens/ff-flair-entry-page.webp",
+    "alt": "Share Your Flair entry page: three steps, the order lookup, prizes and rules",
+    "caption": "The public Share Your Flair page, where an entry starts with an order lookup. The page was already in place; nothing was typed or sent.",
+    "width": 1600,
+    "height": 1793
+   },
+   {
+    "src": "images/product-screens/ff-flair-thank-you.webp",
+    "alt": "Thank-you email for an invented Share Your Flair entry",
+    "caption": "The thank-you email the processing step builds, as a local render with an invented entry. Not sent; the 2025 run was made with customer emails switched off.",
+    "width": 900,
+    "height": 950
+   }
+  ],
+  "image": "images/product-screens/ff-rush-form.webp",
+  "imageWidth": 972,
+  "imageHeight": 780,
+  "imageAlt": "Rush-order request form, empty, with event and delivery dates and a product search",
+  "imageCaption": "The live rush-order form on the storefront, shown empty: event and delivery dates, then products picked from the catalog. Nothing was typed or sent."
+ },
+ {
+  "id": "ai-arena",
+  "title": "The AI plays. The numbers decide.",
+  "name": "AI Arena",
+  "category": "products",
+  "sector": "Simulation · Game AI",
+  "status": "Complete local build · not released",
+  "color": "blue",
+  "short": "Three-a-side AI fighters play a bomb-plant mode in a 3D spectator view, while the same simulation runs headless to measure balance across hundreds of matches.",
+  "role": "Independent developer",
+  "stack": [
+   "Three.js",
+   "Rapier physics",
+   "JavaScript",
+   "Headless simulation"
+  ],
+  "problem": "A match between AI fighters has no correct output to test against. The useful question is whether the game is balanced, and that cannot be answered by watching one match.",
+  "contribution": "Built a deterministic fixed-step simulation, with seeded randomness, a 60 Hz step and physics stepped in a fixed order, that the browser renders and a headless runner batches. Built the fighters' perception, cover, routes, morale and weapon timing.",
+  "groups": [
+   [
+    "Spectator view",
+    "A 3D scene with an automatic camera director and a match HUD. Any seed can be replayed, paused or fast-forwarded."
+   ],
+   [
+    "Fighter decisions",
+    "Perception, cover, routes, morale and weapon timing produce the contest: simulation logic, not chat agents."
+   ],
+   [
+    "Balance laboratory",
+    "Headless batches report team wins, the attack and defense split, round outcomes and each fighter’s impact; every shot is logged with its probability factors."
+   ],
+   [
+    "Decisions from data",
+    "470 logged matches across three batches. In the final 100 matches, attackers won 44.9% of rounds, inside the balance gate, while one team still took 63% of matches, an edge recorded rather than hidden."
+   ]
+  ],
+  "flow": [
+   "Seed",
+   "Deterministic simulation",
+   "Rendered match or balance report"
+  ],
+  "next": "Complete as a local build. Two runs of the same seed already produce byte-identical results (checked 1 October 2026); making that a committed test is next.",
+  "evidence": "Screens are from the local build. Balance figures come from the committed batch logs.",
+  "screens": [
+   {
+    "src": "images/product-screens/ai-arena-plant.webp",
+    "alt": "AI Arena spectator view of a fighter planting the bomb, with team HUD panels",
+    "caption": "A round in progress: one fighter plants while the rest cover, with each fighter’s role, ammunition and state in the HUD.",
+    "width": 1200,
+    "height": 907
+   },
+   {
+    "src": "images/product-screens/ai-arena-balance.webp",
+    "alt": "Balance report table from a 100-match headless batch",
+    "caption": "The final 100-match batch: team wins, the attack and defense split, round outcomes and per-fighter totals.",
+    "width": 1440,
+    "height": 1129
+   }
+  ],
+  "image": "images/product-screens/ai-arena-plant.webp",
+  "imageAlt": "AI Arena spectator view of a fighter planting the bomb, with team HUD panels",
+  "imageCaption": "A round in progress: one fighter plants while the rest cover, with each fighter’s role, ammunition and state in the HUD.",
+  "imageWidth": 1200,
+  "imageHeight": 907,
+  "stage": "built",
+  "nextTitle": "Complete as a local build."
+ },
+ {
+  "id": "fiftyflowers-proposal-manager",
+  "title": "Event flower proposals, built stem by stem.",
+  "name": "Proposal Manager",
+  "sector": "FiftyFlowers · Floral consultations",
+  "status": "Built from the team’s wireframes · not launched",
+  "short": "A web app for floral consultants: an event plan and stem-by-stem recipes become a priced shopping list and a customer presentation. Built, not launched.",
+  "role": "AI Solutions Engineer · FiftyFlowers",
+  "stack": [
+   "React",
+   "Tailwind CSS",
+   "Firebase Auth",
+   "Firestore",
+   "AWS Lambda"
+  ],
+  "problem": "A floral consultation produces an event plan: inspiration, colors, flowers and a recipe for every arrangement. The team’s wireframes asked for one place to build it, price it in store packs and give the customer something to keep.",
+  "contribution": "Implemented the team’s wireframes as a working web app in March 2026: staff sign-in, the proposal editor, catalog search, the recipe-to-shopping-list calculation, and the customer presentation with print-to-PDF and a pre-filled cart link.",
+  "groups": [
+   [
+    "The whole proposal in one place",
+    "Customer and event, inspiration photos, a color palette, chosen flowers and a recipe for every arrangement. The editor saves as the consultant works, and any proposal can be duplicated."
+   ],
+   [
+    "Flowers from the store catalog",
+    "A flower is added by searching the catalog or by asking the embedded AI Floral Assistant, and arrives with its category, pack sizes and prices."
+   ],
+   [
+    "Recipes, stem by stem",
+    "Each recipe lists its flowers with the stems per piece and the number of pieces to make. Half stems are allowed, and a recipe can be reused from another proposal."
+   ],
+   [
+    "A calculated shopping list",
+    "Stems per piece times pieces, added across recipes, gives each flower’s need. The app suggests the smallest pack that covers it and shows the surplus or shortfall of the others."
+   ],
+   [
+    "What the customer keeps",
+    "A presentation of up to 12 pages, from cover and inspiration to recipes and the priced list, printed to PDF from the browser. One button opens a store cart with the chosen packs."
+   ]
+  ],
+  "flow": [
+   "Event and recipes",
+   "Stems to packs and prices",
+   "Presentation and cart"
+  ],
+  "next": "Built in March 2026 and not launched; work paused when the DIY kit migration took priority. Before any launch, the presentation page and product search need repairs, and the shopping list needs a line-by-line check.",
+  "evidence": "Presentation pictures are local renders of the app’s code with an invented proposal; the live presentation page needs a repair. The editor picture is view only.",
+  "decisions": [
+   [
+    "Calculate the list, store the choices.",
+    "The shopping list is recalculated from the recipes each time it is shown. Only the consultant’s pack choices are saved with the proposal."
+   ],
+   [
+    "Start from the design export.",
+    "Five wireframe frames were exported as code on the first day and made interactive the same evening, which gave the team something real to react to."
+   ]
+  ],
+  "decisionNote": "Built in 74 recorded changes between March 3 and 31, 2026. The shopping-list arithmetic has not yet been checked line by line against real store packs.",
+  "nextTitle": "Built, with repairs before any launch.",
+  "color": "green",
+  "logo": "images/brands/fiftyflowers.svg",
+  "logoWidth": 180,
+  "logoHeight": 83,
+  "logoKind": "wordmark",
+  "category": "companies",
+  "parent": "fiftyflowers",
+  "stage": "built",
+  "screens": [
+   {
+    "src": "images/product-screens/ff-proposal-cover.webp",
+    "alt": "Customer presentation cover for an invented garden wedding proposal",
+    "caption": "What a customer would receive: the presentation’s cover. Local render of the app’s code with an invented proposal.",
+    "width": 1600,
+    "height": 1000
+   },
+   {
+    "src": "images/product-screens/ff-proposal-inspiration.webp",
+    "alt": "Inspiration pictures and a color palette in the customer presentation",
+    "caption": "Inspiration and color palette, with placeholder drawings standing in for a real customer’s photos. Local render, invented proposal.",
+    "width": 1600,
+    "height": 930
+   },
+   {
+    "src": "images/product-screens/ff-proposal-recipes.webp",
+    "alt": "Featured blooms and a card for each arrangement recipe in the customer presentation",
+    "caption": "Featured blooms and a card per recipe, each listing its flowers stem by stem. Local render, invented proposal.",
+    "width": 1600,
+    "height": 1522
+   },
+   {
+    "src": "images/product-screens/ff-proposal-shopping-list.webp",
+    "alt": "Presentation shopping list: flowers by group with pack, stems needed and price, then the order totals",
+    "caption": "The presentation’s shopping list: each flower’s pack, the stems its recipes need, the price and the totals. Local render, invented proposal; the discount code is hidden.",
+    "width": 1600,
+    "height": 1896
+   },
+   {
+    "src": "images/product-screens/ff-proposal-stem-math.webp",
+    "alt": "Editor shopping list with the stem calculation and pack choices for one flower",
+    "caption": "In the editor: 57 rose stems added up across eight recipes, each pack’s shortfall or surplus, and the suggested pack. View only; product photos did not load.",
+    "width": 1358,
+    "height": 1420
+   }
+  ],
+  "image": "images/product-screens/ff-proposal-cover.webp",
+  "imageWidth": 1600,
+  "imageHeight": 1000,
+  "imageAlt": "Customer presentation cover for an invented garden wedding proposal",
+  "imageCaption": "What a customer would receive: the presentation’s cover. Local render of the app’s code with an invented proposal."
+ },
+ {
+  "id": "ai-media-manager",
+  "title": "A visual library for social research.",
+  "name": "AI Media Manager",
+  "category": "products",
+  "sector": "Social-media research",
+  "status": "Prototype · post importing still being proven",
+  "color": "rose",
+  "visual": "media",
+  "short": "Connected Instagram accounts and their imported posts in one media library, with organisations and roles. A prototype on its third build; importing is not yet dependable.",
+  "role": "Software Engineer · personal prototype",
+  "stack": [
+   "React",
+   "Firebase",
+   "Headless browser",
+   "Vision model",
+   "Organization roles"
+  ],
+  "problem": "Social research starts with a usable collection of accounts and posts. The idea was one place where a brand’s own posts, the posts its customers tag it in and what is working in its field can be looked at side by side, before any AI drafting is layered on top.",
+  "contribution": "This is the third build in the same area, each replacing the last. The first was a drafting tool: choose a platform, read an AI strategy summary and post ideas, and get a draft rewritten to sound natural. The second was a larger planning dashboard with creator outreach, a week planner and post ideas with reasons, which reached a clickable design before its foundations were dependable. The rebuild goes in phases, each checked before the next. Sign-in, organisations and roles were checked locally and live. The Instagram phase is built but not yet signed off: accounts added by their public username, a media library of imported posts, and a sync engine that drives a headless browser, saves each slide and uses a vision model to read each post page and label each saved slide.",
+  "groups": [
+   [
+    "Organisations and roles",
+    "One sign-in can belong to several organisations. Each has an owner, admins and members, and an invitation stays pending until it is accepted."
+   ],
+   [
+    "Connected accounts",
+    "An organisation’s Instagram accounts sit on one page, added by their public username, each with its followers, post count and sync status."
+   ],
+   [
+    "The media library",
+    "The account’s own posts in one grid, and a second grid set aside for posts it is tagged in. Opening a post steps through a carousel’s slides with its like and comment counts and caption."
+   ],
+   [
+    "Sync status",
+    "Each account shows when it last synced and how long that took, and a sync that crashes or stalls is flagged."
+   ]
+  ],
+  "flow": [
+   "Organisation",
+   "Connected accounts",
+   "Imported posts",
+   "Media library"
+  ],
+  "next": "Two parts are unfinished. Importing: capturing every slide of a carousel is not yet dependable, a reel is saved as a still picture and not its video, a sync that finishes with gaps is still marked as synced, and bringing in the posts an account is tagged in is not built, because Instagram shows them only after sign-in. And keeping each organisation’s data private to its own members is not finished. Finding what is trending in an account’s field, and AI drafting on top of the library, come after that.",
+  "evidence": "Every picture on this page is the real interface running on my own machine with an invented brand and sample pictures. The prototype’s only real account data belongs to someone else, so none of it is published.",
+  "screens": [
+   {
+    "src": "images/product-screens/aimedia-library.webp",
+    "alt": "Media library for a sample Instagram account: profile, engagement totals and two grids of posts",
+    "caption": "The media library for one connected account: its profile, engagement totals, its own posts and a second grid set aside for posts it is tagged in. Run on my own machine with an invented brand and sample pictures.",
+    "width": 1440,
+    "height": 900,
+    "label": "Media library"
+   },
+   {
+    "src": "images/product-screens/aimedia-post.webp",
+    "alt": "A carousel post open in a side panel beside the library",
+    "caption": "Opening a post: each slide of a carousel, with its like and comment counts and caption, beside the grid. Local run, sample data.",
+    "width": 1440,
+    "height": 900,
+    "label": "Post detail"
+   },
+   {
+    "src": "images/product-screens/aimedia-accounts.webp",
+    "alt": "Connected Instagram accounts for one organisation, with the organisation switcher open",
+    "caption": "One sign-in, several organisations, each with its own connected accounts. Local run, sample data.",
+    "width": 1440,
+    "height": 660,
+    "label": "Accounts and organisations"
+   },
+   {
+    "src": "images/product-screens/aimedia-team.webp",
+    "alt": "Team settings: the owner and two pending invitations with their roles",
+    "caption": "Roles inside an organisation: the owner, and invitations waiting for an admin and a member. Local run, sample data.",
+    "width": 1440,
+    "height": 660,
+    "label": "Team and roles"
+   },
+   {
+    "src": "images/product-screens/aimedia-plan-outreach.webp",
+    "alt": "Planning dashboard with three creator cards, each with a reason to reach out and a suggested message",
+    "caption": "The second build was a planning dashboard. Here: creators worth contacting, each with the reason and a suggested first message. A clickable design: everything on this screen is placeholder content, not read from a live account.",
+    "width": 1440,
+    "height": 900,
+    "label": "Creator outreach",
+    "group": "Earlier build: the planning dashboard"
+   },
+   {
+    "src": "images/product-screens/aimedia-plan-week.webp",
+    "alt": "Week planner marking the best days and hours, with two scheduled posts and a column of drafts",
+    "caption": "Same build: a week planner that marks the best days and hours, beside draft posts and who owns each. Placeholder content.",
+    "width": 1440,
+    "height": 900,
+    "label": "Week planner",
+    "group": "Earlier build: the planning dashboard"
+   },
+   {
+    "src": "images/product-screens/aimedia-plan-ideas.webp",
+    "alt": "Post ideas, each with a reason and the posts it is based on",
+    "caption": "Same build: post ideas, each with the reason it should work and the posts behind that reason. Placeholder content.",
+    "width": 1440,
+    "height": 900,
+    "label": "Post ideas",
+    "group": "Earlier build: the planning dashboard"
+   },
+   {
+    "src": "images/product-screens/aimedia-first-platforms.webp",
+    "alt": "Social Command Center: five platform cards with follower figures",
+    "caption": "The first build: choose a platform and it returns an AI strategy summary and post ideas. Shown with a sample brand; the follower figures on this screen were fixed numbers, not live counts.",
+    "width": 1440,
+    "height": 900,
+    "label": "First build",
+    "group": "Where it started: the Social Command Center"
+   }
+  ],
+  "logo": "images/brands/ai-media-manager.svg",
+  "logoWidth": 32,
+  "logoHeight": 32,
+  "logoKind": "icon",
+  "stage": "development",
+  "nextTitle": "A prototype, clearly labeled.",
+  "productTitle": "What the current build does.",
+  "productNote": "The rebuild is the third build in this area. Its screens come first; the two earlier builds follow, labelled.",
+  "image": "images/product-screens/aimedia-library.webp",
+  "imageWidth": 1440,
+  "imageHeight": 900,
+  "imageAlt": "Media library for a sample Instagram account: profile, engagement totals and two grids of posts",
+  "imageCaption": "The media library for one connected account: its profile, engagement totals, its own posts and a second grid set aside for posts it is tagged in. Run on my own machine with an invented brand and sample pictures.",
+  "previewLimit": 4
+ },
+ {
+  "id": "fiftyflowers-diy-migration",
+  "title": "Hundreds of kit recipes and 2,789 arrangement plans, moved and checked.",
+  "name": "DIY kit data migration",
+  "category": "companies",
+  "sector": "FiftyFlowers · Product data",
+  "status": "Delivered on a test copy of the store",
+  "color": "green",
+  "short": "Matched farm spreadsheets to store products and wrote recipes, purchase links and 2,789 arrangement plans onto a test copy of the store, each traced to its source.",
+  "role": "AI Solutions Engineer · FiftyFlowers",
+  "stack": [
+   "Python",
+   "Spreadsheet parsing",
+   "Data matching",
+   "Content-system APIs",
+   "Verification"
+  ],
+  "problem": "DIY flower kits were defined across farm workbooks and a large internal planning workbook. The store’s product system needed the same recipes, purchase links and arrangement plans, without hand entry and without silent changes.",
+  "contribution": "Built the readers, matchers and writers with source tracking, so every written value traces to the worksheet cell it came from and every worksheet ends with a recorded outcome.",
+  "groups": [
+   [
+    "Read the farm books",
+    "509 kit entries read from nine farm workbooks, 504 of them usable. Re-reading the full set of 16 farm books takes about 27 seconds whenever the farms send updates."
+   ],
+   [
+    "Match and write",
+    "498 entries matched to store products; recipes and purchase links written for 494, with the rest held for a reason recorded beside them."
+   ],
+   [
+    "Arrangements",
+    "All 255 planning worksheets have an outcome; 2,789 arrangements on 139 kits were written, each checked against its worksheet."
+   ],
+   [
+    "Nothing silently changed",
+    "Every substitution, missing flower or shortfall went into review lists for the merchandising team instead of being guessed."
+   ]
+  ],
+  "flow": [
+   "Farm and planning workbooks",
+   "Matched products",
+   "Checked recipes and arrangements"
+  ],
+  "next": "Delivered on a test copy of the store; moving it into the live store is the company’s next step.",
+  "evidence": "No supplier names, purchase costs or internal pricing are shown.",
+  "screens": [
+   {
+    "src": "images/product-screens/ff-diy-arrangements.webp",
+    "alt": "A DIY kit’s arrangement plan on the test store, listing each piece and its stems",
+    "caption": "A kit’s arrangement plan on the test copy: each piece to make, how many, and its stems by section.",
+    "width": 1600,
+    "height": 1000
+   }
+  ],
+  "image": "images/product-screens/ff-diy-arrangements.webp",
+  "imageAlt": "A DIY kit’s arrangement plan on the test store, listing each piece and its stems",
+  "imageCaption": "A kit’s arrangement plan on the test copy: each piece to make, how many, and its stems by section.",
+  "imageWidth": 1600,
+  "imageHeight": 1000,
+  "logo": "images/brands/fiftyflowers.svg",
+  "logoWidth": 180,
+  "logoHeight": 83,
+  "logoKind": "wordmark",
+  "parent": "fiftyflowers",
+  "stage": "built",
+  "nextTitle": "Delivered on a test copy."
+ },
+ {
+  "id": "client-portal",
+  "name": "Client Portal",
+  "title": "A shared place for client work.",
+  "category": "earlier",
+  "sector": "WebMarkets · Digital marketing agency",
+  "status": "Earlier work · 2024 internship",
+  "color": "blue",
+  "image": "images/product-screens/client-portal-updates.webp",
+  "short": "WebMarkets’ first client portal, built largely on my own in two weeks during my internship.",
+  "role": "Web Developer Intern",
+  "stack": [
+   "Preact",
+   "TypeScript",
+   "Node.js",
+   "Firebase"
+  ],
+  "problem": "WebMarkets needed a central workspace for client communication, project updates and account management.",
+  "contribution": "Independently built WebMarkets’ first client portal in two weeks during my 2024 internship—my first professional software assignment. The lead developer helped with initial setup and CSS, with shared input on visual direction.",
+  "legacy": true,
+  "imageWidth": 2534,
+  "imageHeight": 1372,
+  "screens": [
+   {
+    "src": "images/product-screens/client-portal-updates.webp",
+    "alt": "Client portal updates feed and navigation with personal details covered",
+    "caption": "Client updates feed from the original 2024 portal. Personal details and profile illustrations are covered.",
+    "width": 2534,
+    "height": 1372
+   },
+   {
+    "src": "images/product-screens/client-portal-notifications.webp",
+    "alt": "Client portal notifications for approvals, documents and updates",
+    "caption": "Notification history from the original 2024 portal. Browser chrome is removed and email addresses are covered.",
+    "width": 2194,
+    "height": 1190
+   }
+  ],
+  "imageAlt": "Client portal updates feed and navigation with personal details covered",
+  "imageCaption": "Client updates feed from the original 2024 portal. Personal details and profile illustrations are covered.",
+  "logo": "images/brands/webmarkets.webp",
+  "logoWidth": 1034,
+  "logoHeight": 156,
+  "logoKind": "wordmark",
+  "logoLabel": "WebMarkets",
+  "stage": "earlier",
+  "nextTitle": "Where this one sits."
+ },
+ {
+  "id": "alpha-seo",
+  "name": "ALPHA SEO",
+  "title": "Tools for focused search optimization.",
+  "category": "earlier",
+  "sector": "WebMarkets · Digital marketing agency",
+  "status": "Earlier work · 2024 internship, team project",
+  "color": "green",
+  "visual": "seo",
+  "short": "Frontend and backend contributions to WebMarkets’ domain-focused SEO platform.",
+  "role": "Web Developer Intern",
+  "stack": [
+   "React",
+   "TypeScript",
+   "Node.js",
+   "Firebase"
+  ],
+  "problem": "WebMarkets needed a domain-focused SEO optimization interface.",
+  "contribution": "Co-developed frontend and backend features with the WebMarkets engineering team during my 2024 internship. The original project demonstration is retained above.",
+  "legacy": true,
+  "videoId": "rbcvWOjfI3E",
+  "videoCaption": "Original ALPHA SEO product demonstration from the 2024 internship. Historical footage; co-developed with the agency engineering team.",
+  "logo": "images/brands/webmarkets.webp",
+  "logoWidth": 1034,
+  "logoHeight": 156,
+  "logoKind": "wordmark",
+  "logoLabel": "WebMarkets",
+  "stage": "earlier",
+  "nextTitle": "Where this one sits."
+ },
+ {
+  "id": "pacman",
+  "name": "Java Pacman",
+  "title": "A familiar game, with room to experiment.",
+  "category": "earlier",
+  "sector": "Game development",
+  "status": "Earlier work · personal project",
+  "color": "ink",
+  "image": "images/Pacmanpic2.jpg",
+  "short": "A state-based Java game with two-player and free-movement variations.",
+  "role": "Independent developer",
+  "stack": [
+   "Java",
+   "State machines",
+   "Game systems"
+  ],
+  "problem": "Recreating a familiar game offered a way to explore game states, movement and rule variations.",
+  "contribution": "Developed a Java Pacman game with two-player mode, free movement and expanded traversal. The original code and feature walkthrough are preserved.",
+  "legacy": true,
+  "imageWidth": 1916,
+  "imageHeight": 1438,
+  "screens": [
+   {
+    "src": "images/product-screens/pacman-1.webp",
+    "alt": "Java Pacman gameplay with the maze, ghosts, score and active power-up bar.",
+    "caption": "Maze gameplay and power-up state · historical Java build.",
+    "width": 1466,
+    "height": 1100
+   },
+   {
+    "src": "images/product-screens/pacman-2.webp",
+    "alt": "Pacman start menu with a Play button and two-player option.",
+    "caption": "Start menu and two-player option · historical Java build.",
+    "width": 1469,
+    "height": 1100
+   },
+   {
+    "src": "images/product-screens/pacman-3.webp",
+    "alt": "Another Java Pacman gameplay state with remaining lives and an inactive power-up bar.",
+    "caption": "A second gameplay state with remaining lives · historical Java build.",
+    "width": 1469,
+    "height": 1100
+   }
+  ],
+  "stage": "earlier",
+  "nextTitle": "Where this one sits."
+ },
+ {
+  "id": "machine-learning-visualization",
+  "name": "3D Machine Learning",
+  "title": "Make the data something to explore.",
+  "category": "earlier",
+  "sector": "ASU · Team capstone",
+  "status": "Earlier work · ASU team capstone",
+  "color": "purple",
+  "image": "images/MachineLearningVisualization.png",
+  "short": "An interactive 3D learning environment for machine-learning concepts.",
+  "role": "Member of a five-person team",
+  "stack": [
+   "Unity",
+   "C#",
+   "Machine learning",
+   "3D visualization"
+  ],
+  "problem": "Machine-learning concepts benefit from an environment where learners can inspect and interact with the data.",
+  "contribution": "Worked in a team of five on a 3D visualization tool for an ASU professor. The original walkthrough includes data positioning and interactive predictions.",
+  "legacy": true,
+  "imageWidth": 1786,
+  "imageHeight": 1002,
+  "screens": [
+   {
+    "src": "images/product-screens/machine-learning-visualization-1.webp",
+    "alt": "Interactive 3D Iris classifier with flower-measurement inputs, a data plot and prediction legend.",
+    "caption": "Interactive Iris classification and 3D data exploration · ASU team capstone.",
+    "width": 1600,
+    "height": 898
+   }
+  ],
+  "excludedLegacyImages": [
+   "images/MachineLearningVisualizationMenu.png"
+  ],
+  "stage": "earlier",
+  "nextTitle": "Where this one sits."
+ },
+ {
+  "id": "lunar-base",
+  "name": "Lunar Base",
+  "title": "A small world, built from the ground up.",
+  "category": "earlier",
+  "sector": "Interactive 3D",
+  "status": "Earlier work · personal project",
+  "color": "sand",
+  "image": "images/LunarBase.png",
+  "short": "A Unity environment with custom terrain, animation and third-person exploration.",
+  "role": "Environment & gameplay developer",
+  "stack": [
+   "Unity",
+   "C#",
+   "Animation",
+   "3D environments"
+  ],
+  "problem": "Create an explorable environment that combines world-building with responsive character control.",
+  "contribution": "Designed a moon-base environment with custom terrain, skybox and animations, including a third-person controller. Original imagery and the animation-state diagram are retained.",
+  "legacy": true,
+  "imageWidth": 1790,
+  "imageHeight": 1004,
+  "screens": [
+   {
+    "src": "images/product-screens/lunar-base-1.webp",
+    "alt": "Third-person character overlooking modular lunar buildings from a raised platform.",
+    "caption": "Rooftop exploration and the base exterior · historical Unity build.",
+    "width": 1600,
+    "height": 897
+   },
+   {
+    "src": "images/product-screens/lunar-base-2.webp",
+    "alt": "Third-person character inside the lunar base with a large interior floor and doorways.",
+    "caption": "Base interior and third-person scale · historical Unity build.",
+    "width": 1600,
+    "height": 899
+   },
+   {
+    "src": "images/product-screens/lunar-base-3.webp",
+    "alt": "Lunar base interior with storage racks, stairs and overhead piping.",
+    "caption": "Interior detail, stairs and storage · historical Unity build.",
+    "width": 1600,
+    "height": 896
+   },
+   {
+    "src": "images/product-screens/lunar-base-4.webp",
+    "alt": "Third-person character standing on uneven lunar terrain beneath a starry sky.",
+    "caption": "Terrain exploration and skybox · historical Unity build.",
+    "width": 1600,
+    "height": 897
+   },
+   {
+    "src": "images/product-screens/lunar-base-5.webp",
+    "alt": "Wide Unity scene view of the lunar base within the surrounding terrain.",
+    "caption": "Environment overview in the Unity editor · historical scene view.",
+    "width": 1600,
+    "height": 845
+   },
+   {
+    "src": "images/product-screens/lunar-base-6.webp",
+    "alt": "Unity animation state machine linking idle, directional sprint and jump states.",
+    "caption": "Character animation state machine · original implementation diagram.",
+    "width": 1480,
+    "height": 760
+   }
+  ],
+  "stage": "earlier",
+  "nextTitle": "Where this one sits."
+ },
+ {
+  "id": "ai-travel-companion",
+  "name": "AI Travel Companion",
+  "title": "Turn a conversation into an itinerary.",
+  "category": "earlier",
+  "sector": "iOS application",
+  "status": "Earlier work · personal prototype",
+  "color": "rose",
+  "image": "images/TravelCompanionItinerary.png",
+  "short": "A Swift app that combines conversation, itinerary editing and maps.",
+  "role": "iOS developer",
+  "stack": [
+   "Swift",
+   "OpenAI API",
+   "Maps",
+   "Location services"
+  ],
+  "problem": "Travel planning moves between conversation, a schedule and places on a map.",
+  "contribution": "Built an iOS app that uses conversation to create and update an itinerary, with integrated map and location features. Original screens remain in the walkthrough.",
+  "legacy": true,
+  "imageWidth": 1179,
+  "imageHeight": 2556,
+  "screens": [
+   {
+    "src": "images/product-screens/ai-travel-companion-1.webp",
+    "alt": "iOS travel app showing a Los Angeles map above an itinerary-planning conversation.",
+    "caption": "Map and planning conversation · historical iOS prototype.",
+    "width": 600,
+    "height": 1301
+   },
+   {
+    "src": "images/product-screens/ai-travel-companion-2.webp",
+    "alt": "Travel app showing a dated itinerary and a conversation used to add plans.",
+    "caption": "Conversation connected to an itinerary · historical iOS prototype.",
+    "width": 600,
+    "height": 1301
+   },
+   {
+    "src": "images/product-screens/ai-travel-companion-3.webp",
+    "alt": "Travel app trip list containing Los Angeles, Italy and Bahamas.",
+    "caption": "Trip list · historical iOS prototype.",
+    "width": 600,
+    "height": 1301
+   },
+   {
+    "src": "images/product-screens/ai-travel-companion-4.webp",
+    "alt": "Travel itinerary item editor with an event title, start time, end time and save control.",
+    "caption": "Editing an itinerary item · historical iOS prototype.",
+    "width": 600,
+    "height": 1301
+   }
+  ],
+  "stage": "earlier",
+  "nextTitle": "Where this one sits."
+ }
 ]

@@ -9,7 +9,8 @@ def preview_screens(project):
  for screen in screens:
   if screen['src'] not in seen:
    seen.add(screen['src']);result.append(screen)
- return result
+ # A long set shows its first few screens on a card; the product page shows them all.
+ return result[:project['previewLimit']] if project.get('previewLimit') else result
 
 def screen_gallery(project,layered=False):
  screens=preview_screens(project)

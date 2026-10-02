@@ -44,7 +44,7 @@ for p in projects:
   for src in re.findall(r'<img[^>]+src="([^"]+)"',active):
    if src not in p.get('excludedLegacyImages',[]) and src not in (root/f'{p["id"]}.html').read_text():errors.append(f'{p["id"]}: lost original media {src}')
  if f'/{p["id"]}/' not in (root/'index.html').read_text():errors.append(f'{p["id"]}: absent from gallery')
-assert len(projects)==13
+assert len(projects)==21
 assert 'href="/"' in (root/'404.html').read_text()
 assert '<base' not in (root/'404.html').read_text()
 config=(root/'_config.yml').read_text()
