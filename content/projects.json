@@ -3900,7 +3900,7 @@
     "alt": "A broker’s message with two green chips, followed by a short reply",
     "caption": "A broker’s rent and expenses, quoted per month, are written to the tracker as yearly figures, then one sentence asks for what is missing. A local run put together from recorded test cases.",
     "width": 1130,
-    "height": 608,
+    "height": 564,
     "label": "A partial answer, then one short ask"
    },
    {
@@ -3942,7 +3942,7 @@
     "eyebrow": "Campaign wizard · before anything is sent",
     "title": "Every row is checked before a single email goes.",
     "intro": "The advisor uploads her own property list. The wizard shows each row with the contact it will write to, lets her say what to ask for column by column, drafts the opening email in her name, and holds the launch if the message asks for something the columns say not to.",
-    "note": "Local run of today’s build with an invented advisor, brokers and addresses; nothing was sent and no AI was called.",
+    "note": "Local run of today’s build with invented people and addresses; nothing was sent and no AI was called.",
     "screens": [
      {
       "src": "images/product-screens/ss-verify.webp",
@@ -4001,7 +4001,7 @@
     "eyebrow": "Dashboard · what needs her",
     "title": "One row per campaign, one line per decision.",
     "intro": "The dashboard opens on the advisor’s campaigns. A campaign that needs her says so on its own row, and opening it lists each decision by kind and property.",
-    "note": "Local run of today’s build with an invented advisor, brokers and addresses; nothing was sent and no AI was called.",
+    "note": "Local run of today’s build with invented people and addresses; nothing was sent and no AI was called.",
     "screens": [
      {
       "src": "images/product-screens/ss-dashboard.webp",
@@ -4036,7 +4036,7 @@
     "eyebrow": "Conversations · facts to the tracker",
     "title": "Each stated fact goes to the tracker; only what is missing is asked for.",
     "intro": "A broker answers in pieces. Each figure is written to the property’s own row as he stated it, shown as a chip under his message, and the product asks once, in one sentence, for what is still missing.",
-    "note": "Local run of today’s build with an invented advisor, brokers and addresses. The conversation was put together from recorded test cases and the product’s own fixed sentences; the emails are the messages it composes, opened in a browser, and the tracker is drawn as a plain grid from what it wrote. Nothing was sent and no AI was called.",
+    "note": "Local run of today’s build with invented people and addresses. The conversation was put together from recorded test cases and the product’s own fixed sentences; nothing was sent and no AI was called.",
     "screens": [
      {
       "src": "images/product-screens/ss-thread-ask.webp",
@@ -4044,7 +4044,7 @@
       "label": "A partial answer, then one short ask",
       "caption": "Rent and expenses quoted per month are written to the tracker as yearly figures, and one sentence asks for the clear height and the doors.",
       "width": 1130,
-      "height": 608,
+      "height": 564,
       "wide": true
      },
      {
@@ -4053,7 +4053,7 @@
       "label": "The last answer and the close",
       "caption": "Three more facts are written, the closing reply goes, and the property is marked complete.",
       "width": 1130,
-      "height": 602
+      "height": 636
      },
      {
       "src": "images/product-screens/ss-replies.webp",
@@ -4079,7 +4079,7 @@
     "eyebrow": "Advisor cards · her call",
     "title": "When the decision is hers, the reply is already written.",
     "intro": "Tours, other buildings, hand-offs to a colleague, questions only the client can answer: each reaches the advisor as a card that says what happened and what already went out, with a reply she can send as it is or rewrite.",
-    "note": "Local run of today’s build with an invented advisor, brokers and addresses. The broker messages are invented and the product’s sentences are its own fixed text; nothing was sent and no AI was called.",
+    "note": "Local run of today’s build with invented people and addresses. The broker messages are invented and the product’s replies are its own fixed text; nothing was sent.",
     "screens": [
      {
       "src": "images/product-screens/ss-tour.webp",
@@ -4130,7 +4130,7 @@
     "eyebrow": "Endings · nothing sent that should not be",
     "title": "A stop is a stop, and the dashboard says so.",
     "intro": "A broker who asks to be left alone is stopped and remembered. Stopping a campaign says what it will cancel and what it keeps, and when nothing can be sent the dashboard says why.",
-    "note": "Local run of today’s build with an invented advisor, brokers and addresses. The broker messages are invented and the product’s sentences are its own fixed text; nothing was sent and no AI was called.",
+    "note": "Local run of today’s build with invented people and addresses. The broker messages are invented and the product’s replies are its own fixed text; nothing was sent.",
     "screens": [
      {
       "src": "images/product-screens/ss-optout.webp",
