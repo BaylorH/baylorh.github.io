@@ -3300,32 +3300,50 @@
    "Decision & reporting"
   ],
   "next": "Scoring activity updates independently from imported loan-history data. Next steps focus on repeatable data refreshes and more precise links between policy changes and affected loans. The savings figure is my own estimate, not an audited number, and it is one part of the value: the dashboard’s five views show the team how scoring, policy settings and lead sources play out across funded loans.",
-  "evidence": "The workflow represents the documented service and dashboard. No customer applications are included, and every figure and trend is covered.",
+  "evidence": "Screens are local runs of the dashboard’s own code with invented applicants, sources and figures; none of the numbers are the lender’s, and no customer application is shown.",
   "logo": "images/till-logo.png",
   "screens": [
    {
-    "src": "images/product-screens/hal-overview.webp",
-    "alt": "HAL lending dashboard with private operating figures redacted",
-    "caption": "The HAL overview brings scoring activity and decision reporting together. Figures and data-freshness badges are covered; no settings were changed.",
-    "width": 1425,
-    "height": 891
+    "src": "images/product-screens/till-overview.webp",
+    "alt": "A dark dashboard with eight headline figures in two rows",
+    "caption": "The dashboard’s Overview. A local run with invented applicants, sources and figures; none of the numbers are the lender’s.",
+    "width": 1440,
+    "height": 975,
+    "label": "The period at a glance"
    },
    {
-    "src": "images/product-screens/hal-sources.webp",
-    "alt": "HAL lead-source analytics showing trend charts with private values covered",
-    "caption": "Lead-source reporting, captured September 24, 2026. Source names, figures, status tiles and trend lines are covered.",
-    "width": 1425,
-    "height": 891
+    "src": "images/product-screens/till-thresholds.webp",
+    "alt": "Five state cards with a number each and a save button",
+    "caption": "Policy settings: one threshold per state, saved as a recorded action.",
+    "width": 1440,
+    "height": 862,
+    "label": "The policy editor"
+   },
+   {
+    "src": "images/product-screens/till-playground.webp",
+    "alt": "Four sliders above four headline figures and a list of sources",
+    "caption": "Scenario analysis: history replayed against a stricter threshold.",
+    "width": 1440,
+    "height": 870,
+    "label": "The replay"
+   },
+   {
+    "src": "images/product-screens/till-funded.webp",
+    "alt": "A large heading above two panels of figures",
+    "caption": "Funded History: a customer’s first loan compared with their later ones.",
+    "width": 1440,
+    "height": 1020,
+    "label": "First funding against later funding"
    }
   ],
   "logoWidth": 312,
   "logoHeight": 152,
   "logoKind": "wordmark",
-  "image": "images/product-screens/hal-overview.webp",
-  "imageAlt": "HAL lending dashboard with private operating figures redacted",
-  "imageCaption": "The HAL overview brings scoring activity and decision reporting together. Figures and data-freshness badges are covered; no settings were changed.",
-  "imageWidth": 1425,
-  "imageHeight": 891,
+  "image": "images/product-screens/till-overview.webp",
+  "imageAlt": "A dark dashboard with eight headline figures in two rows",
+  "imageCaption": "The dashboard’s Overview. A local run of the dashboard’s own code with invented applicants, sources and figures; none of the numbers are the lender’s.",
+  "imageWidth": 1440,
+  "imageHeight": 975,
   "decisions": [
    [
     "Protect policy changes from conflicting edits.",
@@ -3340,7 +3358,217 @@
   "stage": "production",
   "nextTitle": "In production, with clear next steps.",
   "created": "2025-07",
-  "createdFrom": "scoring repository 17 Jul 2025"
+  "createdFrom": "scoring repository 17 Jul 2025",
+  "chapters": [
+   {
+    "id": "overview",
+    "nav": "Overview",
+    "eyebrow": "Overview · see the activity",
+    "title": "Live scoring, and the decision behind each number.",
+    "intro": "The Overview compares the chosen period with the one before: applications scored, accept rate and average score, then how funded loans went on to perform. Any recent decision opens to what was asked for, the credit scores, the score and the threshold it was held to.",
+    "note": "Local run of the dashboard’s own code with invented applicants, sources and figures.",
+    "screens": [
+     {
+      "src": "images/product-screens/till-overview.webp",
+      "alt": "A dark dashboard with eight headline figures in two rows",
+      "label": "The period at a glance",
+      "caption": "Live scoring figures for the last 30 days against the 30 before, above the outcomes of loans that have matured.",
+      "width": 1440,
+      "height": 975,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/till-decision.webp",
+      "alt": "A table of recent decisions with one row expanded into three panels",
+      "label": "One decision, opened",
+      "caption": "A recent decision with its application, its credit scores, the score and the threshold.",
+      "width": 1440,
+      "height": 605
+     },
+     {
+      "src": "images/product-screens/till-states.webp",
+      "alt": "Five state cards above a daily bar chart in red and green",
+      "label": "By state, and day by day",
+      "caption": "Accept and deny counts and accept rate by state, above the daily volume scored, with the 30 days before shown for comparison.",
+      "width": 1440,
+      "height": 717
+     },
+     {
+      "src": "images/product-screens/till-rate-score.webp",
+      "alt": "Two line charts above two histograms",
+      "label": "Rate, score and margin",
+      "caption": "Accept rate and average score by day, with the previous period dashed, then the spread of scores and their margin to the threshold.",
+      "width": 1440,
+      "height": 1025
+     },
+     {
+      "src": "images/product-screens/till-performed.webp",
+      "alt": "Cards per state above two multi-line charts",
+      "label": "How loans performed",
+      "caption": "Matured loans by state: observed net, first-payment misses and the share that were profitable, then both by month.",
+      "width": 1440,
+      "height": 805
+     }
+    ]
+   },
+   {
+    "id": "policy",
+    "nav": "Policy settings",
+    "eyebrow": "Policy settings · a recorded history",
+    "title": "A threshold per state, and a log of every change.",
+    "intro": "Each state has one minimum score. A change is saved as a recorded action with who made it and when, and the log shows what was observed among loans funded before and after it, with a plain note on what that comparison can and cannot show.",
+    "note": "Local run of the dashboard’s own code with invented applicants, sources and figures.",
+    "screens": [
+     {
+      "src": "images/product-screens/till-thresholds.webp",
+      "alt": "Five state cards with a number each and a save button",
+      "label": "The policy editor",
+      "caption": "One value per state, changed with plus and minus and saved together, above the start of the change log.",
+      "width": 1440,
+      "height": 862,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/till-change-log.webp",
+      "alt": "A dated list of threshold changes with stricter and looser tags",
+      "label": "The change log",
+      "caption": "Every saved change with its date, who saved it, and whether it made the bar stricter or looser.",
+      "width": 1440,
+      "height": 910
+     },
+     {
+      "src": "images/product-screens/till-change-detail.webp",
+      "alt": "An expanded log entry with before and after figures and a caveat",
+      "label": "A change, opened",
+      "caption": "Missed first payments among loans funded before and after a change, with the dates compared and the limits of the comparison stated.",
+      "width": 1440,
+      "height": 540
+     }
+    ]
+   },
+   {
+    "id": "scenario",
+    "nav": "Scenario analysis",
+    "eyebrow": "Scenario analysis · explore tradeoffs",
+    "title": "Replay history against a stricter threshold.",
+    "intro": "Moving a state above its current threshold counts what the past would have looked like: loans excluded, profit forgone and losses avoided, and which lead sources the excluded band came from. It is historical evidence, not a forecast.",
+    "note": "Local run of the dashboard’s own code with invented applicants, sources and figures.",
+    "screens": [
+     {
+      "src": "images/product-screens/till-playground.webp",
+      "alt": "Four sliders above four headline figures and a list of sources",
+      "label": "The replay",
+      "caption": "Four states moved above their live thresholds: the loans excluded, the profit forgone and the losses avoided, then which lead sources the excluded band came from.",
+      "width": 1440,
+      "height": 870,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/till-playground-terms.webp",
+      "alt": "A heading above two explanatory notes and a period selector",
+      "label": "What the replay can and cannot say",
+      "caption": "The page states its own limits before any number: it replays loans that were funded and observed, it never writes a threshold, and it is historical evidence, not a forecast.",
+      "width": 1440,
+      "height": 500
+     }
+    ]
+   },
+   {
+    "id": "sources",
+    "nav": "Lead Sources",
+    "eyebrow": "Lead Sources · compare channels",
+    "title": "Where applications come from, and what each source is worth.",
+    "intro": "Lead Sources follows each source from volume to matured outcomes, and says how much of that volume has an observed result before it ranks anything.",
+    "note": "Local run of the dashboard’s own code with invented applicants, sources and figures.",
+    "screens": [
+     {
+      "src": "images/product-screens/till-sources.webp",
+      "alt": "Six source cards with a figure and a small trend line each",
+      "label": "Source financial trend",
+      "caption": "Each source’s observed net on matured loans, with how many of its funded loans have matured, its first-payment miss rate and a twelve-month trend.",
+      "width": 1440,
+      "height": 1050,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/till-volume.webp",
+      "alt": "A horizontal bar chart with one bar per source",
+      "label": "Volume and acceptance",
+      "caption": "Scored volume and acceptance by source.",
+      "width": 1440,
+      "height": 570
+     },
+     {
+      "src": "images/product-screens/till-sources-table.webp",
+      "alt": "A table of lead sources with counts, rates and state ticks",
+      "label": "Every source",
+      "caption": "Every source: volume, weekly accepted history, the latest seven operating days and the states it sends to.",
+      "width": 1440,
+      "height": 650
+     },
+     {
+      "src": "images/product-screens/till-scorecard.webp",
+      "alt": "A table of sources with volume, coverage and outcome columns",
+      "label": "The scorecard",
+      "caption": "Volume, maturity and realised outcomes by source in one table, with filters for source, year and state.",
+      "width": 1440,
+      "height": 832
+     },
+     {
+      "src": "images/product-screens/till-repeat.webp",
+      "alt": "A dot-and-interval chart per source above a table",
+      "label": "Who comes back",
+      "caption": "Which sources’ customers go on to a second funded loan within a year, with the interval around each rate.",
+      "width": 1440,
+      "height": 1050
+     }
+    ]
+   },
+   {
+    "id": "funded",
+    "nav": "Funded History",
+    "eyebrow": "Funded History · follow performance",
+    "title": "How funded loans performed over time.",
+    "intro": "Funded History separates a customer’s first loan from their later ones and follows both by month, state, sequence and timing, with the maturity rule stated on the page.",
+    "note": "Local run of the dashboard’s own code with invented applicants, sources and figures.",
+    "screens": [
+     {
+      "src": "images/product-screens/till-funded.webp",
+      "alt": "A large heading above two panels of figures",
+      "label": "First funding against later funding",
+      "caption": "The two populations side by side, with the share of loans that have a stable customer identity stated first.",
+      "width": 1440,
+      "height": 1020,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/till-monthly.webp",
+      "alt": "Two line series above a monthly table",
+      "label": "Month by month",
+      "caption": "Average observed net per matured loan by month for both groups; months without matured outcomes are marked as unavailable.",
+      "width": 1440,
+      "height": 870
+     },
+     {
+      "src": "images/product-screens/till-sequence.webp",
+      "alt": "Two bar charts above a table by funding sequence",
+      "label": "By funding sequence",
+      "caption": "Observed net and missed first payments by how many loans the customer has had.",
+      "width": 1440,
+      "height": 707
+     },
+     {
+      "src": "images/product-screens/till-timing.webp",
+      "alt": "A rising curve beside four status bars, above two tables",
+      "label": "When the next loan appears",
+      "caption": "How long after a first loan a second one appears, and the status the earlier loan was in.",
+      "width": 1440,
+      "height": 835
+     }
+    ]
+   }
+  ],
+  "productNote": "Five parts follow, one per view of the dashboard. The scoring service itself has no screen; the dashboard shows what it decides. Each screen is a local run of the dashboard’s own code with invented applicants, sources and figures."
  },
  {
   "id": "fiftyflowers-storefront-requests",
@@ -3656,7 +3884,7 @@
    "Tracker and advisor decisions"
   ],
   "next": "SiteSift is not open to users today. Each of its eight steps has measurable criteria that count only when proven on a live test campaign against the build that is serving: nine of 22 so far, and no step is complete yet. The beta stays paused until every fault a broker could see is closed.",
-  "evidence": "Screens come from a test account with every address and identity masked. No client correspondence, broker or prospect information is shown.",
+  "evidence": "Screens are local runs of the product’s own code on 2 October 2026 with an invented advisor, brokers and addresses. Conversations were put together from recorded test cases and the product’s own fixed sentences, and no email was sent or AI called for them. No client correspondence, broker or prospect information is shown.",
   "decisions": [
    [
     "Test fixes against the real model.",
@@ -3664,7 +3892,7 @@
    ],
    [
     "Pin every known fault.",
-    "An offline sweep of 869 realistic phrasings costs nothing to run. Each failing case is pinned to a named fault, so a fix shows up as a flipped test instead of passing silently."
+    "An offline sweep of 871 realistic phrasings costs nothing to run. Each failing case is pinned to a named fault, so a fix shows up as a flipped test instead of passing silently."
    ],
    [
     "Prove it live with the fewest emails.",
@@ -3674,42 +3902,401 @@
   "decisionNote": "More than 10,000 automated backend tests and about 3,800 dashboard and cloud-function tests (local runs, 28 September 2026, with 13 known failures tracked by name). Passing tests are not counted as proof here; only live test campaigns are.",
   "screens": [
    {
-    "src": "images/product-screens/sitesift-conversation.webp",
-    "alt": "SiteSift conversation in which facts from a broker’s reply appear as chips written to the tracker",
-    "caption": "Test account, 13 September 2026 build: a broker’s partial answer is written as three facts, the product asks once for the four still missing, then records them and closes the conversation. That bulleted ask has since been replaced by one plain sentence. Email addresses are masked.",
-    "width": 1564,
-    "height": 784
+    "src": "images/product-screens/ss-dashboard.webp",
+    "alt": "A dark dashboard with three counts and a table of six campaigns",
+    "caption": "The advisor’s dashboard in today’s build. A local run with an invented advisor, brokers and addresses.",
+    "width": 1440,
+    "height": 850,
+    "label": "The campaign list"
    },
    {
-    "src": "images/product-screens/sitesift-alternatives.webp",
-    "alt": "SiteSift conversation where a leased space is marked unavailable and the broker’s three alternative flyers each become a card",
-    "caption": "The space is leased, so the row is marked not viable; the broker attaches three alternative flyers, each becomes its own card, and the advisor passes on two and picks one in a single reply. Test account.",
-    "width": 1564,
-    "height": 784
+    "src": "images/product-screens/ss-thread-ask.webp",
+    "alt": "A broker’s message with two green chips, followed by a short reply",
+    "caption": "A broker’s rent and expenses, quoted per month, are written to the tracker as yearly figures, then one sentence asks for what is missing. A local run put together from recorded test cases.",
+    "width": 1130,
+    "height": 608,
+    "label": "A partial answer, then one short ask"
    },
    {
-    "src": "images/product-screens/sitesift-reply-held.webp",
-    "alt": "SiteSift card explaining that a reply was held while the broker waits on the building owner",
-    "caption": "A broker still waiting on the owner: the known facts are kept, the reply is held, and the card says nothing was sent. Test account.",
-    "width": 1564,
-    "height": 784
+    "src": "images/product-screens/ss-tour.webp",
+    "alt": "A broker’s message, a short reply, and a card with a drafted answer",
+    "caption": "A tour offer: the product acknowledges it, and the advisor gets a card with the reply already written. A local run with an invented broker.",
+    "width": 1100,
+    "height": 1336,
+    "label": "A tour offer"
+   },
+   {
+    "src": "images/product-screens/ss-verify.webp",
+    "alt": "Two wizard dialogs listing properties with ticks, one with two amber warnings",
+    "caption": "Before anything is sent: rows that must not be written to are left out, and the step says why. A local run with an invented property list.",
+    "width": 1520,
+    "height": 807,
+    "label": "Rows that must not be written to"
    }
   ],
-  "image": "images/product-screens/sitesift-conversation.webp",
-  "imageAlt": "SiteSift conversation in which facts from a broker’s reply appear as chips written to the tracker",
-  "imageCaption": "Test account, 13 September 2026 build: a broker’s partial answer is written as three facts, the product asks once for the four still missing, then records them and closes the conversation. That bulleted ask has since been replaced by one plain sentence. Email addresses are masked.",
-  "imageWidth": 1564,
-  "imageHeight": 784,
+  "image": "images/product-screens/ss-dashboard.webp",
+  "imageAlt": "A dark dashboard with three counts and a table of six campaigns",
+  "imageCaption": "The advisor’s dashboard in today’s build. A local run with an invented advisor, brokers and addresses.",
+  "imageWidth": 1440,
+  "imageHeight": 850,
   "logo": "images/brands/sitesift.png",
   "logoWidth": 669,
   "logoHeight": 291,
   "logoKind": "wordmark",
   "productTitle": "What it is being built to do.",
-  "productNote": "These are the product’s goals. Each one counts as done only when it is proven on a live test campaign; the current count is under Where it stands.",
+  "productNote": "Eight parts follow, in the order an advisor meets the product. Every screen is a local run of today’s build with invented people and addresses: they show what is built. What is proven is counted only on live test campaigns, under Where it stands.",
   "nextTitle": "In development, measured honestly.",
   "stage": "development",
   "created": "2025-05",
-  "createdFrom": "repository 27 May 2025"
+  "createdFrom": "repository 27 May 2025",
+  "chapters": [
+   {
+    "id": "start",
+    "nav": "Start a campaign",
+    "eyebrow": "Campaign wizard · before anything is sent",
+    "title": "Every row is checked before a single email goes.",
+    "intro": "The advisor uploads her own property list. The wizard shows each row with the contact it will write to, lets her say what to ask for column by column, drafts the opening email in her name, and holds the launch if the message asks for something the columns say not to.",
+    "note": "Local run of today’s build with an invented advisor, brokers and addresses; nothing was sent and no AI was called.",
+    "screens": [
+     {
+      "src": "images/product-screens/ss-verify.webp",
+      "alt": "Two wizard dialogs listing properties with ticks, one with two amber warnings",
+      "label": "Rows that must not be written to",
+      "caption": "A row with no email address opens struck through and unticked. A tracker uploaded again carries two warnings: the properties below its non-viable line, and the rows of its second tab, will not be emailed.",
+      "width": 1520,
+      "height": 807,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ss-columns.webp",
+      "alt": "A dialog listing data columns with three-way switches and tick boxes",
+      "label": "What to ask for",
+      "caption": "Each column is set to Ask, Note or Skip, with a tick for the facts a property needs before it counts as complete, and a calculated column with its formula.",
+      "width": 1520,
+      "height": 836
+     },
+     {
+      "src": "images/product-screens/ss-opening.webp",
+      "alt": "A dialog with a draft email and a signature preview",
+      "label": "The opening email",
+      "caption": "The first message with a placeholder for each broker’s first name, and the signature exactly as it will be appended.",
+      "width": 1520,
+      "height": 836
+     },
+     {
+      "src": "images/product-screens/ss-recipients.webp",
+      "alt": "A dialog listing recipients grouped by broker",
+      "label": "Who gets which message",
+      "caption": "Nine contacts for ten properties, a line confirming that every greeting has a first name, and one card per broker.",
+      "width": 750,
+      "height": 790
+     },
+     {
+      "src": "images/product-screens/ss-followups.webp",
+      "alt": "A dialog with follow-up count buttons, a wait setting and a draft",
+      "label": "Follow-ups",
+      "caption": "How many nudges, how long to wait before each and what it says; follow-ups pause when a broker responds.",
+      "width": 1520,
+      "height": 836
+     },
+     {
+      "src": "images/product-screens/ss-launch-held.webp",
+      "alt": "A dialog with a red panel listing three issues, beside the typed line that raised them",
+      "label": "A launch held back",
+      "caption": "A typed line asks for a floorplan while that column is set to Note. The step lists what to change and will not start the campaign until it is fixed.",
+      "width": 1520,
+      "height": 836
+     }
+    ]
+   },
+   {
+    "id": "dashboard",
+    "nav": "The dashboard",
+    "eyebrow": "Dashboard · what needs her",
+    "title": "One row per campaign, one line per decision.",
+    "intro": "The dashboard opens on the advisor’s campaigns. A campaign that needs her says so on its own row, and opening it lists each decision by kind and property.",
+    "note": "Local run of today’s build with an invented advisor, brokers and addresses; nothing was sent and no AI was called.",
+    "screens": [
+     {
+      "src": "images/product-screens/ss-dashboard.webp",
+      "alt": "A dark dashboard with three counts and a table of six campaigns",
+      "label": "The campaign list",
+      "caption": "Three counts, then one row per campaign in its own state, with the open decision named on the row and the Sheet button beside it.",
+      "width": 1440,
+      "height": 850,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ss-attention.webp",
+      "alt": "A list of open decisions, each named by kind and property",
+      "label": "Needs your attention",
+      "caption": "One campaign opened: a message that matched no conversation in full, then one line per open decision with its tracker row.",
+      "width": 1110,
+      "height": 870
+     },
+     {
+      "src": "images/product-screens/ss-states.webp",
+      "alt": "A table of eight campaigns in different states",
+      "label": "Every state a campaign can be in",
+      "caption": "Live, not yet started, waiting on a decision, stopping, a stop that failed with its retry, stopped, and completed.",
+      "width": 1200,
+      "height": 900
+     }
+    ]
+   },
+   {
+    "id": "conversation",
+    "nav": "A conversation",
+    "eyebrow": "Conversations · facts to the tracker",
+    "title": "Each stated fact goes to the tracker; only what is missing is asked for.",
+    "intro": "A broker answers in pieces. Each figure is written to the property’s own row as he stated it, shown as a chip under his message, and the product asks once, in one sentence, for what is still missing.",
+    "note": "Local run of today’s build with an invented advisor, brokers and addresses. The conversation was put together from recorded test cases and the product’s own fixed sentences; the emails are the messages it composes, opened in a browser, and the tracker is drawn as a plain grid from what it wrote. Nothing was sent and no AI was called.",
+    "screens": [
+     {
+      "src": "images/product-screens/ss-thread-ask.webp",
+      "alt": "A broker’s message with two green chips, followed by a short reply",
+      "label": "A partial answer, then one short ask",
+      "caption": "Rent and expenses quoted per month are written to the tracker as yearly figures, and one sentence asks for the clear height and the doors.",
+      "width": 1130,
+      "height": 608,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ss-thread-close.webp",
+      "alt": "A broker’s message with three green chips, a closing reply and a Property Complete chip",
+      "label": "The last answer and the close",
+      "caption": "Three more facts are written, the closing reply goes, and the property is marked complete.",
+      "width": 1130,
+      "height": 602
+     },
+     {
+      "src": "images/product-screens/ss-replies.webp",
+      "alt": "Four short emails with the same signature block",
+      "label": "The replies it sends on its own",
+      "caption": "One short ask, the close, the reply when the space is gone, and the acknowledgement of a tour offer, each above the advisor’s signature. These are the messages as composed, not received emails.",
+      "width": 1660,
+      "height": 1191
+     },
+     {
+      "src": "images/product-screens/ss-tracker.webp",
+      "alt": "A spreadsheet grid with yellow and blue rows and a red divider",
+      "label": "The tracker after the replies",
+      "caption": "Rows being watched in yellow, rows waiting on the advisor in blue, the answered row filled in, and two ruled-out rows below the red line. A plain grid drawn from what the product wrote, not a picture of the spreadsheet program.",
+      "width": 1440,
+      "height": 432
+     }
+    ]
+   },
+   {
+    "id": "advisor-cards",
+    "nav": "Her decisions",
+    "eyebrow": "Advisor cards · her call",
+    "title": "When the decision is hers, the reply is already written.",
+    "intro": "Tours, other buildings, hand-offs to a colleague, questions only the client can answer: each reaches the advisor as a card that says what happened and what already went out, with a reply she can send as it is or rewrite.",
+    "note": "Local run of today’s build with an invented advisor, brokers and addresses. The broker messages are invented and the product’s sentences are its own fixed text; nothing was sent and no AI was called.",
+    "screens": [
+     {
+      "src": "images/product-screens/ss-tour.webp",
+      "alt": "A broker’s message, a short reply, and a card with a drafted answer",
+      "label": "A tour offer",
+      "caption": "The broker offers a time. He gets a short acknowledgement, and the card holds a reply that accepts the time, to send, change or mark as handled.",
+      "width": 1100,
+      "height": 1336,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ss-new-property.webp",
+      "alt": "A card with an address, a drafted reply and two buttons",
+      "label": "Another building offered",
+      "caption": "The leased property moves to non-viable, and the building the broker offers becomes a card: dismiss it, or add the property and reply in the same conversation.",
+      "width": 1100,
+      "height": 1232
+     },
+     {
+      "src": "images/product-screens/ss-redirect.webp",
+      "alt": "A broker’s message, a short thanks, and a card with a draft to a new contact",
+      "label": "A hand-off to a colleague",
+      "caption": "The broker names a colleague. He is thanked, and the card holds a first email to her, addressed and ready.",
+      "width": 1100,
+      "height": 1288
+     },
+     {
+      "src": "images/product-screens/ss-unread.webp",
+      "alt": "A message with an attached file and a card explaining it could not be read",
+      "label": "A file that could not be read",
+      "caption": "The card names the file, says that anything only in it is not on the row, and tells her how to review it.",
+      "width": 1100,
+      "height": 927
+     },
+     {
+      "src": "images/product-screens/ss-questions.webp",
+      "alt": "Three cards, each with a short drafted reply",
+      "label": "Questions that are the client’s to answer",
+      "caption": "A question about the requirement, proposed terms, and who the tenant is; the identity reply keeps the client confidential.",
+      "width": 1080,
+      "height": 1017
+     }
+    ]
+   },
+   {
+    "id": "endings",
+    "nav": "Endings and stops",
+    "eyebrow": "Endings · nothing sent that should not be",
+    "title": "A stop is a stop, and the dashboard says so.",
+    "intro": "A broker who asks to be left alone is stopped and remembered. Stopping a campaign says what it will cancel and what it keeps, and when nothing can be sent the dashboard says why.",
+    "note": "Local run of today’s build with an invented advisor, brokers and addresses. The broker messages are invented and the product’s sentences are its own fixed text; nothing was sent and no AI was called.",
+    "screens": [
+     {
+      "src": "images/product-screens/ss-optout.webp",
+      "alt": "A broker’s message with a red chip and a notice with one button",
+      "label": "A broker asks to be taken off the list",
+      "caption": "His message is marked, the conversation stops, and the notice offers one button only.",
+      "width": 1100,
+      "height": 328,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ss-blocked.webp",
+      "alt": "A dialog listing four blocked contacts with reasons",
+      "label": "Everyone who opted out",
+      "caption": "Settings keeps each broker who asked not to be contacted, with the reason and the date.",
+      "width": 630,
+      "height": 730
+     },
+     {
+      "src": "images/product-screens/ss-stop.webp",
+      "alt": "Three small confirmation dialogs",
+      "label": "Stop, complete, reopen",
+      "caption": "Each confirmation says what it will do before anything changes.",
+      "width": 1440,
+      "height": 323
+     },
+     {
+      "src": "images/product-screens/ss-not-sent.webp",
+      "alt": "A dashboard with a banner at the top and a notice on one campaign row",
+      "label": "When nothing can be sent",
+      "caption": "With the mailbox not signed in, a banner offers the fix and the campaign’s own row says four emails were not sent and why.",
+      "width": 1200,
+      "height": 760
+     }
+    ]
+   },
+   {
+    "id": "operations",
+    "nav": "Running it",
+    "eyebrow": "Admin · operating the product",
+    "title": "Health, spend and limits on one screen each.",
+    "intro": "The admin pages show whether the scheduled run is healthy, switch campaign creation and automation on and off, track what the product spends by day and kind of work, and let a conversation be read exactly as it happened.",
+    "note": "Local run of the admin pages with synthetic accounts; the spend figures are computed from an invented list of calls.",
+    "screens": [
+     {
+      "src": "images/product-screens/ss-ops.webp",
+      "alt": "An operations page with a green status banner, two switches and four tiles",
+      "label": "Health and the two switches",
+      "caption": "Whether the scheduled run is healthy, the switches for campaign creation and automation, and the queue.",
+      "width": 1200,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ss-alarms.webp",
+      "alt": "Three versions of the status banner: stale, down, and creation closed",
+      "label": "When the run is late or failing",
+      "caption": "The banner turns red when the run has had no success for over three hours, and again when three runs in a row fail. The third picture shows campaign creation closed while automation keeps running.",
+      "width": 1200,
+      "height": 1644
+     },
+     {
+      "src": "images/product-screens/ss-usage.webp",
+      "alt": "A usage page with a budget bar, four totals and a daily chart",
+      "label": "What it has spent",
+      "caption": "Spend against the monthly budget over the last 90 days, with the split by provider, AI, conversation handling and maps.",
+      "width": 1200,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ss-review.webp",
+      "alt": "A drawer listing conversations beside the messages of one of them",
+      "label": "Reading a conversation as it happened",
+      "caption": "The review drawer: a campaign’s conversations with their status, and the selected one message by message.",
+      "width": 1200,
+      "height": 900
+     }
+    ]
+   },
+   {
+    "id": "testing",
+    "nav": "How it is tested",
+    "eyebrow": "Testing · measured, not assumed",
+    "title": "A failing case has a name and a cost.",
+    "intro": "A harness feeds realistic broker replies through the product’s one reply entry point with the real AI, under a dollar cap. An offline sweep of phrasings costs nothing to run, and every fixed reply is checked against a voice rubric.",
+    "note": "Saved results and terminal output of the product’s own test tools; every case is an invented broker reply.",
+    "screens": [
+     {
+      "src": "images/product-screens/ss-harness.webp",
+      "alt": "A results table with a verdict, a cost and a reason per case",
+      "label": "A real-AI result, with its failures named",
+      "caption": "One feature on 22 September 2026: 7 of 13 cases correct for $1.48, and for each failing case which value was lost and what removed it. A saved result, shown as written.",
+      "width": 1440,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ss-sweep.webp",
+      "alt": "Terminal output of a test run ending in a summary line",
+      "label": "The offline sweep",
+      "caption": "871 phrasings on 2 October 2026: 835 pass and 36 known failures are pinned by name, so a fix shows up as a flipped test.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ss-voice.webp",
+      "alt": "Terminal output listing reply kinds, each marked PASS",
+      "label": "The voice table",
+      "caption": "One line per kind of fixed reply with its verdict against the voice rubric; all 35 pass.",
+      "width": 1440,
+      "height": 900
+     }
+    ]
+   },
+   {
+    "id": "results",
+    "nav": "Results workspace",
+    "eyebrow": "Results · after the replies are in",
+    "title": "From a filled tracker to a tour packet.",
+    "intro": "Once a campaign has its answers, the results workspace turns the selected rows into a summary, a tour packet and a planned route, and tracks each broker’s answer to a tour invitation.",
+    "note": "Local run of the workspace with an invented campaign; the building pictures in the packet are drawn sketches.",
+    "stage": "development",
+    "status": "In development · left out of released builds",
+    "screens": [
+     {
+      "src": "images/product-screens/ss-results-summary.webp",
+      "alt": "A workspace with tabs, a readiness panel and a summary table",
+      "label": "The summary",
+      "caption": "Report readiness, the download, and one line per selected property in tour order.",
+      "width": 1440,
+      "height": 840,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ss-results-schedule.webp",
+      "alt": "Four tour stop cards with confirmation states",
+      "label": "The tour schedule",
+      "caption": "Two of four stops confirmed, one awaiting its broker and one needing another time, with the times that broker suggested.",
+      "width": 1440,
+      "height": 680
+     },
+     {
+      "src": "images/product-screens/ss-results-packet.webp",
+      "alt": "Three document pages side by side",
+      "label": "The tour packet",
+      "caption": "Three pages of the downloaded packet: the cover, the side-by-side comparison and one property page.",
+      "width": 1600,
+      "height": 435
+     }
+    ]
+   }
+  ]
  },
  {
   "id": "fiftyflowers-shopping-assistant",
