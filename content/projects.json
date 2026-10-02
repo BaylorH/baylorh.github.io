@@ -3091,33 +3091,219 @@
    "Rendered match or balance report"
   ],
   "next": "Complete as a local build. Two runs of the same seed already produce byte-identical results (checked 1 October 2026); making that a committed test is next.",
-  "evidence": "Screens are from the local build. Balance figures come from the committed batch logs.",
+  "evidence": "Every picture is the game itself, run on 1 October 2026 from a copy of the final build of 8 July 2026. The terminal pictures are real output of its headless runner, and the balance figures match the committed batch report.",
   "screens": [
    {
-    "src": "images/product-screens/ai-arena-plant.webp",
-    "alt": "AI Arena spectator view of a fighter planting the bomb, with team HUD panels",
-    "caption": "A round in progress: one fighter plants while the rest cover, with each fighter’s role, ammunition and state in the HUD.",
-    "width": 1200,
-    "height": 907
+    "src": "images/product-screens/ai-arena-duel.webp",
+    "alt": "A 3D spectator view of two blocky fighters exchanging fire across a bomb site, with team panels in the corners",
+    "caption": "A duel as the camera director frames it: six AI fighters, an automatic camera, and a panel for every fighter. The game itself, final build.",
+    "width": 1440,
+    "height": 900,
+    "label": "Two fighters in one frame"
    },
    {
-    "src": "images/product-screens/ai-arena-balance.webp",
-    "alt": "Balance report table from a 100-match headless batch",
-    "caption": "The final 100-match batch: team wins, the attack and defense split, round outcomes and per-fighter totals.",
+    "src": "images/product-screens/ai-arena-batch.webp",
+    "alt": "Terminal output of a balance batch with team wins, round outcomes and a per-fighter table",
+    "caption": "The balance batch: 100 matches, 923 rounds, team wins, round outcomes and each fighter’s totals. Real output of the headless runner.",
     "width": 1440,
-    "height": 1129
+    "height": 900,
+    "label": "A hundred matches at once"
+   },
+   {
+    "src": "images/product-screens/ai-arena-match-end.webp",
+    "alt": "A fighter behind concrete barriers under a banner reading VIPERS WIN",
+    "caption": "A match ends: the winner’s banner, the final score and the seed. The game itself, final build.",
+    "width": 1440,
+    "height": 900,
+    "label": "The match ends"
+   },
+   {
+    "src": "images/product-screens/ai-arena-zones.webp",
+    "alt": "Six views of one map: a yard, a street, an overpass, a warehouse, a trench and a container yard",
+    "caption": "Six zones of one map. The game itself, final build.",
+    "width": 1440,
+    "height": 662,
+    "label": "Six zones, two bomb sites"
    }
   ],
-  "image": "images/product-screens/ai-arena-plant.webp",
-  "imageAlt": "AI Arena spectator view of a fighter planting the bomb, with team HUD panels",
-  "imageCaption": "A round in progress: one fighter plants while the rest cover, with each fighter’s role, ammunition and state in the HUD.",
-  "imageWidth": 1200,
-  "imageHeight": 907,
+  "image": "images/product-screens/ai-arena-duel.webp",
+  "imageAlt": "A 3D spectator view of two blocky fighters exchanging fire across a bomb site, with team panels in the corners",
+  "imageCaption": "A duel as the camera director frames it: six AI fighters, an automatic camera, and a panel for every fighter. The game itself, final build.",
+  "imageWidth": 1440,
+  "imageHeight": 900,
   "stage": "built",
   "nextTitle": "Complete as a local build.",
   "created": "2026-07",
   "createdFrom": "first commit 4 Jul 2026",
-  "game": true
+  "game": true,
+  "chapters": [
+   {
+    "id": "match",
+    "nav": "A match",
+    "eyebrow": "The spectator view",
+    "title": "Six AI fighters, one automatic camera.",
+    "intro": "Two teams of three fighters play a bomb-plant mode while a camera director decides what to show: an establishing shot as a round opens, a side-on frame when two fighters duel, slow motion on a kill, an orbit when the match ends. These pictures are the game itself, run on 1 October 2026 from a copy of the final build. The fighters are simulation logic; no language model is involved.",
+    "note": "The game itself, final build.",
+    "stage": "built",
+    "status": "Complete local build · not released",
+    "screens": [
+     {
+      "src": "images/product-screens/ai-arena-duel.webp",
+      "alt": "A 3D spectator view of two blocky fighters exchanging fire across a bomb site, with team panels in the corners",
+      "label": "Two fighters in one frame",
+      "caption": "The camera director holds a duel from the side: one fighter firing from the bomb site, the other answering from the ramp, the tracer between them.",
+      "width": 1440,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ai-arena-opening.webp",
+      "alt": "A high view over a yard with a school bus, a car and planters, and team panels in the corners",
+      "label": "A round opens",
+      "caption": "An establishing shot from above as a round begins. The panels show each fighter’s role, rifle, ammunition and what it intends to do.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ai-arena-kill.webp",
+      "alt": "A fallen fighter at the edge of a container yard with a slow-motion label and a kill feed",
+      "label": "Slow motion on a kill",
+      "caption": "The camera cuts to the fallen fighter in slow motion, and the feed names who made the shot.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ai-arena-planted.webp",
+      "alt": "A fighter standing guard on a bomb site with a red countdown and a fuse bar",
+      "label": "The bomb is down",
+      "caption": "After a plant the clock turns red and counts down while the planter guards the site.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ai-arena-defuse.webp",
+      "alt": "A fighter kneeling at a bomb inside a painted ring, with a defusing progress bar",
+      "label": "A defuse under cover",
+      "caption": "A defender kneels at the bomb with a progress bar while the rest of the team covers.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ai-arena-detonation.webp",
+      "alt": "An explosion on a bomb site under a banner announcing the round",
+      "label": "A round ends",
+      "caption": "Detonation in slow motion, with the round banner and the score.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ai-arena-wallrun.webp",
+      "alt": "A fighter running along a corrugated wall, seen from the side",
+      "label": "Movement the fighters choose",
+      "caption": "A fighter runs along a warehouse wall and the camera swings side-on to show it.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ai-arena-match-end.webp",
+      "alt": "A fighter behind concrete barriers under a banner reading VIPERS WIN",
+      "label": "The match ends",
+      "caption": "The winning team’s banner with the final score and the seed, while the camera circles a survivor.",
+      "width": 1440,
+      "height": 900
+     }
+    ]
+   },
+   {
+    "id": "map",
+    "nav": "The map",
+    "eyebrow": "Crossfire District",
+    "title": "One map, built for long sight lines and close corners.",
+    "intro": "The fighters all carry a bolt-action rifle and a knife, so the map decides the contest: open ground to cross, high positions to hold and two bomb sites to fight over.",
+    "note": "The game itself, final build.",
+    "screens": [
+     {
+      "src": "images/product-screens/ai-arena-zones.webp",
+      "alt": "Six views of one map: a yard, a street, an overpass, a warehouse, a trench and a container yard",
+      "label": "Six zones, two bomb sites",
+      "caption": "Yard, street, overpass, warehouse, trench and container yard: each gives the fighters different cover and different angles.",
+      "width": 1440,
+      "height": 662,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ai-arena-smoke.webp",
+      "alt": "A fighter walking towards a cloud of smoke under an overpass",
+      "label": "Smoke changes a sight line",
+      "caption": "A smoke grenade hangs under the overpass as a fighter advances up the street towards it.",
+      "width": 1440,
+      "height": 900
+     }
+    ]
+   },
+   {
+    "id": "replay",
+    "nav": "Replays",
+    "eyebrow": "Seeds",
+    "title": "Any second of any match can be reopened.",
+    "intro": "A match is fully decided by its seed, so the same seed always plays the same match. A moment can be reopened from the page address: which seed, how many seconds in, paused or live, and which fighter the camera follows.",
+    "note": "The game itself, final build.",
+    "screens": [
+     {
+      "src": "images/product-screens/ai-arena-replay.webp",
+      "alt": "Two views of the same paused moment of a match, each under its page address",
+      "label": "The same second, twice",
+      "caption": "The address above each picture names the seed, the second and whether to hold the frame; adding a fighter’s number moves the camera to that fighter. There are no on-screen controls for this yet.",
+      "width": 1440,
+      "height": 513,
+      "wide": true
+     }
+    ]
+   },
+   {
+    "id": "lab",
+    "nav": "The balance laboratory",
+    "eyebrow": "Headless runs",
+    "title": "The numbers decide.",
+    "intro": "The same simulation runs without graphics, a hundred matches at a time. Every shot is logged with the factors behind its hit chance, and a batch reports who wins, how rounds end and what each fighter contributed. These are real outputs of the runner, produced on 1 October 2026.",
+    "note": "The game itself: real output of its headless runner.",
+    "screens": [
+     {
+      "src": "images/product-screens/ai-arena-shot-log.webp",
+      "alt": "Terminal output listing shots with their hit probability and the factors behind it",
+      "label": "Why a shot hit or missed",
+      "caption": "The first lines of one match’s shot log: distance, hit chance, the roll, and the factors behind the chance, such as aim, sway, flinch, the target’s speed, stress and exposure.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ai-arena-batch.webp",
+      "alt": "Terminal output of a balance batch with team wins, round outcomes and a per-fighter table",
+      "label": "A hundred matches at once",
+      "caption": "The balance batch, run again on 1 October 2026: 100 seeds, 923 rounds, attackers winning 44.9% of rounds, one team taking 63 of 100 matches, and each fighter’s totals. The report it wrote matches the committed one byte for byte.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ai-arena-same-seed.webp",
+      "alt": "Terminal output comparing two runs of one seed and reporting them identical",
+      "label": "Same seed, same match",
+      "caption": "One seed run twice: the two outputs are identical, down to the checksum.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ai-arena-who-wins.webp",
+      "alt": "A report titled WHO WINS with a headline section and an explanation of why defence wins",
+      "label": "The written verdict",
+      "caption": "The balance report the numbers led to: which team is stronger, why defence wins rounds, and each fighter ranked by impact.",
+      "width": 1440,
+      "height": 900
+     }
+    ]
+   }
+  ],
+  "productNote": "Four parts follow: a match as a spectator sees it, the map, replays, and the balance laboratory."
  },
  {
   "id": "lunar-base",
