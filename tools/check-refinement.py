@@ -16,7 +16,7 @@ catalog=json.loads((r/'content/projects.json').read_text())
 overviews={x['parent'] for x in catalog if x.get('parent')}
 listed=[x for x in catalog if x['id'] not in overviews]
 assert overviews=={'fiftyflowers'}, 'Only FiftyFlowers has an overview page above its products'
-assert len(p.projects)==len(listed)==20, 'The directory lists every product once; a company overview is not repeated as a card'
+assert len(p.projects)==len(listed)==21, 'The directory lists every product once; a company overview is not repeated as a card'
 assert p.features==['fiftyflowers','till','create-spaces','engineering-platform'], 'Featured work must remain separate from the complete directory'
 assert (r/'dist/assets/js/motion.js').exists(), 'Release must include motion module'
 assert len(gzip.compress((r/'dist/assets/js/motion.js').read_bytes()))<=35000, 'Motion exceeds transfer budget'
@@ -36,7 +36,8 @@ assert listed==rest+games and [x['id'] for x in games]==['ai-arena','lunar-base'
 assert all(months(b)-months(a)<=3 for i,a in enumerate(rest) for b in rest[i+1:]), 'A card sits ahead of one that is more than three months newer'
 assert all(months(a)>=months(b) for a,b in zip(games,games[1:])), 'The games run newest first'
 company=lambda x:x.get('parent') or x['id']
-assert sum(company(a)==company(b) for a,b in zip(rest,rest[1:]))<=1, 'Products of one company stack up in the collection'
+assert sum(company(a)==company(b) for a,b in zip(rest,rest[1:]))<=2, 'Products of one company stack up in the collection'
+assert not any(company(a)==company(b)==company(c) for a,b,c in zip(rest,rest[1:],rest[2:])), 'Three products of one company sit in a row'
 assert len({company(x) for x in rest[:3]})==3, 'The collection must open on three different places'
 assert 'sitesift' not in p.features, 'A product in development is not featured'
 print('PASS: selected stories, a collection in loose order of creation with the games last, and release motion budget')
@@ -84,7 +85,7 @@ for pid in ['till','create-spaces','engineering-platform']:
 print('PASS: verified brand art and reviewed selected-work screenshots retain dimensions and captions')
 
 # Keep requested editorial order and gallery sources reliable as the collection grows.
-expected=['fiftyflowers', 'create-spaces', 'fiftyflowers-diy-migration', 'engineering-platform', 'fiftyflowers-second-brain', 'ai-media-manager', 'fiftyflowers-image-studio', 'axiom', 'fiftyflowers-proposal-manager', 'fiftyflowers-support-ai', 'till', 'fiftyflowers-storefront-requests', 'sitesift', 'fiftyflowers-shopping-assistant', 'ai-travel-companion', 'client-portal', 'alpha-seo', 'machine-learning-visualization', 'ai-arena', 'lunar-base', 'pacman']
+expected=['fiftyflowers', 'create-spaces', 'fiftyflowers-diy-migration', 'engineering-platform', 'fiftyflowers-second-brain', 'fiftyflowers-content-engine', 'ai-media-manager', 'fiftyflowers-image-studio', 'axiom', 'fiftyflowers-proposal-manager', 'fiftyflowers-support-ai', 'till', 'fiftyflowers-storefront-requests', 'sitesift', 'fiftyflowers-shopping-assistant', 'ai-travel-companion', 'client-portal', 'alpha-seo', 'machine-learning-visualization', 'ai-arena', 'lunar-base', 'pacman']
 assert [x['id'] for x in items]==expected, 'Requested directory order changed'
 import sys
 sys.path.insert(0,str(r/'tools'))
@@ -117,11 +118,22 @@ for page in r.glob('*.html'):
   assert f'assets/js/portfolio.js?v={controller_hash}' in page.read_text(), f'{page.name}: stale controller URL'
 print('PASS: generated pages version the playback controller by content')
 
-# The AI Media Manager prototype shows real screens, and every one says it is a local run or placeholder content.
+# Chapters: every screen exists at its stated size, appears on its page, and the page's contents list reaches each chapter.
+for item in items:
+ if not item.get('chapters'): continue
+ page=(r/(item['id']+'.html')).read_text(); seen=set()
+ for c in item['chapters']:
+  assert f'<section id="{c["id"]}" class="chapter">' in page and f'href="#{c["id"]}"' in page, f"{item['id']}: chapter {c['id']} is not reachable"
+  for x in c['screens']:
+   assert x['src'] not in seen, x['src']+' is used twice'; seen.add(x['src'])
+   with Image.open(r/x['src']) as image: assert image.size==(x['width'],x['height']), x['src']
+   assert x['src'] in page and x['label'] and x['caption'], x['src']
+# The AI Media Manager prototype shows every screen of its three builds, and each chapter says what the pictures are.
 aim=next(x for x in items if x['id']=='ai-media-manager')
-assert aim['image'].startswith('images/product-screens/aimedia-') and len(aim['screens'])==8, 'ai-media-manager prototype screens are missing'
-assert all(any(k in s['caption'] for k in ['sample','Placeholder','placeholder']) for s in aim['screens']), 'an AI Media Manager caption does not say its data is sample or placeholder'
-print("PASS: 'ai-media-manager' prototype shows eight labelled screens from its three builds")
+assert [c['id'] for c in aim['chapters']]==['rebuild','planning-dashboard','first-build'] and sum(len(c['screens']) for c in aim['chapters'])>=30, 'ai-media-manager prototype screens are missing'
+assert all(any(k in c['note'] for k in ['sample','placeholder','invented']) for c in aim['chapters']), 'an AI Media Manager chapter does not say its data is sample or placeholder'
+assert all(any(k in x['caption'] for k in ['sample','Placeholder','placeholder']) for x in aim['screens']), 'an AI Media Manager card caption does not say its data is sample'
+print("PASS: 'ai-media-manager' prototype shows every clicked-through screen of its three builds, each chapter labelled")
 
 # Every "Built with" tag has its mark, the mark file exists and is plain drawing only, and each product page shows them.
 from stack_icons import ICONS

@@ -126,27 +126,38 @@ def family(p):
  cards=''.join(f'<a class="family-card" href="{x["id"]}.html"><span class="family-thumb"><img src="{e(x["image"])}" alt="" width="{x.get("imageWidth",1200)}" height="{x.get("imageHeight",800)}" loading="lazy"></span><b>{e(x["name"])}</b><small class="status" data-stage="{e(x.get("stage","earlier"))}"><i></i>{e(x["status"])}</small></a>' for x in items)
  return f'<section id="family" class="family"><p class="eyebrow">{"Inside "+e(p["name"]) if kids else "Same company"}</p><h2>{e(heading)}</h2>{lead}<div class="family-grid">{cards}</div></section>'
 
+def chapters(p):
+ # A long product is told in chapters: a heading, where that part stands, a short lead, then its screens two across.
+ out=''
+ for c in p.get('chapters',[]):
+  note=f'<span class="shot-note">{e(c["note"])}</span>' if c.get('note') else ''
+  figs=''.join(f'<figure class="shot{" wide" if x.get("wide") else ""}"><img src="{e(x["src"])}" alt="{e(x["alt"])}" width="{x["width"]}" height="{x["height"]}" loading="lazy"><figcaption><b>{e(x["label"])}</b>{e(x["caption"])} {note}</figcaption></figure>' for x in c['screens'])
+  stage=f'<p class="chapter-stage"><b class="stage-line" data-stage="{e(c["stage"])}"><i aria-hidden="true"></i>{e(c["status"])}</b></p>' if c.get('stage') else ''
+  out+=f'<section id="{e(c["id"])}" class="chapter"><p class="eyebrow">{e(c["eyebrow"])}</p><h2>{e(c["title"])}</h2>{stage}<p>{e(c["intro"])}</p><div class="shot-grid">{figs}</div></section>'
+ return out
+
 def case(p,n):
  chips='<p class="tech-label">Built with</p>'+''.join(chip(t) for t in p['stack'])
  note=f'<p class="product-note">{e(p["productNote"])}</p>' if p.get('productNote') else ''
  fam=family(p); is_parent=any(x.get('parent')==p['id'] for x in PROJECTS)
  fam_link='' if not fam else '<a href="#family">The products</a>' if is_parent else '<a href="#family">Same company</a>'
  brand=brand_art(p,"client-brand")
- body=f'''<section class="case-hero"><a class="back-link" href="index.html#work">← All work</a><p class="eyebrow">{e(p['sector'])}</p>{brand}<h1>{e(p['title'])}</h1><p class="case-deck">{e(p['short'])}</p><div class="case-meta"><div><span>PROJECT</span><b>{e(p['name'])}</b></div><div><span>MY ROLE</span><b>{e(p['role'])}</b></div><div><span>STAGE</span><b class="stage-line" data-stage="{e(p.get('stage','earlier'))}"><i aria-hidden="true"></i>{e(p['status'])}</b></div></div></section><div class="case-visual">{visual(p,True)}</div><div class="case-body"><aside class="case-aside"><p class="eyebrow">Inside this project</p><a href="#context">The context</a><a href="#contribution">My contribution</a><a href="#product">The product</a>{fam_link if is_parent else ''}{'<a href="#decisions">Engineering choices</a>' if p.get("decisions") else ""}<a href="#next">Where it stands</a>{'' if is_parent else fam_link}<div class="tech-tags">{chips}</div></aside><div class="case-story"><section id="context"><p class="eyebrow">The context</p><h2>A problem worth solving.</h2><p>{e(p['problem'])}</p></section><section id="contribution"><p class="eyebrow">My contribution</p><h2>What I brought to the work.</h2><p>{e(p['contribution'])}</p></section><section id="product"><p class="eyebrow">The product</p><h2>{e(p.get('productTitle','What it makes possible.'))}</h2>{note}'''
+ chapter_links=''.join(f'<a href="#{e(c["id"])}">{e(c["nav"])}</a>' for c in p.get('chapters',[]))
+ body=f'''<section class="case-hero"><a class="back-link" href="index.html#work">← All work</a><p class="eyebrow">{e(p['sector'])}</p>{brand}<h1>{e(p['title'])}</h1><p class="case-deck">{e(p['short'])}</p><div class="case-meta"><div><span>PROJECT</span><b>{e(p['name'])}</b></div><div><span>MY ROLE</span><b>{e(p['role'])}</b></div><div><span>STAGE</span><b class="stage-line" data-stage="{e(p.get('stage','earlier'))}"><i aria-hidden="true"></i>{e(p['status'])}</b></div></div></section><div class="case-visual">{visual(p,True)}</div><div class="case-body"><aside class="case-aside"><p class="eyebrow">Inside this project</p><a href="#context">The context</a><a href="#contribution">My contribution</a><a href="#product">The product</a>{chapter_links}{fam_link if is_parent else ''}{'<a href="#decisions">Engineering choices</a>' if p.get("decisions") else ""}<a href="#next">Where it stands</a>{'' if is_parent else fam_link}<div class="tech-tags">{chips}</div></aside><div class="case-story"><section id="context"><p class="eyebrow">The context</p><h2>A problem worth solving.</h2><p>{e(p['problem'])}</p></section><section id="contribution"><p class="eyebrow">My contribution</p><h2>What I brought to the work.</h2><p>{e(p['contribution'])}</p></section><section id="product"><p class="eyebrow">The product</p><h2>{e(p.get('productTitle','What it makes possible.'))}</h2>{note}'''
  if p.get('legacy'):
   body+=legacy_body(p)
  else:
   body+='<div class="feature-cards">'+''.join(f'<article><span>{i:02d}</span><h3>{e(g[0])}</h3><p>{e(g[1])}</p></article>' for i,g in enumerate(p['groups'],1))+'</div>'
   body+='<div class="flow-panel"><p class="eyebrow">At a glance / simplified product view</p><ol>'+''.join(f'<li><span>{i:02d}</span>{e(x)}</li>' for i,x in enumerate(p['flow'],1))+'</ol></div>'
  screens=[im for im in p.get('screens',[]) if im['src']!=p.get('image')]
- if screens and not p.get('legacy'):
+ if screens and not p.get('legacy') and not p.get('chapters'):
   figures='';group=None
   for im in screens:
    if im.get('group') and im['group']!=group:
     group=im['group'];figures+=f'<h4 class="screens-group">{e(group)}</h4>'
    figures+=f'<figure><img src="{e(im["src"])}" alt="{e(im["alt"])}" width="{im["width"]}" height="{im["height"]}" loading="lazy"><figcaption>{e(im["caption"])}</figcaption></figure>'
   body+='<div class="product-screens"><p class="eyebrow">Inside the software</p><h3>See the actual workspace.</h3>'+figures+'</div>'
- body+='</section>'
+ body+='</section>'+chapters(p)
  if is_parent: body+=fam
  if p.get('decisions'):
   body+='<section id="decisions"><p class="eyebrow">Engineering choices</p><h2>The decisions behind the interface.</h2><div class="engineering-decisions">'+''.join(f'<article class="decision-card"><span>{i:02d}</span><div><h3>{e(title)}</h3><p>{e(detail)}</p></div></article>' for i,(title,detail) in enumerate(p['decisions'],1))+'</div><p class="decision-note">'+e(p['decisionNote'])+'</p></section>'

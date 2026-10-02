@@ -130,3 +130,14 @@
 .case-aside .tech-tags span{display:flex;align-items:center;gap:10px;border:0;padding:0;border-radius:0;font:500 12.5px/1.3 var(--sans);letter-spacing:-.005em;color:#3b4339}
 .case-aside .tech-tags img{width:18px;height:18px;flex:none;object-fit:contain}
 @media(max-width:760px){.case-aside .tech-tags{display:flex;flex-wrap:wrap;gap:8px;padding-top:18px}.case-aside .tech-label{flex-basis:100%;margin-bottom:2px}.case-aside .tech-tags span{border:1px solid var(--line);border-radius:999px;padding:6px 12px 6px 9px;font-size:12px;gap:7px;background:#f8f7f1}.case-aside .tech-tags img{width:15px;height:15px}}
+/* Product pages: a chapter of screens, two across, each with a short title and caption. */
+.chapter .chapter-stage{margin:-6px 0 18px;font:10.5px/1.6 var(--mono);color:var(--muted)}
+.shot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 20px;margin-top:30px;align-items:start}
+.shot-grid .shot{margin:0;min-width:0}
+.shot-grid .shot.wide{grid-column:1/-1}
+.shot-grid img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#0c0d0c}
+.shot-grid .image-expand{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.shot-grid figcaption{margin-top:11px;color:#555e57;font-size:.84rem;line-height:1.6}
+.shot-grid figcaption b{display:block;color:var(--ink);font-weight:550;font-size:.92rem;letter-spacing:-.01em;margin-bottom:2px}
+.shot-grid .shot-note{display:block;margin-top:3px;font:9.5px/1.5 var(--mono);letter-spacing:.02em;color:#7b8378}
+@media(max-width:760px){.shot-grid{grid-template-columns:1fr;gap:24px}}

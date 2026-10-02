@@ -34,7 +34,7 @@ if (filters) {
 const viewer = document.querySelector("#image-viewer");
 if (viewer && typeof viewer.showModal === "function") {
   let trigger;
-  document.querySelectorAll(".legacy-content img, .case-visual .image-visual img, .product-screens img").forEach((image) => {
+  document.querySelectorAll(".legacy-content img, .case-visual .image-visual img, .product-screens img, .shot-grid img").forEach((image) => {
     if (image.closest("a")) return;
     const button = document.createElement("button");
     button.type = "button";

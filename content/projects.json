@@ -35,7 +35,7 @@
    ],
    [
     "Content from customer questions",
-    "Six months of support conversations classified into customer-question topics and coverage gaps, with a review queue of FAQ and blog drafts built in June 2026. Nothing publishes without a person’s approval."
+    "Six months of support conversations classified into customer-question topics and coverage gaps, with a review queue of FAQ and blog drafts built in June 2026. Nothing publishes without a person’s approval. See the Content Engine case study."
    ],
    [
     "Storefront",
@@ -457,6 +457,282 @@
   "createdFrom": "Engineering Brain repository 7 Jul 2026"
  },
  {
+  "id": "fiftyflowers-content-engine",
+  "title": "What customers ask, turned into what the site is missing.",
+  "name": "Content Engine",
+  "category": "companies",
+  "sector": "FiftyFlowers · Content from customer questions",
+  "status": "In the company AI workspace since June 2026 · nothing published through it yet",
+  "color": "green",
+  "short": "Six months of support conversations, product-page questions and reviews, grouped into topics and checked against what the website already answers, with a review queue of the answers and articles that are missing.",
+  "role": "AI Solutions Engineer · FiftyFlowers",
+  "stack": [
+   "Python pipeline",
+   "LLM APIs",
+   "Data matching",
+   "React",
+   "TypeScript",
+   "Firebase"
+  ],
+  "problem": "Customers ask the same questions in support conversations, on product pages and in reviews, while many of the answers sit in the support team’s saved replies or nowhere at all. Nobody could see which questions the website already answered and which it did not.",
+  "contribution": "Built the pipeline that gathers and classifies the questions, the matching that checks each topic against every place an answer can live, and a two-view dashboard: Explore for the evidence and Act for a review queue of suggestions with AI drafting on request. The queue was then rebuilt inside the company’s AI workspace. The work followed the AI discoverability research I delivered in March 2026.",
+  "groups": [
+   [
+    "Gather and classify",
+    "Support conversations, product-page questions, reviews and every existing answer go into one analysis database. Rules sort each support message, so only real customer questions enter the pool."
+   ],
+   [
+    "Topics, not tickets",
+    "Similar questions are grouped into topics, and each topic is marked as FAQ material, a blog subject, or a problem that belongs to another team."
+   ],
+   [
+    "Coverage, surface by surface",
+    "Each topic is compared with the FAQ page, product FAQs, the help center, the blog and the support team’s saved replies, so a gap is a measured gap."
+   ],
+   [
+    "Seven kinds of suggestion",
+    "Each gap becomes a suggestion with its lineage: how many customers asked, how they worded it, the closest existing answer and the page it belongs on. Problems that content cannot fix are routed to the team that owns them."
+   ],
+   [
+    "A person approves",
+    "Reviewers approve or dismiss with their initials, and a digest hands the approved items to whoever places content in the store. Nothing is published automatically."
+   ]
+  ],
+  "flow": [
+   "Customer questions",
+   "Topics and coverage",
+   "Suggestions for review"
+  ],
+  "next": "The review queue has been in the company’s AI workspace since June 2026, showing the June 2026 analysis. The original dashboard, which saved decisions for the whole team and drafted on request, was retired in September 2026. Bringing shared decisions and drafting into the workspace, refreshing the data and getting the first approved answers onto the site are the next steps; no content has been published through the queue yet.",
+  "nextTitle": "A queue in staff hands, with publishing still to come.",
+  "evidence": "Every picture is a local run of the product’s own code with invented data for an invented shop, “SampleFlowers”: no figure, question, answer or product in them is the company’s. The company’s name in the page’s fixed text was swapped for the invented shop so that no invented figure is attributed to it.",
+  "decisions": [
+   [
+    "Route what content cannot fix.",
+    "A recurring shipping or website problem becomes a signal for the team that owns it, not a blog post."
+   ],
+   [
+    "State the thresholds.",
+    "Every matching threshold is listed on the page as an editorial choice, beside the caveats, so a reviewer can judge a suggestion instead of trusting it."
+   ]
+  ],
+  "decisionNote": "A model names each topic and writes a draft only when asked. Sorting the messages is rule-based, and matching uses text similarity with stated thresholds.",
+  "logo": "images/brands/fiftyflowers.svg",
+  "logoWidth": 180,
+  "logoHeight": 83,
+  "logoKind": "wordmark",
+  "parent": "fiftyflowers",
+  "stage": "rollout",
+  "created": "2026-05",
+  "createdFrom": "analysis database 21 May 2026",
+  "image": "images/product-screens/ff-ce-queue.webp",
+  "imageWidth": 1440,
+  "imageHeight": 900,
+  "imageAlt": "A grid of suggestion cards styled as storefront FAQ entries and pages",
+  "imageCaption": "The review queue: each open suggestion drawn the way it would look where it lands. A local run of the dashboard’s own code with invented data for an invented shop.",
+  "screens": [
+   {
+    "src": "images/product-screens/ff-ce-queue.webp",
+    "alt": "A grid of suggestion cards styled as storefront FAQ entries and pages",
+    "caption": "The review queue: each open suggestion drawn the way it would look where it lands. A local run of the dashboard’s own code with invented data for an invented shop.",
+    "width": 1440,
+    "height": 900,
+    "label": "The open suggestions"
+   },
+   {
+    "src": "images/product-screens/ff-ce-topics.webp",
+    "alt": "A table of customer-question topics with trend bars and coverage scores",
+    "caption": "Every recurring question as a row, with its trend and how well each answer surface covers it. Local run, invented data for an invented shop.",
+    "width": 1440,
+    "height": 900,
+    "label": "Every recurring question, ranked"
+   },
+   {
+    "src": "images/product-screens/ff-ce-coverage.webp",
+    "alt": "Four columns of topics: FAQ page, product FAQs, help center and blog, and uncovered",
+    "caption": "Which surface answers which topic, with the gaps in the last column. Local run, invented data for an invented shop.",
+    "width": 1440,
+    "height": 900,
+    "label": "Who answers what"
+   },
+   {
+    "src": "images/product-screens/ff-ce-new-faq.webp",
+    "alt": "A suggestion window with lineage, reasons, customer wordings and a Generate draft button",
+    "caption": "One suggestion opened: why it exists, where it would go and how customers worded it. Local run, invented data for an invented shop.",
+    "width": 1100,
+    "height": 848,
+    "label": "Why a suggestion exists"
+   }
+  ],
+  "chapters": [
+   {
+    "id": "explore",
+    "nav": "Explore: the evidence",
+    "eyebrow": "The original dashboard · Explore",
+    "title": "From raw messages to measured gaps.",
+    "intro": "Explore is the whole pipeline on one page, top to bottom: where the data comes from, how raw messages become customer questions and topics, and which of the site’s answer surfaces already cover each topic. These pictures are the dashboard’s own code running on my machine with invented data for an invented shop, “SampleFlowers”. Every figure and every sentence of data is invented; the layout, the labels and the method text are the product’s. In the product a model names the topics; here the topic names are sample values.",
+    "note": "Local run, invented data for an invented shop.",
+    "stage": "earlier",
+    "status": "The original dashboard · June to September 2026",
+    "screens": [
+     {
+      "src": "images/product-screens/ff-ce-sources.webp",
+      "alt": "A dashboard page titled Explore with cards for tickets, messages, product-page questions and reviews",
+      "label": "Where the questions come from",
+      "caption": "One card per source with its volume and the day it was last pulled: what customers ask, the support team’s own reference data, and the answers already live.",
+      "width": 1440,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-ce-classify.webp",
+      "alt": "Bar charts of message labels, the question pool by source and the topics by kind",
+      "label": "How messages become topics",
+      "caption": "Every support message is sorted by rule, only real customer questions enter the pool, and the pool is grouped into topics, each with its kind and its ask count.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-ce-topics.webp",
+      "alt": "A table of customer-question topics with trend bars and coverage scores",
+      "label": "Every recurring question, ranked",
+      "caption": "One row per topic: asks, a six-month trend, where the questions came from, the nearest standard question and how closely each of five answer surfaces covers it.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-ce-topic-open.webp",
+      "alt": "A topic row expanded to show a monthly chart, example questions and coverage links",
+      "label": "One topic, opened",
+      "caption": "Asks per month, example questions tagged by source, coverage surface by surface, and the review complaints that echo the topic.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-ce-coverage.webp",
+      "alt": "Four columns of topics: FAQ page, product FAQs, help center and blog, and uncovered",
+      "label": "Who answers what",
+      "caption": "The topics sorted by which surface already answers them. The last column is the gaps, each linked to its suggestion in the queue.",
+      "width": 1440,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-ce-method.webp",
+      "alt": "A table of thresholds above a bar chart and a list of caveats",
+      "label": "Thresholds and caveats, stated",
+      "caption": "Each matching threshold is listed as an editorial choice, with why raw ticket counts overstate demand and what the method cannot tell.",
+      "width": 1440,
+      "height": 900
+     }
+    ]
+   },
+   {
+    "id": "act",
+    "nav": "Act: the review queue",
+    "eyebrow": "The original dashboard · Act",
+    "title": "Every suggestion says why it exists and where it would go.",
+    "intro": "Act is the queue. Each suggestion comes from exactly one of seven rules and carries its receipts, so a reviewer can trace it back to the questions behind it. Reviewers approve or dismiss with their initials, and a digest hands the approved items on. The same queue was rebuilt inside the company’s AI workspace, where staff use it today. No AI draft appears in these pictures: none was requested in this run.",
+    "note": "Local run, invented data for an invented shop.",
+    "screens": [
+     {
+      "src": "images/product-screens/ff-ce-queue.webp",
+      "alt": "A grid of suggestion cards styled as storefront FAQ entries and pages",
+      "label": "The open suggestions",
+      "caption": "Each suggestion is drawn the way it would look where it lands: a storefront FAQ entry, a hidden page, a blog card.",
+      "width": 1440,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-ce-kinds.webp",
+      "alt": "The Act page with counts and seven cards explaining each kind of suggestion",
+      "label": "Seven kinds, each with its destination",
+      "caption": "The top of the queue: what is open, what can be drafted, and what each kind of suggestion is with a small picture of where it lands. The thumbnails are drawn stand-ins.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-ce-new-faq.webp",
+      "alt": "A suggestion window with lineage, reasons, customer wordings and a Generate draft button",
+      "label": "Why a suggestion exists",
+      "caption": "A New FAQ suggestion: its lineage, why it should exist, where it would go, how customers worded it and the closest existing answers. No draft was requested in this run.",
+      "width": 1100,
+      "height": 848
+     },
+     {
+      "src": "images/product-screens/ff-ce-publish-ready.webp",
+      "alt": "A suggestion window previewing a product page’s frequently asked questions",
+      "label": "Answers already written",
+      "caption": "Answers the support team has written for one product and not yet placed, shown as that product page’s FAQ list. One approval covers the product.",
+      "width": 1100,
+      "height": 848
+     },
+     {
+      "src": "images/product-screens/ff-ce-signal.webp",
+      "alt": "A suggestion window marked Signal with a routing slip to operations",
+      "label": "Not everything is content",
+      "caption": "A Signal is a routing slip: a recurring problem passed to the team that owns it, with the customer wordings behind it.",
+      "width": 1100,
+      "height": 694
+     },
+     {
+      "src": "images/product-screens/ff-ce-approved.webp",
+      "alt": "An Approved section holding three suggestion cards each marked approved with initials",
+      "label": "Approved, with initials",
+      "caption": "Approving stamps a suggestion with the reviewer’s initials and moves it to the Approved section.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-ce-log.webp",
+      "alt": "A decisions log table with five rows of approvals and dismissals",
+      "label": "Who decided what, and when",
+      "caption": "The decisions log lists every approval and dismissal with its kind, the reviewer and the time.",
+      "width": 1180,
+      "height": 520
+     },
+     {
+      "src": "images/product-screens/ff-ce-digest.webp",
+      "alt": "A text digest of approved items with questions and answers",
+      "label": "The digest for whoever places the content",
+      "caption": "What the digest button copies: each approved item with who approved it, where it goes and the questions and answers themselves. Produced here by a local stand-in that follows the product’s digest line by line.",
+      "width": 900,
+      "height": 866
+     }
+    ]
+   },
+   {
+    "id": "pipeline",
+    "nav": "The pipeline",
+    "eyebrow": "Behind the dashboard",
+    "title": "A pipeline that can be run again and checked.",
+    "intro": "The dashboard reads a snapshot written by a pipeline of plain commands over one analysis database. These pictures are the pipeline’s own commands and report code run on my machine against an invented database sized to match the sample dashboard.",
+    "note": "Local run, invented data for an invented shop.",
+    "screens": [
+     {
+      "src": "images/product-screens/ff-ce-pipeline.webp",
+      "alt": "Terminal output listing database tables with row counts, then a passing test run",
+      "label": "Status and tests in a terminal",
+      "caption": "The pipeline’s status command lists each table of the analysis database with its row count and when it was last filled; its 28 contract tests pass. Run against an invented database.",
+      "width": 1400,
+      "height": 1130,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-ce-backlog.webp",
+      "alt": "A report page with a verdict summary table and a list of counts",
+      "label": "A report that checks the team’s own sheet",
+      "caption": "The verified publishing backlog: what the team’s sheet says is published against what is live on product pages.",
+      "width": 900,
+      "height": 866
+     }
+    ]
+   }
+  ],
+  "productNote": "Three parts follow: the evidence, the review queue, and the pipeline behind them."
+ },
+ {
   "id": "ai-media-manager",
   "title": "A visual library for social research.",
   "name": "AI Media Manager",
@@ -504,12 +780,12 @@
   "evidence": "Every picture on this page is the real interface running on my own machine with an invented brand and sample pictures. The prototype’s only real account data belongs to someone else, so none of it is published.",
   "screens": [
    {
-    "src": "images/product-screens/aimedia-library.webp",
+    "src": "images/product-screens/aimedia-library-top.webp",
     "alt": "Media library for a sample Instagram account: profile, engagement totals and two grids of posts",
     "caption": "The media library for one connected account: its profile, engagement totals, its own posts and a second grid set aside for posts it is tagged in. Run on my own machine with an invented brand and sample pictures.",
     "width": 1440,
     "height": 900,
-    "label": "Media library"
+    "label": "The media library"
    },
    {
     "src": "images/product-screens/aimedia-post.webp",
@@ -517,7 +793,7 @@
     "caption": "Opening a post: each slide of a carousel, with its like and comment counts and caption, beside the grid. Local run, sample data.",
     "width": 1440,
     "height": 900,
-    "label": "Post detail"
+    "label": "A carousel post"
    },
    {
     "src": "images/product-screens/aimedia-accounts.webp",
@@ -534,42 +810,6 @@
     "width": 1440,
     "height": 660,
     "label": "Team and roles"
-   },
-   {
-    "src": "images/product-screens/aimedia-plan-outreach.webp",
-    "alt": "Planning dashboard with three creator cards, each with a reason to reach out and a suggested message",
-    "caption": "The second build was a planning dashboard. Here: creators worth contacting, each with the reason and a suggested first message. A clickable design: everything on this screen is placeholder content, not read from a live account.",
-    "width": 1440,
-    "height": 900,
-    "label": "Creator outreach",
-    "group": "Earlier build: the planning dashboard"
-   },
-   {
-    "src": "images/product-screens/aimedia-plan-week.webp",
-    "alt": "Week planner marking the best days and hours, with two scheduled posts and a column of drafts",
-    "caption": "Same build: a week planner that marks the best days and hours, beside draft posts and who owns each. Placeholder content.",
-    "width": 1440,
-    "height": 900,
-    "label": "Week planner",
-    "group": "Earlier build: the planning dashboard"
-   },
-   {
-    "src": "images/product-screens/aimedia-plan-ideas.webp",
-    "alt": "Post ideas, each with a reason and the posts it is based on",
-    "caption": "Same build: post ideas, each with the reason it should work and the posts behind that reason. Placeholder content.",
-    "width": 1440,
-    "height": 900,
-    "label": "Post ideas",
-    "group": "Earlier build: the planning dashboard"
-   },
-   {
-    "src": "images/product-screens/aimedia-first-platforms.webp",
-    "alt": "Social Command Center: five platform cards with follower figures",
-    "caption": "The first build: choose a platform and it returns an AI strategy summary and post ideas. Shown with a sample brand; the follower figures on this screen were fixed numbers, not live counts.",
-    "width": 1440,
-    "height": 900,
-    "label": "First build",
-    "group": "Where it started: the Social Command Center"
    }
   ],
   "logo": "images/brands/ai-media-manager.svg",
@@ -579,13 +819,350 @@
   "stage": "development",
   "nextTitle": "A prototype, clearly labeled.",
   "productTitle": "What the current build does.",
-  "productNote": "The rebuild is the third build in this area. Its screens come first; the two earlier builds follow, labelled.",
-  "image": "images/product-screens/aimedia-library.webp",
+  "productNote": "The rebuild is the third build in this area. Every screen of all three builds follows, each chapter labelled with what it is.",
+  "image": "images/product-screens/aimedia-library-top.webp",
   "imageWidth": 1440,
   "imageHeight": 900,
   "imageAlt": "Media library for a sample Instagram account: profile, engagement totals and two grids of posts",
   "imageCaption": "The media library for one connected account: its profile, engagement totals, its own posts and a second grid set aside for posts it is tagged in. Run on my own machine with an invented brand and sample pictures.",
-  "previewLimit": 4,
+  "chapters": [
+   {
+    "id": "rebuild",
+    "nav": "The rebuild",
+    "eyebrow": "Build three · April 2026 to today",
+    "title": "The rebuild: organisations, accounts and a media library.",
+    "stage": "development",
+    "status": "Prototype · sign-in and organisations checked, the Instagram phase not yet signed off",
+    "intro": "A clean restart that goes in phases, each checked before the next. These are the real screens, clicked through one by one on my own machine with an invented brand and drawn pictures.",
+    "note": "Local run, sample data.",
+    "screens": [
+     {
+      "src": "images/product-screens/aimedia-library-top.webp",
+      "alt": "Media library for a sample Instagram account: profile, engagement totals and two grids of posts",
+      "label": "The media library",
+      "caption": "One connected account: its profile, engagement totals, its own posts and a second grid set aside for posts it is tagged in.",
+      "width": 1440,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/aimedia-post.webp",
+      "alt": "A carousel post open in a side panel beside the library",
+      "label": "A carousel post",
+      "caption": "Opening a post steps through each slide of a carousel, with its like and comment counts and caption, beside the grid.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/aimedia-reel.webp",
+      "alt": "A reel open in the side panel with its view count",
+      "label": "A reel",
+      "caption": "A reel shows its still picture, views, likes and audio name. The video itself is not captured yet.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/aimedia-trending.webp",
+      "alt": "A grid of trending reels with view counts",
+      "label": "Trending reels",
+      "caption": "A row of popular reels in the account’s field, most viewed first; hovering shows whose reel it is. A first version exists in the code and is not dependable yet.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/aimedia-library-empty.webp",
+      "alt": "An account page with no posts and a Sync Now button",
+      "label": "Before the first import",
+      "caption": "An account with nothing imported shows its profile and one action. The import was not run here, because it calls the live service.",
+      "width": 1440,
+      "height": 693
+     },
+     {
+      "src": "images/product-screens/aimedia-accounts.webp",
+      "alt": "Connected Instagram accounts for one organisation, with the organisation switcher open",
+      "label": "Accounts and organisations",
+      "caption": "One sign-in, several organisations, each with its own connected accounts.",
+      "width": 1440,
+      "height": 660
+     },
+     {
+      "src": "images/product-screens/aimedia-dashboard-empty.webp",
+      "alt": "An empty dashboard with a prompt to connect a social media account",
+      "label": "A new organisation",
+      "caption": "A new organisation starts with no accounts and one prompt: connect one.",
+      "width": 1440,
+      "height": 490
+     },
+     {
+      "src": "images/product-screens/aimedia-connect-platform.webp",
+      "alt": "A window listing Instagram as available and three other platforms as coming soon",
+      "label": "Choose a platform",
+      "caption": "Instagram is the only platform switched on; the others are marked as coming.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/aimedia-connect-instagram.webp",
+      "alt": "A window asking for an Instagram username",
+      "label": "Connect an account",
+      "caption": "An account is added by its public username. The lookup was not run in this local copy, because it calls the live service.",
+      "width": 1440,
+      "height": 628
+     },
+     {
+      "src": "images/product-screens/aimedia-sign-in.webp",
+      "alt": "Sign-in card with a Continue with Google button",
+      "label": "Sign-in",
+      "caption": "Google sign-in is the only way in.",
+      "width": 1440,
+      "height": 458
+     },
+     {
+      "src": "images/product-screens/aimedia-welcome.webp",
+      "alt": "Welcome screen offering to create an organisation or join an existing one",
+      "label": "First run",
+      "caption": "A new person either creates an organisation or joins one they were invited to; the badge counts waiting invitations.",
+      "width": 1440,
+      "height": 542
+     },
+     {
+      "src": "images/product-screens/aimedia-pending-invitation.webp",
+      "alt": "A pending invitation to join an organisation as a member",
+      "label": "A waiting invitation",
+      "caption": "Invitations are listed inside the app with the role offered; no email is sent.",
+      "width": 1440,
+      "height": 436
+     },
+     {
+      "src": "images/product-screens/aimedia-create-organisation.webp",
+      "alt": "Form to create an organisation",
+      "label": "Create an organisation",
+      "caption": "A name and an optional website are all it asks for.",
+      "width": 1440,
+      "height": 700
+     },
+     {
+      "src": "images/product-screens/aimedia-settings.webp",
+      "alt": "Organisation settings: read-only name and website, icon and logo boxes with Upload buttons, and a Delete Organization button",
+      "label": "Organisation settings",
+      "caption": "Details and branding for an organisation. In this build the name and website cannot be edited here, and the upload and delete buttons are not connected yet.",
+      "width": 1440,
+      "height": 1004
+     },
+     {
+      "src": "images/product-screens/aimedia-team.webp",
+      "alt": "Team settings: the owner and two pending invitations with their roles",
+      "label": "Team and roles",
+      "caption": "The owner, and invitations waiting for an admin and a member.",
+      "width": 1440,
+      "height": 660
+     },
+     {
+      "src": "images/product-screens/aimedia-invite.webp",
+      "alt": "A window to invite a team member with a role choice",
+      "label": "Invite a teammate",
+      "caption": "An invitation carries a role, member or admin, and appears for that person the next time they sign in.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/aimedia-add-organisation.webp",
+      "alt": "A window offering to create or join another organisation",
+      "label": "Add another organisation",
+      "caption": "From the switcher, the same person can create or join a second organisation.",
+      "width": 1440,
+      "height": 900
+     }
+    ]
+   },
+   {
+    "id": "planning-dashboard",
+    "nav": "The planning dashboard",
+    "eyebrow": "Build two · April 2026",
+    "title": "The planning dashboard: outreach, a week planner and post ideas.",
+    "stage": "development",
+    "status": "A clickable design · stopped before its foundations were dependable",
+    "intro": "A larger second attempt, designed screen by screen before sign-in had passed a real test. The screens run in its own demo mode, and every number and message on them is placeholder content.",
+    "note": "Demo mode, placeholder content.",
+    "screens": [
+     {
+      "src": "images/product-screens/aimedia-plan-outreach.webp",
+      "alt": "Planning dashboard with three creator cards, each with a reason to reach out and a suggested message",
+      "label": "Creator outreach",
+      "caption": "Creators worth contacting, each with the reason and a suggested first message.",
+      "width": 1440,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/aimedia-plan-week.webp",
+      "alt": "Week planner marking the best days and hours, with two scheduled posts and a column of drafts",
+      "label": "Week planner",
+      "caption": "The week with its best days and hours marked, beside draft posts and who owns each.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/aimedia-plan-slot.webp",
+      "alt": "Week planner with one hour chosen and a prompt to click a draft",
+      "label": "Picking a slot",
+      "caption": "Choosing an hour arms the drafts on the right to be dropped into it.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/aimedia-plan-ideas.webp",
+      "alt": "Post ideas, each with a reason and the posts it is based on",
+      "label": "Post ideas",
+      "caption": "Ideas grouped by where they come from, each with the reason it should work and the posts behind that reason.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/aimedia-plan-ideas-more.webp",
+      "alt": "More post ideas: a competitor trend and a product spotlight",
+      "label": "More idea types",
+      "caption": "A competitor trend and a product spotlight, in the same reason-and-evidence layout.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/aimedia-plan-editor.webp",
+      "alt": "Post editor with a preview on the left and a caption box on the right",
+      "label": "Post editor",
+      "caption": "An idea opened as a post: preview, caption and the post that inspired it. The picture button only shows a spinner in this build.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/aimedia-plan-filter.webp",
+      "alt": "Creator list filtered to rising accounts",
+      "label": "Filtering creators",
+      "caption": "The same list narrowed to rising accounts.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/aimedia-plan-setup-1.webp",
+      "alt": "Set-up step one: organisation name and website",
+      "label": "Set-up, step 1",
+      "caption": "Name the organisation.",
+      "width": 1440,
+      "height": 682
+     },
+     {
+      "src": "images/product-screens/aimedia-plan-setup-2.webp",
+      "alt": "Set-up step two: an Instagram account found and added",
+      "label": "Set-up, step 2",
+      "caption": "Add the brand’s own Instagram account. The lookup in this build is simulated and its numbers are random.",
+      "width": 1440,
+      "height": 778
+     },
+     {
+      "src": "images/product-screens/aimedia-plan-setup-3.webp",
+      "alt": "Set-up step three: a competitor account added",
+      "label": "Set-up, step 3",
+      "caption": "Add competitors to watch.",
+      "width": 1440,
+      "height": 778
+     },
+     {
+      "src": "images/product-screens/aimedia-plan-settings.webp",
+      "alt": "Settings page showing a placeholder for team settings",
+      "label": "Settings",
+      "caption": "Settings was a placeholder; the build stopped before it was written.",
+      "width": 1440,
+      "height": 510
+     },
+     {
+      "src": "images/product-screens/aimedia-plan-sign-in.webp",
+      "alt": "Sign-in card titled Social Command Center",
+      "label": "Sign-in",
+      "caption": "The second build kept the first one’s name.",
+      "width": 1440,
+      "height": 468
+     }
+    ]
+   },
+   {
+    "id": "first-build",
+    "nav": "The first build",
+    "eyebrow": "Build one · March 2026",
+    "title": "The Social Command Center: a read-out, ideas and a draft.",
+    "stage": "built",
+    "status": "A working drafting sandbox · it drafts, a person copies and posts",
+    "intro": "The first version drafts posts. Choose a platform, read an AI strategy summary and six post ideas, pick one, and get a draft that is written, checked for machine-sounding habits and rewritten, then shown as it would look on that platform. It reads no account numbers and posts nothing. These screens are the tool running on my own machine on 1 October 2026, pointed at an invented brand, so the read-out, the ideas and the draft are its real output for that brand.",
+    "note": "Local run, invented brand; the text is the tool’s own output.",
+    "screens": [
+     {
+      "src": "images/product-screens/aimedia-first-platforms.webp",
+      "alt": "Social Command Center: five platform cards with follower figures",
+      "label": "Choose a platform",
+      "caption": "Five platforms for one brand. The follower figures are typed into the tool, not read from the accounts.",
+      "width": 1440,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/aimedia-first-reading.webp",
+      "alt": "A waiting screen while the platform is analysed",
+      "label": "Reading",
+      "caption": "The wait while the read-out and the ideas are written.",
+      "width": 1440,
+      "height": 620
+     },
+     {
+      "src": "images/product-screens/aimedia-first-custom.webp",
+      "alt": "The list of ideas with a box open for a custom topic",
+      "label": "Your own topic",
+      "caption": "Instead of a suggested idea, a topic can be typed in.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/aimedia-first-read-out.webp",
+      "alt": "A strategy read-out beside six post ideas",
+      "label": "The read-out and six ideas",
+      "caption": "A summary, what tends to work, current trends and posting times on the left; six post ideas on the right, each tagged by type and effort. Bold markers show as raw asterisks, a flaw this build never fixed.",
+      "width": 1440,
+      "height": 1526,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/aimedia-first-drafting.webp",
+      "alt": "A waiting screen while the draft is written",
+      "label": "Drafting",
+      "caption": "The draft is written, checked for machine-sounding habits and rewritten before it is shown.",
+      "width": 1440,
+      "height": 620
+     },
+     {
+      "src": "images/product-screens/aimedia-first-draft.webp",
+      "alt": "A drafted Instagram post shown in a mock-up with a generated picture",
+      "label": "The draft, as an Instagram post",
+      "caption": "The finished draft in a mock-up of the platform, with a generated picture, ready to copy. Nothing is posted.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/aimedia-first-draft-post.webp",
+      "alt": "The full drafted Instagram post: picture, caption and hashtags",
+      "label": "The whole caption",
+      "caption": "The same draft from top to bottom: the picture, the caption and its hashtags.",
+      "width": 480,
+      "height": 1362
+     },
+     {
+      "src": "images/product-screens/aimedia-first-draft-facebook.webp",
+      "alt": "A drafted Facebook post shown in a mock-up",
+      "label": "The same flow for Facebook",
+      "caption": "Each platform gets its own format and its own mock-up. This draft came without a picture.",
+      "width": 1440,
+      "height": 1339
+     }
+    ]
+   }
+  ],
   "created": "2026-03",
   "createdFrom": "first build 26 Mar 2026; rebuild 14 Apr 2026"
  },
@@ -801,7 +1378,7 @@
    "Presentation and cart"
   ],
   "next": "Built in March 2026 and not launched; work paused when the DIY kit migration took priority. Before any launch, the presentation page and product search need repairs, and the shopping list needs a line-by-line check.",
-  "evidence": "Presentation pictures are local renders of the app’s code with an invented proposal; the live presentation page needs a repair. The editor picture is view only.",
+  "evidence": "Every picture is a local run of the app’s own code with invented proposals, invented products and prices, and drawn pictures. No AI answer was invented for a picture. The live presentation page needs a repair.",
   "decisions": [
    [
     "Calculate the list, store the choices.",
@@ -824,48 +1401,462 @@
   "stage": "built",
   "screens": [
    {
-    "src": "images/product-screens/ff-proposal-cover.webp",
-    "alt": "Customer presentation cover for an invented garden wedding proposal",
-    "caption": "What a customer would receive: the presentation’s cover. Local render of the app’s code with an invented proposal.",
-    "width": 1600,
-    "height": 1000
+    "src": "images/product-screens/ff-pm-dashboard.webp",
+    "alt": "Proposal Manager dashboard with six proposal cards and a sidebar listing consultants",
+    "caption": "The dashboard a consultant lands on: every saved proposal as a card. Local run of the app’s code with invented proposals and drawn pictures.",
+    "width": 1440,
+    "height": 1126,
+    "label": "The dashboard"
    },
    {
-    "src": "images/product-screens/ff-proposal-inspiration.webp",
-    "alt": "Inspiration pictures and a color palette in the customer presentation",
-    "caption": "Inspiration and color palette, with placeholder drawings standing in for a real customer’s photos. Local render, invented proposal.",
-    "width": 1600,
-    "height": 930
+    "src": "images/product-screens/ff-pm-recipes.webp",
+    "alt": "Recipe cards for a bridal bouquet, bridesmaid bouquets and boutonnieres",
+    "caption": "A recipe for every arrangement, stem by stem. Local run, invented proposal.",
+    "width": 1440,
+    "height": 900,
+    "label": "A recipe for every arrangement"
    },
    {
-    "src": "images/product-screens/ff-proposal-recipes.webp",
-    "alt": "Featured blooms and a card for each arrangement recipe in the customer presentation",
-    "caption": "Featured blooms and a card per recipe, each listing its flowers stem by stem. Local render, invented proposal.",
-    "width": 1600,
-    "height": 1522
+    "src": "images/product-screens/ff-pm-shopping.webp",
+    "alt": "Stem calculation for one flower with four pack options, one marked as suggested",
+    "caption": "The stem arithmetic behind the shopping list, with the store pack that covers the need suggested. Local run, invented products and prices.",
+    "width": 1440,
+    "height": 900,
+    "label": "The stem arithmetic"
    },
    {
-    "src": "images/product-screens/ff-proposal-shopping-list.webp",
-    "alt": "Presentation shopping list: flowers by group with pack, stems needed and price, then the order totals",
-    "caption": "The presentation’s shopping list: each flower’s pack, the stems its recipes need, the price and the totals. Local render, invented proposal; the discount code is hidden.",
-    "width": 1600,
-    "height": 1896
-   },
-   {
-    "src": "images/product-screens/ff-proposal-stem-math.webp",
-    "alt": "Editor shopping list with the stem calculation and pack choices for one flower",
-    "caption": "In the editor: 57 rose stems added up across eight recipes, each pack’s shortfall or surplus, and the suggested pack. View only; product photos did not load.",
-    "width": 1358,
-    "height": 1420
+    "src": "images/product-screens/ff-pm-cover.webp",
+    "alt": "Presentation cover for an invented garden wedding",
+    "caption": "What a customer would receive: the presentation’s cover. Local run, invented proposal.",
+    "width": 1440,
+    "height": 900,
+    "label": "The cover"
    }
   ],
-  "image": "images/product-screens/ff-proposal-cover.webp",
-  "imageWidth": 1600,
-  "imageHeight": 1000,
-  "imageAlt": "Customer presentation cover for an invented garden wedding proposal",
-  "imageCaption": "What a customer would receive: the presentation’s cover. Local render of the app’s code with an invented proposal.",
+  "image": "images/product-screens/ff-pm-dashboard.webp",
+  "imageWidth": 1440,
+  "imageHeight": 1126,
+  "imageAlt": "Proposal Manager dashboard with six proposal cards and a sidebar listing consultants",
+  "imageCaption": "The dashboard a consultant lands on: every saved proposal as a card. Local run of the app’s code with invented proposals and drawn pictures.",
   "created": "2026-03",
-  "createdFrom": "repository 4 Mar 2026"
+  "createdFrom": "repository 4 Mar 2026",
+  "chapters": [
+   {
+    "id": "dashboard",
+    "nav": "Sign-in and dashboard",
+    "eyebrow": "Part one · where a consultant starts",
+    "title": "Sign in, and every proposal is on one screen.",
+    "intro": "A consultant signs in with a company Google account and lands on the dashboard: every saved proposal as a card, and a sidebar that files them by consultant and consultation level. Every picture on this page is the app’s own code running on my machine with invented proposals, invented products and drawn pictures.",
+    "note": "Local run, invented data.",
+    "screens": [
+     {
+      "src": "images/product-screens/ff-pm-dashboard.webp",
+      "alt": "Proposal Manager dashboard with six proposal cards and a sidebar listing consultants",
+      "label": "The dashboard",
+      "caption": "Every saved proposal as a card: consultation level, event name, cover picture, event date and consultant, with View, Edit and Duplicate on each.",
+      "width": 1440,
+      "height": 1126,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-pm-sidebar.webp",
+      "alt": "The dashboard with the sidebar tree opened to one consultant’s proposals",
+      "label": "Find a proposal by consultant",
+      "caption": "The sidebar opens by consultant, then by consultation level, down to the proposal itself.",
+      "width": 1440,
+      "height": 700
+     },
+     {
+      "src": "images/product-screens/ff-pm-sign-in.webp",
+      "alt": "Sign-in card with a Continue with Google button",
+      "label": "Sign-in",
+      "caption": "Google sign-in, limited to company accounts.",
+      "width": 880,
+      "height": 560
+     },
+     {
+      "src": "images/product-screens/ff-pm-sign-in-refused.webp",
+      "alt": "Sign-in card showing an access restricted message",
+      "label": "An outside account",
+      "caption": "An account from outside the company is turned away with a plain message.",
+      "width": 880,
+      "height": 620
+     },
+     {
+      "src": "images/product-screens/ff-pm-dashboard-empty.webp",
+      "alt": "Empty dashboard saying no proposals yet",
+      "label": "Before the first proposal",
+      "caption": "An empty dashboard points to the one thing to do next.",
+      "width": 1440,
+      "height": 420
+     },
+     {
+      "src": "images/product-screens/ff-pm-dashboard-loading.webp",
+      "alt": "Dashboard showing grey placeholder cards while loading",
+      "label": "While it loads",
+      "caption": "Placeholder cards hold the layout until the proposals arrive.",
+      "width": 1440,
+      "height": 700
+     },
+     {
+      "src": "images/product-screens/ff-pm-duplicate.webp",
+      "alt": "The editor opened on a copy of a proposal",
+      "label": "Duplicate a proposal",
+      "caption": "A copy opens straight in the editor as “Copy of …”, ready to adapt for the next event.",
+      "width": 1440,
+      "height": 900
+     }
+    ]
+   },
+   {
+    "id": "editor",
+    "nav": "Building a proposal",
+    "eyebrow": "Part two · the editor",
+    "title": "One long form holds the whole event.",
+    "intro": "The editor runs top to bottom in the order a consultation does: the customer and event, inspiration and colours, then the flowers. It saves as the consultant works.",
+    "note": "Local run, invented data.",
+    "screens": [
+     {
+      "src": "images/product-screens/ff-pm-editor-details.webp",
+      "alt": "The top of the proposal editor with customer and event fields filled in",
+      "label": "Customer and event",
+      "caption": "Cover picture, customer, consultation level, event and delivery dates, and the discount code that applies to the order.",
+      "width": 1440,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-pm-editor-inspiration.webp",
+      "alt": "Inspiration pictures, six palette colours and style notes in the editor",
+      "label": "Inspiration and colours",
+      "caption": "Up to nine inspiration pictures, a colour palette and the consultant’s style notes.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-pm-editor-new.webp",
+      "alt": "An empty new proposal form",
+      "label": "A new proposal",
+      "caption": "Every section starts empty, and the consultation level decides which sections appear.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-pm-add-image.webp",
+      "alt": "A small box for adding an image by link, open over the inspiration pictures",
+      "label": "Add a picture",
+      "caption": "By pasting a link, or by uploading from the computer.",
+      "width": 1150,
+      "height": 700
+     },
+     {
+      "src": "images/product-screens/ff-pm-choose-colour.webp",
+      "alt": "A colour picker with quick-pick swatches open over the palette",
+      "label": "Add a colour",
+      "caption": "Eighteen quick picks, or any custom colour.",
+      "width": 1150,
+      "height": 840
+     },
+     {
+      "src": "images/product-screens/ff-pm-blooms.webp",
+      "alt": "Featured blooms listed by group with a search box above",
+      "label": "The featured flowers",
+      "caption": "The chosen flowers, grouped as focal, filler, line and greenery. The product names are invented.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-pm-search.webp",
+      "alt": "Product search results listed under the search box",
+      "label": "Search the catalog",
+      "caption": "Typing a name lists matching products with picture and price, and choosing one adds it to the proposal. Names and prices here are invented.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-pm-search-none.webp",
+      "alt": "Search box saying no products found",
+      "label": "No match",
+      "caption": "A search with no match says so.",
+      "width": 1150,
+      "height": 640
+     },
+     {
+      "src": "images/product-screens/ff-pm-assistant.webp",
+      "alt": "The AI Floral Assistant panel open with four quick prompts",
+      "label": "Ask the AI Floral Assistant",
+      "caption": "The embedded assistant takes a request in plain words. Only its opening screen is shown, because no AI answer was invented for a picture.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-pm-assistant-waiting.webp",
+      "alt": "The assistant panel showing a question and three waiting dots",
+      "label": "Waiting for the answer",
+      "caption": "The question is sent and the panel waits. The service was not called in this run.",
+      "width": 1150,
+      "height": 640
+     },
+     {
+      "src": "images/product-screens/ff-pm-unsaved.webp",
+      "alt": "The editor header reading Unsaved changes",
+      "label": "Saving as you work",
+      "caption": "The header shows “Unsaved changes”, then “Saving…”, then “Saved”, without a save button.",
+      "width": 860,
+      "height": 600
+     }
+    ]
+   },
+   {
+    "id": "recipes",
+    "nav": "Recipes and shopping list",
+    "eyebrow": "Part three · stems to packs",
+    "title": "Recipes, stem by stem, become a priced shopping list.",
+    "intro": "Each arrangement gets a recipe: which flowers, how many stems per piece, how many pieces. The app adds the stems across every recipe and turns them into the store’s packs, with prices.",
+    "note": "Local run, invented data.",
+    "screens": [
+     {
+      "src": "images/product-screens/ff-pm-recipes.webp",
+      "alt": "Recipe cards for a bridal bouquet, bridesmaid bouquets and boutonnieres",
+      "label": "A recipe for every arrangement",
+      "caption": "One card per arrangement: how many to make, a description and its stems by flower.",
+      "width": 1440,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-pm-recipe-form.webp",
+      "alt": "A recipe form with four ingredient rows",
+      "label": "The recipe form",
+      "caption": "Name, count, description, and one row per flower with its stems per piece.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-pm-recipe-photo.webp",
+      "alt": "The recipe photo block with a Generating button and a tips box",
+      "label": "Recipe picture and tips",
+      "caption": "A picture for the recipe (uploaded, linked or generated) and notes for the customer. The generator is shown waiting; no AI picture was made for this page.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-pm-recipe-duplicate.webp",
+      "alt": "A recipe form with the name box outlined in red and a message",
+      "label": "A repeated name is refused",
+      "caption": "Two recipes in one proposal cannot share a name.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-pm-add-recipe.webp",
+      "alt": "A panel offering to create a recipe from scratch or choose an existing one",
+      "label": "Add a recipe",
+      "caption": "From scratch, or reused from another proposal.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-pm-reuse.webp",
+      "alt": "A list of existing recipes filtered by the word table",
+      "label": "Reuse a recipe",
+      "caption": "Search the recipes of every proposal and bring one in.",
+      "width": 1150,
+      "height": 640
+     },
+     {
+      "src": "images/product-screens/ff-pm-shopping.webp",
+      "alt": "Stem calculation for one flower with four pack options, one marked as suggested",
+      "label": "The stem arithmetic",
+      "caption": "For each flower: stems per piece times pieces for every recipe, the total needed, then each store pack with its shortfall or surplus. The pack that covers the need is suggested.",
+      "width": 1440,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-pm-order-summary.webp",
+      "alt": "An order summary drawn as a price tag with eight lines and a total",
+      "label": "The order summary",
+      "caption": "One line per flower and pack, the subtotal, the consultation discount and the total.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-pm-basic-packs.webp",
+      "alt": "Featured flowers of a Basic proposal with pack choices under each",
+      "label": "A Basic consultation",
+      "caption": "No custom recipes at this level: the consultant ticks one pack for each flower.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-pm-basic-guides.webp",
+      "alt": "Five standard recipe guide cards with line drawings",
+      "label": "Standard recipe guides",
+      "caption": "Five fixed guides with stems by flower group, shown with Basic proposals.",
+      "width": 1440,
+      "height": 900
+     }
+    ]
+   },
+   {
+    "id": "presentation",
+    "nav": "The customer’s presentation",
+    "eyebrow": "Part four · what the customer receives",
+    "title": "The proposal becomes a presentation and a PDF.",
+    "intro": "The consultant chooses which pages to include, then opens the presentation: cover, inspiration, flowers, recipes, the shopping list and a day-by-day guide. Download PDF prints it. These pages come from a local run; on the live app the presentation does not open at the moment, and that repair is listed under where it stands.",
+    "note": "Local run, invented proposal.",
+    "screens": [
+     {
+      "src": "images/product-screens/ff-pm-cover.webp",
+      "alt": "Presentation cover for an invented garden wedding",
+      "label": "The cover",
+      "caption": "The event name and date over the app’s own background picture, with Download PDF in the top bar.",
+      "width": 1440,
+      "height": 900,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-pm-customize.webp",
+      "alt": "A list of presentation pages with switches and drag handles",
+      "label": "Choose the pages",
+      "caption": "Eight rows to switch on or off and drag into order.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-pm-customize-styles.webp",
+      "alt": "Colour, font style and heading size choices for the presentation",
+      "label": "Colours and type",
+      "caption": "Colour, font and heading choices are saved with the proposal. The pages do not apply them yet.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-pm-pres-inspiration.webp",
+      "alt": "A collage of inspiration pictures with a colour palette card",
+      "label": "Inspiration and palette",
+      "caption": "The inspiration pictures as a collage beside the colour palette.",
+      "width": 1440,
+      "height": 1210
+     },
+     {
+      "src": "images/product-screens/ff-pm-pres-blooms.webp",
+      "alt": "Eight flowers shown as round pictures with names",
+      "label": "Featured blooms",
+      "caption": "Each chosen flower as a round picture with its name.",
+      "width": 1440,
+      "height": 680
+     },
+     {
+      "src": "images/product-screens/ff-pm-pres-recipes.webp",
+      "alt": "Six recipe cards in the presentation",
+      "label": "Recipes",
+      "caption": "Every arrangement with its picture, count and stems.",
+      "width": 1440,
+      "height": 1269
+     },
+     {
+      "src": "images/product-screens/ff-pm-pres-list.webp",
+      "alt": "The presentation shopping list with flowers grouped by type",
+      "label": "Shopping list",
+      "caption": "Each flower with its pack, the stems it needs and the price.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-pm-pres-total.webp",
+      "alt": "A summary box with subtotal, discount, total, dates and a purchase button",
+      "label": "Totals and one button to buy",
+      "caption": "Subtotal, the consultation discount, the total, the order-by, delivery and event dates, and a button meant to fill the store cart. The button was not followed in this run.",
+      "width": 1440,
+      "height": 780
+     },
+     {
+      "src": "images/product-screens/ff-pm-guide-1.webp",
+      "alt": "Resources and tutorials page with three lists",
+      "label": "Guide: supplies and tutorials",
+      "caption": "The first of seven fixed guide pages.",
+      "width": 1440,
+      "height": 607
+     },
+     {
+      "src": "images/product-screens/ff-pm-guide-2.webp",
+      "alt": "Tips and tricks page with three cards",
+      "label": "Guide: tips",
+      "caption": "Preparation, storage and transport.",
+      "width": 1440,
+      "height": 567
+     },
+     {
+      "src": "images/product-screens/ff-pm-guide-3.webp",
+      "alt": "A checklist titled Flower Day 1",
+      "label": "Guide: flower day 1",
+      "caption": "A checklist for the day the flowers arrive.",
+      "width": 1440,
+      "height": 775
+     },
+     {
+      "src": "images/product-screens/ff-pm-guide-4.webp",
+      "alt": "A checklist titled Flower Day 2",
+      "label": "Guide: flower day 2",
+      "caption": "A checklist for making the personal flowers.",
+      "width": 1440,
+      "height": 775
+     },
+     {
+      "src": "images/product-screens/ff-pm-guide-5.webp",
+      "alt": "A checklist titled Flower Day 3",
+      "label": "Guide: flower day 3",
+      "caption": "A checklist for ceremony and reception pieces.",
+      "width": 1440,
+      "height": 775
+     },
+     {
+      "src": "images/product-screens/ff-pm-guide-6.webp",
+      "alt": "A checklist titled Event Day",
+      "label": "Guide: event day",
+      "caption": "A checklist for the day itself.",
+      "width": 1440,
+      "height": 775
+     },
+     {
+      "src": "images/product-screens/ff-pm-guide-7.webp",
+      "alt": "A closing page inviting customers to share photos",
+      "label": "Guide: share the result",
+      "caption": "An invitation to share photos afterwards.",
+      "width": 1440,
+      "height": 556
+     },
+     {
+      "src": "images/product-screens/ff-pm-pdf-1.webp",
+      "alt": "Six landscape PDF pages laid side by side",
+      "label": "The PDF, pages 1 to 6",
+      "caption": "Download PDF prints the same pages. Sections taller than a sheet run on to the next, which is one of the repairs still to make.",
+      "width": 1600,
+      "height": 834,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-pm-pdf-2.webp",
+      "alt": "Six more landscape PDF pages",
+      "label": "The PDF, pages 7 to 12",
+      "caption": "The shopping list and the first guide pages on paper.",
+      "width": 1600,
+      "height": 834
+     },
+     {
+      "src": "images/product-screens/ff-pm-pdf-3.webp",
+      "alt": "The last four landscape PDF pages",
+      "label": "The PDF, pages 13 to 16",
+      "caption": "The last guide pages.",
+      "width": 1600,
+      "height": 834
+     }
+    ]
+   }
+  ],
+  "productNote": "Every screen of the app follows in four parts, in the order a consultant uses it."
  },
  {
   "id": "fiftyflowers-support-ai",
@@ -878,7 +1869,7 @@
   "short": "Four AI apps for inquiries, reviews, claims and chargebacks, with shared case history and a Chrome sidepanel. They replaced the paid AI writing tool the team used before, saving about $24,000 a year.",
   "role": "AI Solutions Engineer · FiftyFlowers",
   "stack": [
-   "React",
+   "JavaScript",
    "Firebase",
    "Google Cloud",
    "Chrome extension",
@@ -1104,7 +2095,7 @@
    "Ticket or review cards"
   ],
   "next": "The rush form has been live since October 2025. Share Your Flair processing has run on every 2025 entry; releasing its media-link fixes and confirming automatic processing of new entries are the next steps.",
-  "evidence": "The form and entry page are the public storefront pages, shown empty; nothing was typed or sent. The emails are local renders of the real code with invented data.",
+  "evidence": "Every picture is a local run with invented data. The rush form is the store theme’s own form with invented products and an invented customer. The emails, the card and the bundle request are what the functions’ own code wrote, shown in plain frames. Nothing was typed into the live storefront and nothing was sent.",
   "decisions": [
    [
     "Write it as the customer.",
@@ -1127,41 +2118,197 @@
   "stage": "rollout",
   "screens": [
    {
-    "src": "images/product-screens/ff-rush-form.webp",
-    "alt": "Rush-order request form, empty, with event and delivery dates and a product search",
-    "caption": "The live rush-order form on the storefront, shown empty: event and delivery dates, then products picked from the catalog. Nothing was typed or sent.",
-    "width": 972,
-    "height": 780
+    "src": "images/product-screens/ff-rush-products.webp",
+    "alt": "Two views of the rush-order form: a product search listing four matches, and two chosen products with size and quantity",
+    "caption": "The rush-order form: searching the catalog, then two products chosen with size and quantity. A local run of the theme’s own form with invented products; nothing was typed into the live form.",
+    "width": 1380,
+    "height": 846,
+    "label": "Exact products, not a description"
    },
    {
-    "src": "images/product-screens/ff-rush-email.webp",
-    "alt": "Rush-order email with an invented request: event date, delivery date and two products with links",
-    "caption": "What customer service receives, in the customer’s voice with exact products and links. Local render of the function’s code with an invented request; not sent.",
-    "width": 1280,
-    "height": 718
+    "src": "images/product-screens/ff-rush-request-email.webp",
+    "alt": "A formatted rush order request email with order details, customer information, billing and shipping addresses",
+    "caption": "What customer service receives, in the customer’s voice with exact products and links. A local run of the function’s code with an invented request; recorded, not sent.",
+    "width": 860,
+    "height": 1645,
+    "label": "The email customer service receives"
    },
    {
-    "src": "images/product-screens/ff-flair-entry-page.webp",
-    "alt": "Share Your Flair entry page: three steps, the order lookup, prizes and rules",
-    "caption": "The public Share Your Flair page, where an entry starts with an order lookup. The page was already in place; nothing was typed or sent.",
-    "width": 1600,
-    "height": 1793
+    "src": "images/product-screens/ff-flair-contest-card.webp",
+    "alt": "A plain frame showing a contest card’s title, project, year and body with contact details, event, story and photo links",
+    "caption": "What the Share Your Flair step writes to the contest card for one entry. A local run with an invented entry, shown as a plain render.",
+    "width": 1020,
+    "height": 915,
+    "label": "The contest card"
    },
    {
-    "src": "images/product-screens/ff-flair-thank-you.webp",
-    "alt": "Thank-you email for an invented Share Your Flair entry",
-    "caption": "The thank-you email the processing step builds, as a local render with an invented entry. Not sent; the 2025 run was made with customer emails switched off.",
-    "width": 900,
-    "height": 950
+    "src": "images/product-screens/ff-flair-thanks.webp",
+    "alt": "A thank-you email headed Share Your Flair Contest with entry details and what happens next",
+    "caption": "The thank-you email the step builds for the couple. A local run with an invented entry; not sent.",
+    "width": 860,
+    "height": 1130,
+    "label": "The thank-you email"
    }
   ],
-  "image": "images/product-screens/ff-rush-form.webp",
-  "imageWidth": 972,
-  "imageHeight": 780,
-  "imageAlt": "Rush-order request form, empty, with event and delivery dates and a product search",
-  "imageCaption": "The live rush-order form on the storefront, shown empty: event and delivery dates, then products picked from the catalog. Nothing was typed or sent.",
+  "image": "images/product-screens/ff-rush-products.webp",
+  "imageWidth": 1380,
+  "imageHeight": 846,
+  "imageAlt": "Two views of the rush-order form: a product search listing matches, and two chosen products with size and quantity",
+  "imageCaption": "The rush-order form: searching the catalog, then two products chosen with size and quantity. A local run of the theme’s own form with invented products; nothing was typed into the live form.",
   "created": "2025-09",
-  "createdFrom": "rush-order function 5 Sep 2025"
+  "createdFrom": "rush-order function 5 Sep 2025",
+  "chapters": [
+   {
+    "id": "rush-form",
+    "nav": "The rush form",
+    "eyebrow": "Rush orders · the storefront form",
+    "title": "A request the form has already checked.",
+    "intro": "A customer who needs flowers sooner than standard delivery fills in one form: dates, exact products from the catalog with size and quantity, contact details and addresses. The form checks each part as it goes and refuses what cannot work, such as a Sunday delivery. These pictures are the store theme’s own form running on my machine with invented products and an invented customer. Nothing was typed into the live form.",
+    "note": "Local run, invented data.",
+    "stage": "production",
+    "status": "Live on the storefront since October 2025",
+    "screens": [
+     {
+      "src": "images/product-screens/ff-rush-products.webp",
+      "alt": "Two views of the rush-order form: a product search listing four matches, and two chosen products with size and quantity",
+      "label": "Exact products, not a description",
+      "caption": "Typing in the product box lists matches from the catalog. Picking one adds a row with a link to the product, a size menu with each size’s price, and a quantity. The products, prices and pictures are invented.",
+      "width": 1380,
+      "height": 846,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-rush-dates.webp",
+      "alt": "Two views of the form’s date boxes with red messages under refused dates",
+      "label": "Dates that cannot work are refused",
+      "caption": "An event date of today, a Sunday delivery and a delivery after the event are each refused with a message under the date.",
+      "width": 1380,
+      "height": 466,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-rush-checks.webp",
+      "alt": "The contact section of the form with four boxes outlined in red and a message under each",
+      "label": "Checked while typing",
+      "caption": "A digit in the name, an unfinished email address, a phone number cut short and a wrong character in the postal code each get a message as they are typed.",
+      "width": 680,
+      "height": 880
+     },
+     {
+      "src": "images/product-screens/ff-rush-thanks.webp",
+      "alt": "The rush-order page showing a green thank-you notice in place of the form",
+      "label": "An acknowledgment right away",
+      "caption": "After sending, the form is replaced by a notice that says when the team will be in touch and asks the customer to stay reachable.",
+      "width": 1260,
+      "height": 670
+     },
+     {
+      "src": "images/product-screens/ff-rush-failed.webp",
+      "alt": "The rush-order page with a red notice above the filled form",
+      "label": "When sending fails",
+      "caption": "If the request cannot be sent, a notice says so and the form stays filled, ready to send again.",
+      "width": 1260,
+      "height": 760
+     },
+     {
+      "src": "images/product-screens/ff-rush-phone.webp",
+      "alt": "Three phone-width views of the rush-order form",
+      "label": "On a phone",
+      "caption": "At phone width every section sits in one column and each chosen product stacks its name, link, size and quantity.",
+      "width": 1210,
+      "height": 890,
+      "wide": true
+     }
+    ]
+   },
+   {
+    "id": "rush-ticket",
+    "nav": "What support receives",
+    "eyebrow": "Rush orders · the request function",
+    "title": "One email the team can answer directly.",
+    "intro": "The request function checks everything again, then writes one email in the customer’s voice with the customer as reply-to, so it opens as a helpdesk ticket the team can answer without re-typing anything. These are the function’s own outputs for the request typed into the local form. The mail service was replaced by a recorder, and nothing was sent.",
+    "note": "Local run, invented data.",
+    "screens": [
+     {
+      "src": "images/product-screens/ff-rush-request-email.webp",
+      "alt": "A formatted rush order request email with order details, customer information, billing and shipping addresses",
+      "label": "The email customer service receives",
+      "caption": "Written in the customer’s voice with the customer as reply-to, so it opens as a ticket the team can answer directly: the order line by line, the customer, both addresses and a rush banner. The addresses in the header are stand-ins, and the email was recorded, not sent.",
+      "width": 860,
+      "height": 1645
+     },
+     {
+      "src": "images/product-screens/ff-rush-recheck.webp",
+      "alt": "A request with four missing fields and the function’s reply listing four errors",
+      "label": "Checked again on the server",
+      "caption": "The function does not trust the browser: it checks every request again and answers a bad one with a list of what is wrong.",
+      "width": 1040,
+      "height": 817
+     },
+     {
+      "src": "images/product-screens/ff-rush-prototype.webp",
+      "alt": "A text-only rush order request email with event details and two addresses",
+      "label": "Where it started: the one-day prototype",
+      "caption": "The first version’s email, September 2025: the same idea, a web form turned into an email the team can act on, before formatting, product links or the customer’s voice. Rebuilt by running the retired prototype’s own code with an invented request.",
+      "width": 860,
+      "height": 860
+     }
+    ]
+   },
+   {
+    "id": "flair",
+    "nav": "Share Your Flair",
+    "eyebrow": "Share Your Flair · the processing step",
+    "title": "One contest entry becomes two pieces of team work.",
+    "intro": "When a couple shares their event, the processing step turns the saved entry into a contest review card, a Make This Look card, a draft store bundle built from their photos, story and ordered products, a page that downloads all their media in one click, and a thank-you email. These pictures show what the step writes, from one run of its own code on my machine with an invented entry and every outside service replaced by a recorder. They are plain renders of what was written, not screenshots of the team’s tools.",
+    "note": "Local run, invented data.",
+    "stage": "rollout",
+    "status": "Run on every 2025 entry · fixes for new entries awaiting release",
+    "screens": [
+     {
+      "src": "images/product-screens/ff-flair-contest-card.webp",
+      "alt": "A plain frame showing a contest card’s title, project, year and body with contact details, event, story and photo links",
+      "label": "The contest card",
+      "caption": "What the step writes to the marketing team’s contest card: who entered, the event, their story and a link to every photo. A plain render of what was written, not a screenshot of the team’s project tool.",
+      "width": 1020,
+      "height": 915
+     },
+     {
+      "src": "images/product-screens/ff-flair-bundle.webp",
+      "alt": "A plain frame showing a draft bundle’s title, tags, description, products, fields and six photos",
+      "label": "The draft store bundle",
+      "caption": "What the step asks the store to create: a draft named after the couple, holding their story, the products they ordered in the sizes they bought, and their photos, tagged for the Make This Look collection.",
+      "width": 1020,
+      "height": 1005
+     },
+     {
+      "src": "images/product-screens/ff-flair-download.webp",
+      "alt": "A download page titled with a couple and event, two zip buttons and seven file links",
+      "label": "All the media in one click",
+      "caption": "Each card links to a page that zips the couple’s photos and videos in the browser, or hands over single files. Generated by the step’s own code for an invented entry with drawn pictures.",
+      "width": 840,
+      "height": 465
+     },
+     {
+      "src": "images/product-screens/ff-flair-thanks.webp",
+      "alt": "A thank-you email headed Share Your Flair Contest with entry details and what happens next",
+      "label": "The thank-you email",
+      "caption": "The confirmation the step builds for the couple: their entry details and what happens next. Recorded, not sent.",
+      "width": 860,
+      "height": 1130
+     },
+     {
+      "src": "images/product-screens/ff-flair-checks.webp",
+      "alt": "Test runner output listing eleven passing checks in three groups",
+      "label": "Its automated checks, passing",
+      "caption": "The step’s own 11 checks for link building, the download page and repair planning, run on my machine.",
+      "width": 1040,
+      "height": 490
+     }
+    ]
+   }
+  ],
+  "productNote": "Three parts follow: the rush form in use, what customer service receives, and what the contest step writes for one entry."
  },
  {
   "id": "sitesift",
@@ -1317,7 +2464,7 @@
    "Products and chips"
   ],
   "next": "In the store theme since January 2026, hidden unless the company’s A/B test shows it. Next: record who the test shows it to, check card prices against product pages, and measure usage and cost.",
-  "evidence": "The panel is a local render of the store theme’s code, not the live storefront and not a live AI run: the reading of the request was typed in by hand and the three products are invented. The prototype page is shown empty.",
+  "evidence": "Every picture is a local run of the store theme’s code and the assistant’s search code against an invented catalog, on a plain test page: not the live storefront and not a live AI run. Where a conversation starts from a typed request, the reading of that request was typed in by hand.",
   "decisions": [
    [
     "Let the model translate, let code search.",
@@ -1340,27 +2487,174 @@
   "stage": "rollout",
   "screens": [
    {
-    "src": "images/product-screens/ff-shop-assistant-panel.webp",
-    "alt": "AI Floral Assistant side panel: the welcome view, and an answer with product cards and filter chips",
-    "caption": "Local render of the store theme’s code, not the live storefront: the welcome view, and an answer with removable filter chips. In this render the reading of the request was typed in by hand and the three products are invented; the search, the reply and the chips are the real code.",
-    "width": 1600,
-    "height": 1411
+    "src": "images/product-screens/ff-shop-ask.webp",
+    "alt": "Three views of the assistant panel: the welcome view, waiting dots after a request, and an answer with product cards and filter chips",
+    "caption": "The assistant’s panel: open, ask, answered. Local run of the store theme’s code with an invented catalog; the reading of the request was typed in by hand, and the search, the reply and the chips are the real code.",
+    "width": 1440,
+    "height": 885,
+    "label": "Open, ask, answered"
    },
    {
-    "src": "images/product-screens/ff-shop-prototype.webp",
-    "alt": "The 2025 prototype’s chat page with four suggested questions and an empty filters panel",
-    "caption": "The 2025 prototype’s chat page in its starting state. It ran locally and was never shown to shoppers; its filters carried into the storefront assistant.",
-    "width": 1280,
-    "height": 720
+    "src": "images/product-screens/ff-shop-refine.webp",
+    "alt": "Three views: results after one chip is removed, results with no filters, and the row that offers new recommendations",
+    "caption": "Refining without starting over: a chip taken off, filters cleared, a fresh set. Local run, invented catalog.",
+    "width": 1440,
+    "height": 885,
+    "label": "Refine without starting over"
+   },
+   {
+    "src": "images/product-screens/ff-shop-loosened.webp",
+    "alt": "Three views: two answers that say the budget was raised to find options, and one reply with a suggestion and no products",
+    "caption": "When nothing fits, the search is loosened and the reply says what changed. Local run, invented catalog.",
+    "width": 1440,
+    "height": 885,
+    "label": "Never an empty answer"
+   },
+   {
+    "src": "images/product-screens/ff-shop-proto-answer.webp",
+    "alt": "The prototype page listing recommended products beside two active filters",
+    "caption": "The 2025 prototype answering a question, with the filters it read on the right. Local run, invented catalog.",
+    "width": 1140,
+    "height": 870,
+    "label": "An answer"
    }
   ],
-  "image": "images/product-screens/ff-shop-assistant-panel.webp",
-  "imageWidth": 1600,
-  "imageHeight": 1411,
-  "imageAlt": "AI Floral Assistant side panel: the welcome view, and an answer with product cards and filter chips",
-  "imageCaption": "Local render of the store theme’s code, not the live storefront: the welcome view, and an answer with removable filter chips. In this render the reading of the request was typed in by hand and the three products are invented; the search, the reply and the chips are the real code.",
+  "image": "images/product-screens/ff-shop-ask.webp",
+  "imageWidth": 1440,
+  "imageHeight": 885,
+  "imageAlt": "Three views of the assistant panel: the welcome view, waiting dots after a request, and an answer with product cards and filter chips",
+  "imageCaption": "The assistant’s panel: open, ask, answered. Local run of the store theme’s code with an invented catalog; the reading of the request was typed in by hand, and the search, the reply and the chips are the real code.",
   "created": "2025-08",
-  "createdFrom": "prototype 8 Aug 2025"
+  "createdFrom": "prototype 8 Aug 2025",
+  "chapters": [
+   {
+    "id": "panel",
+    "nav": "The storefront panel",
+    "eyebrow": "The storefront assistant · in the store theme since January 2026",
+    "title": "Ask in plain words, get products the store really sells.",
+    "intro": "A shopper opens the panel, says what they need, and gets products from the store’s own catalog, with what the assistant understood shown as chips they can take off again. These pictures are the store theme’s own code and the assistant’s own search code running on my machine against an invented catalog. The AI step was not called: where a conversation starts from a typed request, the reading of that request was typed in by hand, and everything after it is the real code.",
+    "note": "Local run, invented catalog.",
+    "stage": "rollout",
+    "status": "In the store theme · behind an A/B test since January 2026",
+    "screens": [
+     {
+      "src": "images/product-screens/ff-shop-ask.webp",
+      "alt": "Three views of the assistant panel: the welcome view, waiting dots after a request, and an answer with product cards and filter chips",
+      "label": "Open, ask, answered",
+      "caption": "The panel opens on four example requests. A request is sent, and the answer comes back as a sentence, product cards and chips for what was understood. In this local run the reading of the request was typed in by hand; the search, the reply and the cards are the real code.",
+      "width": 1440,
+      "height": 885,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-shop-launcher.webp",
+      "alt": "A test page of flower products with a pink AI Floral Assistant button at the bottom right",
+      "label": "The button on the page",
+      "caption": "Closed, the assistant is one button above the support chat button. Shown on a plain test page with invented products, not the store.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-shop-answer-whole.webp",
+      "alt": "The assistant panel showing six product cards and five filter chips",
+      "label": "The whole answer",
+      "caption": "Six products with type, name, picture, price and options, then a row offering a fresh set, and the chips. The reading of this request was typed in by hand.",
+      "width": 500,
+      "height": 2059
+     },
+     {
+      "src": "images/product-screens/ff-shop-refine.webp",
+      "alt": "Three views: results after one chip is removed, results with no filters, and the row that offers new recommendations",
+      "label": "Refine without starting over",
+      "caption": "Taking a chip off searches again at once, clearing them all widens to the whole catalog, and the refresh button draws a different set. None of these steps calls the AI.",
+      "width": 1440,
+      "height": 885,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-shop-loosened.webp",
+      "alt": "Three views: two answers that say the budget was raised to find options, and one reply with a suggestion and no products",
+      "label": "Never an empty answer",
+      "caption": "When nothing fits, the search is loosened and the reply says what changed. When loosening finds nothing either, it says so and suggests what to change. In the first and third the reading of the request was typed in by hand.",
+      "width": 1440,
+      "height": 885,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-shop-saved.webp",
+      "alt": "Three views: saved conversation tabs, a conversation with exclusion chips, and a renamed tab",
+      "label": "Conversations that come back",
+      "caption": "Earlier conversations return as tabs, what was left out shows as struck-through chips, and a tab can be renamed. These conversations were loaded from an invented saved record.",
+      "width": 1440,
+      "height": 885,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-shop-phone.webp",
+      "alt": "Four phone-width views of the assistant panel",
+      "label": "On a phone",
+      "caption": "The panel takes most of the screen, the cards narrow to two columns and then to one, and the chips wrap.",
+      "width": 1440,
+      "height": 806,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-shop-errors.webp",
+      "alt": "Three views: an error bubble with the message restored, an apology when the catalog cannot be searched, and a card with a placeholder drawing",
+      "label": "When something goes wrong",
+      "caption": "A failed message is put back in the box to send again, a catalog that cannot be reached is said plainly, and a product without a picture gets a drawing in its place.",
+      "width": 1440,
+      "height": 885,
+      "wide": true
+     }
+    ]
+   },
+   {
+    "id": "prototype",
+    "nav": "The 2025 prototype",
+    "eyebrow": "The prototype · August to November 2025",
+    "title": "A demo page that proved the filters first.",
+    "intro": "Before the storefront panel there was a chat page that read a request into filters, remembered them in a side panel and answered with numbered products. Its filter vocabulary carried into the storefront assistant. These pictures are the prototype’s own page running locally with an invented catalog, and the readings were typed in by hand.",
+    "note": "Local run, invented catalog.",
+    "stage": "earlier",
+    "status": "Prototype · ran on a developer’s machine, never shown to shoppers",
+    "screens": [
+     {
+      "src": "images/product-screens/ff-shop-proto-start.webp",
+      "alt": "A pink chat page with suggested questions and an empty Active Filters panel",
+      "label": "Where it started",
+      "caption": "The demo page as it opens: four suggested questions and an empty panel for the filters it will remember.",
+      "width": 1140,
+      "height": 610
+     },
+     {
+      "src": "images/product-screens/ff-shop-proto-answer.webp",
+      "alt": "The prototype page listing recommended products beside two active filters",
+      "label": "An answer",
+      "caption": "Numbered products with price, colors, effort level, type, availability and occasions, and the filters it read on the right. The reading of the request was typed in by hand.",
+      "width": 1140,
+      "height": 870
+     },
+     {
+      "src": "images/product-screens/ff-shop-proto-filters.webp",
+      "alt": "The prototype page with three active filters: budget, colors and occasions",
+      "label": "Filters that are remembered",
+      "caption": "A second message adds a budget to the colour and occasion already held; each can be removed.",
+      "width": 1140,
+      "height": 870
+     },
+     {
+      "src": "images/product-screens/ff-shop-proto-removed.webp",
+      "alt": "The prototype page after the budget filter was removed",
+      "label": "A filter removed",
+      "caption": "Removing the budget brings a new set for what remains.",
+      "width": 1140,
+      "height": 610
+     }
+    ]
+   }
+  ],
+  "productNote": "Every state of the panel follows as side-by-side views, then the 2025 prototype."
  },
  {
   "id": "ai-travel-companion",
