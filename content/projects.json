@@ -31,7 +31,7 @@
    ],
    [
     "Product imagery",
-    "Image Studio and Preset Creation for consistent product photos, plus a separate batch photo-preparation tool. See the Image Studio case study."
+    "Image Studio and Preset Creation for consistent product photos. See the Image Studio case study."
    ],
    [
     "Content from customer questions",
@@ -1184,7 +1184,7 @@
    "Python pipeline"
   ],
   "problem": "A large product catalog needed consistent backgrounds and styles. Editing by hand was slow, and a credit-based third-party tool cost about 15 cents an image.",
-  "contribution": "Ran the April pilot and its cost case, then built Image Studio and Preset Creation into the company’s AI platform, with usage tracking and team limits, plus a separate catalog-photo pipeline.",
+  "contribution": "Ran the April pilot and its cost case, then built Image Studio and Preset Creation into the company’s AI platform, with usage tracking and team limits.",
   "groups": [
    [
     "A pilot that made the case",
