@@ -729,21 +729,21 @@
    {
     "src": "images/product-screens/axiom-analytics.webp",
     "alt": "Axiom analytics dashboard with sector distribution and fee-analysis charts",
-    "caption": "Analytics across historical proposal and fee data. Amounts, counts, chart shapes and account details are covered. The interface is shown as captured, not as independent validation of the analysis.",
+    "caption": "Analytics across historical proposal and fee data. Amounts, counts, chart shapes, account details and the name of the client’s accounting system are covered. The interface is shown as captured, not as independent validation of the analysis.",
     "width": 1440,
     "height": 900
    },
    {
     "src": "images/product-screens/axiom-explorer.webp",
     "alt": "Axiom source explorer showing proposals, actuals and workbook collections",
-    "caption": "The live source explorer organizes proposals, engagement records and fee workbooks. Private counts and account details are covered; source reconciliation and estimation remain separate work.",
+    "caption": "The live source explorer organizes proposals, engagement records and fee workbooks. Private counts, account details and the name of the client’s accounting system are covered; source reconciliation and estimation remain separate work.",
     "width": 1440,
     "height": 900
    }
   ],
   "image": "images/product-screens/axiom-analytics.webp",
   "imageAlt": "Axiom analytics dashboard with sector distribution and fee-analysis charts",
-  "imageCaption": "Analytics across historical proposal and fee data. Amounts, counts, chart shapes and account details are covered. The interface is shown as captured, not as independent validation of the analysis.",
+  "imageCaption": "Analytics across historical proposal and fee data. Amounts, counts, chart shapes, account details and the name of the client’s accounting system are covered. The interface is shown as captured, not as independent validation of the analysis.",
   "imageWidth": 1440,
   "imageHeight": 900,
   "logo": "images/brands/axiom.png",
