@@ -111,10 +111,10 @@
   "name": "Create Spaces",
   "category": "companies",
   "sector": "Office furniture · Workplace services",
-  "status": "Dashboard live · daily export being proven, ChatGPT connection not yet on",
+  "status": "Dashboard and ChatGPT connection live · daily export being proven",
   "color": "sand",
   "visual": "reports",
-  "short": "The company’s booking history back to 2009, verified to the cent in its own AWS storage, with a dashboard live behind a company sign-in. A daily AI export agent and a read-only ChatGPT connection that ties each figure to its report row are built and being switched on step by step.",
+  "short": "The company’s booking history back to 2009, verified to the cent in its own AWS storage, with a dashboard and a read-only ChatGPT connection live behind a company sign-in; every answer ties its figure to the report row it came from. A daily AI export agent is built and being proven run by run.",
   "role": "Software Engineer · Manifold",
   "stack": [
    "AI computer-use agent",
@@ -140,7 +140,7 @@
    ],
    [
     "Ask in your own ChatGPT",
-    "Each person will connect their own ChatGPT through a read-only connection, built and tested ahead of rollout. The connection returns every figure with the report row it came from and has no way to change the data."
+    "Each person connects their own ChatGPT through a read-only connection, switched on in October 2026. The connection returns every figure with the report row it came from and has no way to change the data."
    ],
    [
     "See the business",
@@ -152,7 +152,7 @@
    "Verified daily export",
    "Dashboard and ChatGPT answers"
   ],
-  "next": "The verified history and the dashboard are live on the company’s own AWS account, behind a company sign-in. The daily schedule is being proven run by run, and each person’s ChatGPT connection switches on after that.",
+  "next": "The verified history, the dashboard and the ChatGPT connection are live on the company’s own AWS account, behind a company sign-in. The daily schedule is being proven run by run.",
   "evidence": "Screens use invented sample data generated in the report’s exact format, except the calendar of report days, which shows the real coverage and no figures.",
   "decisions": [
    [
@@ -164,7 +164,7 @@
     "The ChatGPT connection is read-only and returns the Excel row behind each figure, so an answer can be checked against the source."
    ]
   ],
-  "decisionNote": "More than 1,200 automated tests cover the export, verification, dashboard and connection. The dashboard went live on 1 October 2026; the daily schedule and the ChatGPT connection are the remaining rollout steps.",
+  "decisionNote": "More than 1,200 automated tests cover the export, verification, dashboard and connection. The dashboard and the ChatGPT connection went live on 1 October 2026; the daily schedule is the remaining rollout step.",
   "logo": "images/create-spaces-logo.png",
   "logoWidth": 800,
   "logoHeight": 221,
@@ -180,14 +180,14 @@
    {
     "src": "images/product-screens/create-spaces-exports-days.webp",
     "alt": "Calendar of every report day received from 2009 to September 2026",
-    "caption": "Every report day received, from January 2009 to September 2026.",
+    "caption": "Report days received: the latest 31 days on a calendar, beside the count of every day received since January 2009.",
     "width": 730,
     "height": 420
    },
    {
     "src": "images/product-screens/create-spaces-connections.webp",
     "alt": "Connections page guiding a person through linking their own ChatGPT",
-    "caption": "Connections: five steps for each person to link their own ChatGPT, read-only. Shown before the connection is switched on.",
+    "caption": "Connections as it looked before the connection was switched on: five steps for each person to link their own ChatGPT, read-only. The live page now walks through the same set-up in eight picture steps.",
     "width": 1440,
     "height": 834
    }

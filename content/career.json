@@ -39,7 +39,7 @@
           "projects": [
             {
               "name": "Booking reporting & AI workspace",
-              "text": "Built the company’s booking-data platform on its own AWS account: history back to 2009 verified to the cent, a dashboard behind company sign-in, an AI agent built to export the daily report from the company’s business system, and a read-only ChatGPT connection that ties each figure to its report row. The dashboard is live; the daily export is being proven run by run and the ChatGPT connection is not yet switched on.",
+              "text": "Built the company’s booking-data platform on its own AWS account: history back to 2009 verified to the cent, a dashboard behind company sign-in, an AI agent built to export the daily report from the company’s business system, and a read-only ChatGPT connection that ties each figure to its report row. The dashboard and the ChatGPT connection are live; the daily export is being proven run by run.",
               "record": "create-spaces"
             }
           ]
