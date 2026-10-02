@@ -776,7 +776,7 @@
    "Products and chips"
   ],
   "next": "In the store theme since January 2026, hidden unless the company’s A/B test shows it. Next: record who the test shows it to, check card prices against product pages, and measure usage and cost.",
-  "evidence": "The panel is a local render of the store theme’s code with three invented products, not the live storefront. The prototype page is shown empty.",
+  "evidence": "The panel is a local render of the store theme’s code, not the live storefront and not a live AI run: the reading of the request was typed in by hand and the three products are invented. The prototype page is shown empty.",
   "decisions": [
    [
     "Let the model translate, let code search.",
@@ -801,7 +801,7 @@
    {
     "src": "images/product-screens/ff-shop-assistant-panel.webp",
     "alt": "AI Floral Assistant side panel: the welcome view, and an answer with product cards and filter chips",
-    "caption": "Local render of the store theme’s code, not the live storefront: the welcome view, and an answer built from three invented products with removable filter chips.",
+    "caption": "Local render of the store theme’s code, not the live storefront: the welcome view, and an answer with removable filter chips. In this render the reading of the request was typed in by hand and the three products are invented; the search, the reply and the chips are the real code.",
     "width": 1600,
     "height": 1411
    },
@@ -817,7 +817,7 @@
   "imageWidth": 1600,
   "imageHeight": 1411,
   "imageAlt": "AI Floral Assistant side panel: the welcome view, and an answer with product cards and filter chips",
-  "imageCaption": "Local render of the store theme’s code, not the live storefront: the welcome view, and an answer built from three invented products with removable filter chips."
+  "imageCaption": "Local render of the store theme’s code, not the live storefront: the welcome view, and an answer with removable filter chips. In this render the reading of the request was typed in by hand and the three products are invented; the search, the reply and the chips are the real code."
  },
  {
   "id": "sitesift",
