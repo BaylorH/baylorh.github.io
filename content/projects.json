@@ -1906,7 +1906,7 @@
    "Reviewed reply"
   ],
   "next": "In production since January 2026. The saving comes from retiring the paid AI writing tool the team used before; the figure is my own estimate, not a company or audited number. A number does not cover the rest of the change: replies now start from the team’s own knowledge and voice, refund figures are calculated before a word is written, and every case leaves a history the next person can pick up.",
-  "evidence": "Screens show invented cases entered for documentation. No customer, order or staff information is displayed.",
+  "evidence": "The first three pictures are captures of the live product with invented cases. Every other picture is a local run of the workspace’s own code with an invented knowledge base, invented orders and customers, and a stand-in in place of the AI: each draft in them is a reference reply from the project’s own test set, or the stand-in’s default text. No customer, order or staff information is displayed.",
   "decisions": [
    [
     "Calculate first, then write.",
@@ -1921,29 +1921,40 @@
   "screens": [
    {
     "src": "images/product-screens/ff-support-inquiry.webp",
-    "alt": "A drafted reply to an invented care question about ranunculus and garden roses",
-    "caption": "CS Inquiry with an invented care question: the app picks the matching care articles and drafts the reply. The representative’s name is replaced.",
+    "alt": "A drafted customer reply about ranunculus and garden roses in the support app",
+    "caption": "CS Inquiry on the live product with an invented care question: the first screen of the reply it drafted. The representative’s name is replaced.",
     "width": 1290,
-    "height": 860
+    "height": 860,
+    "label": "A drafted reply"
    },
    {
-    "src": "images/product-screens/ff-support-apps.webp",
-    "alt": "The CS Inquiry form, empty, with the four support apps in the side menu",
-    "caption": "The CS Inquiry form before anything is generated, with the four support apps in the menu. The signed-in name is replaced.",
+    "src": "images/product-screens/ff-cs-sidepanel.webp",
+    "alt": "A support ticket with selected text and a toolbar, beside a side panel form filled with that text",
+    "caption": "In the support desk: select the customer’s words, pick an app, and the side panel opens with the message filled in. Local run on an invented support-desk page.",
     "width": 1440,
-    "height": 900
+    "height": 933,
+    "label": "Select the customer’s words, pick an app"
    },
    {
-    "src": "images/product-screens/ff-support-reviews.webp",
-    "alt": "A drafted public reply to an invented two-star review",
-    "caption": "Reviews: a plain-text public reply to an invented two-star review.",
-    "width": 1290,
-    "height": 990
+    "src": "images/product-screens/ff-cs-draft-toolbar.webp",
+    "alt": "A drafted reply with one paragraph selected and a small toolbar offering Shorten, Expand and Rewrite",
+    "caption": "Editing a draft: select a passage to shorten, expand or rewrite it. Local run; the draft is a reference reply from the project’s test set.",
+    "width": 1184,
+    "height": 900,
+    "label": "Edit the part that needs it"
+   },
+   {
+    "src": "images/product-screens/ff-cs-history.webp",
+    "alt": "A History page with a list of cases and one case open showing its current draft and timeline",
+    "caption": "Every case keeps its steps and can be reopened. Local run, invented cases.",
+    "width": 1184,
+    "height": 900,
+    "label": "A case, with every step kept"
    }
   ],
   "image": "images/product-screens/ff-support-inquiry.webp",
-  "imageAlt": "A drafted reply to an invented care question about ranunculus and garden roses",
-  "imageCaption": "CS Inquiry with an invented care question: the app picks the matching care articles and drafts the reply. The representative’s name is replaced.",
+  "imageAlt": "A drafted customer reply about ranunculus and garden roses in the support app",
+  "imageCaption": "CS Inquiry on the live product with an invented care question: the first screen of the reply it drafted. The representative’s name is replaced.",
   "imageWidth": 1290,
   "imageHeight": 860,
   "logo": "images/brands/fiftyflowers.svg",
@@ -1954,7 +1965,211 @@
   "stage": "production",
   "nextTitle": "In use by the support team since January 2026.",
   "created": "2026-01",
-  "createdFrom": "first commit 13 Jan 2026"
+  "createdFrom": "first commit 13 Jan 2026",
+  "chapters": [
+   {
+    "id": "live",
+    "nav": "On the live product",
+    "eyebrow": "The live product",
+    "title": "Real drafts, for invented cases.",
+    "intro": "These three pictures are existing captures of the live product. The cases in them were invented and entered for documentation, and the drafts are what the product wrote for them.",
+    "note": "Existing captures of the live product, invented cases.",
+    "stage": "production",
+    "status": "In production since January 2026",
+    "screens": [
+     {
+      "src": "images/product-screens/ff-support-inquiry.webp",
+      "alt": "A drafted customer reply about ranunculus and garden roses in the support app",
+      "label": "A drafted reply",
+      "caption": "CS Inquiry on the live product with an invented care question: the first screen of the reply it drafted. The representative’s name is replaced.",
+      "width": 1290,
+      "height": 860
+     },
+     {
+      "src": "images/product-screens/ff-support-apps.webp",
+      "alt": "The CS Inquiry form with a menu listing CS Inquiry, Reviews, Claims and Chargeback",
+      "label": "Four apps in one menu",
+      "caption": "The CS Inquiry form before anything is generated, with the four support apps in the menu.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-support-reviews.webp",
+      "alt": "A drafted public reply to a product review",
+      "label": "A public reply to a review",
+      "caption": "Reviews: a plain-text public reply to an invented two-star review. The sign-off line is left out of the picture.",
+      "width": 1290,
+      "height": 990
+     }
+    ]
+   },
+   {
+    "id": "drafting",
+    "nav": "Drafting a reply",
+    "eyebrow": "The four apps · a local run",
+    "title": "From the customer’s words to a reply ready to send.",
+    "intro": "Every app works the same way: paste what the customer said, let the app pick the company knowledge that applies, say what the reply should do, then edit the draft and copy it out. The pictures from here on are the workspace’s own code running on my machine with an invented knowledge base, invented orders and customers, and a stand-in in place of the AI. Each draft shown is a reference reply from the project’s own test set, and no AI was called for a picture.",
+    "note": "Local run, invented knowledge base and orders.",
+    "screens": [
+     {
+      "src": "images/product-screens/ff-cs-inquiry-form.webp",
+      "alt": "The CS Inquiry form with a customer message, seven ticked knowledge chips and optional fields",
+      "label": "The knowledge the app picked",
+      "caption": "A customer’s message after Next: the app has ticked the knowledge articles that match, and the rep adds the facts and the resolution before generating. The articles are invented for these pictures.",
+      "width": 1184,
+      "height": 919
+     },
+     {
+      "src": "images/product-screens/ff-cs-draft-toolbar.webp",
+      "alt": "A drafted reply with one paragraph selected and a small toolbar offering Shorten, Expand and Rewrite",
+      "label": "Edit the part that needs it",
+      "caption": "Selecting a passage of the draft brings up Shorten, Expand and Rewrite for that passage only. The draft text is a reference reply from the project’s own test set, returned by a stand-in; no AI was called for this picture.",
+      "width": 1184,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-cs-refine.webp",
+      "alt": "The reply view after a refinement, with an Ask for changes box and a Copy to Clipboard button",
+      "label": "Or ask for a change in plain words",
+      "caption": "An instruction typed under the draft rewrites the whole reply in place. The draft text is a reference reply from the project’s own test set, returned by a stand-in; no AI was called for this picture.",
+      "width": 1184,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-cs-paste.webp",
+      "alt": "A formatted reply pasted into a rich-text reply editor",
+      "label": "Copied out with its formatting",
+      "caption": "Copy to Clipboard carries the headings, bold labels and bullets, shown here pasted into a reply box on a support-desk page invented for these pictures. The draft text is a reference reply from the project’s own test set, returned by a stand-in; no AI was called for this picture.",
+      "width": 1440,
+      "height": 640
+     },
+     {
+      "src": "images/product-screens/ff-cs-claims.webp",
+      "alt": "The Claims form with an order lookup, two products, a documents checklist and a refund calculator",
+      "label": "Numbers worked out before a word is written",
+      "caption": "Claims with an invented order looked up: the rep ticks the affected products, and the calculator works out the claim subtotal after the order discount, the tax, and the refund or store credit for the damage chosen. The reply is told to quote those amounts exactly.",
+      "width": 1184,
+      "height": 2100
+     },
+     {
+      "src": "images/product-screens/ff-cs-chargeback.webp",
+      "alt": "The Chargeback form filled with order details, a timeline, an evidence list and a resolution",
+      "label": "A dispute letter starts from the facts",
+      "caption": "Chargeback with an invented dispute: the order details filled from a lookup, the dated timeline, the evidence list and the position for the bank, above Generate Dispute Letter.",
+      "width": 1184,
+      "height": 1810
+     }
+    ]
+   },
+   {
+    "id": "cases",
+    "nav": "Case history",
+    "eyebrow": "History",
+    "title": "Nobody starts a case from scratch.",
+    "intro": "Every draft, regeneration and edit is saved with the form that produced it, so the next person can read what happened, reopen the case in its app, or draft the reply to the customer’s next message.",
+    "note": "Local run, invented knowledge base and orders.",
+    "screens": [
+     {
+      "src": "images/product-screens/ff-cs-history.webp",
+      "alt": "A History page with a list of cases and one case open showing its current draft and timeline",
+      "label": "A case, with every step kept",
+      "caption": "History lists the team’s saved cases; this one has four numbered steps, from the first draft to a refinement, and can be reopened in its app. The draft text is a reference reply from the project’s own test set, returned by a stand-in; no AI was called for this picture.",
+      "width": 1184,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-cs-followup.webp",
+      "alt": "Three views: a reopened form, a customer reply pasted under a case, and the case with a fifth step",
+      "label": "Reopen it, or draft the follow-up",
+      "caption": "A reopened case brings back its inputs. Pasting the customer’s newest message under the case drafts the next reply as a fifth step. In the third panel that draft reads “stubbed output”: it is the test stand-in’s default text, because no AI was called.",
+      "width": 1184,
+      "height": 2874
+     }
+    ]
+   },
+   {
+    "id": "desk",
+    "nav": "In the support desk",
+    "eyebrow": "The Chrome side panel",
+    "title": "The apps come to where the team works.",
+    "intro": "A Chrome extension brings three of the apps into the support desk and other approved sites. Its cases land in the same history as the web app’s. These pictures are the extension’s own code in a throwaway browser profile, on a support-desk page invented for them.",
+    "note": "Local run, invented knowledge base and orders.",
+    "screens": [
+     {
+      "src": "images/product-screens/ff-cs-sidepanel.webp",
+      "alt": "A support ticket with selected text and a toolbar, beside a side panel form filled with that text",
+      "label": "Select the customer’s words, pick an app",
+      "caption": "On a support ticket, selecting the customer’s message brings up a small toolbar; picking Inquiry opens the browser’s side panel with the message already in the form and knowledge ticked. The support desk is a page invented for these pictures.",
+      "width": 1440,
+      "height": 933,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-cs-panel-views.webp",
+      "alt": "Five narrow side-panel views: a draft, a rewrite, a history list, a saved case and a follow-up form",
+      "label": "The whole flow, without leaving the ticket",
+      "caption": "The side panel’s views: a draft, a quick rewrite with the original above it, the team’s history, a saved case, and a follow-up. The draft text is a reference reply from the project’s own test set, returned by a stand-in; no AI was called for this picture.",
+      "width": 1440,
+      "height": 725,
+      "wide": true
+     }
+    ]
+   },
+   {
+    "id": "upkeep",
+    "nav": "Knowledge and upkeep",
+    "eyebrow": "Behind the drafts",
+    "title": "The team owns what the AI is told.",
+    "intro": "The replies are only as good as the knowledge behind them, so the team keeps that itself: brand voices, knowledge articles, requests for changes, and a page that shows what the drafts cost.",
+    "note": "Local run, invented knowledge base and orders.",
+    "screens": [
+     {
+      "src": "images/product-screens/ff-cs-brain.webp",
+      "alt": "A dark map of knowledge points with a panel explaining how the Claims app works",
+      "label": "What each app reads",
+      "caption": "The map of the customer-service knowledge with the apps around it. Opening an app’s point explains what it attaches when a reply is generated and how its knowledge is chosen.",
+      "width": 1440,
+      "height": 900
+     },
+     {
+      "src": "images/product-screens/ff-cs-knowledge-edit.webp",
+      "alt": "Three panels: a list of brand voices, a voice editor and a knowledge article editor",
+      "label": "Voices and knowledge the team edits itself",
+      "caption": "Voices, audiences and knowledge articles are kept in one drawer with search, add, edit and delete. A voice holds its values, words to avoid and example replies.",
+      "width": 1440,
+      "height": 721,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-cs-pdf.webp",
+      "alt": "Four panels: an empty new-article form, a PDF being analysed, the filled fields and the saved article",
+      "label": "A PDF becomes an article",
+      "caption": "Dropping a PDF reads it and fills the article’s fields for review before saving. The PDF is an invented care guide; the fields shown are the canned answer of the project’s own test, not a model’s reading.",
+      "width": 1440,
+      "height": 539,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-cs-requests.webp",
+      "alt": "Four panels of a Requests drawer: a new request, open requests, a resolution note and resolved requests",
+      "label": "Requests from the people who use it",
+      "caption": "A Requests button on every page files a bug or an idea with a screenshot of the page; admins resolve it with a note the team can read. The requests are invented.",
+      "width": 1440,
+      "height": 732,
+      "wide": true
+     },
+     {
+      "src": "images/product-screens/ff-cs-usage.webp",
+      "alt": "A Usage and Cost page with a total, two spend cards and a table of responses",
+      "label": "What every draft costs",
+      "caption": "The admin Usage page: total spend, image generation and customer-service drafts, with a row per response. Every figure and account here is invented.",
+      "width": 1184,
+      "height": 900
+     }
+    ]
+   }
+  ],
+  "productNote": "Three captures of the live product come first, then a full walk through the workspace from a local run."
  },
  {
   "id": "till",
